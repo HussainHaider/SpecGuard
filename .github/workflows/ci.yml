@@ -1,0 +1,40 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    env:
+      # No test in the default run may reach a live API.
+      LLM_PROVIDER: fake
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: api/uv.lock
+      - run: uv python install 3.12
+      - run: uv sync --locked --all-groups
+      - name: ruff format
+        run: uv run ruff format --check .
+      - name: ruff check
+        run: uv run ruff check .
+      - name: mypy --strict
+        run: uv run mypy
+      - name: pytest
+        run: uv run pytest -m "not slow"
+      # Tier 1 evals are deterministic ground-truth metrics and gate the build.
+      # Tier 2 (deepeval) is reported, never merge-blocking — non-negotiable #6.
+      - name: tier 1 evals
+        run: uv run python -m evals.run_eval --fail-under-config
