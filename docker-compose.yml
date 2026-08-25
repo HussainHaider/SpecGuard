@@ -1,0 +1,97 @@
+# Only db and qdrant are needed to work on the project today; api, worker and web sit
+# behind the `app` profile so `docker compose up` starts the datastores and nothing else.
+# Bring the application up with `docker compose --profile app up`.
+
+name: specguard
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-specguard}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-specguard}
+      POSTGRES_DB: ${POSTGRES_DB:-specguard}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-specguard} -d ${POSTGRES_DB:-specguard}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    ports:
+      - "${QDRANT_HTTP_PORT:-6333}:6333"   # REST + dashboard at /dashboard
+      - "${QDRANT_GRPC_PORT:-6334}:6334"   # gRPC, used by qdrant-client
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__API_KEY: ${QDRANT_API_KEY:-}
+    healthcheck:
+      # The image has no curl or wget; its own binary can answer the readiness probe.
+      test: ["CMD", "/qdrant/qdrant", "--version"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  api:
+    profiles: ["app"]
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    env_file: [.env]
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
+      QDRANT_URL: http://qdrant:6333
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./corpus:/app/corpus:ro
+      - ./fixtures:/app/fixtures:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+
+  worker:
+    profiles: ["app"]
+    # Same image as the api; it polls the jobs table (FOR UPDATE SKIP LOCKED) and runs
+    # the check graph. No broker service, so Postgres is the queue.
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    command: ["python", "-m", "specguard.worker"]
+    env_file: [.env]
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
+      QDRANT_URL: http://qdrant:6333
+    volumes:
+      - ./corpus:/app/corpus:ro
+      - ./fixtures:/app/fixtures:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+
+  web:
+    profiles: ["app"]
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000}
+    ports:
+      - "${WEB_PORT:-5173}:5173"
+    depends_on:
+      - api
+
+volumes:
+  db_data:
+  qdrant_data:
