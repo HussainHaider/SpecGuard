@@ -1,0 +1,107 @@
+[project]
+name = "specguard"
+version = "0.1.0"
+description = "EU food-label compliance checking over supplier spec sheets."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "sqlalchemy>=2.0.36",
+    "alembic>=1.14",
+    "psycopg[binary]>=3.2",
+    "langgraph>=0.2.50",
+    "langsmith>=0.2",
+    "qdrant-client>=1.12",
+    "fastembed>=0.4",
+    "anthropic>=0.40",
+    "openai>=1.55",
+    "pdfplumber>=0.11",
+    "structlog>=24.4",
+    "httpx>=0.27",
+    "python-multipart>=0.0.17",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8",
+    "mypy>=1.13",
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "pytest-cov>=6.0",
+    "deepeval>=1.5",
+    "reportlab>=4.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/specguard"]
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "evals"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "UP",   # pyupgrade
+    "B",    # bugbear
+    "SIM",  # simplify
+    "C4",   # comprehensions
+    "N",    # pep8-naming
+    "ANN",  # annotations
+    "ASYNC",
+    "S",    # bandit
+    "PT",   # pytest style
+    "PTH",  # use pathlib
+    "TID",  # tidy imports
+    "ARG",  # unused arguments
+    "RUF",
+]
+ignore = [
+    "ANN401",  # allow Any in narrowly-typed adapter signatures
+    "S101",    # assert is how pytest works
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["ANN", "ARG", "S105", "S106"]
+"evals/**" = ["ANN", "ARG"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src"]
+strict = true
+plugins = ["pydantic.mypy"]
+warn_unreachable = true
+disallow_any_explicit = false
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = ["fastembed.*", "deepeval.*", "pdfplumber.*", "reportlab.*"]
+ignore_missing_imports = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "evals"]
+addopts = "--strict-markers -m 'not slow'"
+markers = [
+    "slow: judged evals and anything that may reach a live API; excluded by default",
+]
+asyncio_mode = "auto"
