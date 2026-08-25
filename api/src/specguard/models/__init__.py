@@ -1,0 +1,72 @@
+"""Core domain models. Everything that crosses a boundary is defined here."""
+
+from specguard.models.citation import CHUNK_ID_NAMESPACE, Citation, chunk_id_for
+from specguard.models.common import (
+    ExtractedField,
+    Language,
+    NetQuantityUnit,
+    Quantity,
+    SpecGuardModel,
+)
+from specguard.models.report import CheckReport, GuardrailFlags
+from specguard.models.rule import (
+    RULE_KINDS,
+    AbstentionReason,
+    LlmUsage,
+    RuleId,
+    RuleKind,
+    RuleResult,
+    Verdict,
+)
+from specguard.models.spec import (
+    BusinessOperator,
+    Claim,
+    ClaimKind,
+    DurabilityDate,
+    DurabilityKind,
+    EmphasisStyle,
+    Ingredient,
+    IngredientList,
+    MicroNutrient,
+    NutrientBasis,
+    NutritionDeclaration,
+    OriginDeclaration,
+    OriginScope,
+    ProductSpec,
+    SourceDocument,
+)
+
+__all__ = [
+    "CHUNK_ID_NAMESPACE",
+    "RULE_KINDS",
+    "AbstentionReason",
+    "BusinessOperator",
+    "CheckReport",
+    "Citation",
+    "Claim",
+    "ClaimKind",
+    "DurabilityDate",
+    "DurabilityKind",
+    "EmphasisStyle",
+    "ExtractedField",
+    "GuardrailFlags",
+    "Ingredient",
+    "IngredientList",
+    "Language",
+    "LlmUsage",
+    "MicroNutrient",
+    "NetQuantityUnit",
+    "NutrientBasis",
+    "NutritionDeclaration",
+    "OriginDeclaration",
+    "OriginScope",
+    "ProductSpec",
+    "Quantity",
+    "RuleId",
+    "RuleKind",
+    "RuleResult",
+    "SourceDocument",
+    "SpecGuardModel",
+    "Verdict",
+    "chunk_id_for",
+]
