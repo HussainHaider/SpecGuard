@@ -141,7 +141,9 @@ class Citation(SpecGuardModel):
     def reference(self) -> str:
         """Human-readable reference, e.g. ``Regulation (EU) No 1169/2011 Art. 21(1)(b)``."""
         if self.article.casefold().startswith("annex"):
-            locator = self.article
+            # Annex paragraphs carry their part ("Part B.2"), so they render alongside
+            # the annex rather than in article-style parentheses.
+            locator = f"{self.article}, {self.paragraph}" if self.paragraph else self.article
         else:
             locator = f"Art. {self.article}"
             if self.paragraph is not None:
