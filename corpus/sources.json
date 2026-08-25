@@ -1,0 +1,38 @@
+[
+  {
+    "celex": "02011R1169-20180101",
+    "regulation": "Regulation (EU) No 1169/2011",
+    "language": "en",
+    "sha256": "c1788de2c95a4a26aa518405b6327a13f37c83116c18e9e0451f63a73271a550",
+    "fetched_at": "2026-08-25T18:40:37.071293Z",
+    "url": "https://publications.europa.eu/resource/celex/02011R1169-20180101",
+    "source_version": "02011R1169-20180101-en"
+  },
+  {
+    "celex": "02011R1169-20180101",
+    "regulation": "Regulation (EU) No 1169/2011",
+    "language": "de",
+    "sha256": "a495285fea44a3e3f9a11f5f69aacecfe2cb45749bde01bd04bd49a2f15eba69",
+    "fetched_at": "2026-08-25T18:40:37.313603Z",
+    "url": "https://publications.europa.eu/resource/celex/02011R1169-20180101",
+    "source_version": "02011R1169-20180101-de"
+  },
+  {
+    "celex": "02006R1924-20141213",
+    "regulation": "Regulation (EC) No 1924/2006",
+    "language": "en",
+    "sha256": "1fd496f6c0c5a5f87dc0da36ef3812cc546fc695581ada43a875e215a743a3b4",
+    "fetched_at": "2026-08-25T18:40:37.539193Z",
+    "url": "https://publications.europa.eu/resource/celex/02006R1924-20141213",
+    "source_version": "02006R1924-20141213-en"
+  },
+  {
+    "celex": "02006R1924-20141213",
+    "regulation": "Regulation (EC) No 1924/2006",
+    "language": "de",
+    "sha256": "cdabed491d622de385529a46a48e0bd79e65c9e19ad76180a1f8e531b4eca886",
+    "fetched_at": "2026-08-25T18:40:37.757210Z",
+    "url": "https://publications.europa.eu/resource/celex/02006R1924-20141213",
+    "source_version": "02006R1924-20141213-de"
+  }
+]

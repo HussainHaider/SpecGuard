@@ -1,0 +1,622 @@
+►B | ▼C1 REGULATION (EC) No 1924/2006 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 20 December 2006 on nutrition and health claims made on foods ▼B (OJ L 404 30.12.2006, p. 9)
+
+Official Journal
+No | page | date
+►M1 | REGULATION (EC) No 107/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 15 January 2008 | L 39 | 8 | 13.2.2008
+►M2 | REGULATION (EC) No 109/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 15 January 2008 | L 39 | 14 | 13.2.2008
+►M3 | COMMISSION REGULATION (EU) No 116/2010 of 9 February 2010 | L 37 | 16 | 10.2.2010
+►M4 | REGULATION (EU) No 1169/2011 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 25 October 2011 | L 304 | 18 | 22.11.2011
+►M5 | COMMISSION REGULATION (EU) No 1047/2012 of 8 November 2012 | L 310 | 36 | 9.11.2012
+
+►C1 | Corrigendum, OJ L 012, 18.1.2007, p. 3 (1924/2006)
+
+CHAPTER I
+
+SUBJECT MATTER, SCOPE AND DEFINITIONS
+
+Article 1
+
+Subject matter and scope
+
+1. This Regulation harmonises the provisions laid down by law, regulation or administrative action in Member States which relate to nutrition and health claims in order to ensure the effective functioning of the internal market whilst providing a high level of consumer protection.
+
+2. This Regulation shall apply to nutrition and health claims made in commercial communications, whether in the labelling, presentation or advertising of foods to be delivered as such to the final consumer.
+
+In the case of non-prepackaged foodstuffs (including fresh products such as fruit, vegetables or bread) put up for sale to the final consumer or to mass caterers and foodstuffs packed at the point of sale at the request of the purchaser or pre-packaged with a view to immediate sale, Article 7 and Article 10(2)(a) and (b) shall not apply. National provisions may apply until the eventual adoption of Community measures designed to amend non-essential elements of this Regulation, inter alia, by supplementing it, in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).
+
+This Regulation shall also apply in respect of foods intended for supply to restaurants, hospitals, schools, canteens and similar mass caterers.
+
+3. A trade mark, brand name or fancy name appearing in the labelling, presentation or advertising of a food which may be construed as a nutrition or health claim may be used without undergoing the authorisation procedures provided for in this Regulation, provided that it is accompanied by a related nutrition or health claim in that labelling, presentation or advertising which complies with the provisions of this Regulation.
+
+4. For generic descriptors (denominations) which have traditionally been used to indicate a particularity of a class of foods or beverages which could imply an effect on human health, a derogation from paragraph 3 designed to amend non-essential elements of this Regulation by supplementing it may be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), on application by the food business operators concerned. The application shall be sent to the national competent authority of a Member State which will forward it to the Commission without delay. The Commission shall adopt and make public the rules for food business operators according to which such applications shall be made, so as to ensure that the application is dealt with transparently and within a reasonable time.
+
+5. This Regulation shall apply without prejudice to the following Community provisions:
+(a) Directive 89/398/EEC and Directives adopted relating to foodstuffs for particular nutritional uses;
+(b) Council Directive 80/777/EEC of 15 July 1980 on the approximation of the laws of the Member States relating to the exploitation and marketing of natural mineral waters ( 12 );
+(c) Council Directive 98/83/EC of 3 November 1998 on the quality of water intended for human consumption ( 13 );
+(d) Directive 2002/46/EC.
+
+Article 2
+
+Definitions
+
+1. For the purposes of this Regulation:
+(a) the definitions of ‘food’, ‘food business operator’, ‘placing on the market’, and ‘final consumer’ set out in Articles 2, 3(3), 3(8) and 3(18) of Regulation (EC) No 178/2002 of the European Parliament and of the Council of 28 January 2002 laying down the general principles and requirements of food law, establishing the European Food Safety Authority and laying down procedures in matters of food safety ( 14 ) shall apply;
+(b) the definition of ‘food supplement’ set out in Directive 2002/46/EC shall apply;
+(c) the definitions of ‘nutrition labelling’, ‘protein’, ‘carbohydrate’, ‘sugars’, ‘fat’, ‘saturates’, ‘mono-unsaturates’, ‘poly-unsaturates’, ‘fibre’ set out in Directive 90/496/EEC shall apply;
+(d) the definition of ‘labelling’ set out in Article 1(3)(a) of Directive 2000/13/EC shall apply.
+
+2. The following definitions shall also apply:
+1) ‘claim’ means any message or representation, which is not mandatory under Community or national legislation, including pictorial, graphic or symbolic representation, in any form, which states, suggests or implies that a food has particular characteristics;
+2) ‘nutrient’ means protein, carbohydrate, fat, fibre, sodium, vitamins and minerals listed in the Annex to Directive 90/496/EEC, and substances which belong to or are components of one of those categories;
+3) ‘other substance’ means a substance other than a nutrient that has a nutritional or physiological effect;
+4) ‘nutrition claim’ means any claim which states, suggests or implies that a food has particular beneficial nutritional properties due to:
+(a) the energy (calorific value) it
+(i) provides;
+(ii) provides at a reduced or increased rate; or
+(iii) does not provide; and/or
+(b) the nutrients or other substances it
+(i) contains;
+(ii) contains in reduced or increased proportions; or
+(iii) does not contain;
+5) ‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;
+6) ‘reduction of disease risk claim’ means any health claim that states, suggests or implies that the consumption of a food category, a food or one of its constituents significantly reduces a risk factor in the development of a human disease;
+7) ‘Authority’ means the European Food Safety Authority established by Regulation (EC) No 178/2002.
+
+CHAPTER II
+
+GENERAL PRINCIPLES
+
+Article 3
+
+General principles for all claims
+
+Nutrition and health claims may be used in the labelling, presentation and advertising of foods placed on the market in the Community only if they comply with the provisions of this Regulation.
+
+Without prejudice to Directives 2000/13/EC and 84/450/EEC, the use of nutrition and health claims shall not:
+
+(a) be false, ambiguous or misleading;
+
+(b) give rise to doubt about the safety and/or the nutritional adequacy of other foods;
+
+(c) encourage or condone excess consumption of a food;
+
+(d) state, suggest or imply that a balanced and varied diet cannot provide appropriate quantities of nutrients in general. Derogations in the case of nutrients for which sufficient quantities cannot be provided by a balanced and varied diet, including the conditions for their application, and designed to amend non-essential elements of this Regulation by supplementing it may be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), taking into account the special conditions present in Member States;
+
+(e) refer to changes in bodily functions which could give rise to or exploit fear in the consumer, either textually or through pictorial, graphic or symbolic representations.
+
+Article 4
+
+Conditions for the use of nutrition and health claims
+
+1. By 19 January 2009, the Commission shall establish specific nutrient profiles, including exemptions, which food or certain categories of food must comply with in order to bear nutrition or health claims and the conditions for the use of nutrition or health claims for foods or categories of foods with respect to the nutrient profiles. Such measures, designed to amend non-essential elements of this Regulation by supplementing it, shall be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).
+
+The nutrient profiles for food and/or certain categories of food shall be established taking into account in particular:
+
+(a) the quantities of certain nutrients and other substances contained in the food, such as fat, saturated fatty acids, trans-fatty acids, sugars and salt/sodium;
+
+(b) the role and importance of the food (or of categories of food) and the contribution to the diet of the population in general or, as appropriate, of certain risk groups including children;
+
+(c) the overall nutritional composition of the food and the presence of nutrients that have been scientifically recognised as having an effect on health.
+
+The nutrient profiles shall be based on scientific knowledge about diet and nutrition, and their relation to health.
+
+In setting the nutrient profiles, the Commission shall request the Authority to provide within 12 months relevant scientific advice, focusing in particular on:
+
+(i) whether profiles should be set for food in general and/or categories of food;
+
+(ii) the choice and balance of nutrients to be taken into account;
+
+(iii) the choice of reference quantity/basis for profiles;
+
+(iv) the approach to the calculation of the profiles; and
+
+(v) the feasibility and testing of a proposed system.
+
+In setting the nutrient profiles, the Commission shall carry out consultations with interested parties, in particular food business operators and consumer groups.
+
+Nutrient profiles and their conditions of use designed to amend non-essential elements of this Regulation by supplementing it shall be updated to take into account relevant scientific developments in accordance with the regulatory procedure with scrutiny referred to in Article 25(3) and after consultation of interested parties, in particular food business operators and consumer groups.
+
+2. By way of derogation from paragraph 1, nutrition claims:
+(a) referring to the reduction of fat, saturated fatty acids, trans-fatty acids, sugars and salt/sodium shall be allowed without reference to a profile for the specific nutrient/s for which the claim is made, provided they comply with the conditions laid down in this Regulation;
+(b) shall be allowed, where a single nutrient exceeds the nutrient profile provided that a statement about the specific nutrient appears in close proximity to, on the same side and with the same prominence as the claim. This statement shall read as follows: ‘High ( *1 ) content’.
+
+3. Beverages containing more than 1,2 % by volume of alcohol shall not bear health claims.
+
+As far as nutrition claims are concerned, only nutrition claims referring to low alcohol levels, or the reduction of the alcohol content, or the reduction of the energy content for beverages containing more than 1,2 % by volume of alcohol, shall be permitted.
+
+4. In the absence of specific Community rules regarding nutrition claims referring to low alcohol levels, or the reduction or absence of alcohol or energy in beverages which normally contain alcohol, relevant national rules may apply in compliance with the provisions of the Treaty.
+
+5. Measures determining the foods or categories of foods other than those referred to in paragraph 3 for which nutrition or health claims are to be restricted or prohibited and designed to amend non-essential elements of this Regulation may be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3) and in the light of scientific evidence.
+
+Article 5
+
+General conditions
+
+1. The use of nutrition and health claims shall only be permitted if the following conditions are fulfilled:
+(a) the presence, absence or reduced content in a food or category of food of a nutrient or other substance in respect of which the claim is made has been shown to have a beneficial nutritional or physiological effect, as established by generally accepted scientific evidence;
+(b) the nutrient or other substance for which the claim is made:
+(i) is contained in the final product in a significant quantity as defined in Community legislation or, where such rules do not exist, in a quantity that will produce the nutritional or physiological effect claimed as established by generally accepted scientific evidence; or
+(ii) is not present or is present in a reduced quantity that will produce the nutritional or physiological effect claimed as established by generally accepted scientific evidence;
+(c) where applicable, the nutrient or other substance for which the claim is made is in a form that is available to be used by the body;
+(d) the quantity of the product that can reasonably be expected to be consumed provides a significant quantity of the nutrient or other substance to which the claim relates, as defined in Community legislation or, where such rules do not exist, a significant quantity that will produce the nutritional or physiological effect claimed as established by generally accepted scientific evidence;
+(e) compliance with the specific conditions set out in Chapter III or Chapter IV as the case may be.
+
+2. The use of nutrition and health claims shall only be permitted if the average consumer can be expected to understand the beneficial effects as expressed in the claim.
+
+3. Nutrition and health claims shall refer to the food ready for consumption in accordance with the manufacturer's instructions.
+
+Article 6
+
+Scientific substantiation for claims
+
+1. Nutrition and health claims shall be based on and substantiated by generally accepted scientific evidence.
+
+2. A food business operator making a nutrition or health claim shall justify the use of the claim.
+
+3. The competent authorities of the Member States may request a food business operator or a person placing a product on the market to produce all relevant elements and data establishing compliance with this Regulation.
+
+Article 7
+
+Nutrition information
+
+Nutrition labelling of products on which a nutrition and/or health claim is made shall be mandatory, with the exception of generic advertising. The information to be provided shall consist of that specified in Article 30(1) of Regulation (EU) No 1169/2011 of the European Parliament and of the Council of 25 October 2011 on the provision of food information to consumers ( 15 ). Where a nutrition and/or health claim is made for a nutrient referred to in Article 30(2) of Regulation (EU) No 1169/2011 the amount of that nutrient shall be declared in accordance with Articles 31 to 34 of that Regulation.
+
+The amount(s) of the substance(s) to which a nutrition or health claim relates that does not appear in the nutrition labelling shall be stated in the same field of vision as the nutrition labelling and be expressed in accordance with Articles 31, 32 and 33 of Regulation (EU) No 1169/2011. The units of measurement used to express the amount of the substance shall be appropriate for the individual substances concerned.
+
+In the case of food supplements, the nutrition information shall be provided in accordance with Article 8 of Directive 2002/46/EC.
+
+CHAPTER III
+
+NUTRITION CLAIMS
+
+Article 8
+
+Specific conditions
+
+1. Nutrition claims shall only be permitted if they are listed in the Annex and are in conformity with the conditions set out in this Regulation.
+
+2. Amendments to the Annex shall be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3) and, where appropriate, after consulting the Authority. Where appropriate, the Commission shall involve interested parties, in particular food business operators and consumer groups, in order to evaluate the perception and understanding of the claims in question.
+
+Article 9
+
+Comparative claims
+
+1. Without prejudice to Directive 84/450/EEC, a comparison may only be made between foods of the same category, taking into consideration a range of foods of that category. The difference in the quantity of a nutrient and/or the energy value shall be stated and the comparison shall relate to the same quantity of food.
+
+2. Comparative nutrition claims shall compare the composition of the food in question with a range of foods of the same category, which do not have a composition which allows them to bear a claim, including foods of other brands.
+
+CHAPTER IV
+
+HEALTH CLAIMS
+
+Article 10
+
+Specific conditions
+
+1. Health claims shall be prohibited unless they comply with the general requirements in Chapter II and the specific requirements in this Chapter and are authorised in accordance with this Regulation and included in the lists of authorised claims provided for in Articles 13 and 14.
+
+2. Health claims shall only be permitted if the following information is included in the labelling, or if no such labelling exists, in the presentation and advertising:
+(a) a statement indicating the importance of a varied and balanced diet and a healthy lifestyle;
+(b) the quantity of the food and pattern of consumption required to obtain the claimed beneficial effect;
+(c) where appropriate, a statement addressed to persons who should avoid using the food; and
+(d) an appropriate warning for products that are likely to present a health risk if consumed to excess.
+
+3. Reference to general, non-specific benefits of the nutrient or food for overall good health or health-related well-being may only be made if accompanied by a specific health claim included in the lists provided for in Article 13 or 14.
+
+4. Where appropriate, guidelines on the implementation of this Article shall be adopted in accordance with the procedure referred to in Article 25(2) and, if necessary, in consultation with interested parties, in particular food business operators and consumer groups.
+
+Article 11
+
+National associations of medical, nutrition or dietetic professionals and health-related charities
+
+In the absence of specific Community rules concerning recommendations of or endorsements by national associations of medical, nutrition or dietetic professionals and health-related charities, relevant national rules may apply in compliance with the provisions of the Treaty.
+
+Article 12
+
+Restrictions on the use of certain health claims
+
+The following health claims shall not be allowed:
+
+(a) claims which suggest that health could be affected by not consuming the food;
+
+(b) claims which make reference to the rate or amount of weight loss;
+
+(c) claims which make reference to recommendations of individual doctors or health professionals and other associations not referred to in Article 11.
+
+Article 13
+
+Health claims other than those referring to the reduction of disease risk and to children's development and health
+
+1. Health claims describing or referring to:
+(a) the role of a nutrient or other substance in growth, development and the functions of the body; or
+(b) psychological and behavioural functions; or
+(c) without prejudice to Directive 96/8/EC, slimming or weight-control or a reduction in the sense of hunger or an increase in the sense of satiety or to the reduction of the available energy from the diet,
+which are indicated in the list provided for in paragraph 3 may be made without undergoing the procedures laid down in Articles 15 to 19, if they are:
+(i) based on generally accepted scientific evidence; and
+(ii) well understood by the average consumer.
+
+2. Member States shall provide the Commission with lists of claims as referred to in paragraph 1 by 31 January 2008 at the latest accompanied by the conditions applying to them and by references to the relevant scientific justification.
+
+3. After consulting the Authority, the Commission shall adopt, in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), a Community list, designed to amend non-essential elements of this Regulation by supplementing it, of permitted claims as referred to in paragraph 1 and all necessary conditions for the use of these claims by 31 January 2010 at the latest.
+
+4. Any changes to the list referred to in paragraph 3, based on generally accepted scientific evidence and designed to amend non-essential elements of this Regulation by supplementing it, shall be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), after consulting the Authority, on the Commission's own initiative or following a request by a Member State.
+
+5. Any additions of claims to the list referred to in paragraph 3 based on newly developed scientific evidence and/or which include a request for the protection of proprietary data shall be adopted following the procedure laid down in Article 18, except claims referring to children's development and health, which shall be authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19.
+
+Article 14
+
+Reduction of disease risk claims and claims referring to children's development and health
+
+1. Notwithstanding Article 2(1)(b) of Directive 2000/13/EC, the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:
+(a) reduction of disease risk claims;
+(b) claims referring to children's development and health.
+
+2. In addition to the general requirements laid down in this Regulation and the specific requirements of paragraph 1, for reduction of disease risk claims the labelling or, if no such labelling exists, the presentation or advertising shall also bear a statement indicating that the disease to which the claim is referring has multiple risk factors and that altering one of these risk factors may or may not have a beneficial effect.
+
+Article 15
+
+Application for authorisation
+
+1. When reference is made to this Article, an application for authorisation shall be submitted in accordance with the following paragraphs.
+
+2. The application shall be sent to the national competent authority of a Member State.
+(a) The national competent authority shall:
+(i) acknowledge receipt of an application in writing within 14 days of its receipt. The acknowledgement shall state the date of receipt of the application;
+(ii) inform without delay the Authority; and
+(iii) make the application and any supplementary information supplied by the applicant available to the Authority;
+(b) The Authority shall:
+(i) inform without delay the other Member States and the Commission of the application and shall make the application and any supplementary information supplied by the applicant available to them;
+(ii) make the summary of the application referred to in paragraph 3(g) available to the public.
+
+3. The application shall include the following:
+(a) the name and address of the applicant;
+(b) the nutrient or other substance, or the food or the category of food, in respect of which the health claim is to be made and its particular characteristics;
+(c) a copy of the studies, including, where available, independent, peer-reviewed studies, which have been carried out with regard to the health claim and any other material which is available to demonstrate that the health claim complies with the criteria provided for in this Regulation;
+(d) where appropriate, an indication of the information which should be regarded as proprietary accompanied by verifiable justification;
+(e) a copy of other scientific studies which are relevant to that health claim;
+(f) a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;
+(g) a summary of the application.
+
+4. The Commission, having first consulted the Authority, shall establish in accordance with the procedure referred to in Article 25(2) implementing rules for the application of this Article, including rules concerning the preparation and presentation of the application.
+
+5. The Commission, in close cooperation with the Authority, shall make available appropriate technical guidance and tools to assist food business operators, in particular SMEs, in the preparation and presentation of the application for scientific assessment.
+
+Article 16
+
+Opinion of the Authority
+
+1. In giving its opinion, the Authority shall respect a time limit of five months from the date of receipt of a valid application. Whenever the Authority seeks supplementary information from the applicant as provided for in paragraph 2, such time limit shall be extended by up to two months following the date of receipt of the requested information submitted by the applicant.
+
+2. The Authority or a national competent authority through the Authority may, where appropriate, request the applicant to supplement the particulars accompanying the application within a specified time limit.
+
+3. In order to prepare its opinion, the Authority shall verify:
+(a) that the health claim is substantiated by scientific evidence;
+(b) that the wording of the health claim complies with the criteria laid down in this Regulation.
+
+4. In the event of an opinion in favour of authorising the health claim, the opinion shall include the following particulars:
+(a) the name and address of the applicant;
+(b) the nutrient or other substance, or the food or the category of food, in respect of which a claim is to be made and its particular characteristics;
+(c) a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;
+(d) where applicable, conditions or restrictions of use of the food and/or an additional statement or warning that should accompany the health claim on the label and in advertising.
+
+5. The Authority shall forward its opinion to the Commission, the Member States and the applicant, including a report describing its assessment of the health claim and stating the reasons for its opinion and the information on which its opinion was based.
+
+6. The Authority, in accordance with Article 38(1) of Regulation (EC) No 178/2002, shall make its opinion public.
+
+The applicant or members of the public may make comments to the Commission within 30 days from such publication.
+
+Article 17
+
+Community authorisation
+
+1. Within two months after receiving the opinion of the Authority, the Commission shall submit to the Committee referred to in Article 23(2) a draft decision on the lists of permitted health claims, taking into account the opinion of the Authority, any relevant provisions of Community law and other legitimate factors relevant to the matter under consideration. Where the draft decision is not in accordance with the opinion of the Authority, the Commission shall provide an explanation for the differences.
+
+2. Any draft decision to amend the lists of permitted health claims shall include the particulars referred to in Article 16(4).
+
+3. A final decision on the application, designed to amend non essential elements of this Regulation by supplementing it, shall be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).
+However, where at the applicant's request for the protection of proprietary data, the Commission proposes to restrict the use of the claim in favour of the applicant:
+(a) a decision on the authorisation of the claim shall be taken in accordance with the regulatory procedure referred to in Article 25(2). In such case, the authorisation, if granted, shall expire after five years;
+(b) before the expiry of the five-year period, if the claim still meets the conditions laid down in this Regulation, the Commission shall submit a draft of measures designed to amend non-essential elements of this Regulation by supplementing it for authorisation of the claim without restriction for use which shall be decided on in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).
+
+4. Official Journal of the European Union
+
+5. Health claims included in the lists provided for in Articles 13 and 14 may be used, in conformity with the conditions applying to them, by any food business operator, if they are not restricted for use in accordance with the provisions of Article 21.
+
+6. The granting of authorisation shall not lessen the general civil and criminal liability of any food business operator in respect of the food concerned.
+
+Article 18
+
+Claims referred to in Article 13(5)
+
+1. A food business operator intending to use a health claim not included in the list provided for in Article 13(3) may apply for the inclusion of the claim in that list.
+
+2. The application for this inclusion shall be submitted to the national competent authority of a Member State which shall acknowledge receipt of the application in writing within 14 days of its receipt. The acknowledgement shall state the date of receipt of the application. The application shall include the data provided for in Article 15(3) and the reasons for the request.
+
+3. The valid application, in line with the guidance referred to in Article 15(5), and any information supplied by the applicant shall be sent without delay to the Authority for a scientific assessment as well as to the Commission and the Member States for information. The Authority shall issue its opinion within a time limit of five months from the date of receipt of the request. Such time limit may be extended by up to one month if the Authority considers it necessary to seek supplementary information from the applicant. In such a case the applicant shall submit the requested information within 15 days from the date of receipt of the Authority's request.
+
+The procedure laid down in Article 16(3)(a) and (b), (5) and (6) shall apply mutatis mutandis.
+
+4. Where the Authority, following scientific assessment, issues an opinion in favour of the inclusion of the claim in the list provided for in Article 13(3), the Commission shall take a decision on the application, taking into account the opinion of the Authority, any relevant provisions of Community law and other legitimate factors relevant to the matter under consideration, after having consulted the Member States and within two months of receiving the opinion of the Authority.
+
+5. Where the Authority issues an opinion that does not support the inclusion of the claim in the list referred to in paragraph 4, a decision on the application designed to amend non-essential elements of this Regulation by supplementing it shall be taken in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).
+However, where at the applicant's request for the protection of proprietary data the Commission proposes to restrict the use of the claim in favour of the applicant:
+(a) a decision on the authorisation of the claim shall be taken in accordance with the regulatory procedure referred to in Article 25(2). In such case, the authorisation, if granted, shall expire after five years;
+(b) before the expiry of the five-year period, if the claim still meets the conditions laid down in this Regulation, the Commission shall submit a draft of measures designed to amend non-essential elements of this Regulation by supplementing it for authorisation of the claim without restriction of use which shall be decided on in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).
+
+Article 19
+
+Modification, suspension and revocation of authorisations
+
+1. The applicant/user of a claim included in one of the lists provided for in Articles 13 and 14 may apply for a modification of the relevant list. The procedures laid down in Articles 15 to 18 shall apply mutatis mutandis.
+
+2. On its own initiative or following a request from a Member State or from the Commission, the Authority shall issue an opinion on whether a health claim included in the lists provided for in Articles 13 and 14 still meets the conditions laid down in this Regulation.
+
+It shall forthwith transmit its opinion to the Commission, the Member States and, where relevant, to the original applicant of the claim in question. The Authority, in accordance with Article 38(1) of Regulation (EC) No 178/2002, shall make its opinion public.
+
+The applicant/user or a member of the public may make comments to the Commission within 30 days of such publication.
+
+The Commission shall examine the opinion of the Authority and any comments received as soon as possible. If appropriate, the authorisation shall be modified, suspended or revoked in accordance with the procedures laid down in Articles 17 and 18.
+
+CHAPTER V
+
+GENERAL AND FINAL PROVISIONS
+
+Article 20
+
+Community Register
+
+1. The Commission shall establish and maintain a Community Register of nutrition and health claims made on food, hereinafter referred to as ‘the Register’.
+
+2. The Register shall include the following:
+(a) the nutrition claims and the conditions applying to them as set out in the Annex;
+(b) restrictions adopted in accordance with Article 4(5);
+(c) the authorised health claims and the conditions applying to them provided for in Articles 13(3) and (5), 14(1), 19(2), 21, 24(2) and 28(6) and the national measures referred to in Article 23(3);
+(d) a list of rejected health claims and the reasons for their rejection.
+
+Health claims authorised on the basis of proprietary data shall be recorded in a separate Annex to the Register together with the following information:
+
+1) the date the Commission authorised the health claim and the name of the original applicant that was granted authorisation.
+
+2) the fact that the Commission authorised the health claim on the basis of proprietary data and restricted use;
+
+3) in the cases referred to in Article 17(3), second subparagraph, and Article 18(5), second subparagraph, the fact that the health claim is authorised for a limited duration.
+
+3. The Register shall be made available to the public.
+
+Article 21
+
+Data protection
+
+1. The scientific data and other information in the application required under Article 15(3) may not be used for the benefit of a subsequent applicant for a period of five years from the date of authorisation, unless the subsequent applicant has agreed with the prior applicant that such data and information may be used, where:
+(a) the scientific data and other information has been designated as proprietary by the prior applicant at the time the prior application was made; and
+(b) the prior applicant had exclusive right of reference to the proprietary data at the time the prior application was made; and
+(c) the health claim could not have been authorised without the submission of the proprietary data by the prior applicant.
+
+2. Until the end of the five-year period specified in paragraph 1, no subsequent applicant shall have the right to refer to data designated as proprietary by a prior applicant unless and until the Commission takes a decision on whether a claim could be or could have been included in the list provided for in Article 14 or, where appropriate, Article 13 without the submission of data designated as proprietary by the prior applicant.
+
+Article 22
+
+National provisions
+
+Without prejudice to the Treaty, in particular Articles 28 and 30 thereof, Member States may not restrict or forbid trade in or advertising of foods which comply with this Regulation by the application of non-harmonised national provisions governing claims made on certain foods or on foods in general.
+
+Article 23
+
+Notification procedure
+
+1. If a Member State considers it necessary to adopt new legislation, it shall notify the Commission and the other Member States of the envisaged measures and give the reasons justifying them.
+
+2. The Commission shall consult the Standing Committee on the Food Chain and Animal Health instituted by Article 58(1) of Regulation (EC) No 178/2002 (hereinafter referred to as ‘the Committee’) if it considers such consultation to be useful or if a Member State so requests, and shall give an opinion on the envisaged measures.
+
+3. The Member State concerned may take the envisaged measures six months after the notification referred to in paragraph 1, provided that the Commission's opinion is not negative.
+
+If the Commission's opinion is negative, it shall determine, in accordance with the procedure referred to in Article 25(2) and before the expiry of the period referred to in the first subparagraph of this paragraph, whether the envisaged measures may be implemented. The Commission may require certain amendments to be made to the envisaged measures.
+
+Article 24
+
+Safeguard measures
+
+1. Where a Member State has serious grounds for considering that a claim does not comply with this Regulation, or that the scientific substantiation provided for in Article 6 is insufficient, that Member State may temporarily suspend the use of that claim within its territory.
+
+It shall inform the other Member States and the Commission and give reasons for the suspension.
+
+2. In accordance with the procedure referred to in Article 25(2), a decision shall be taken, where appropriate after obtaining an opinion from the Authority.
+
+The Commission may initiate this procedure on its own initiative.
+
+3. The Member State referred to in paragraph 1 may maintain the suspension until the decision referred to in paragraph 2 has been notified to it.
+
+Article 25
+
+Committee procedure
+
+1. The Commission shall be assisted by the Committee.
+
+2. Where reference is made to this paragraph, Articles 5 and 7 of Decision 1999/468/EC shall apply, having regard to the provisions of Article 8 thereof.
+The period laid down in Article 5(6) of Decision 1999/468/EC shall be set at three months.
+
+3. Where reference is made to this paragraph, Article 5a(1) to (4), and Article 7 of Decision 1999/468/EC shall apply, having regard to the provisions of Article 8 thereof.
+
+Article 26
+
+Monitoring
+
+To facilitate efficient monitoring of foods bearing nutrition or health claims, Member States may require the manufacturer or the person placing such foods on the market in their territory to notify the competent authority of that placing on the market by forwarding to it a model of the label used for the product.
+
+Article 27
+
+Evaluation
+
+By 19 January 2013 at the latest, the Commission shall submit to the European Parliament and to the Council a report on the application of this Regulation, in particular on the evolution of the market in foods in respect of which nutrition or health claims are made and on the consumers' understanding of claims, together with a proposal for amendments if necessary. The report shall also include an evaluation of the impact of this Regulation on dietary choices and the potential impact on obesity and non-communicable diseases.
+
+Article 28
+
+Transitional measures
+
+1. Foods placed on the market or labelled prior to the date of application of this Regulation which do not comply with this Regulation may be marketed until their expiry date, but not later than 31 July 2009 With regard to the provisions in Article 4(1), foods may be marketed until twenty-four months following adoption of the relevant nutrient profiles and their conditions of use.
+
+2. Products bearing trade marks or brand names existing before 1 January 2005 which do not comply with this Regulation may continue to be marketed until 19 January 2022 after which time the provisions of this Regulation shall apply.
+
+3. Nutrition claims which have been used in a Member State before 1 January 2006 in compliance with national provisions applicable to them and which are not included in the Annex, may continue to be used until 19 January 2010 under the responsibility of food business operators and without prejudice to the adoption of safeguard measures as referred to in Article 24.
+
+4. Nutrition claims in the form of pictorial, graphic or symbolic representation, complying with the general principles of this Regulation, which are not included in the Annex and are used according to specific conditions and criteria elaborated by national provisions or rules, shall be subject to the following:
+(a) Member States shall communicate to the Commission, by 31 January 2008 at the latest, such nutrition claims and the national provisions or rules applicable, accompanied by scientific data in support of such provisions or rules;
+▼M1
+(b) the Commission shall, in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), adopt a decision concerning the use of such claims and designed to amend non-essential elements of this Regulation.
+▼C1
+
+Nutrition claims not authorised under this procedure may continue to be used for twelve months following the adoption of the Decision.
+
+5. Health claims as referred to in Article 13(1)(a) may be made from the date of entry into force of this Regulation until the adoption of the list referred to in Article 13(3), under the responsibility of food business operators provided that they comply with this Regulation and with existing national provisions applicable to them, and without prejudice to the adoption of safeguard measures as referred to in Article 24.
+
+6. ►M2 Health claims other than those referred to in Article 13(1)(a) and in Article 14(1)(a), which have been used in compliance with national provisions before the date of entry into force of this Regulation, shall be subject to the following: ◄
+(a) health claims which have been the subject of evaluation and authorisation in a Member State shall be authorised as follows:
+(i) Member States shall communicate to the Commission, by 31 January 2008 at the latest, such claims accompanied by a report evaluating the scientific data in support of the claim;
+▼M1
+(ii) after consulting the Authority, the Commission shall, in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), adopt a decision concerning the health claims authorised in this way and designed to amend non-essential elements of this Regulation by supplementing it.
+▼C1
+Health claims not authorised under this procedure may continue to be used for six months following the adoption of the Decision;
+(b) health claims which have not been the subject of evaluation and authorisation in a Member State: such claims may continue to be used provided an application is made pursuant to this Regulation before 19 January 2008; health claims not authorised under this procedure may continue to be used for six months after a decision is taken pursuant to Article 17(3).
+
+Article 29
+
+Entry into force
+
+This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.
+
+It shall apply from 1 July 2007.
+
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+
+ANNEX
+
+Nutrition claims and conditions applying to them
+
+LOW ENERGY
+
+A claim that a food is low in energy, and any claim likely to have the same meaning for the consumer, may only be made where the product does not contain more than 40 kcal (170 kJ)/100 g for solids or more than 20 kcal (80 kJ)/100 ml for liquids. For table-top sweeteners the limit of 4 kcal (17 kJ)/portion, with equivalent sweetening properties to 6 g of sucrose (approximately 1 teaspoon of sucrose), applies.
+
+ENERGY-REDUCED
+
+A claim that a food is energy-reduced, and any claim likely to have the same meaning for the consumer, may only be made where the energy value is reduced by at least 30 %, with an indication of the characteristic(s) which make(s) the food reduced in its total energy value.
+
+ENERGY-FREE
+
+A claim that a food is energy-free, and any claim likely to have the same meaning for the consumer, may only be made where the product does not contain more than 4 kcal (17 kJ)/100 ml. For table-top sweeteners the limit of 0,4 kcal (1,7 kJ)/portion, with equivalent sweetening properties to 6 g of sucrose (approximately 1 teaspoon of sucrose), applies.
+
+LOW FAT
+
+A claim that a food is low in fat, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 3 g of fat per 100 g for solids or 1,5 g of fat per 100 ml for liquids (1,8 g of fat per 100 ml for semi-skimmed milk).
+
+FAT-FREE
+
+A claim that a food is fat-free, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 0,5 g of fat per 100 g or 100 ml. However, claims expressed as ‘X % fat-free’ shall be prohibited.
+
+LOW SATURATED FAT
+
+A claim that a food is low in saturated fat, and any claim likely to have the same meaning for the consumer, may only be made if the sum of saturated fatty acids and trans-fatty acids in the product does not exceed 1,5 g per 100 g for solids or 0,75 g/100 ml for liquids and in either case the sum of saturated fatty acids and trans-fatty acids must not provide more than 10 % of energy.
+
+SATURATED FAT-FREE
+
+A claim that a food does not contain saturated fat, and any claim likely to have the same meaning for the consumer, may only be made where the sum of saturated fat and trans-fatty acids does not exceed 0,1 g of saturated fat per 100 g or 100 ml.
+
+LOW SUGARS
+
+A claim that a food is low in sugars, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 5 g of sugars per 100 g for solids or 2,5 g of sugars per 100 ml for liquids.
+
+SUGARS-FREE
+
+A claim that a food is sugars-free, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 0,5 g of sugars per 100 g or 100 ml.
+
+WITH NO ADDED SUGARS
+
+A claim stating that sugars have not been added to a food, and any claim likely to have the same meaning for the consumer, may only be made where the product does not contain any added mono- or disaccharides or any other food used for its sweetening properties. If sugars are naturally present in the food, the following indication should also appear on the label: ‘CONTAINS NATURALLY OCCURRING SUGARS’.
+
+LOW SODIUM/SALT
+
+A claim that a food is low in sodium/salt, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 0,12 g of sodium, or the equivalent value for salt, per 100 g or per 100 ml. For waters, other than natural mineral waters falling within the scope of Directive 80/777/EEC, this value should not exceed 2 mg of sodium per 100 ml.
+
+VERY LOW SODIUM/SALT
+
+A claim that a food is very low in sodium/salt, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 0,04 g of sodium, or the equivalent value for salt, per 100 g or per 100 ml. This claim shall not be used for natural mineral waters and other waters.
+
+SODIUM-FREE or SALT-FREE
+
+A claim that a food is sodium-free or salt-free, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 0,005 g of sodium, or the equivalent value for salt, per 100 g.
+
+NO ADDED SODIUM/SALT
+
+A claim stating that sodium/salt has not been added to a food and any claim likely to have the same meaning for the consumer may only be made where the product does not contain any added sodium/salt or any other ingredient containing added sodium/salt and the product contains no more than 0,12 g sodium, or the equivalent value for salt, per 100 g or 100 ml.
+
+SOURCE OF FIBRE
+
+A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal.
+
+HIGH FIBRE
+
+A claim that a food is high in fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 6 g of fibre per 100 g or at least 3 g of fibre per 100 (kcal.
+
+SOURCE OF PROTEIN
+
+A claim that a food is a source of protein, and any claim likely to have the same meaning for the consumer, may only be made where at least 12 % of the energy value of the food is provided by protein.
+
+HIGH PROTEIN
+
+A claim that a food is high in protein, and any claim likely to have the same meaning for the consumer, may only be made where at least 20 % of the energy value of the food is provided by protein.
+
+SOURCE OF [NAME OF VITAMIN/S] AND/OR [NAME OF MINERAL/S]
+
+A claim that a food is a source of vitamins and/or minerals, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least a significant amount as defined in the Annex to Directive 90/496/EEC or an amount provided for by derogations granted according to Article 6 of Regulation (EC) No 1925/2006 of the European Parliament and of the Council of 20 December 2006 on the addition of vitamins and minerals and of certain other substances to foods ( 16 ).
+
+HIGH [NAME OF VITAMIN/S] AND/OR [NAME OF MINERAL/S]
+
+A claim that a food is high in vitamins and/or minerals, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least twice the value of ‘source of [NAME OF VITAMIN/S] and/or [NAME OF MINERAL/S]’.
+
+CONTAINS [NAME OF THE NUTRIENT OR OTHER SUBSTANCE]
+
+A claim that a food contains a nutrient or another substance, for which specific conditions are not laid down in this Regulation, or any claim likely to have the same meaning for the consumer, may only be made where the product complies with all the applicable provisions of this Regulation, and in particular Article 5. For vitamins and minerals the conditions of the claim ‘source of’ shall apply.
+
+INCREASED [NAME OF THE NUTRIENT]
+
+A claim stating that the content in one or more nutrients, other than vitamins and minerals, has been increased, and any claim likely to have the same meaning for the consumer, may only be made where the product meets the conditions for the claim ‘source of’ and the increase in content is at least 30 % compared to a similar product.
+
+REDUCED [NAME OF THE NUTRIENT]
+
+A claim stating that the content in one or more nutrients has been reduced, and any claim likely to have the same meaning for the consumer, may only be made where the reduction in content is at least 30 % compared to a similar product, except for micronutrients, where a 10 % difference in the reference values as set in Directive 90/496/EEC shall be acceptable, and for sodium, or the equivalent value for salt, where a 25 % difference shall be acceptable.
+
+The claim ‘reduced saturated fat’, and any claim likely to have the same meaning for the consumer, may only be made:
+
+(a) if the sum of saturated fatty acids and of trans-fatty acids in the product bearing the claim is at least 30 % less than the sum of saturated fatty acids and of trans-fatty acids in a similar product; and
+
+(b) if the content in trans-fatty acids in the product bearing the claim is equal to or less than in a similar product.
+
+The claim ‘reduced sugars’, and any claim likely to have the same meaning for the consumer, may only be made if the amount of energy of the product bearing the claim is equal to or less than the amount of energy in a similar product.
+
+LIGHT/LITE
+
+A claim stating that a product is ‘light’ or ‘lite’, and any claim likely to have the same meaning for the consumer, shall follow the same conditions as those set for the term ‘reduced’; the claim shall also be accompanied by an indication of the characteristic(s) which make(s) the food ‘light’ or ‘lite’.
+
+NATURALLY/NATURAL
+
+Where a food naturally meets the condition(s) laid down in this Annex for the use of a nutritional claim, the term ‘naturally/natural’ may be used as a prefix to the claim.
+
+SOURCE OF OMEGA-3 FATTY ACIDS
+
+A claim that a food is a source of omega-3 fatty acids, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 0,3 g alpha-linolenic acid per 100 g and per 100 kcal, or at least 40 mg of the sum of eicosapentaenoic acid and docosahexaenoic acid per 100 g and per 100 kcal.
+
+HIGH OMEGA-3 FATTY ACIDS
+
+A claim that a food is high in omega-3 fatty acids, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 0,6 g alpha-linolenic acid per 100 g and per 100 kcal, or at least 80 mg of the sum of eicosapentaenoic acid and docosahexaenoic acid per 100 g and per 100 kcal.
+
+HIGH MONOUNSATURATED FAT
+
+A claim that a food is high in monounsaturated fat, and any claim likely to have the same meaning for the consumer, may only be made where at least 45 % of the fatty acids present in the product derive from monounsaturated fat under the condition that monounsaturated fat provides more than 20 % of energy of the product.
+
+HIGH POLYUNSATURATED FAT
+
+A claim that a food is high in polyunsaturated fat, and any claim likely to have the same meaning for the consumer, may only be made where at least 45 % of the fatty acids present in the product derive from polyunsaturated fat under the condition that polyunsaturated fat provides more than 20 % of energy of the product.
+
+HIGH UNSATURATED FAT
+
+A claim that a food is high in unsaturated fat, and any claim likely to have the same meaning for the consumer may only be made where at least 70 % of the fatty acids present in the product derive from unsaturated fat under the condition that unsaturated fat provides more than 20 % of energy of the product.
