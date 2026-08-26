@@ -1,0 +1,243 @@
+{
+  "note": "hand-authored from fixture ground truth for SPEC-001 (SPEC-001-digestive-biscuits.pdf); ingredient emphasis deliberately cleared so enrichment is exercised",
+  "input_tokens": 1800,
+  "output_tokens": 900,
+  "response": {
+    "product_name": {
+      "value": "Wholemeal Digestive Biscuits",
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "legal_name": {
+      "value": "Wholemeal biscuits",
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Wholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Wholemeal WHEAT flour",
+              "percentage": 51.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Palm oil",
+              "percentage": 19.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Sugar",
+              "percentage": 16.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Partially inverted sugar syrup",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Raising agents",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "allergen_statement": null,
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 400.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before",
+        "raw_text": "Best before end: 10 months from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "storage_conditions": {
+      "value": "Store in a cool, dry place.",
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Ashford Biscuit Company Ltd",
+        "address": "Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom",
+        "country": null
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 1979.0,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "energy_kcal": {
+          "value": 472.0,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "fat_g": {
+          "value": 20.9,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "saturates_g": {
+          "value": 9.8,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 62.1,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "sugars_g": {
+          "value": 16.4,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 4.1,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "protein_g": {
+          "value": 6.9,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "salt_g": {
+          "value": 1.02,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "United Kingdom",
+          "raw_text": "United Kingdom"
+        },
+        "confidence": 1.0,
+        "page": null,
+        "quoted_span": null
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "United Kingdom",
+          "raw_text": "United Kingdom"
+        },
+        "confidence": 1.0,
+        "page": null,
+        "quoted_span": null
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

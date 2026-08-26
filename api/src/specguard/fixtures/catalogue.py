@@ -100,7 +100,7 @@ CATALOGUE: tuple[ProductTemplate, ...] = (
         legal_name="Strawberry yogurt with live cultures",
         net_quantity="500 g",
         ingredients=[
-            IngredientSpec(name="Yogurt", percentage=82.0, allergen="MILK"),
+            IngredientSpec(name="Yogurt (MILK)", percentage=82.0, allergen="MILK"),
             IngredientSpec(name="Strawberries", percentage=12.0),
             IngredientSpec(name="Sugar", percentage=5.0),
             IngredientSpec(name="Pectin"),
@@ -552,7 +552,7 @@ CATALOGUE: tuple[ProductTemplate, ...] = (
         legal_name="Erdbeerjoghurt mit lebenden Kulturen",
         net_quantity="500 g",
         ingredients=[
-            IngredientSpec(name="Joghurt", percentage=82.0, allergen="MILCH"),
+            IngredientSpec(name="Joghurt (MILCH)", percentage=82.0, allergen="MILCH"),
             IngredientSpec(name="Erdbeeren", percentage=12.0),
             IngredientSpec(name="Zucker", percentage=5.0),
             IngredientSpec(name="Pektin"),

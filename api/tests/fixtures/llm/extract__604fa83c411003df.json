@@ -1,0 +1,219 @@
+{
+  "note": "hand-authored from fixture ground truth for SPEC-008 (SPEC-008-de-zartbitterschokolade.pdf); ingredient emphasis deliberately cleared so enrichment is exercised",
+  "input_tokens": 1800,
+  "output_tokens": 900,
+  "response": {
+    "product_name": {
+      "value": "Zartbitterschokolade 70%",
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "legal_name": {
+      "value": "Zartbitterschokolade",
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Kakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin",
+        "items": [
+          {
+            "value": {
+              "name": "Kakaomasse",
+              "percentage": 58.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Zucker",
+              "percentage": 29.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "Kakaobutter",
+              "percentage": 12.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          },
+          {
+            "value": {
+              "name": "SOJA-Lecithin",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": null,
+            "quoted_span": null
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "allergen_statement": null,
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 100.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before",
+        "raw_text": "Mindestens haltbar bis Ende: 15 Monate ab Herstellung",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "storage_conditions": {
+      "value": "Unter 18 °C trocken lagern.",
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Chocolaterie Verhoeven N.V.",
+        "address": "Nijverheidslaan 3, 9000 Gent, Belgien",
+        "country": null
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 2352.0,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "energy_kcal": {
+          "value": 567.0,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "fat_g": {
+          "value": 42.1,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "saturates_g": {
+          "value": 25.3,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 33.8,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "sugars_g": {
+          "value": 29.0,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 10.9,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "protein_g": {
+          "value": 7.8,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "salt_g": {
+          "value": 0.02,
+          "confidence": 1.0,
+          "page": null,
+          "quoted_span": null
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": null,
+      "quoted_span": null
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Belgien",
+          "raw_text": "Belgien"
+        },
+        "confidence": 1.0,
+        "page": null,
+        "quoted_span": null
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Ghana",
+          "raw_text": "Ghana"
+        },
+        "confidence": 1.0,
+        "page": null,
+        "quoted_span": null
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

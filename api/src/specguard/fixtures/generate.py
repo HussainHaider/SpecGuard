@@ -96,6 +96,11 @@ class _Sheet:
     defects: list[SeededDefect] = field(default_factory=list)
 
 
+def _is_liquid(template: ProductTemplate) -> bool:
+    """Whether the net quantity is a volume, which decides the per-100 basis."""
+    return template.net_quantity.strip().split()[-1].lower() in {"ml", "l", "cl"}
+
+
 def _sheet_from(template: ProductTemplate) -> _Sheet:
     """A fully compliant sheet: energy computed from the macros, allergens emphasised."""
     return _Sheet(
@@ -107,7 +112,7 @@ def _sheet_from(template: ProductTemplate) -> _Sheet:
         origin=template.origin,
         primary_ingredient_origin=template.primary_ingredient_origin,
         ingredients=list(template.ingredients),
-        basis="per 100 g",
+        basis="per 100 ml" if _is_liquid(template) else "per 100 g",
         energy_kj=template.nutrients.energy_kj(),
         energy_kcal=template.nutrients.energy_kcal(),
         nutrition_claim=template.nutrition_claim,
@@ -244,8 +249,24 @@ def _allergen_only_in_may_contain(sheet: _Sheet) -> None:
     )
 
 
+def _recompute_energy(sheet: _Sheet) -> None:
+    """Re-derive the energy figures after a defect changed a macronutrient.
+
+    A defect must break exactly the rule it claims to break. Overriding fat to support a
+    bogus "low fat" claim also makes the declared energy wrong, so without this the
+    document fails NUTRITION_ARITHMETIC too and the manifest understates it.
+    """
+    nutrients = sheet.template.nutrients
+    fat = sheet.fat_override if sheet.fat_override is not None else nutrients.fat
+    fibre = sheet.fibre_override if sheet.fibre_override is not None else nutrients.fibre
+    adjusted = nutrients.model_copy(update={"fat": fat, "fibre": fibre})
+    sheet.energy_kj = adjusted.energy_kj()
+    sheet.energy_kcal = adjusted.energy_kcal()
+
+
 def _unsupported_fibre_claim(sheet: _Sheet) -> None:
     sheet.fibre_override = 1.2
+    _recompute_energy(sheet)
     sheet.nutrition_claim = "Source of fibre"
     sheet.defects.append(
         SeededDefect(
@@ -261,6 +282,7 @@ def _unsupported_fibre_claim(sheet: _Sheet) -> None:
 
 def _unsupported_low_fat_claim(sheet: _Sheet) -> None:
     sheet.fat_override = 12.4
+    _recompute_energy(sheet)
     sheet.nutrition_claim = "Low fat"
     sheet.defects.append(
         SeededDefect(
@@ -731,6 +753,23 @@ def generate(output_dir: Path) -> list[SpecFixture]:
             )
         )
     return fixtures
+
+
+def build_sheets() -> list[tuple[str, _Sheet]]:
+    """The planned sheets, keyed by spec id, without rendering anything.
+
+    Lets the rules be tested against ground truth for all thirty fixtures with no model
+    in the loop: we know exactly what was rendered, so we know exactly what a perfect
+    extraction would produce.
+    """
+    sheets: list[tuple[str, _Sheet]] = []
+    for index, case in enumerate(_plan_cases(), start=1):
+        sheet = _sheet_from(case.template)
+        sheet.injected_instruction = case.injection
+        for defect in case.defects:
+            defect.apply(sheet)
+        sheets.append((f"SPEC-{index:03d}", sheet))
+    return sheets
 
 
 def write_manifest(fixtures: list[SpecFixture], path: Path) -> None:
