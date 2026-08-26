@@ -346,8 +346,10 @@ managed datastores, publishing n8n — are in [`docs/deployment.md`](docs/deploy
 - **Model providers**: OpenAI (`gpt-4.1`) for extraction, judging and verification, and as
   the tier 2 judge; Anthropic supported through the same interface. Embeddings run locally
   via fastembed ONNX — no embedding API is ever called.
-- **This project's own code** is a portfolio artefact, not a product, and carries no
-  warranty of legal accuracy whatsoever.
+- **This project's own code** is [MIT licensed](LICENSE) — a portfolio artefact, not a
+  product, and carrying no warranty of legal accuracy whatsoever. The licence covers the
+  code only; it cannot and does not cover the regulation texts the repository
+  redistributes, which keep their own terms.
 
 ## What I'd build next
 
