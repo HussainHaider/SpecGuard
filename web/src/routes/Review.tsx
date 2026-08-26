@@ -68,6 +68,16 @@ export default function Review() {
         </p>
       ) : null}
 
+      {report?.demo ? (
+        <section className="notice notice--demo">
+          <strong>Replayed result.</strong>{" "}
+          {report.demo_note ??
+            "This report was computed in advance and is served from a fixture."}{" "}
+          This deployment runs no model and indexes nothing; it exists so the output can be
+          read without anyone paying for it.
+        </section>
+      ) : null}
+
       {report ? (
         <>
           <section className="summary">

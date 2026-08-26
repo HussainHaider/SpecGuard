@@ -1,0 +1,522 @@
+{
+  "report_id": "44cd5751-674e-52b1-af44-e165e7ef9e3c",
+  "job_id": null,
+  "created_at": "2026-08-26T00:00:00Z",
+  "spec": {
+    "spec_id": "0c72e84e-2ede-4974-898c-b8a35c674201",
+    "source": {
+      "filename": "SPEC-017-de-vollkornbrot.pdf",
+      "sha256": "423ccde9ed9a715bd53a6a32d91823d3661522b14c85706a0ae9a60f82b54bcc",
+      "page_count": 1,
+      "byte_size": 2724
+    },
+    "language": "de",
+    "extracted_at": "2026-08-26T17:41:54.257343Z",
+    "extractor_model": "recorded",
+    "extractor_prompt_version": "extract@v2",
+    "product_name": {
+      "value": "Vollkornbrot, geschnitten",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUKTSPEZIFIKATION\nVollkornbrot, geschnitten"
+    },
+    "legal_name": {
+      "value": "Weizenvollkornbrot, geschnitten",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Bezeichnung des Lebensmittels Weizenvollkornbrot, geschnitten"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "WEIZEN-Vollkornmehl 68%, Wasser, Hefe, Speisesalz, Rapsoel 1.4%",
+        "items": [
+          {
+            "value": {
+              "name": "WEIZEN-Vollkornmehl",
+              "percentage": 68.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "WEIZEN-Vollkornmehl 68%"
+          },
+          {
+            "value": {
+              "name": "Wasser",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Wasser"
+          },
+          {
+            "value": {
+              "name": "Hefe",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Hefe"
+          },
+          {
+            "value": {
+              "name": "Speisesalz",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Speisesalz"
+          },
+          {
+            "value": {
+              "name": "Rapsoel",
+              "percentage": 1.4,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Rapsoel 1.4%"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Zutaten\nWEIZEN-Vollkornmehl 68%, Wasser, Hefe, Speisesalz, Rapsoel 1.4%"
+    },
+    "allergen_statement": {
+      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 750.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nettofuellmenge 750 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before",
+        "raw_text": "Mindestens haltbar bis: 6 Tage ab Herstellung",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Haltbarkeit Mindestens haltbar bis: 6 Tage ab Herstellung"
+    },
+    "storage_conditions": {
+      "value": "Kuehl und trocken lagern.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Aufbewahrungsbedingungen Kuehl und trocken lagern."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Backhaus Westfalen GmbH",
+        "address": "Muehlenweg 8, 48143 Muenster, Deutschland",
+        "country": "Deutschland"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Lieferant Backhaus Westfalen GmbH, Muehlenweg 8, 48143 Muenster, Deutschland"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_portion",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Naehrstoff per 30 g portion"
+        },
+        "portion_size": {
+          "value": {
+            "value": 30.0,
+            "unit": "g"
+          },
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "per 30 g portion"
+        },
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 964.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 964 kJ / 228 kcal"
+        },
+        "energy_kcal": {
+          "value": 228.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 964 kJ / 228 kcal"
+        },
+        "fat_g": {
+          "value": 2.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fett 2.4 g"
+        },
+        "saturates_g": {
+          "value": 0.5,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon gesaettigte Fettsaeuren 0.5 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 38.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Kohlenhydrate 38.9 g"
+        },
+        "sugars_g": {
+          "value": 2.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon Zucker 2.6 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 6.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Ballaststoffe 6.8 g"
+        },
+        "protein_g": {
+          "value": 9.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Eiweiss 9.4 g"
+        },
+        "salt_g": {
+          "value": 0.98,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salz 0.98 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 30 g portion\nEnergie 964 kJ / 228 kcal\nFett 2.4 g\ndavon gesaettigte Fettsaeuren 0.5 g\nKohlenhydrate 38.9 g\ndavon Zucker 2.6 g\nBallaststoffe 6.8 g\nEiweiss 9.4 g\nSalz 0.98 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Deutschland",
+          "raw_text": "Ursprungsland Deutschland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprungsland Deutschland"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Deutschland",
+          "raw_text": "Ursprung der primaeren Zutat Deutschland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprung der primaeren Zutat Deutschland"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Ballaststoffquelle",
+          "kind": "nutrition",
+          "nutrient": "Ballaststoffe"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ballaststoffquelle"
+      }
+    ],
+    "unmapped_notes": []
+  },
+  "results": [
+    {
+      "rule_id": "MANDATORY_FIELDS",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "9",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "d1ad65a4-5cff-588e-b833-1f14674b3751",
+          "quoted_span": "In accordance with Articles 10 to 35 and subject to the exceptions contained in this Chapter, indication of the following particulars shall be mandatory",
+          "source_version": "02011R1169-20180101-de",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "All mandatory particulars required by Art. 9(1) are present.",
+      "suggested_fix": null,
+      "confidence": 0.95,
+      "abstention_reason": null,
+      "metrics": {
+        "missing_count": 0.0
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_ARITHMETIC",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "31",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "2011ef14-30fc-5848-a523-86a8aebf4f68",
+          "quoted_span": "The energy value shall be calculated using the conversion factors listed in Annex XIV.",
+          "source_version": "02011R1169-20180101-de",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "Declared energy agrees with the value computed from the macronutrients using the Annex XIV factors, within 5%.",
+      "suggested_fix": null,
+      "confidence": 0.9,
+      "abstention_reason": null,
+      "metrics": {
+        "tolerance_pct": 5.0,
+        "declared_kJ": 964.0,
+        "computed_kJ": 964.3,
+        "deviation_kJ_pct": 0.0,
+        "declared_kcal": 228.0,
+        "computed_kcal": 228.4,
+        "deviation_kcal_pct": 0.2,
+        "kj_kcal_drift_pct": 1.1
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_PER_100",
+      "verdict": "FAIL",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "32",
+          "paragraph": "2",
+          "point": null,
+          "chunk_id": "b42092a8-80ee-5c9c-8b04-db98593e6f04",
+          "quoted_span": "The energy value and the amount of nutrients referred to in Article 30(1) to (5) shall be expressed per 100 g or per 100 ml",
+          "source_version": "02011R1169-20180101-de",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "The nutrition declaration is expressed per portion only. Art. 32(2) requires a per 100 g or per 100 ml declaration; a per-portion or per-pack figure may only be given in addition to it.",
+      "suggested_fix": "Restate the nutrition declaration per 100 g or per 100 ml. Keep the per-portion figures alongside it if they are wanted.",
+      "confidence": 0.97,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "ALLERGEN_EMPHASIS",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "21",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "0ccb0786-2f1c-5f45-8bbd-277ab8cacd5c",
+          "quoted_span": "emphasised through a typeset that clearly distinguishes it from the rest of the list of ingredients, for instance by means of the font, style or background colour",
+          "source_version": "02011R1169-20180101-de",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "All 1 Annex II substance(s) in the ingredient list are emphasised (uppercase).",
+      "suggested_fix": null,
+      "confidence": 0.92,
+      "abstention_reason": null,
+      "metrics": {
+        "allergens_found": 1.0,
+        "unemphasised_count": 0.0
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_CLAIM_CONDITIONS",
+      "verdict": "NEEDS_REVIEW",
+      "citations": [],
+      "rationale": "The product makes the nutrition claim 'Ballaststoffquelle' (source of fibre). However, none of the retrieved regulation clauses include the conditions of use for the claim 'source of fibre' or its German equivalent. The only nutrition claim condition provided is for 'energiearm' (low energy), which is not relevant to the claim made. Therefore, I cannot determine compliance for the 'source of fibre' claim based on the supplied clauses.",
+      "suggested_fix": null,
+      "confidence": 0.3,
+      "abstention_reason": "judge_uncertain",
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_nutrition_claim_conditions@v1",
+          "input_tokens": 3445,
+          "output_tokens": 180,
+          "cost_usd": 0.00833,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    },
+    {
+      "rule_id": "ORIGIN_DECLARATION",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "26",
+          "paragraph": "2",
+          "point": null,
+          "chunk_id": "b24bc226-c399-5f65-bcfc-39811a5305d2",
+          "quoted_span": "Die Angabe des Ursprungslands oder des Herkunftsorts ist in folgenden Fällen verpflichtend: a) falls ohne diese Angabe eine Irreführung der Verbraucher über das tatsächliche Ursprungsland oder den tatsächlichen Herkunftsort des Lebensmittels möglich wäre, insbesondere wenn die dem Lebensmittel beigefügten Informationen oder das Etikett insgesamt sonst den Eindruck erwecken würden, das Lebensmittel komme aus einem anderen Ursprungsland oder Herkunftsort;",
+          "source_version": "02011R1169-20180101-de",
+          "eurlex_url": null,
+          "retrieval_score": 0.5
+        },
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "26",
+          "paragraph": "3",
+          "point": null,
+          "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+          "quoted_span": "Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so a) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder b) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel.",
+          "source_version": "02011R1169-20180101-de",
+          "eurlex_url": null,
+          "retrieval_score": 0.33333334
+        }
+      ],
+      "rationale": "The specification declares the country of origin for both the product and its primary ingredient (Weizenvollkornmehl, 68%) as 'Deutschland'. According to Art. 26(2) and (3), the origin must be given if omitting it could mislead, and if the primary ingredient's origin differs from the product's, this must be stated. Here, both are 'Deutschland', so there is no discrepancy and the requirement is satisfied.",
+      "suggested_fix": null,
+      "confidence": 1.0,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_origin_declaration@v1",
+          "input_tokens": 3434,
+          "output_tokens": 395,
+          "cost_usd": 0.010028,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 984,
+          "output_tokens": 116,
+          "cost_usd": 0.002896,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 1,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    },
+    {
+      "rule_id": "LEGAL_NAME_AND_QUID",
+      "verdict": "NEEDS_REVIEW",
+      "citations": [],
+      "rationale": "The product is given a legal name, 'Weizenvollkornbrot, geschnitten', which is a customary and descriptive name for this type of bread in Germany. The ingredient 'WEIZEN-Vollkornmehl' (whole wheat flour) is both in the name and emphasised in the ingredients list, and its quantitative declaration (68%) is provided. This satisfies the requirement for a QUID declaration where the ingredient appears in the name and is emphasised. (verification: no cited clause supports this verdict — Regulation (EU) No 1169/2011 Annex VII, Part E.1 insufficient)",
+      "suggested_fix": null,
+      "confidence": 0.3,
+      "abstention_reason": "citation_unverified",
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_legal_name_and_quid@v1",
+          "input_tokens": 3772,
+          "output_tokens": 229,
+          "cost_usd": 0.009376,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 858,
+          "output_tokens": 143,
+          "cost_usd": 0.00286,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 1,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    }
+  ],
+  "guardrails": {
+    "injection_suspected": false,
+    "injection_signals": [],
+    "low_confidence_fields": [],
+    "unreadable_pages": []
+  },
+  "demo": false,
+  "demo_note": null,
+  "corpus_version": "02011R1169-20180101-de",
+  "graph_version": "graph@v1",
+  "duration_ms": 0,
+  "overall_verdict": "FAIL",
+  "counts": {
+    "PASS": 4,
+    "FAIL": 1,
+    "NEEDS_REVIEW": 2
+  },
+  "total_cost_usd": 0.03349
+}

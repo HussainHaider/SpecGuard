@@ -170,9 +170,11 @@ class WorkerSettings:
     max_jobs = 4
     job_timeout = 600
 
-    @staticmethod
-    def redis_settings() -> RedisSettings:
-        return RedisSettings.from_dsn(get_settings().redis_url)
+    # A plain class attribute, not a staticmethod. arq reads `WorkerSettings.redis_settings`
+    # as a value; declared as a method it hands arq the staticmethod object itself, and
+    # the worker dies with `'staticmethod' object has no attribute 'host'` before it
+    # takes a single job. Evaluated at import, which is when a worker process starts.
+    redis_settings: RedisSettings = RedisSettings.from_dsn(get_settings().redis_url)
 
 
 # The API enqueues by name and arq resolves by name, so a rename on either side is

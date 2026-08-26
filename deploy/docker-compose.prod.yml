@@ -1,0 +1,123 @@
+# Production overlay. Used with the base file, never on its own:
+#
+#   docker compose -f docker-compose.yml -f deploy/docker-compose.prod.yml \
+#     --profile app up -d
+#
+# What this changes, and why each one matters on a public box:
+#
+#   * Nothing but Caddy listens on a public interface. The base file publishes Postgres,
+#     Qdrant, Redis, the API, the UI and n8n for local development; here every one of
+#     those ports is withdrawn and reached over an SSH tunnel instead.
+#   * Every service gets a memory limit. One runaway embedding job should degrade one
+#     container, not take the box down with the OOM killer picking a victim at random.
+#   * Restart policies, because this is a single VM with no orchestrator to reschedule.
+#   * DEMO_MODE is on. The public instance replays pre-computed reports and calls no
+#     model: an open upload endpoint wired to a paid API is a bill anyone can run up.
+
+services:
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SPECGUARD_DOMAIN: ${SPECGUARD_DOMAIN:?set SPECGUARD_DOMAIN}
+      SPECGUARD_BASIC_AUTH_USER: ${BASIC_AUTH_USER:-reviewer}
+      SPECGUARD_BASIC_AUTH_HASH: ${BASIC_AUTH_HASH:?set BASIC_AUTH_HASH, from `caddy hash-password`}
+      CADDY_EMAIL: ${CADDY_EMAIL:-admin@example.com}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+      - web
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  db:
+    # Withdrawn from the host. `ports: []` rather than omitting the key: the base file
+    # publishes 5432, and an override has to actively cancel it.
+    ports: []
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  qdrant:
+    ports: []
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  redis:
+    ports: []
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  api:
+    ports: []
+    restart: unless-stopped
+    environment:
+      DEMO_MODE: "true"
+      LOG_LEVEL: INFO
+      CORS_ORIGINS: '["https://${SPECGUARD_DOMAIN}"]'
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  worker:
+    restart: unless-stopped
+    # In demo mode nothing is ever queued, so the worker is idle by design. It stays in
+    # the deployment so that turning DEMO_MODE off is a one-line change rather than a
+    # different topology.
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  web:
+    ports: []
+    restart: unless-stopped
+    build:
+      args:
+        VITE_API_BASE_URL: https://${SPECGUARD_DOMAIN}
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+
+  n8n:
+    # Never published. n8n holds credentials and can execute shell commands; it is
+    # reached over an SSH tunnel:
+    #
+    #   ssh -N -L 5678:localhost:5678 deploy@$SPECGUARD_DOMAIN
+    #
+    # and then opened at http://localhost:5678 on the laptop.
+    ports: []
+    restart: unless-stopped
+    environment:
+      N8N_HOST: localhost
+      WEBHOOK_URL: http://localhost:5678/
+      # The editor is only ever reached through the tunnel, so it binds to the container
+      # network and Caddy has no route to it at all.
+      N8N_LISTEN_ADDRESS: 0.0.0.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+volumes:
+  caddy_data:
+  caddy_config:

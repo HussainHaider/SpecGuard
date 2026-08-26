@@ -1,6 +1,9 @@
-# db, qdrant and redis are the backing services; api, worker and web sit behind the
-# `app` profile, so `docker compose up` starts the datastores and nothing else.
-# Bring the application up with `docker compose --profile app up`.
+# db, qdrant and redis are the backing services; api, worker, web and n8n sit behind
+# the `app` profile, so `docker compose up` starts the datastores and nothing else.
+# Bring the whole thing up with `docker compose --profile app up`.
+#
+# Production overrides live in deploy/docker-compose.prod.yml — basic auth at Caddy,
+# resource limits, and no published database, vector store or n8n ports.
 
 name: specguard
 
@@ -27,7 +30,10 @@ services:
     restart: unless-stopped
 
   qdrant:
-    image: qdrant/qdrant:v1.12.4
+    # Pinned to match the qdrant-client the lockfile resolves to. The client refuses a
+    # major mismatch and warns on more than one minor, and a warning nobody acts on is
+    # how a genuine incompatibility gets missed later.
+    image: qdrant/qdrant:v1.19.0
     ports:
       - "${QDRANT_HTTP_PORT:-6333}:6333"   # REST + dashboard at /dashboard
       - "${QDRANT_GRPC_PORT:-6334}:6334"   # gRPC, used by qdrant-client
@@ -65,16 +71,34 @@ services:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
       QDRANT_URL: http://qdrant:6333
       REDIS_URL: redis://redis:6379/0
+      # Absolute, because the package lives at /app/src/specguard in the image and
+      # deriving a repository root from __file__ lands on / in a container.
+      CORPUS_DIR: /app/corpus
+      FIXTURES_DIR: /app/fixtures
+      # Declared here as well as in .env so it can be flipped for one run:
+      #   DEMO_MODE=true docker compose --profile app up -d api
+      # An `environment:` entry wins over `env_file:`, which is what makes the override
+      # take effect at all.
+      DEMO_MODE: ${DEMO_MODE:-false}
     ports:
       - "${API_PORT:-8000}:8000"
     volumes:
       - ./corpus:/app/corpus:ro
       - ./fixtures:/app/fixtures:ro
+      # The API writes the upload; the worker reads it. Two containers, so this has to
+      # be a shared volume — on a container-local /tmp the worker looks for a file that
+      # only ever existed in the API's filesystem.
+      - uploads:/tmp/specguard-uploads
+      - fastembed_cache:/app/.cache/fastembed
     depends_on:
       db:
         condition: service_healthy
       qdrant:
         condition: service_started
+      # The API enqueues on submit. Without Redis it still serves stored reports and
+      # says so at /healthz, but nothing new can be queued.
+      redis:
+        condition: service_healthy
 
   worker:
     profiles: ["app"]
@@ -91,9 +115,15 @@ services:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
       QDRANT_URL: http://qdrant:6333
       REDIS_URL: redis://redis:6379/0
+      # Absolute, because the package lives at /app/src/specguard in the image and
+      # deriving a repository root from __file__ lands on / in a container.
+      CORPUS_DIR: /app/corpus
+      FIXTURES_DIR: /app/fixtures
     volumes:
       - ./corpus:/app/corpus:ro
       - ./fixtures:/app/fixtures:ro
+      - uploads:/tmp/specguard-uploads
+      - fastembed_cache:/app/.cache/fastembed
     depends_on:
       db:
         condition: service_healthy
@@ -117,6 +147,50 @@ services:
     depends_on:
       - api
 
+  # Community edition, self-hosted from this file. No cloud account, no licence key.
+  # First start asks you to create a local owner account — that is expected and the
+  # account never leaves this machine.
+  n8n:
+    profiles: ["app"]
+    image: n8nio/n8n:1.70.1
+    environment:
+      # Explicit, and the single most important line in this service. n8n encrypts
+      # saved credentials with this key. Left unset it generates one into the volume on
+      # first start, so a volume reset — or a fresh clone — silently orphans every
+      # credential that was saved under the old key, with no way to recover them.
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:?set N8N_ENCRYPTION_KEY in .env}
+      # Schedule triggers fire in this zone. Unset, the weekly regulation watcher runs
+      # at an hour nobody chose.
+      GENERIC_TIMEZONE: ${GENERIC_TIMEZONE:-Europe/Berlin}
+      TZ: ${GENERIC_TIMEZONE:-Europe/Berlin}
+      N8N_HOST: ${N8N_HOST:-localhost}
+      # What n8n prints as a node's callback address. Wrong here means a webhook URL
+      # that looks right in the editor and resolves to nothing.
+      WEBHOOK_URL: ${WEBHOOK_URL:-http://localhost:5678/}
+      N8N_PORT: 5678
+      N8N_DIAGNOSTICS_ENABLED: "false"
+      N8N_RUNNERS_ENABLED: "true"
+      # Workflows are exported to n8n/ as JSON and committed; this is the path both
+      # `just n8n-export` and `just n8n-import` address.
+      N8N_USER_FOLDER: /home/node/.n8n
+    ports:
+      # Published for local development only. The production override drops this: n8n
+      # holds credentials and has no business on a public interface, and it is reached
+      # over an SSH tunnel instead (docs/deployment.md).
+      - "${N8N_PORT:-5678}:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+      # Bind-mounted rather than a volume: these files are committed to the repository,
+      # so an export lands in the working tree where it can be reviewed and a clean
+      # clone already has the workflows to import.
+      - ./n8n:/workflows
+    depends_on:
+      - api
+    restart: unless-stopped
+
 volumes:
   db_data:
   qdrant_data:
+  n8n_data:
+  uploads:
+  fastembed_cache:

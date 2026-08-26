@@ -1,0 +1,569 @@
+{
+  "report_id": "fe36ca0f-820e-59c0-bbb0-334e81353b2a",
+  "job_id": null,
+  "created_at": "2026-08-26T00:00:00Z",
+  "spec": {
+    "spec_id": "8426993d-0d0e-4ab3-a1f5-680bd825086f",
+    "source": {
+      "filename": "SPEC-021-pasta-sauce.pdf",
+      "sha256": "3e4ff9cb5f392df72195497d3cac16b0bb9d899e12347b652f7ee4276c6cdf35",
+      "page_count": 1,
+      "byte_size": 2698
+    },
+    "language": "en",
+    "extracted_at": "2026-08-26T17:41:54.150216Z",
+    "extractor_model": "recorded",
+    "extractor_prompt_version": "extract@v2",
+    "product_name": {
+      "value": "Pasta Sauce with Mushrooms",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nPasta Sauce with Mushrooms"
+    },
+    "legal_name": {
+      "value": "Tomato sauce with mushrooms for pasta",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Tomato sauce with mushrooms for pasta"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Tomatoes 62%, Mushrooms 14%, Onions 8%, Olive oil 3.5%, Garlic 1%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Tomatoes",
+              "percentage": 62.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Tomatoes 62%"
+          },
+          {
+            "value": {
+              "name": "Mushrooms",
+              "percentage": 14.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Mushrooms 14%"
+          },
+          {
+            "value": {
+              "name": "Onions",
+              "percentage": 8.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Onions 8%"
+          },
+          {
+            "value": {
+              "name": "Olive oil",
+              "percentage": 3.5,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Olive oil 3.5%"
+          },
+          {
+            "value": {
+              "name": "Garlic",
+              "percentage": 1.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Garlic 1%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "none"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nTomatoes 62%, Mushrooms 14%, Onions 8%, Olive oil 3.5%, Garlic 1%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 440.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 440 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before",
+        "raw_text": "Best before: 18 months from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Best before: 18 months from production"
+    },
+    "storage_conditions": {
+      "value": "Store in a cool, dry place. Refrigerate after opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Store in a cool, dry place. Refrigerate after opening."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Salsa Bella S.r.l.",
+        "address": "Strada Provinciale 22, 43122 Parma, Italy",
+        "country": "Italy"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Salsa Bella S.r.l., Strada Provinciale 22, 43122 Parma, Italy"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 285.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 285 kJ / 68 kcal"
+        },
+        "energy_kcal": {
+          "value": 68.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 285 kJ / 68 kcal"
+        },
+        "fat_g": {
+          "value": 3.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 3.9 g"
+        },
+        "saturates_g": {
+          "value": 0.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 0.6 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 6.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 6.2 g"
+        },
+        "sugars_g": {
+          "value": 5.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 5.1 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 1.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 1.2 g"
+        },
+        "protein_g": {
+          "value": 1.5,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 1.5 g"
+        },
+        "salt_g": {
+          "value": 0.71,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.71 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 285 kJ / 68 kcal\nFat 3.9 g\nof which saturates 0.6 g\nCarbohydrate 6.2 g\nof which sugars 5.1 g\nFibre 1.2 g\nProtein 1.5 g\nSalt 0.71 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Italy",
+          "raw_text": "Country of origin Italy"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Italy"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Italy",
+          "raw_text": "Origin of primary ingredient Italy"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Italy"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Source of fibre",
+          "kind": "nutrition",
+          "nutrient": "fibre"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Source of fibre"
+      }
+    ],
+    "unmapped_notes": []
+  },
+  "results": [
+    {
+      "rule_id": "MANDATORY_FIELDS",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "9",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "fcbb7bf7-a38b-5338-b0a8-96f15aa28610",
+          "quoted_span": "In accordance with Articles 10 to 35 and subject to the exceptions contained in this Chapter, indication of the following particulars shall be mandatory",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "All mandatory particulars required by Art. 9(1) are present.",
+      "suggested_fix": null,
+      "confidence": 0.95,
+      "abstention_reason": null,
+      "metrics": {
+        "missing_count": 0.0
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_ARITHMETIC",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "31",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "a6d7d921-b7b6-5f6b-9d44-38f2973a50a9",
+          "quoted_span": "The energy value shall be calculated using the conversion factors listed in Annex XIV.",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "Declared energy agrees with the value computed from the macronutrients using the Annex XIV factors, within 5%.",
+      "suggested_fix": null,
+      "confidence": 0.9,
+      "abstention_reason": null,
+      "metrics": {
+        "tolerance_pct": 5.0,
+        "declared_kJ": 285.0,
+        "computed_kJ": 284.8,
+        "deviation_kJ_pct": 0.1,
+        "declared_kcal": 68.0,
+        "computed_kcal": 68.3,
+        "deviation_kcal_pct": 0.4,
+        "kj_kcal_drift_pct": 0.2
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_PER_100",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "32",
+          "paragraph": "2",
+          "point": null,
+          "chunk_id": "fdd69745-ac72-5927-b1de-b254adf29934",
+          "quoted_span": "The energy value and the amount of nutrients referred to in Article 30(1) to (5) shall be expressed per 100 g or per 100 ml",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "The nutrition declaration is expressed per 100g.",
+      "suggested_fix": null,
+      "confidence": 0.97,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "ALLERGEN_EMPHASIS",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "21",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "f6b5af47-a57a-561e-8045-f0e1551a97e5",
+          "quoted_span": "emphasised through a typeset that clearly distinguishes it from the rest of the list of ingredients, for instance by means of the font, style or background colour",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "No Annex II substance appears in the ingredient list, so no emphasis is required.",
+      "suggested_fix": null,
+      "confidence": 0.9,
+      "abstention_reason": null,
+      "metrics": {
+        "allergens_found": 0.0
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_CLAIM_CONDITIONS",
+      "verdict": "FAIL",
+      "citations": [
+        {
+          "regulation": "Regulation (EC) No 1924/2006",
+          "article": "Annex",
+          "paragraph": "SOURCE OF FIBRE",
+          "point": null,
+          "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+          "quoted_span": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal.",
+          "source_version": "02006R1924-20141213-en",
+          "eurlex_url": null,
+          "retrieval_score": 1.0
+        }
+      ],
+      "rationale": "The product makes the nutrition claim 'Source of fibre'. According to the regulation, to make this claim, the product must contain at least 3 g of fibre per 100 g or at least 1.5 g of fibre per 100 kcal. The declared nutrition values are 1.2 g fibre per 100 g and 68 kcal per 100 g, which is also 1.2 g fibre per 68 kcal. This is below both thresholds required for the claim. Therefore, the product does not meet the conditions of use for the 'Source of fibre' claim.",
+      "suggested_fix": "Remove the 'Source of fibre' claim from the packaging or reformulate the product to increase the fibre content to at least 3 g per 100 g or 1.5 g per 100 kcal.",
+      "confidence": 1.0,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_nutrition_claim_conditions@v1",
+          "input_tokens": 3324,
+          "output_tokens": 301,
+          "cost_usd": 0.009056,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 884,
+          "output_tokens": 89,
+          "cost_usd": 0.00248,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 1,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    },
+    {
+      "rule_id": "ORIGIN_DECLARATION",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "26",
+          "paragraph": "3",
+          "point": null,
+          "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+          "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food.",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": 0.8333334
+        }
+      ],
+      "rationale": "The specification declares the country of origin for both the product and its primary ingredient (tomatoes, 62%) as Italy. Regulation (EU) No 1169/2011 Art. 26(3) requires that if the origin of the food is given and it differs from that of the primary ingredient, the origin of the primary ingredient must also be given or a statement that it differs. Here, both are declared as Italy, so there is no discrepancy, and the requirement is satisfied. Additionally, there is no evidence that omitting the origin would mislead the consumer, and the origin is clearly stated.",
+      "suggested_fix": null,
+      "confidence": 1.0,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_origin_declaration@v1",
+          "input_tokens": 3386,
+          "output_tokens": 285,
+          "cost_usd": 0.009052,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 953,
+          "output_tokens": 122,
+          "cost_usd": 0.002882,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    },
+    {
+      "rule_id": "LEGAL_NAME_AND_QUID",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "22",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+          "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer;",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": 0.6666667
+        },
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "18",
+          "paragraph": "2",
+          "point": null,
+          "chunk_id": "d7b99676-bc00-5f2e-95b9-d6027762424a",
+          "quoted_span": "Ingredients shall be designated by their specific name, where applicable, in accordance with the rules laid down in Article 17 and in Annex VI.",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": 0.25
+        }
+      ],
+      "rationale": "The product is given a legal name: 'Tomato sauce with mushrooms for pasta', which is a descriptive and customary name, not just a brand or fancy name. The ingredients list provides a quantitative declaration (QUID) for both 'Tomatoes' (62%) and 'Mushrooms' (14%), which are both mentioned in the name of the food. This satisfies the requirement that a QUID is given where an ingredient appears in the name of the food. The retrieved clauses establish both requirements and the specification meets them.",
+      "suggested_fix": null,
+      "confidence": 1.0,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_legal_name_and_quid@v1",
+          "input_tokens": 4433,
+          "output_tokens": 311,
+          "cost_usd": 0.011354,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 812,
+          "output_tokens": 122,
+          "cost_usd": 0.0026,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 909,
+          "output_tokens": 95,
+          "cost_usd": 0.002578,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 1,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    }
+  ],
+  "guardrails": {
+    "injection_suspected": false,
+    "injection_signals": [],
+    "low_confidence_fields": [],
+    "unreadable_pages": []
+  },
+  "demo": false,
+  "demo_note": null,
+  "corpus_version": "02011R1169-20180101-en",
+  "graph_version": "graph@v1",
+  "duration_ms": 0,
+  "overall_verdict": "FAIL",
+  "counts": {
+    "PASS": 6,
+    "FAIL": 1,
+    "NEEDS_REVIEW": 0
+  },
+  "total_cost_usd": 0.040001999999999996
+}

@@ -16,6 +16,7 @@ from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from specguard import demo
 from specguard.api.deps import get_session
 from specguard.api.metrics import GUARDRAIL_TRIPS, REGISTRY
 from specguard.api.schemas import (
@@ -71,6 +72,7 @@ async def submit_check(
         log.warning("upload.rejected", filename=filename, reason=str(error))
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, str(error)) from error
 
+    settings = get_settings()
     job = Job(
         correlation_id=correlation_id,
         status=JobStatus.QUEUED,
@@ -81,6 +83,24 @@ async def submit_check(
     )
     session.add(job)
     await session.flush()
+
+    if settings.demo_mode:
+        # Nothing is written to disk and nothing is queued. The demo path never builds a
+        # model client or a vector store, so there is no configuration under which a
+        # public deployment quietly starts spending money.
+        try:
+            report = demo.report_for(payload)
+        except demo.NoDemoReportError as error:
+            await session.delete(job)
+            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, str(error)) from error
+
+        job.status = JobStatus.SUCCEEDED
+        job.finished_at = dt.datetime.now(dt.UTC)
+        job.report = report.model_dump(mode="json")
+        job.graph_version = report.graph_version
+        job.corpus_version = report.corpus_version
+        log.info("check.replayed", job_id=str(job.id), filename=filename)
+        return CheckAccepted(job_id=job.id, status=job.status, correlation_id=correlation_id)
 
     # Off the event loop: a 10 MB write is long enough to stall every other request
     # on this worker while it happens.
@@ -190,6 +210,85 @@ async def submit_feedback(
     )
 
 
+@router.post(
+    "/checks/{job_id}/recheck",
+    response_model=CheckAccepted,
+    status_code=status.HTTP_202_ACCEPTED,
+)
+async def recheck(
+    job_id: uuid.UUID,
+    request: Request,
+    session: Annotated[AsyncSession, Depends(get_session)],
+) -> CheckAccepted:
+    """Re-run a stored check against the current corpus.
+
+    Called by the weekly regulation watcher after a re-index, for the checks whose cited
+    clauses actually changed. It re-runs the *document*, not the report: a verdict is only
+    worth anything if it was produced from the specification it claims to describe.
+
+    Uploads are deleted once a check succeeds (docs/decisions.md 014), so the document
+    usually is not there any more. Rather than pretend, this refuses with 409 and says so
+    — and the sample specifications published with this repository are still on disk, so
+    the path is exercisable end to end on the synthetic corpus it was built for.
+    """
+    job = await session.get(Job, job_id)
+    if job is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, f"No check with id {job_id}.")
+
+    source = _source_document(job.sha256)
+    if source is None:
+        raise HTTPException(
+            status.HTTP_409_CONFLICT,
+            "The document behind this check is no longer retained, so it cannot be "
+            "re-run. Resubmit the specification to check it against the current corpus.",
+        )
+
+    correlation_id = bind_correlation_id(job.correlation_id)
+    replacement = Job(
+        correlation_id=correlation_id,
+        status=JobStatus.QUEUED,
+        filename=job.filename,
+        sha256=job.sha256,
+        byte_size=source.stat().st_size,
+        language=job.language,
+    )
+    session.add(replacement)
+    await session.flush()
+
+    await anyio.to_thread.run_sync(_persist_upload, replacement.id, source.read_bytes())
+
+    queue = request.app.state.queue
+    if queue is None:
+        raise HTTPException(
+            status.HTTP_503_SERVICE_UNAVAILABLE, "The queue is unavailable; nothing was queued."
+        )
+    await queue.enqueue_job(WORKER_FUNCTION, str(replacement.id), _job_id=str(replacement.id))
+    log.info("check.requeued", job_id=str(replacement.id), original=str(job.id))
+
+    return CheckAccepted(
+        job_id=replacement.id, status=replacement.status, correlation_id=correlation_id
+    )
+
+
+def _source_document(sha256: str) -> Path | None:
+    """The document behind a stored check, if it is still on disk.
+
+    Looks in the upload spool first, then among the published sample specifications —
+    matched by content hash, never by filename, so a renamed file is still the same
+    document and a different file with the same name is not.
+    """
+    for path in UPLOAD_DIR.glob("*.pdf"):
+        if hashlib.sha256(path.read_bytes()).hexdigest() == sha256:
+            return path
+
+    samples = get_settings().fixtures_dir / "specs" / "generated"
+    if samples.exists():
+        for path in sorted(samples.glob("*.pdf")):
+            if hashlib.sha256(path.read_bytes()).hexdigest() == sha256:
+                return path
+    return None
+
+
 @router.get("/clauses/{chunk_id}", response_model=ClauseText)
 async def get_clause(chunk_id: str, request: Request) -> ClauseText:
     """The full text of a cited clause, so a verdict can be read in context.
@@ -241,10 +340,16 @@ async def healthz(session: Annotated[AsyncSession, Depends(get_session)]) -> Hea
     except Exception:
         checks["postgres"] = False
 
-    healthy = all(checks.values())
+    settings = get_settings()
+    if settings.demo_mode:
+        # Reported, not hidden. Someone debugging "why did my upload come back instantly"
+        # should be able to see the answer without reading the deployment config.
+        checks["demo_mode"] = True
+
+    healthy = all(value for name, value in checks.items() if name != "demo_mode")
     return Health(
         status="ok" if healthy else "degraded",
-        version=get_settings().graph_version,
+        version=settings.graph_version,
         checks=checks,
     )
 

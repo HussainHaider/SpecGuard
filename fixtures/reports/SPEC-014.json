@@ -1,0 +1,510 @@
+{
+  "report_id": "e7350bce-0748-5a2e-9217-3ce0222932b5",
+  "job_id": null,
+  "created_at": "2026-08-26T00:00:00Z",
+  "spec": {
+    "spec_id": "4c4db0a9-431d-4ef6-90fd-203dce0d1611",
+    "source": {
+      "filename": "SPEC-014-chicken-soup.pdf",
+      "sha256": "922111520e3ca9db11df57ad0d5e10c7fe3a312c6c25a7455a95e4253059c704",
+      "page_count": 1,
+      "byte_size": 2661
+    },
+    "language": "en",
+    "extracted_at": "2026-08-26T17:41:54.114227Z",
+    "extractor_model": "recorded",
+    "extractor_prompt_version": "extract@v2",
+    "product_name": {
+      "value": "Chicken & Vegetable Soup",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nChicken & Vegetable Soup"
+    },
+    "legal_name": {
+      "value": "Chicken soup with vegetables",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Chicken soup with vegetables"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Chicken stock 52%, Chicken 18%, Carrots 11%, Leeks 7%, WHEAT flour 3%, CELERY 2%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Chicken stock",
+              "percentage": 52.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chicken stock 52%"
+          },
+          {
+            "value": {
+              "name": "Chicken",
+              "percentage": 18.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chicken 18%"
+          },
+          {
+            "value": {
+              "name": "Carrots",
+              "percentage": 11.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Carrots 11%"
+          },
+          {
+            "value": {
+              "name": "Leeks",
+              "percentage": 7.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Leeks 7%"
+          },
+          {
+            "value": {
+              "name": "WHEAT flour",
+              "percentage": 3.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "WHEAT flour 3%"
+          },
+          {
+            "value": {
+              "name": "CELERY",
+              "percentage": 2.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "CELERY 2%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nChicken stock 52%, Chicken 18%, Carrots 11%, Leeks 7%, WHEAT flour 3%, CELERY 2%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 400.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 400 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Use by: 10 days from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Use by: 10 days from production"
+    },
+    "storage_conditions": {
+      "value": "Keep refrigerated. Use within 2 days of opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Keep refrigerated. Use within 2 days of opening."
+    },
+    "instructions_for_use": {
+      "value": "Empty into a saucepan and heat until piping hot.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Instructions for use Empty into a saucepan and heat until piping hot."
+    },
+    "business_operator": {
+      "value": {
+        "name": "Potages Duval SAS",
+        "address": null,
+        "country": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Potages Duval SAS"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 269.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 269 kJ / 64 kcal"
+        },
+        "energy_kcal": {
+          "value": 64.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 269 kJ / 64 kcal"
+        },
+        "fat_g": {
+          "value": 2.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 2.8 g"
+        },
+        "saturates_g": {
+          "value": 0.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 0.9 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 4.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 4.4 g"
+        },
+        "sugars_g": {
+          "value": 1.7,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 1.7 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 0.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 0.9 g"
+        },
+        "protein_g": {
+          "value": 4.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 4.9 g"
+        },
+        "salt_g": {
+          "value": 0.79,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.79 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 269 kJ / 64 kcal\nFat 2.8 g\nof which saturates 0.9 g\nCarbohydrate 4.4 g\nof which sugars 1.7 g\nFibre 0.9 g\nProtein 4.9 g\nSalt 0.79 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "France",
+          "raw_text": "Country of origin France"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin France"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "France",
+          "raw_text": "Origin of primary ingredient France"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient France"
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  },
+  "results": [
+    {
+      "rule_id": "MANDATORY_FIELDS",
+      "verdict": "FAIL",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "9",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "fcbb7bf7-a38b-5338-b0a8-96f15aa28610",
+          "quoted_span": "In accordance with Articles 10 to 35 and subject to the exceptions contained in this Chapter, indication of the following particulars shall be mandatory",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "Missing mandatory particulars: operator address, Art. 9(1)(h).",
+      "suggested_fix": "Add the missing particulars to the specification: operator address, Art. 9(1)(h).",
+      "confidence": 0.95,
+      "abstention_reason": null,
+      "metrics": {
+        "missing_count": 1.0
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_ARITHMETIC",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "31",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "a6d7d921-b7b6-5f6b-9d44-38f2973a50a9",
+          "quoted_span": "The energy value shall be calculated using the conversion factors listed in Annex XIV.",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "Declared energy agrees with the value computed from the macronutrients using the Annex XIV factors, within 5%.",
+      "suggested_fix": null,
+      "confidence": 0.9,
+      "abstention_reason": null,
+      "metrics": {
+        "tolerance_pct": 5.0,
+        "declared_kJ": 269.0,
+        "computed_kJ": 268.9,
+        "deviation_kJ_pct": 0.0,
+        "declared_kcal": 64.0,
+        "computed_kcal": 64.2,
+        "deviation_kcal_pct": 0.3,
+        "kj_kcal_drift_pct": 0.5
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "NUTRITION_PER_100",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "32",
+          "paragraph": "2",
+          "point": null,
+          "chunk_id": "fdd69745-ac72-5927-b1de-b254adf29934",
+          "quoted_span": "The energy value and the amount of nutrients referred to in Article 30(1) to (5) shall be expressed per 100 g or per 100 ml",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "The nutrition declaration is expressed per 100g.",
+      "suggested_fix": null,
+      "confidence": 0.97,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "ALLERGEN_EMPHASIS",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "21",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "f6b5af47-a57a-561e-8045-f0e1551a97e5",
+          "quoted_span": "emphasised through a typeset that clearly distinguishes it from the rest of the list of ingredients, for instance by means of the font, style or background colour",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": null
+        }
+      ],
+      "rationale": "All 2 Annex II substance(s) in the ingredient list are emphasised (uppercase).",
+      "suggested_fix": null,
+      "confidence": 0.92,
+      "abstention_reason": null,
+      "metrics": {
+        "allergens_found": 2.0,
+        "unemphasised_count": 0.0
+      },
+      "llm_usage": [],
+      "duration_ms": 0,
+      "langsmith_run_id": null,
+      "kind": "deterministic"
+    },
+    {
+      "rule_id": "ORIGIN_DECLARATION",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "26",
+          "paragraph": "3",
+          "point": null,
+          "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+          "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food.",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": 0.7
+        }
+      ],
+      "rationale": "The specification declares the country of origin for both the product and its primary ingredient (chicken stock, 52%) as France. Regulation (EU) No 1169/2011 Art. 26(3) requires that if the origin of the food is given and it differs from the primary ingredient, this must be stated. Here, both are the same (France), so no additional statement is required. There is no evidence that omitting the origin would mislead the consumer, and the relevant information is provided.",
+      "suggested_fix": null,
+      "confidence": 0.98,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_origin_declaration@v1",
+          "input_tokens": 3426,
+          "output_tokens": 266,
+          "cost_usd": 0.00898,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 934,
+          "output_tokens": 117,
+          "cost_usd": 0.002804,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 1,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    },
+    {
+      "rule_id": "LEGAL_NAME_AND_QUID",
+      "verdict": "PASS",
+      "citations": [
+        {
+          "regulation": "Regulation (EU) No 1169/2011",
+          "article": "22",
+          "paragraph": "1",
+          "point": null,
+          "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+          "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer;",
+          "source_version": "02011R1169-20180101-en",
+          "eurlex_url": null,
+          "retrieval_score": 0.75
+        }
+      ],
+      "rationale": "The product is given a legal name, 'Chicken soup with vegetables', which is a descriptive name and not just a brand or fancy name. This satisfies the first requirement. For the second requirement, a QUID declaration is required for ingredients that appear in the name of the food. Both 'Chicken' and 'Vegetable(s)' appear in the name, and the ingredients list provides quantitative declarations for 'Chicken' (18%), 'Carrots' (11%), 'Leeks' (7%), 'WHEAT flour' (3%), and 'CELERY' (2%). The main vegetables are individually quantified, and the chicken content is also declared. This satisfies the QUID requirement as established by the regulation.",
+      "suggested_fix": null,
+      "confidence": 0.98,
+      "abstention_reason": null,
+      "metrics": {},
+      "llm_usage": [
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "judge_legal_name_and_quid@v1",
+          "input_tokens": 5814,
+          "output_tokens": 280,
+          "cost_usd": 0.013868,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        },
+        {
+          "provider": "fake",
+          "model": "recorded",
+          "prompt_version": "verify@v2",
+          "input_tokens": 946,
+          "output_tokens": 104,
+          "cost_usd": 0.002724,
+          "latency_ms": 0,
+          "langsmith_run_id": null
+        }
+      ],
+      "duration_ms": 1,
+      "langsmith_run_id": null,
+      "kind": "rag"
+    }
+  ],
+  "guardrails": {
+    "injection_suspected": false,
+    "injection_signals": [],
+    "low_confidence_fields": [
+      "escalated:MANDATORY_FIELDS"
+    ],
+    "unreadable_pages": []
+  },
+  "demo": false,
+  "demo_note": null,
+  "corpus_version": "02011R1169-20180101-en",
+  "graph_version": "graph@v1",
+  "duration_ms": 0,
+  "overall_verdict": "FAIL",
+  "counts": {
+    "PASS": 5,
+    "FAIL": 1,
+    "NEEDS_REVIEW": 0
+  },
+  "total_cost_usd": 0.028376
+}
