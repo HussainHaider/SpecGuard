@@ -88,3 +88,36 @@ class TestDeterminism:
         path = tmp_path / "manifest.jsonl"
         write_manifest(manifest, path)
         assert load_manifest(path) == manifest
+
+
+class TestDefectsActuallyApply:
+    """A recorded defect that changed nothing is a lie the whole eval is built on."""
+
+    def test_every_seeded_defect_changes_the_document(self, tmp_path: Path, manifest) -> None:
+        from specguard.fixtures.catalogue import CATALOGUE
+        from specguard.fixtures.generate import _sheet_from, render_pdf
+
+        by_slug = {template.slug: template for template in CATALOGUE}
+        for fixture in manifest:
+            if not fixture.seeded_defects:
+                continue
+            slug = fixture.filename.removeprefix(f"{fixture.spec_id}-").removesuffix(".pdf")
+            clean = render_pdf(_sheet_from(by_slug[slug]), tmp_path / f"clean-{slug}.pdf")
+            actual = (FIXTURE_DIR / "generated" / fixture.filename).read_bytes()
+            assert actual != clean, (
+                f"{fixture.spec_id} records {[d.kind for d in fixture.seeded_defects]} "
+                "but renders identically to the compliant product"
+            )
+
+    def test_allergen_defects_land_on_products_with_allergens(self, manifest) -> None:
+        from specguard.fixtures.catalogue import CATALOGUE
+
+        by_slug = {template.slug: template for template in CATALOGUE}
+        for fixture in manifest:
+            kinds = {defect.kind for defect in fixture.seeded_defects}
+            if not kinds & {"allergen_not_emphasised", "all_allergens_unemphasised"}:
+                continue
+            slug = fixture.filename.removeprefix(f"{fixture.spec_id}-").removesuffix(".pdf")
+            assert any(i.allergen for i in by_slug[slug].ingredients), (
+                f"{fixture.spec_id} seeds an allergen defect on a product with no allergens"
+            )

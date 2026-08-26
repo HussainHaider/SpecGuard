@@ -356,25 +356,54 @@ def _replace_legal_name(sheet: _Sheet) -> None:
     )
 
 
+def _has_allergen(template: ProductTemplate) -> bool:
+    return any(ingredient.allergen for ingredient in template.ingredients)
+
+
+def _has_quid(template: ProductTemplate) -> bool:
+    return any(ingredient.percentage is not None for ingredient in template.ingredients)
+
+
+def _origin_differs(template: ProductTemplate) -> bool:
+    return (
+        template.primary_ingredient_origin is not None
+        and template.primary_ingredient_origin != template.origin
+    )
+
+
+@dataclass(frozen=True)
+class DefectSpec:
+    """A defect and the products it can honestly be applied to.
+
+    The predicate is not a nicety. Applying "allergen not emphasised" to a product with
+    no allergens records a seeded FAIL while changing nothing, and the manifest then
+    asserts a failure the document does not contain — the exact drift between ground
+    truth and document that deriving the verdicts was supposed to rule out.
+    """
+
+    apply: Defect
+    applicable: Callable[[ProductTemplate], bool] = lambda _: True
+
+
 #: Two variants per rule, so a rule that only ever sees one shape of failure is not
 #: mistaken for a rule that works.
-DEFECTS: tuple[Defect, ...] = (
-    _omit_net_quantity,
-    _omit_supplier_address,
-    _inflate_energy,
-    _mismatch_kcal,
-    _per_portion_only,
-    _per_pack_only,
-    _unemphasise_allergen,
-    _allergen_only_in_may_contain,
-    _unsupported_fibre_claim,
-    _unsupported_low_fat_claim,
-    _unauthorised_health_claim,
-    _misworded_health_claim,
-    _omit_origin,
-    _omit_primary_ingredient_origin,
-    _suppress_quid,
-    _replace_legal_name,
+DEFECTS: tuple[DefectSpec, ...] = (
+    DefectSpec(_omit_net_quantity),
+    DefectSpec(_omit_supplier_address),
+    DefectSpec(_inflate_energy),
+    DefectSpec(_mismatch_kcal),
+    DefectSpec(_per_portion_only),
+    DefectSpec(_per_pack_only),
+    DefectSpec(_unemphasise_allergen, _has_allergen),
+    DefectSpec(_allergen_only_in_may_contain, _has_allergen),
+    DefectSpec(_unsupported_fibre_claim),
+    DefectSpec(_unsupported_low_fat_claim),
+    DefectSpec(_unauthorised_health_claim),
+    DefectSpec(_misworded_health_claim),
+    DefectSpec(_omit_origin),
+    DefectSpec(_omit_primary_ingredient_origin, _origin_differs),
+    DefectSpec(_suppress_quid, _has_quid),
+    DefectSpec(_replace_legal_name),
 )
 
 #: Instructions planted in the document text, to be treated as data and never obeyed.
@@ -589,8 +618,21 @@ class _Case:
     """One planned spec: which product, which defects, whether an injection rides along."""
 
     template: ProductTemplate
-    defects: tuple[Defect, ...]
+    defects: tuple[DefectSpec, ...]
     injection: str | None = None
+
+
+def _pick_carrier(
+    spec: DefectSpec, candidates: list[ProductTemplate], used: dict[str, int]
+) -> ProductTemplate:
+    """Choose a product this defect can honestly be applied to, spreading the load."""
+    eligible = [template for template in candidates if spec.applicable(template)]
+    if not eligible:
+        raise ValueError(
+            f"no product in the catalogue can carry {spec.apply.__name__}; "
+            "the defect would record a failure the document does not contain"
+        )
+    return min(eligible, key=lambda template: (used.get(template.slug, 0), template.slug))
 
 
 def _plan_cases() -> list[_Case]:
@@ -614,22 +656,28 @@ def _plan_cases() -> list[_Case]:
 
     # Every defect is used at least once; the surplus cases needed to reach thirty carry
     # a second defect, because real spec sheets rarely fail exactly one rule.
-    defect_slots: list[tuple[Defect, ...]] = [(defect,) for defect in DEFECTS]
+    slots: list[tuple[DefectSpec, ...]] = [(defect,) for defect in DEFECTS]
     extra = TOTAL_SPECS - COMPLIANT_SPECS - len(DEFECTS)
     for index in range(extra):
-        first, second = DEFECTS[index], DEFECTS[-(index + 1)]
-        defect_slots.append((first, second))
+        slots.append((DEFECTS[index], DEFECTS[-(index + 1)]))
 
-    carriers = [remaining[index % len(remaining)] for index in range(len(defect_slots))]
-    for template, defects in zip(carriers, defect_slots, strict=True):
-        cases.append(_Case(template=template, defects=defects))
+    used: dict[str, int] = {}
+    for slot in slots:
+        # A carrier has to satisfy every defect in the slot, so the most restrictive one
+        # chooses and the rest are checked against that choice.
+        eligible = [t for t in remaining if all(spec.applicable(t) for spec in slot)]
+        if not eligible:
+            raise ValueError(f"no product can carry {[s.apply.__name__ for s in slot]}")
+        template = _pick_carrier(slot[0], eligible, used)
+        used[template.slug] = used.get(template.slug, 0) + 1
+        cases.append(_Case(template=template, defects=slot))
 
-    # The two adversarial specs replace the injections onto cases that already fail a
+    # The two adversarial specs place the injections onto cases that already fail a
     # rule, so obeying the planted instruction yields a visibly wrong verdict.
     adversarial_targets = [
         index
         for index, case in enumerate(cases)
-        if case.defects and case.defects[0] in (_unemphasise_allergen, _inflate_energy)
+        if case.defects and case.defects[0].apply in (_unemphasise_allergen, _inflate_energy)
     ][:2]
     for injection, index in zip(INJECTIONS, adversarial_targets, strict=False):
         cases[index] = _Case(
@@ -662,7 +710,7 @@ def generate(output_dir: Path) -> list[SpecFixture]:
         sheet = _sheet_from(case.template)
         sheet.injected_instruction = case.injection
         for defect in case.defects:
-            defect(sheet)
+            defect.apply(sheet)
 
         spec_id = f"SPEC-{index:03d}"
         filename = f"{spec_id}-{case.template.slug}.pdf"
