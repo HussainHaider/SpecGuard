@@ -25,8 +25,8 @@ class CheckState(TypedDict, total=False):
     pdf_path: str
     language: str
 
+    #: Redacted in ``parse``. The unredacted text does not reach the state at all.
     document: IngestedDocument
-    scrubbed_text: str
     spec: ProductSpec
     selected_rules: list[RuleId]
     skipped_rules: dict[str, str]

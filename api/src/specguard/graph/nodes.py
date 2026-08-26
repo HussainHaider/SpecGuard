@@ -21,11 +21,13 @@ from specguard.ingest.extract import extract_spec
 from specguard.ingest.pdf import ingest_pdf
 from specguard.llm.protocol import LLMClient
 from specguard.models.common import Language
+from specguard.models.document import IngestedDocument, Page
 from specguard.models.report import CheckReport, GuardrailFlags
 from specguard.models.rule import AbstentionReason, RuleId, RuleResult, Verdict
 from specguard.models.spec import ProductSpec
 from specguard.rules.base import RagContext, RuleContext
 from specguard.rules.registry import deterministic_rules, rag_rules
+from specguard.tracing import Span, rule_span
 from specguard.vectorstore.protocol import VectorStore
 
 #: Fields whose confidence is worth reporting when it is low. Not every field matters
@@ -51,6 +53,28 @@ class Dependencies:
     corpus_chunk_ids: set[str]
 
 
+def _redact(document: IngestedDocument) -> tuple[IngestedDocument, int]:
+    """Return the document with personal data removed from its page text.
+
+    The redaction is applied to the document itself rather than kept beside it. An
+    earlier version put the scrubbed text in a separate state key that nothing ever
+    read, so the guarantee this node advertises — that no later node can pass the
+    unredacted text — was not one the state actually enforced. It is now: the
+    unredacted text does not survive this function.
+
+    Only ``Page.text`` is rewritten. The spans carry font weight for ALLERGEN_EMPHASIS
+    and are matched against ingredient names, never against a contact block, so
+    redacting them would cost the evidence Art. 21(1)(b) needs and remove nothing.
+    """
+    redacted: list[Page] = []
+    removed = 0
+    for page in document.pages:
+        text, redaction = scrub(page.text)
+        removed += redaction.total
+        redacted.append(page.model_copy(update={"text": text}))
+    return document.model_copy(update={"pages": redacted}), removed
+
+
 def parse(state: CheckState, deps: Dependencies) -> CheckState:
     """Read the PDF, screen it, and redact personal data before anything sees it.
 
@@ -61,19 +85,20 @@ def parse(state: CheckState, deps: Dependencies) -> CheckState:
     document = ingest_pdf(Path(state["pdf_path"]))
     check_page_count(len(document.pages))
 
-    scrubbed, redaction = scrub(document.text)
+    # Screened before redaction: an injected instruction sitting next to a phone number
+    # must still be seen, and a redaction marker in its place is not a signal.
     injection = scan(document.text)
+    document, redactions = _redact(document)
 
     return {
         "started_at": time.perf_counter(),
         "document": document,
-        "scrubbed_text": scrubbed,
         "guardrails": GuardrailFlags(
             injection_suspected=injection.suspected,
             injection_signals=injection.signals(),
             unreadable_pages=[p.number for p in document.pages if not p.text.strip()],
         ),
-        "skipped_rules": {"_redactions": str(redaction.total)} if redaction.total else {},
+        "skipped_rules": {"_redactions": str(redactions)} if redactions else {},
     }
 
 
@@ -133,11 +158,29 @@ def check(state: CheckState, deps: Dependencies) -> CheckState:
     results: list[RuleResult] = []
     for rule_id, rule in deterministic_rules().items():
         if rule_id in selected:
-            results.append(rule.evaluate(spec, plain))
+            with rule_span(rule_id) as traced:
+                result = rule.evaluate(spec, plain)
+                traced.tag(verdict=result.verdict.value, confidence=result.confidence)
+            results.append(_traced(result, traced))
     for rule_id, rag_rule in rag_rules().items():
         if rule_id in selected:
-            results.append(_guarded(rag_rule, spec, rag, rule_id))
+            with rule_span(rule_id) as traced:
+                result = _guarded(rag_rule, spec, rag, rule_id)
+                traced.tag(
+                    verdict=result.verdict.value,
+                    confidence=result.confidence,
+                    cost_usd=sum(u.cost_usd for u in result.llm_usage),
+                    llm_calls=len(result.llm_usage),
+                )
+            results.append(_traced(result, traced))
     return {"results": results}
+
+
+def _traced(result: RuleResult, span: Span) -> RuleResult:
+    """Stamp the result with the run that produced it, when there was one."""
+    if span.run_id is None:
+        return result
+    return result.model_copy(update={"langsmith_run_id": span.run_id})
 
 
 def _guarded(rule: object, spec: ProductSpec, context: RagContext, rule_id: RuleId) -> RuleResult:

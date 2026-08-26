@@ -23,6 +23,7 @@ from specguard.graph.nodes import (
     verify,
 )
 from specguard.graph.state import CheckState
+from specguard.tracing import node_span
 
 #: In order. The names are the trace span names, so they match the milestone's language
 #: rather than the function names they happen to be implemented by.
@@ -47,7 +48,20 @@ def _bind(
     """
 
     def run(state: CheckState) -> dict[str, Any]:
-        return dict(node(state, deps))
+        with node_span(
+            f"node:{node.__name__}",
+            {
+                "node": node.__name__,
+                "job_id": state.get("job_id"),
+                "correlation_id": state.get("correlation_id"),
+                "graph_version": deps.settings.graph_version,
+            },
+        ) as traced:
+            written = dict(node(state, deps))
+            # The keys a node wrote, not their values: the values are a whole document
+            # and eight rule results, and a span is not the place to store either.
+            traced.tag(wrote=sorted(written))
+        return written
 
     run.__name__ = node.__name__
     return run

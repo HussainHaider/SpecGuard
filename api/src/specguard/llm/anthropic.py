@@ -21,33 +21,16 @@ from anthropic import Anthropic
 from anthropic.types import OutputConfigParam
 from pydantic import BaseModel
 
+from specguard.llm.pricing import estimate_cost
 from specguard.llm.protocol import LLMError, LLMResult, wrap_document
 from specguard.models.rule import LlmUsage
 from specguard.prompts.loader import Prompt
-
-#: USD per million tokens (input, output). Kept here so a cost in a trace is auditable
-#: rather than a number nobody can source.
-PRICING: dict[str, tuple[float, float]] = {
-    "claude-opus-5": (5.0, 25.0),
-    "claude-sonnet-5": (2.0, 10.0),
-    "claude-haiku-4-5": (1.0, 5.0),
-    "claude-haiku-4-5-20251001": (1.0, 5.0),
-    "claude-fable-5": (10.0, 50.0),
-}
 
 MAX_TOKENS = 16000
 
 #: Thinking depth. Extraction is a transcription task over text already in front of
 #: the model, so it does not need deep reasoning; the judge in M3 will ask for more.
 type Effort = Literal["low", "medium", "high", "xhigh", "max"]
-
-
-def estimate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
-    """Cost of one call, or 0.0 for a model we have no published price for."""
-    rates = PRICING.get(model)
-    if rates is None:
-        return 0.0
-    return (input_tokens * rates[0] + output_tokens * rates[1]) / 1_000_000
 
 
 class AnthropicClient:

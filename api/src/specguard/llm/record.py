@@ -45,6 +45,8 @@ def record_spec(spec_id: str, filename: str, client: LLMClient, out_dir: Path) -
         response=result.value,
         input_tokens=usage.input_tokens,
         output_tokens=usage.output_tokens,
+        cost_usd=usage.cost_usd,
+        latency_ms=usage.latency_ms,
         note=(
             f"recorded from {usage.provider}/{usage.model} with {prompt.version} "
             f"for {spec_id} ({filename})"
@@ -167,6 +169,8 @@ class RecordingClient:
             response=result.value,
             input_tokens=result.usage.input_tokens,
             output_tokens=result.usage.output_tokens,
+            cost_usd=result.usage.cost_usd,
+            latency_ms=result.usage.latency_ms,
             note=f"recorded from {self.provider}/{self.model} with {prompt.version}",
         )
         self.cost_usd += result.usage.cost_usd

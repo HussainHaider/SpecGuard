@@ -60,6 +60,7 @@ def resolve_citations(result: RuleResult, known_chunk_ids: set[str]) -> RuleResu
         metrics=result.metrics,
         llm_usage=result.llm_usage,
         duration_ms=result.duration_ms,
+        langsmith_run_id=result.langsmith_run_id,
     )
 
 
@@ -84,6 +85,7 @@ def force_low_confidence_abstention(result: RuleResult, minimum: float) -> RuleR
         metrics=result.metrics,
         llm_usage=result.llm_usage,
         duration_ms=result.duration_ms,
+        langsmith_run_id=result.langsmith_run_id,
     )
 
 

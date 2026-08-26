@@ -15,28 +15,12 @@ import time
 from openai import OpenAI
 from pydantic import BaseModel
 
+from specguard.llm.pricing import estimate_cost
 from specguard.llm.protocol import LLMError, LLMResult, wrap_document
 from specguard.models.rule import LlmUsage
 from specguard.prompts.loader import Prompt
 
-#: USD per million tokens (input, output). Unknown models cost 0.0 rather than a guess:
-#: a fabricated price in an audit trail is worse than an absent one.
-PRICING: dict[str, tuple[float, float]] = {
-    "gpt-4.1": (2.0, 8.0),
-    "gpt-4.1-mini": (0.4, 1.6),
-    "gpt-4o": (2.5, 10.0),
-    "gpt-4o-mini": (0.15, 0.6),
-}
-
 MAX_OUTPUT_TOKENS = 16000
-
-
-def estimate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
-    """Cost of one call, or 0.0 for a model we have no published price for."""
-    rates = PRICING.get(model)
-    if rates is None:
-        return 0.0
-    return (input_tokens * rates[0] + output_tokens * rates[1]) / 1_000_000
 
 
 class OpenAIClient:

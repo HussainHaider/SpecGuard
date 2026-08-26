@@ -6,7 +6,11 @@ name: specguard
 
 services:
   db:
-    image: postgres:16
+    # pgvector's own image rather than plain postgres:16 — same server, same data
+    # directory, with the extension available. PgVectorStore exists so Qdrant can be
+    # compared against it (evals/benchmark_retrieval.py); nothing in the application
+    # path reads from it.
+    image: pgvector/pgvector:pg16
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-specguard}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-specguard}

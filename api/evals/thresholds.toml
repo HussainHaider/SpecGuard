@@ -1,0 +1,61 @@
+# Tier 1 gates and the baseline they are measured against.
+#
+# In a file rather than in Python so that moving a gate shows up as a diff a reviewer
+# reads, next to the result that motivated it. A threshold buried in a module is a
+# threshold that gets relaxed quietly the first time it fails.
+#
+# Gates apply to the combined set. The dev and held-out splits are reported separately
+# and never averaged into one another, but the split itself can be rebuilt, so the
+# comparable-across-milestones number is the combined one.
+
+[gates]
+# A floor, not a target. Set below the current figure on purpose: this gate exists to
+# catch a regression, and one pinned to the exact current number fails on noise.
+min_accuracy = 0.85
+
+# The two hard zeros. A compliance tool that reports a non-compliant product as
+# compliant is worse than one that declines to answer, and an allergen failure is the
+# one that puts someone in hospital. Neither is traded against accuracy.
+max_allergen_false_negative_rate = 0.0
+max_false_passes = 0
+
+# One wrong-but-confident verdict is tolerated: docs/decisions.md 011 records it, and
+# it is a false FAIL on a compliant spec — the safe direction to err, and still an error.
+max_wrong_verdicts = 1
+
+# Non-negotiable #1 as a gate. Every decided verdict must cite a clause that resolves
+# against the indexed corpus; anything less is a verdict resting on nothing checkable.
+min_citation_resolution = 1.0
+
+# Reported, never gating. Retrieval quality bounds what the judge can conclude, but the
+# anchors it is scored against are a judgement about which clause decides a question
+# (see evals/build_golden.py), and a build should not fail on a labelling opinion.
+[reported]
+recall_at_5 = true
+hit_rate_at_5 = true
+abstention_rate = true
+latency = true
+cost_per_spec = true
+
+# What the gates were set against. Written by hand from a run of `evals.run_eval`, and
+# the source of the README's baseline column — so the table and the gates cannot tell
+# different stories about the same milestone.
+[baseline]
+milestone = "M5"
+measured_on = "2026-08-26"
+mode = "offline"
+
+# The combined split at M5, written by hand from a run of `evals.run_eval`. The README
+# renders this beside the current figure, so a regression is visible in the table rather
+# than only in a failing gate — and a number nobody can reproduce cannot sit here,
+# because the offline run that produces it needs no key and no network.
+[baseline.all]
+accuracy = 0.888
+abstention_rate = 0.112
+allergen_fnr = 0.0
+false_passes = 0
+wrong_verdicts = 0
+citation_resolution_rate = 1.0
+recall_at_5 = 0.572
+hit_rate_at_5 = 0.759
+cost_per_spec_usd = 0.0313

@@ -15,6 +15,7 @@ from specguard.api.metrics import CHECKS_TOTAL
 from specguard.api.routers import router
 from specguard.config import get_settings
 from specguard.logging import bind_correlation_id, configure_logging, get_logger
+from specguard.tracing import configure_tracing
 
 log = get_logger(__name__)
 
@@ -30,6 +31,8 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """
     settings = get_settings()
     configure_logging(settings.log_level)
+    if configure_tracing(settings):
+        log.info("tracing.enabled", project=settings.langsmith_project)
     try:
         app.state.queue = await create_pool(RedisSettings.from_dsn(settings.redis_url))
         log.info("queue.connected")

@@ -12,6 +12,7 @@ from collections.abc import AsyncIterator
 
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
 from specguard.api.app import create_app
@@ -109,6 +110,62 @@ class TestFeedback:
         )
         assert response.status_code == 201
         assert response.json()["corrected_verdict"] == Verdict.PASS.value
+
+    async def test_a_correction_attaches_to_the_run_that_produced_the_verdict(
+        self, client, sessionmaker, monkeypatch
+    ) -> None:
+        """The point of storing the run id: a human override lands on the trace it disputes."""
+        submitted = await client.post("/checks", files={"file": ("s.pdf", PDF, "application/pdf")})
+        job_id = uuid.UUID(submitted.json()["job_id"])
+
+        async with sessionmaker() as session:
+            session.add(
+                Result(
+                    job_id=job_id,
+                    rule_id=RuleId.ORIGIN_DECLARATION.value,
+                    verdict=Verdict.FAIL.value,
+                    confidence=0.9,
+                    rationale="origin is not declared",
+                    langsmith_run_id="run-xyz",
+                )
+            )
+            await session.commit()
+
+        pushed: dict[str, object] = {}
+
+        def _capture(run_id: str, **kwargs: object) -> str:
+            pushed.update({"run_id": run_id, **kwargs})
+            return "feedback-1"
+
+        monkeypatch.setattr("specguard.api.routers.record_feedback", _capture)
+
+        response = await client.post(
+            f"/checks/{job_id}/feedback",
+            json={
+                "rule_id": RuleId.ORIGIN_DECLARATION.value,
+                "corrected_verdict": Verdict.PASS.value,
+                "reviewer": "qa",
+            },
+        )
+        assert response.status_code == 201
+        assert pushed["run_id"] == "run-xyz"
+        assert pushed["corrected_verdict"] == Verdict.PASS.value
+        assert pushed["original_verdict"] == Verdict.FAIL.value
+
+        async with sessionmaker() as session:
+            stored = (await session.execute(select(Feedback))).scalars().all()
+        assert [entry.langsmith_feedback_id for entry in stored] == ["feedback-1"]
+
+    async def test_a_correction_is_kept_even_when_there_is_no_run_to_attach_it_to(
+        self, client
+    ) -> None:
+        """A verdict recorded before tracing existed is still correctable."""
+        submitted = await client.post("/checks", files={"file": ("s.pdf", PDF, "application/pdf")})
+        response = await client.post(
+            f"/checks/{submitted.json()['job_id']}/feedback",
+            json={"rule_id": RuleId.MANDATORY_FIELDS.value, "corrected_verdict": "PASS"},
+        )
+        assert response.status_code == 201
 
     async def test_rejects_an_unknown_rule(self, client) -> None:
         submitted = await client.post("/checks", files={"file": ("s.pdf", PDF, "application/pdf")})
