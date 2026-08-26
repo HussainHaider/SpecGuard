@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 976,
+  "output_tokens": 113,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 19(1)(d)) is about exemptions from the requirement to provide an ingredients list for certain dairy products, including cheese, under specific conditions. The verdict, however, turns on requirements for naming the product and providing a quantitative ingredients declaration (QUID) for 'milk.' This clause does not establish the rules for naming or QUID; those are found elsewhere in Regulation (EU) No 1169/2011. Therefore, the clause is insufficient to ground the verdict."
+  }
+}

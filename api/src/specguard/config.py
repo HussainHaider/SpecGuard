@@ -10,7 +10,7 @@ from __future__ import annotations
 from functools import lru_cache
 from pathlib import Path
 
-from pydantic import Field
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from specguard.embedding.encoder import DENSE_MODEL, SPARSE_MODEL
@@ -47,15 +47,26 @@ class Settings(BaseSettings):
     dense_embedding_model: str = DENSE_MODEL
     sparse_embedding_model: str = SPARSE_MODEL
 
-    corpus_dir: Path = Path("../corpus")
+    corpus_dir: Path = Path("corpus")
 
-    retrieval_top_k: int = Field(default=8, ge=1)
-    retrieval_prefetch_k: int = Field(default=25, ge=1)
+    retrieval_top_k: int = Field(default=5, ge=1)
+    retrieval_prefetch_k: int = Field(default=50, ge=1)
     min_retrieval_score: float = Field(default=0.35, ge=0.0)
     min_extraction_confidence: float = Field(default=0.60, ge=0.0, le=1.0)
 
     graph_version: str = "graph@v1"
     log_level: str = "INFO"
+
+    @field_validator("corpus_dir")
+    @classmethod
+    def _anchor_to_repo_root(cls, value: Path) -> Path:
+        """Resolve a relative path against the repository root, not the working directory.
+
+        The same setting is read from the repo root, from api/, and from inside a
+        container. Anchoring relative paths to the root means one value is correct
+        everywhere instead of being correct only where it was written.
+        """
+        return value if value.is_absolute() else (_REPO_ROOT / value).resolve()
 
 
 @lru_cache(maxsize=1)

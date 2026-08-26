@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1040,
+  "output_tokens": 117,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 9(1)(a), establishes the requirement to indicate the name of the food. The verdict, however, also turns on the requirement for quantitative indication of ingredients (QUID) for those named in the food name, which is a separate requirement established in Article 22(1), not in Article 9(1)(a). Therefore, the clause is insufficient to support the full verdict, as it does not contain the QUID requirement."
+  }
+}

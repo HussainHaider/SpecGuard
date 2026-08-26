@@ -1,0 +1,12 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3445,
+  "output_tokens": 180,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product makes the nutrition claim 'Ballaststoffquelle' (source of fibre). However, none of the retrieved regulation clauses include the conditions of use for the claim 'source of fibre' or its German equivalent. The only nutrition claim condition provided is for 'energiearm' (low energy), which is not relevant to the claim made. Therefore, I cannot determine compliance for the 'source of fibre' claim based on the supplied clauses.",
+    "suggested_fix": "Retrieve the specific conditions of use for the claim 'source of fibre' (Ballaststoffquelle) from Regulation (EC) No 1924/2006 Annex and compare them to the declared fibre content (6.8g per portion).",
+    "citations": [],
+    "confidence": 0.9
+  }
+}

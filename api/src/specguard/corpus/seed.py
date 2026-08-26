@@ -65,8 +65,7 @@ def seed(corpus_dir: Path, store: QdrantVectorStore) -> int:
             f"{len(clauses) - len(ids)} duplicate chunk ids across the corpus; "
             "indexing would silently drop clauses"
         )
-    store.ensure_collection()
-    return store.upsert_clauses(clauses)
+    return store.upsert(clauses)
 
 
 def main() -> None:
@@ -75,6 +74,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--corpus-dir", type=Path, default=settings.corpus_dir)
     parser.add_argument("--collection", default=settings.qdrant_collection)
+    parser.add_argument(
+        "--reset", action="store_true", help="Drop the collection first. Destructive."
+    )
     args = parser.parse_args()
 
     client = QdrantClient(url=settings.qdrant_url, api_key=settings.qdrant_api_key)
@@ -83,8 +85,14 @@ def main() -> None:
         Encoder(settings.dense_embedding_model, settings.sparse_embedding_model),
         collection=args.collection,
     )
+    if args.reset:
+        # Destructive, so it never happens implicitly: a re-seed overwrites by chunk id
+        # anyway, and dropping the collection is only right when the chunking changed.
+        print(f"Dropping collection '{args.collection}'")
+        store.reset()
+
     written = seed(args.corpus_dir, store)
-    print(f"Indexed {written} clauses into '{args.collection}' ({store.count()} points total)")
+    print(f"Indexed {written} clauses into '{args.collection}'")
 
 
 if __name__ == "__main__":

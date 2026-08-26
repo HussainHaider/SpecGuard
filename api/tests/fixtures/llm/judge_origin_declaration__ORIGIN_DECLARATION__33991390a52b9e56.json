@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3502,
+  "output_tokens": 384,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares the country of origin for both the product and its primary ingredient as 'France'. The primary ingredient is 'Chicken stock' (52%), and its origin is also listed as 'France'. There is no indication that the origin of the food and its primary ingredient differ, and the origin is clearly stated. The retrieved clauses require the origin to be given where omitting it could mislead, and require disclosure if the primary ingredient's origin differs from the product's. Here, both are declared and match, so the requirement is satisfied.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "b73d2faf-676d-5055-8d61-5ca58c92268f",
+        "quoted_span": "Indication of the country of origin or place of provenance shall be mandatory: (a) where failure to indicate this might mislead the consumer as to the true country of origin or place of provenance of the food, in particular if the information accompanying the food or the label as a whole would otherwise imply that the food has a different country of origin or place of provenance;"
+      },
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

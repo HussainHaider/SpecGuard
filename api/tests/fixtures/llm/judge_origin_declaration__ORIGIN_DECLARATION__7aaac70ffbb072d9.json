@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3297,
+  "output_tokens": 305,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The specification declares the country of origin of the product as 'Greece'. The primary ingredient is chickpeas (54%). However, there is no information provided about the country of origin or place of provenance of the chickpeas. According to Art. 26(3), when the origin of the food is given and it is not the same as that of its primary ingredient, the origin of the primary ingredient must also be given or it must be stated that it is different. Since the origin of the chickpeas is not declared, the requirement is not met.",
+    "suggested_fix": "Add the country of origin or place of provenance of the chickpeas, or include a statement that the origin of the chickpeas is different from that of the product.",
+    "citations": [
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

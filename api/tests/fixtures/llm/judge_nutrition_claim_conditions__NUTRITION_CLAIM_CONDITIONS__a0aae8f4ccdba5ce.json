@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3250,
+  "output_tokens": 311,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product makes the nutrition claim 'Low fat'. According to the nutrition information provided, the product contains 12.4 g of fat per 100 ml. Regulation (EC) No 1924/2006 Annex states that a 'low fat' claim may only be made where the product contains no more than 1.5 g of fat per 100 ml for liquids. The declared fat content (12.4 g/100 ml) greatly exceeds this threshold, so the claim does not meet the regulatory condition.",
+    "suggested_fix": "Remove the 'Low fat' claim from the packaging and marketing materials, or reformulate the product to contain no more than 1.5 g of fat per 100 ml if the claim is to be retained.",
+    "citations": [
+      {
+        "chunk_id": "f9be9d6e-03f4-54e1-b9ff-e6cbf9e7377d",
+        "quoted_span": "A claim that a food is low in fat, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 3 g of fat per 100 g for solids or 1,5 g of fat per 100 ml for liquids (1,8 g of fat per 100 ml for semi-skimmed milk)."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

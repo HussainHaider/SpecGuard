@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3324,
+  "output_tokens": 301,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product makes the nutrition claim 'Source of fibre'. According to the regulation, to make this claim, the product must contain at least 3 g of fibre per 100 g or at least 1.5 g of fibre per 100 kcal. The declared nutrition values are 1.2 g fibre per 100 g and 68 kcal per 100 g, which is also 1.2 g fibre per 68 kcal. This is below both thresholds required for the claim. Therefore, the product does not meet the conditions of use for the 'Source of fibre' claim.",
+    "suggested_fix": "Remove the 'Source of fibre' claim from the packaging or reformulate the product to increase the fibre content to at least 3 g per 100 g or 1.5 g per 100 kcal.",
+    "citations": [
+      {
+        "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+        "quoted_span": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

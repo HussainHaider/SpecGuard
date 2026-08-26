@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 940,
+  "output_tokens": 113,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)(a)) establishes the requirement that the quantity of an ingredient must be indicated when that ingredient is mentioned in the name of the food or is typically associated with that name. The verdict turns on this requirement by assessing whether the product provides the necessary quantitative ingredient declaration (QUID) for 'Kakaomasse' as mentioned in the product name. Therefore, the clause directly supports the legal basis for the verdict."
+  }
+}

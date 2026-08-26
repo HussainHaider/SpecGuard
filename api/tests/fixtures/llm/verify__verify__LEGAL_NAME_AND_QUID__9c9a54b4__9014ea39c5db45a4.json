@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 961,
+  "output_tokens": 123,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that the quantity of an ingredient or category of ingredients (QUID) must be indicated when those ingredients appear in the name of the food, are emphasised on the labelling, or are essential to characterise the food. The verdict turns on this exact requirement, stating that the product provides QUID for all nuts appearing in the name and emphasised, thus satisfying the obligation set out in the clause. Therefore, the clause supports the verdict."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 3641,
+  "output_tokens": 268,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product is given a legal name ('Weizenvollkornbrot, geschnitten'), which satisfies the first requirement for a legal or customary name. However, the second requirement is not met: a QUID (quantitative ingredient declaration) is required for 'WEIZEN-Vollkornmehl' because it is both part of the legal name and is emphasised in the ingredient list (uppercase). The specification does not provide a percentage for 'WEIZEN-Vollkornmehl', nor is there any indication that an exemption applies. Therefore, the QUID requirement is not satisfied.",
+    "suggested_fix": "Add the percentage of WEIZEN-Vollkornmehl used in the product to the ingredient list, as required by QUID rules.",
+    "citations": [
+      {
+        "chunk_id": "257007aa-1e3b-5e1f-83b8-238945038990",
+        "quoted_span": "Anhang VIII enthält technische Vorschriften für die Anwendung von Absatz 1, die sich auch auf spezielle Fälle beziehen können, in denen eine Mengenangabe für bestimmte Zutaten nicht erforderlich ist."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

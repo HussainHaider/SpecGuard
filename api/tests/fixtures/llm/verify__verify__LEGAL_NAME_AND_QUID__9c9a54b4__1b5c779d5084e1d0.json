@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 988,
+  "output_tokens": 114,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 22(1)) establishes the requirement for QUID (Quantitative Ingredient Declaration) — that is, when the quantity of an ingredient must be indicated. However, the verdict also claims that the clause establishes the requirement for a legal/customary/descriptive name, which is not addressed in this clause. Art. 22(1) is solely about QUID triggers, not naming conventions. Therefore, the clause is insufficient to support the full verdict as stated."
+  }
+}

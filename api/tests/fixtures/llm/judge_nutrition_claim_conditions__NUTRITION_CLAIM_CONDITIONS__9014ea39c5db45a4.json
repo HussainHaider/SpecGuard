@@ -1,0 +1,12 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3488,
+  "output_tokens": 157,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The only nutrition claim listed in the specification is 'High in protein'. However, none of the retrieved regulation clauses provide the conditions of use for the claim 'High in protein'. The retrieved clauses only cover 'high fibre', 'source of fibre', and 'high omega-3 fatty acids'. Therefore, I cannot determine compliance for the 'High in protein' claim based on the supplied regulation text.",
+    "suggested_fix": "Retrieve the specific conditions of use for the 'High in protein' claim from Regulation (EC) No 1924/2006 Annex and compare them to the declared protein content.",
+    "citations": [],
+    "confidence": 1.0
+  }
+}

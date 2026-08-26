@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1005,
+  "output_tokens": 114,
+  "response": {
+    "support": "supports",
+    "reason": "The quoted clause from Art. 26(2)(a) of Regulation (EU) No 1169/2011 establishes that indication of the country of origin or place of provenance is mandatory if omitting it could mislead consumers about the true origin of the food, especially if the labeling or information would otherwise suggest a different origin. The verdict turns on this requirement, stating that the origin is declared and there is no risk of misleading the consumer. Therefore, the clause directly supports the requirement being assessed in the verdict."
+  }
+}

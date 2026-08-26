@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 965,
+  "output_tokens": 116,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), explicitly states that the quantity indication (QUID) is required when an ingredient appears in the name of the food or is emphasised, which is exactly the requirement the verdict turns on. The verdict discusses the presence of 'chickpea' and 'sesame paste' in the product name and confirms that their quantities are indicated, directly addressing the obligation set out in the cited clause. Therefore, the clause supports the verdict."
+  }
+}

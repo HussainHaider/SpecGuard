@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3546,
+  "output_tokens": 363,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The retrieved regulation clauses establish that health claims may only be made if they are authorised and must be worded within the terms of that authorisation (see Art. 3 and Art. 15/16 of Regulation (EC) No 1924/2006). The product makes the claim: 'Vitamin C contributes to the normal function of the immune system.' However, none of the retrieved clauses provide the specific authorised wording for this health claim or the conditions of use (such as the minimum required amount of vitamin C per 100ml for a beverage to make this claim). The nutrition table does not list vitamin C content, so it is not possible to verify if the product meets the compositional criteria for the claim. Additionally, the retrieved clauses do not include the EU Register of authorised health claims or the exact permitted wording. Therefore, it is not possible to determine compliance based solely on the information provided.",
+    "suggested_fix": "Retrieve the authorised wording and conditions of use for the health claim 'Vitamin C contributes to the normal function of the immune system' from the EU Register of Nutrition and Health Claims. Ensure the product provides a significant amount of vitamin C as required for the claim, and that the claim is worded exactly as authorised.",
+    "citations": [
+      {
+        "chunk_id": "bafee060-6dc5-5bfb-8ce5-ad6c086d1258",
+        "quoted_span": "Nutrition and health claims may be used in the labelling, presentation and advertising of foods placed on the market in the Community only if they comply with the provisions of this Regulation."
+      }
+    ],
+    "confidence": 0.7
+  }
+}

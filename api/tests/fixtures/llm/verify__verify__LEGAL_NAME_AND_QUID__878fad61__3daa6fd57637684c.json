@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 899,
+  "output_tokens": 154,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Annex VII, Part E.1) concerns how a compound ingredient may be listed in the ingredients list—specifically, that it can be named by its legal or customary name, provided its ingredients are listed immediately after. The verdict, however, addresses broader issues: the use of a legal or customary name for the product, and the declaration of QUID (Quantitative Ingredient Declaration) percentages for certain ingredients. The clause does not establish the requirements for QUID declarations or for the naming of the product as a whole; it only addresses the listing of compound ingredients in the ingredients list. Therefore, the clause is insufficient to ground the verdict."
+  }
+}

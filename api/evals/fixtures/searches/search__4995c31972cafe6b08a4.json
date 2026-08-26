@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Apfelsaft aus Apfelsaftkonzentrat, naturtrueb, Apfelsaftkonzentrat 12%",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part E.1",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL E — BEZEICHNUNG VON ZUSAMMENGESETZTEN ZUTATEN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "b3205509-18a0-5b5e-94f7-cc327e34df50",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex I",
+        "paragraph": "12",
+        "heading": "SPEZIELLE BEGRIFFSBESTIMMUNGEN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "12. „Ballaststoffe“ bedeutet Kohlenhydratpolymere mit drei oder mehr Monomereinheiten, die im Dünndarm des Menschen weder verdaut noch absorbiert werden und zu folgenden Klassen zählen:\n— essbare Kohlenhydratpolymere, die in Lebensmitteln, wenn diese verzehrt werden, auf natürliche Weise vorkommen;\n— essbare Kohlenhydratpolymere, die auf physikalische, enzymatische oder chemische Weise aus Lebensmittelrohstoffen gewonnen werden und laut allgemein anerkannten wissenschaftlichen Nachweisen eine positive physiologische Wirkung besitzen;\n— essbare synthetische Kohlenhydratpolymere, die laut allgemein anerkannten wissenschaftlichen Nachweisen eine positive physiologische Wirkung besitzen;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "8d23a72e-6650-5b14-ad1f-1a4dabc0b8f0",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "15",
+        "paragraph": "3",
+        "heading": "Beantragung der Zulassung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "(3) Der Antrag muss Folgendes enthalten:\na) Name und Anschrift des Antragstellers;\nb) Bezeichnung des Nährstoffs oder der anderen Substanz oder des Lebensmittels oder der Lebensmittelkategorie, wofür die gesundheitsbezogene Angabe gemacht werden soll, sowie die jeweiligen besonderen Eigenschaften;\nc) eine Kopie der Studien einschließlich — soweit verfügbar — unabhängiger und nach dem Peer-Review-Verfahren erstellter Studien zu der gesundheitsbezogenen Angabe sowie alle sonstigen verfügbaren Unterlagen, aus denen hervorgeht, dass die gesundheitsbezogene Angabe die Kriterien dieser Verordnung erfüllt;\nd) gegebenenfalls einen Hinweis, welche Informationen als eigentumsrechtlich geschützt einzustufen sind, zusammen mit einer entsprechenden nachprüfbaren Begründung;\ne) eine Kopie anderer wissenschaftlicher Studien, die für die gesundheitsbezogene Angabe relevant sind;\nf) einen Vorschlag für die Formulierung der gesundheitsbezogenen Angabe, deren Zulassung beantragt wird, gegebenenfalls einschließlich spezieller Bedingungen für die Verwendung;\ng) eine Zusammenfassung des Antrags."
+      },
+      "score": 0.43333334
+    },
+    {
+      "clause": {
+        "chunk_id": "d073683c-e0f7-5e5d-980a-e5883dbb2a1e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part B",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL B — BEZEICHNUNG BESTIMMTER ZUTATEN, BEI DENEN DIE SPEZIELLE BEZEICHNUNG DURCH DIE BEZEICHNUNG EINER KLASSE ERSETZT WERDEN KANN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "Unbeschadet des Artikels 21 können Zutaten, die zu einer der im Folgenden aufgeführten Lebensmittelklasse gehören und die Bestandteile eines anderen Lebensmittels sind, statt mit ihrer speziellen Bezeichnung mit der Bezeichnung der betreffenden Klasse benannt werden.\nDefinition der Lebensmittelklasse | Bezeichnung\n1. Raffinierte Öle tierischer Herkunft | „Öl“, ergänzt entweder durch das Adjektiv „tierisch“ oder die Angabe der speziellen tierischen Herkunft Der Hinweis auf ein gehärtetes Öl muss gegebenenfalls mit dem Ausdruck „ganz gehärtet“ oder „teilweise gehärtet“ versehen sein.\n2. Raffinierte Fette tierischer Herkunft | „Fett“, ergänzt entweder durch das Adjektiv „tierisch“ oder die Angabe der speziellen tierischen Herkunft Der Hinweis auf ein gehärtetes Fett muss gegebenenfalls mit dem Ausdruck „ganz gehärtet“ oder „teilweise gehärtet“ versehen sein.\n3. Mischungen von Mehl aus zwei oder mehr Getreidearten | „Mehl“, gefolgt von der Aufzählung der Getreidearten, aus denen es hergestellt ist, in abnehmender Reihenfolge ihres Gewichtsanteils\n4. Natürliche Stärke und auf physikalischem oder enzymatischem Wege modifizierte Stärke | „Stärke“\n5. Fisch aller Art, wenn der Fisch Zutat eines anderen Lebensmittels ist und sofern sich Bezeichnung und Darstellung dieses Lebensmittels nicht auf eine bestimmte Fischart beziehen | „Fisch“\n6. Käse aller Art, wenn der Käse oder die Käsemischung Zutat eines anderen Lebensmittels ist und sofern sich Bezeichnung und Darstellung dieses Lebensmittels nicht auf eine bestimmte Käseart beziehen | „Käse“\n7. Gewürze jeder Art, die nicht mehr als 2 Gewichtsprozent des Lebensmittels ausmachen | „Gewürz(e)“ oder „Gewürzmischung“\n8. Kräuter oder Kräuterteile jeder Art, die nicht mehr als 2 Gewichtsprozent des Lebensmittels ausmachen | „Kräuter“ oder „Kräutermischung“\n9. Grundstoffe jeder Art, die für die Herstellung der Kaumasse von Kaugummi verwendet werden | „Kaumasse“\n10. Paniermehl jeglichen Ursprungs | „Paniermehl“\n11. Saccharose jeder Art | „Zucker“\n12. Dextroseanhydrid oder Dextrosemonohydrat | „Dextrose“\n13. Glucosesirup und getrockneter Glucosesirup | „Glukosesirup“\n14. Milcheiweiß aller Art (Kaseine, Kaseinate und Molkenproteine) und Mischungen daraus | „Milcheiweiß“\n15. Kakaopressbutter, Expeller-Kakaobutter, raffinierte Kakaobutter | „Kakaobutter“\n16. Weine aller Art gemäß Anhang XIb der Verordnung (EG) Nr. 1234/2007 (1) | „Wein“\n17. Skelettmuskeln (2) von Tieren der Spezies „Säugetiere“ und „Vögel“, die als für den menschlichen Verzehr geeignet gelten, mitsamt dem natürlicherweise darin eingebetteten oder damit verbundenen Gewebe, deren Gesamtanteil an Fett und Bindegewebe die nachstehend aufgeführten Werte nicht übersteigt, und soweit das Fleisch Zutat eines anderen Lebensmittels ist. Höchstwerte der Fett- und Bindegewebeanteile für Zutaten, die mit dem Begriff „… fleisch“ bezeichnet werden: Art Fettgehalt Verhältnis Kollagen/Fleischeiweiß (1) — Säugetiere (ausgenommen Kaninchen und Schweine) und Mischungen von Tierarten, bei denen Säugetiere überwiegen 25 % 25 % — Schweine 30 % 25 % — Vögel und Kaninchen 15 % 10 % (1) Das Verhältnis Kollagen/Fleischeiweiß wird als Prozentsatz des im Fleischeiweiß enthaltenen Kollagens ausgedrückt. Der Kollagengehalt ist der mit dem Faktor 8 vervielfältigte Gehalt an Hydroxyprolin. Werden diese Höchstwerte überschritten und sind alle anderen Kriterien der Definition von „… fleisch“ erfüllt, so muss der „… fleisch-Anteil“ entsprechend nach unten angepasst werden und das Zutatenverzeichnis muss neben der Angabe des Begriffs „… fleisch“ die Angabe der Zutat Fett bzw. Bindegewebe enthalten. Die unter die Definition von „Separatorenfleisch“ fallenden Erzeugnisse fallen nicht unter die vorliegende Definition. | „… fleisch“, dem der Name/die Namen (3) der Tierart, von der/denen es stammt, vorangestellt ist/sind\nArt | Fettgehalt | Verhältnis Kollagen/Fleischeiweiß (1)\n— Säugetiere (ausgenommen Kaninchen und Schweine) und Mischungen von Tierarten, bei denen Säugetiere überwiegen | 25 % | 25 %\n— Schweine | 30 % | 25 %\n— Vögel und Kaninchen | 15 % | 10 %\n(1) Das Verhältnis Kollagen/Fleischeiweiß wird als Prozentsatz des im Fleischeiweiß enthaltenen Kollagens ausgedrückt. Der Kollagengehalt ist der mit dem Faktor 8 vervielfältigte Gehalt an Hydroxyprolin.\n18. Alle Arten von Erzeugnissen, die unter die Definition von „Separatorenfleisch“ fallen | „Separatorenfleisch“, dem der Name/die Namen (3) der Tierart/Tierarten, von der/denen es stammt, vorangestellt ist/sind\n(1) Verordnung (EG) Nr. 1234/2007 des Rates vom 22. Oktober 2007 über eine gemeinsame Organisation der Agrarmärkte und mit Sondervorschriften für bestimmte landwirtschaftliche Erzeugnisse (Verordnung über die einheitliche GMO) (ABl. L 299 vom 16.11.2007, S. 1). (2) Das Zwerchfell und die Kaumuskeln gehören zu den Skelettmuskeln, während das Herz, die Zunge, die Muskeln des Kopfes (außer den Kaumuskeln), des Karpal- und Tarsalgelenks und des Schwanzes nicht darunter fallen. (3) Bei der Kennzeichnung in englischer Sprache kann diese Bezeichnung durch die allgemeine Bezeichnung für das Fleisch der betreffenden Tierspezies ersetzt werden."
+      },
+      "score": 0.39285713
+    },
+    {
+      "clause": {
+        "chunk_id": "8e13d4a7-5a58-567d-b198-ecf8d9a4807f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "11",
+        "heading": "LEBENSMITTEL, DIE VON DER VERPFLICHTENDEN NÄHRWERTDEKLARATION AUSGENOMMEN SIND",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "11. Lebensmittelzusatzstoffe;"
+      },
+      "score": 0.33333334
+    }
+  ]
+}

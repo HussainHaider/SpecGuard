@@ -1,9 +1,10 @@
 """The VectorStore boundary.
 
-This abstraction is here because comparing Qdrant against pgvector is a deliverable of
-the project, not because the application needs pluggable storage. It stays deliberately
-thin: anything a backend cannot express — Qdrant's server-side fusion in particular —
-belongs behind this interface rather than reimplemented above it.
+Three methods, deliberately. This abstraction exists because comparing Qdrant against
+pgvector is a deliverable, not because the application needs pluggable storage — so it
+is kept at the smallest surface that supports that comparison. Anything a backend can do
+better than we can, hybrid fusion above all, stays behind this line rather than being
+reimplemented above it.
 """
 
 from __future__ import annotations
@@ -26,12 +27,12 @@ class SearchHit(SpecGuardModel):
 class VectorStore(Protocol):
     """Storage and hybrid retrieval over clause chunks."""
 
-    def ensure_collection(self) -> None:
-        """Create the collection if absent. Must be safe to call on every startup."""
-        ...
+    def upsert(self, clauses: Sequence[Clause]) -> int:
+        """Index clauses, creating the collection if needed. Returns points written.
 
-    def upsert_clauses(self, clauses: Sequence[Clause]) -> int:
-        """Index clauses, returning how many points were written."""
+        Idempotent: a clause's point id is its deterministic chunk id, so re-indexing
+        overwrites rather than duplicating. Safe to call on every startup.
+        """
         ...
 
     def search(
@@ -39,12 +40,12 @@ class VectorStore(Protocol):
         query: str,
         *,
         language: Language,
-        limit: int = 8,
+        limit: int = 5,
         regulation: str | None = None,
     ) -> list[SearchHit]:
-        """Hybrid dense + sparse search, fused, most relevant first."""
+        """Hybrid dense + sparse search, fused by the engine, most relevant first."""
         ...
 
-    def count(self) -> int:
-        """Number of indexed points."""
+    def reset(self) -> None:
+        """Drop the collection and everything in it. Destructive; used by tests and reseeds."""
         ...

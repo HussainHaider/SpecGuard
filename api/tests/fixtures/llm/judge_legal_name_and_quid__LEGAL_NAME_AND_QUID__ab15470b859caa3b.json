@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4672,
+  "output_tokens": 233,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name: 'Apfelsaft aus Apfelsaftkonzentrat, naturtrueb', which is a customary and legally recognized name for this type of product in the EU. The ingredient 'Apfelsaftkonzentrat' appears in the legal name and is quantitatively declared in the ingredients list as 'Apfelsaftkonzentrat 12%'. This satisfies the requirement for a quantitative ingredient declaration (QUID) when the ingredient appears in the name of the food.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "quoted_span": "Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

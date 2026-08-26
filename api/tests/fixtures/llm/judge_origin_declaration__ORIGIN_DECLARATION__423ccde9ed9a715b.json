@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3434,
+  "output_tokens": 395,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares the country of origin for both the product and its primary ingredient (Weizenvollkornmehl, 68%) as 'Deutschland'. According to Art. 26(2) and (3), the origin must be given if omitting it could mislead, and if the primary ingredient's origin differs from the product's, this must be stated. Here, both are 'Deutschland', so there is no discrepancy and the requirement is satisfied.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "b24bc226-c399-5f65-bcfc-39811a5305d2",
+        "quoted_span": "Die Angabe des Ursprungslands oder des Herkunftsorts ist in folgenden Fällen verpflichtend: a) falls ohne diese Angabe eine Irreführung der Verbraucher über das tatsächliche Ursprungsland oder den tatsächlichen Herkunftsort des Lebensmittels möglich wäre, insbesondere wenn die dem Lebensmittel beigefügten Informationen oder das Etikett insgesamt sonst den Eindruck erwecken würden, das Lebensmittel komme aus einem anderen Ursprungsland oder Herkunftsort;"
+      },
+      {
+        "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+        "quoted_span": "Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so a) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder b) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

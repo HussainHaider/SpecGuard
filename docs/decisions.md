@@ -131,3 +131,68 @@ would otherwise have to reverse-engineer from the code.
 - **Cost:** the guardrail is currently exercised only by synthetic specs. A threshold
   tuned to a number the model never emits is decorative, and picking one now would be
   fitting to 30 documents from one generator. Revisit in M5 with the eval set.
+
+## 010 — No cross-encoder reranker
+
+- **Context:** A cross-encoder rerank over the fused candidates is the standard next
+  quality lever in a hybrid RAG pipeline, and retrieval quality directly bounds what the
+  judge can conclude.
+- **Options:** (a) add a cross-encoder over the top ~50 fused candidates; (b) rely on
+  dense + sparse RRF alone and spend the effort on verification instead.
+- **Choice:** (b), deliberately deferred rather than overlooked. The corpus is 734
+  clauses of one legal domain, retrieval already returns the governing clause at rank 1
+  for the queries the rules actually issue, and a reranker adds a model download, a
+  second inference hop per query and latency to every RAG rule.
+- **Cost:** recall@5 is whatever RRF gives us, with no second opinion on ranking. The
+  honest reason to skip it here is that a wrong verdict in this system comes from
+  *reasoning over* a clause rather than from failing to retrieve it — which is why the
+  verification pass got the effort instead. Revisit if M5's eval shows retrieval misses
+  rather than judgement errors.
+
+## 011 — PASS verdicts are harder to cite than FAIL verdicts
+
+- **Context:** Across 112 rule evaluations on real model output, verification supported
+  30 citations and rejected 40 as `insufficient` — and on inspection the verifier was
+  right every time. Support rates split sharply by rule:
+  `NUTRITION_CLAIM_CONDITIONS` 4/4, `ORIGIN_DECLARATION` 20/32,
+  `LEGAL_NAME_AND_QUID` 5/31.
+- **Cause, which is structural rather than a prompt defect:** citing a breach is easy —
+  you quote the obligation that was broken. Citing compliance often means establishing
+  that *no obligation arose*, and a clause stating a conditional requirement cannot
+  prove its condition was absent. The conditions of use in the 1924/2006 Annex verify
+  perfectly because each entry states a self-contained threshold; Art. 22 does not,
+  because *when* QUID is required (22(1)), *how* it must be given (Annex VIII) and when
+  it is exempt (22(2)) are three different clauses.
+- **Options:** (a) relax the verifier; (b) let a rule reach its PASS through the
+  not-applicable path, citing the governing provision, when the requirement was never
+  triggered; (c) split the compound rules.
+- **Choice:** not (a) — the verifier is the reason no wrong verdict was produced in 112
+  evaluations, and every mismatch was an abstention rather than a false PASS or FAIL.
+  Leaning toward (b), with (c) for LEGAL_NAME_AND_QUID, which asks two questions at once.
+- **Resolution (measured, verify@v2):** the verifier was being asked whether a clause
+  *proves compliance*. It cannot: compliance is a fact about the specification, and a
+  clause's job is to establish what the obligation is. v2 asks for legal grounding
+  instead, while still rejecting a clause about a different obligation. Correct verdicts
+  went from 74/112 to 96/120, and `NUTRITION_CLAIM_CONDITIONS` held at 4/4 → 5/5, which
+  is what distinguishes a discriminating change from a blanket-permissive one.
+- **Cost:** one wrong verdict appeared where there had been none — a false FAIL on a
+  compliant spec whose origins are both declared. The safer direction to err, but still
+  an error, and worth stating plainly: v1's clean record came from abstaining on 82% of
+  one rule, which suppresses bad judgements by accident rather than catching them.
+
+## 012 — A defect must implement what it claims
+
+- **Context:** Two specs flipped to false PASS under verify@v2, both on
+  `brand_name_as_legal_name`. The defect built the name as `f"{product_name} Selection"`
+  — which keeps every descriptive word and appends a marketing one.
+- **Cause:** Art. 17 accepts a descriptive name, so "Pasta Sauce with Mushrooms
+  Selection" is arguably compliant. The fixture asserted a failure a careful reviewer
+  would dispute, and the model was right to pass it.
+- **Choice:** fix the fixture, not the verifier. The defect now uses names with no
+  descriptive content at all ("Bella Selezione", "Chef's Reserve"), which is what "a
+  brand name in place of the legal name" actually means. Both false PASSes disappeared.
+- **Cost:** ground truth had to be revised after a model disagreed with it, which is one
+  step away from fitting the test to the answer. The distinction that makes it
+  legitimate: the defect did not implement its own stated description, the same failure
+  as seeding an allergen defect on a product with no allergens (decision 011's
+  neighbour in M2). Generation is deterministic, so only the two affected PDFs changed.

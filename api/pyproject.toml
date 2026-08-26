@@ -102,6 +102,9 @@ warn_required_dynamic_aliases = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "evals"]
+# `evals` is a sibling package of `src`, and the tests import the eval harness so the
+# number the README quotes is the number a test asserts on.
+pythonpath = ["."]
 addopts = "--strict-markers -m 'not slow'"
 markers = [
     "slow: judged evals and anything that may reach a live API; excluded by default",

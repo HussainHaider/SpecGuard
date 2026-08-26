@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 966,
+  "output_tokens": 108,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 26(3)) establishes the requirement that if the origin of a food is indicated and it differs from that of its primary ingredient, the origin of the primary ingredient must also be indicated or a statement must be made that it is different. The verdict turns on this exact requirement, explaining that since both origins are the same, no additional statement is required. The clause is directly relevant and supports the verdict."
+  }
+}

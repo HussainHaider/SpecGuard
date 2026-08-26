@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Weizenvollkornbrot, geschnitten, WEIZEN-Vollkornmehl 68%, Rapsoel 1.4%",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part E.1",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL E — BEZEICHNUNG VON ZUSAMMENGESETZTEN ZUTATEN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "c308ca05-a6ac-5735-b0b8-f06bd7773df8",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "20",
+        "paragraph": "2",
+        "heading": "Gemeinschaftsregister",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "(2) Das Register enthält Folgendes:\na) die nährwertbezogenen Angaben und die Bedingungen für ihre Verwendung gemäß dem Anhang;\nb) gemäß Artikel 4 Absatz 5 festgelegte Einschränkungen;\nc) die zugelassenen gesundheitsbezogenen Angaben und die Bedingungen für ihre Verwendung nach Artikel 13 Absätze 3 und 5, Artikel 14 Absatz 1, Artikel 19 Absatz 2, Artikel 21, Artikel 24 Absatz 2 und Artikel 28 Absatz 6 sowie die innerstaatlichen Maßnahmen nach Artikel 23 Absatz 3;\nd) eine Liste abgelehnter gesundheitsbezogener Angaben und die Gründe für ihre Ablehnung.\nGesundheitsbezogene Angaben, die aufgrund geschützter Daten zugelassen wurden, werden in einen gesonderten Anhang des Registers aufgenommen, zusammen mit folgenden Informationen:\n1. Datum der Zulassung der gesundheitsbezogenen Angabe durch die Kommission und Name des ursprünglichen Antragstellers, dem die Zulassung erteilt wurde;\n2. die Tatsache, dass die Kommission die gesundheitsbezogene Angabe auf der Grundlage geschützter Daten und mit Einschränkung der Verwendung zugelassen hat;\n3. in den in Artikel 17 Absatz 3 Unterabsatz 2 und Artikel 18 Absatz 5 Unterabsatz 2 genannten Fällen die Tatsache, dass die gesundheitsbezogene Angabe auf begrenzte Zeit zugelassen ist."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "2984fd45-ba9b-5843-ba47-6ad9eb19a59e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part A.1",
+        "heading": "REFERENZMENGEN — TEIL A — REFERENZMENGEN FÜR DIE TÄGLICHE ZUFUHR VON VITAMINEN UND MINERALSTOFFEN (ERWACHSENE)",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Vitamine und Mineralstoffe, die angegeben werden können, sowie ihre Nährstoffbezugswerte (nutrient reference values — NRV)\nVitamin A (μg) | 800\nVitamin D (μg) | 5\nVitamin E (mg) | 12\nVitamin K (μg) | 75\nVitamin C (mg) | 80\nThiamin (mg) | 1,1\nRiboflavin (mg) | 1,4\nNiacin (mg) | 16\nVitamin B6 (mg) | 1,4\nFolsäure (μg) | 200\nVitamin B12 (μg) | 2,5\nBiotin (μg) | 50\nPantothensäure (mg) | 6\nKalium (mg) | 2 000\n►C1 Chlorid (mg) ◄ | 800\nCalcium (mg) | 800\nPhosphor (mg) | 700\nMagnesium (mg) | 375\nEisen (mg) | 14\nZink (mg) | 10\nKupfer (mg) | 1\nMangan (mg) | 2\n►C1 Fluorid (mg) ◄ | 3,5\nSelen (μg) | 55\nChrom (μg) | 40\nMolybdän (μg) | 50\nJod (μg) | 150"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "8e13d4a7-5a58-567d-b198-ecf8d9a4807f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "11",
+        "heading": "LEBENSMITTEL, DIE VON DER VERPFLICHTENDEN NÄHRWERTDEKLARATION AUSGENOMMEN SIND",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "11. Lebensmittelzusatzstoffe;"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "5d39869e-6d44-50cb-8495-5529872a26cb",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "ENERGIEFREI",
+        "heading": "Nährwertbezogene Angaben und Bedingungen für ihre Verwendung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "Die Angabe, ein Lebensmittel sei energiefrei, sowie jegliche Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn das Produkt nicht mehr als 4 kcal (17 kJ)/100 ml enthält. Für Tafelsüßen gilt ein Grenzwert von 0,4 kcal (1,7 kJ) pro Portion, die der süßenden Wirkung von 6 g Saccharose (ca. 1 Teelöffel Zucker) entspricht."
+      },
+      "score": 0.25
+    }
+  ]
+}

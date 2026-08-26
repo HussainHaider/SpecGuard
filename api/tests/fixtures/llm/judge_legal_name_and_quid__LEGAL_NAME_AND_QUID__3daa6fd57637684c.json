@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4942,
+  "output_tokens": 270,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name, 'Tomatensuppe mit Basilikum', which is a customary and descriptive name for a tomato soup with basil in German. This satisfies the requirement for a legal or customary name. For the QUID requirement: both 'Tomaten' (tomatoes) and 'Basilikum' (basil) appear in the name of the food, and their percentages (71% and 1.2% respectively) are declared in the ingredients list. Additionally, 'SAHNE' (cream) is emphasised in the ingredients list (uppercase), and its percentage (4%) is also declared. Thus, all relevant QUID requirements are met.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "quoted_span": "Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      }
+    ],
+    "confidence": 0.98
+  }
+}

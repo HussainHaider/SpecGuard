@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 847,
+  "output_tokens": 148,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 22(2) of Regulation (EU) No 1169/2011) states that Annex VIII contains technical provisions for the application of paragraph 1, including cases where a quantitative ingredient declaration (QUID) is not required. However, this clause does not itself establish the requirement for when a QUID is necessary; it only refers to the existence of technical rules and possible exemptions. The verdict turns on the obligation to provide a QUID for certain ingredients, which is set out in Article 22(1) and detailed in Annex VIII, not in Article 22(2) itself. Therefore, the clause is insufficient to ground the verdict."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1000,
+  "output_tokens": 111,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Art. 26(2)(a)) establishes that the indication of the country of origin or place of provenance is mandatory if omitting it could mislead the consumer, especially if the labeling would otherwise suggest a different origin. The verdict turns on this requirement by stating that both the product and its primary ingredient have their origin declared as 'Italy', and thus there is no risk of misleading the consumer. The clause is directly relevant to the obligation being assessed, so the citation supports the verdict."
+  }
+}

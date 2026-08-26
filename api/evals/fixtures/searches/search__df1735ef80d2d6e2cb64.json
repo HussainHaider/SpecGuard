@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Wholemeal wheat bread, sliced",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "b7fc2190-4de0-5ae2-8fa1-8c986e883664",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "16",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "16. Yeast;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "22",
+        "paragraph": "1",
+        "heading": "Quantitative indication of ingredients",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned:\n(a) appears in the name of the food or is usually associated with that name by the consumer;\n(b) is emphasised on the labelling in words, pictures or graphics; or\n(c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "54fa0d25-e799-5589-9374-f7d5f6a52e13",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VIII",
+        "paragraph": "1",
+        "heading": "QUANTITATIVE INDICATION OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The quantitative indication shall not be required:\n(a) in respect of an ingredient or category of ingredients:\n(i) the drained net weight of which is indicated in accordance with point 5 of Annex IX;\n(ii) the quantities of which must already appear on the labelling under Union provisions;\n(iii) which is used in small quantities for the purposes of flavouring; or\n(iv) which, while appearing in the name of the food, is not such as to govern the choice of the consumer in the country of marketing because the variation in quantity is not essential to characterise the food or does not distinguish it from similar foods;\n(b) where specific Union provisions stipulate precisely the quantity of an ingredient or of a category of ingredients without providing for the indication thereof on the labelling; or\n(c) in the cases referred to in points 4 and 5 of Part A of Annex VII."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "8f27fb37-cf0e-5bff-b397-34ae2a290de5",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "15",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "15. Jam setting compounds;"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "1b8ef4b6-93a1-507a-9d05-372a21f76ec4",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "14",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "14. Gelatine;"
+      },
+      "score": 0.25
+    }
+  ]
+}

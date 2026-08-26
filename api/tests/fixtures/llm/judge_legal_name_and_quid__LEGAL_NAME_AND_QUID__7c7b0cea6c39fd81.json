@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 3653,
+  "output_tokens": 282,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name, 'Atlantic Salmon Fillets Selection', which is a customary and descriptive name for the food and not merely a brand or fancy name. The ingredient list states 'Atlantic SALMON 100%', and the only ingredient is Atlantic salmon, which appears in the name of the food and is emphasised. The quantitative indication (QUID) is provided as 100%, satisfying the requirement for a quantitative declaration when the ingredient appears in the name or is emphasised.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer; (b) is emphasised on the labelling in words, pictures or graphics; or (c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

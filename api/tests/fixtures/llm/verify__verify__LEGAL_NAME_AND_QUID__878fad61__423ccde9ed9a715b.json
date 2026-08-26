@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 858,
+  "output_tokens": 143,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Annex VII, Part E.1) concerns how a compound ingredient may be listed in the ingredients list—specifically, that it can be named by its established or customary name, with its proportion, provided its ingredients are listed immediately after. The verdict, however, turns on the requirement for a QUID (Quantitative Ingredient Declaration) when an ingredient appears in the name or is emphasised, which is governed by Article 22 and Annex VIII of the Regulation, not Annex VII, Part E.1. Therefore, the cited clause does not establish the requirement the verdict turns on."
+  }
+}

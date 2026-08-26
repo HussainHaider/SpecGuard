@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 905,
+  "output_tokens": 107,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause from Regulation (EC) No 1924/2006 Annex explicitly states the requirement for making a 'low fat' claim on a food product: for liquids, the product must contain no more than 1.5 g of fat per 100 ml. The verdict turns on this exact requirement, noting that the product contains 12.4 g of fat per 100 ml, which exceeds the threshold. Therefore, the clause directly supports the regulatory basis for the verdict."
+  }
+}

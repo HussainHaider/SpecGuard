@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 858,
+  "output_tokens": 83,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause explicitly states the conditions under which a 'source of fibre' claim may be made (at least 3 g of fibre per 100 g or at least 1.5 g per 100 kcal). The verdict turns on whether the product meets these thresholds, which is exactly the requirement set out in the clause. Therefore, the clause supports the verdict."
+  }
+}

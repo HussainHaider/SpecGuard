@@ -1,0 +1,78 @@
+{
+  "query": "country of origin or place of provenance, primary ingredient origin indication, Tomaten",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "3",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(3) Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so\na) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder\nb) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel.\nFür die Anwendung dieses Absatzes müssen zuvor die Durchführungsrechtsakte gemäß Absatz 8 erlassen worden sein."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "b24bc226-c399-5f65-bcfc-39811a5305d2",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "2",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) Die Angabe des Ursprungslands oder des Herkunftsorts ist in folgenden Fällen verpflichtend:\na) falls ohne diese Angabe eine Irreführung der Verbraucher über das tatsächliche Ursprungsland oder den tatsächlichen Herkunftsort des Lebensmittels möglich wäre, insbesondere wenn die dem Lebensmittel beigefügten Informationen oder das Etikett insgesamt sonst den Eindruck erwecken würden, das Lebensmittel komme aus einem anderen Ursprungsland oder Herkunftsort;\nb) bei Fleisch, das in die Codes der Kombinierten Nomenklatur (KN) fällt, die in Anhang XI aufgeführt sind. Für die Anwendung dieses Buchstabens müssen zuvor die Durchführungsbestimmungen gemäß Absatz 8 erlassen worden sein."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "74c6d4a4-2a09-5447-9c1a-d37cae9a92c4",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "19",
+        "paragraph": "1",
+        "heading": "Ausnahme vom Erfordernis eines Zutatenverzeichnisses",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) Ein Zutatenverzeichnis ist bei folgenden Lebensmitteln nicht erforderlich:\na) frischem Obst und Gemüse — einschließlich Kartoffeln —, das nicht geschält, geschnitten oder auf ähnliche Weise behandelt worden ist;\nb) Tafelwasser, das mit Kohlensäure versetzt ist und in dessen Beschreibung dieses Merkmal aufgeführt ist,\nc) Gärungsessig, der nur aus einem Grundstoff hergestellt ist und dem keine weitere Zutat zugesetzt worden ist;\nd) Käse, Butter, fermentierter Milch und Sahne, denen keine Zutat zugesetzt wurde außer für die Herstellung notwendige Milchinhaltsstoffe, Lebensmittelenzyme und Mikroorganismen-Kulturen oder für die Herstellung von Käse — ausgenommen Frisch- oder Schmelzkäse — notwendiges Salz;\ne) Lebensmitteln, die aus einer einzigen Zutat bestehen, sofern\ni) die Bezeichnung des Lebensmittels mit der Zutatenbezeichnung identisch ist oder\nii) die Bezeichnung des Lebensmittels eindeutig auf die Art der Zutat schließen lässt."
+      },
+      "score": 0.25
+    },
+    {
+      "clause": {
+        "chunk_id": "8469995c-2292-56bb-a3a8-7d04120fd33d",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "26",
+        "paragraph": null,
+        "heading": "Überwachung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "Um die wirksame Überwachung von Lebensmitteln mit nährwert- oder gesundheitsbezogenen Angaben zu erleichtern, können die Mitgliedstaaten die Hersteller oder die Personen, die derartige Lebensmittel in ihrem Hoheitsgebiet in Verkehr bringen, verpflichten, die zuständige Behörde über das Inverkehrbringen zu unterrichten und ihr ein Muster des für das Produkt verwendeten Etiketts zu übermitteln."
+      },
+      "score": 0.2
+    },
+    {
+      "clause": {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part E.1",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL E — BEZEICHNUNG VON ZUSAMMENGESETZTEN ZUTATEN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      },
+      "score": 0.16666667
+    }
+  ]
+}

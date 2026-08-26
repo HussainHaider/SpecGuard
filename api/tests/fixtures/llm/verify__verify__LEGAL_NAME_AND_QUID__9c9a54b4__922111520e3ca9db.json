@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 946,
+  "output_tokens": 104,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)(a)) establishes that a quantitative ingredient declaration (QUID) is required when an ingredient appears in the name of the food. The verdict turns on this requirement, stating that 'Chicken' and 'Vegetable(s)' appear in the name and that their quantities are declared, thus satisfying the QUID requirement. The clause directly supports the legal basis for the verdict."
+  }
+}

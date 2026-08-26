@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Zartbitterschokolade, Kakaomasse 58%, Zucker 29%, Kakaobutter 12%",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "7acb99ca-f2ec-5c5a-8a18-5b9f7a1ce18f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "29",
+        "paragraph": "2",
+        "heading": "Verhältnis zu anderen Rechtsvorschriften",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) 12"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "74c6d4a4-2a09-5447-9c1a-d37cae9a92c4",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "19",
+        "paragraph": "1",
+        "heading": "Ausnahme vom Erfordernis eines Zutatenverzeichnisses",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) Ein Zutatenverzeichnis ist bei folgenden Lebensmitteln nicht erforderlich:\na) frischem Obst und Gemüse — einschließlich Kartoffeln —, das nicht geschält, geschnitten oder auf ähnliche Weise behandelt worden ist;\nb) Tafelwasser, das mit Kohlensäure versetzt ist und in dessen Beschreibung dieses Merkmal aufgeführt ist,\nc) Gärungsessig, der nur aus einem Grundstoff hergestellt ist und dem keine weitere Zutat zugesetzt worden ist;\nd) Käse, Butter, fermentierter Milch und Sahne, denen keine Zutat zugesetzt wurde außer für die Herstellung notwendige Milchinhaltsstoffe, Lebensmittelenzyme und Mikroorganismen-Kulturen oder für die Herstellung von Käse — ausgenommen Frisch- oder Schmelzkäse — notwendiges Salz;\ne) Lebensmitteln, die aus einer einzigen Zutat bestehen, sofern\ni) die Bezeichnung des Lebensmittels mit der Zutatenbezeichnung identisch ist oder\nii) die Bezeichnung des Lebensmittels eindeutig auf die Art der Zutat schließen lässt."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "d073683c-e0f7-5e5d-980a-e5883dbb2a1e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part B",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL B — BEZEICHNUNG BESTIMMTER ZUTATEN, BEI DENEN DIE SPEZIELLE BEZEICHNUNG DURCH DIE BEZEICHNUNG EINER KLASSE ERSETZT WERDEN KANN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "Unbeschadet des Artikels 21 können Zutaten, die zu einer der im Folgenden aufgeführten Lebensmittelklasse gehören und die Bestandteile eines anderen Lebensmittels sind, statt mit ihrer speziellen Bezeichnung mit der Bezeichnung der betreffenden Klasse benannt werden.\nDefinition der Lebensmittelklasse | Bezeichnung\n1. Raffinierte Öle tierischer Herkunft | „Öl“, ergänzt entweder durch das Adjektiv „tierisch“ oder die Angabe der speziellen tierischen Herkunft Der Hinweis auf ein gehärtetes Öl muss gegebenenfalls mit dem Ausdruck „ganz gehärtet“ oder „teilweise gehärtet“ versehen sein.\n2. Raffinierte Fette tierischer Herkunft | „Fett“, ergänzt entweder durch das Adjektiv „tierisch“ oder die Angabe der speziellen tierischen Herkunft Der Hinweis auf ein gehärtetes Fett muss gegebenenfalls mit dem Ausdruck „ganz gehärtet“ oder „teilweise gehärtet“ versehen sein.\n3. Mischungen von Mehl aus zwei oder mehr Getreidearten | „Mehl“, gefolgt von der Aufzählung der Getreidearten, aus denen es hergestellt ist, in abnehmender Reihenfolge ihres Gewichtsanteils\n4. Natürliche Stärke und auf physikalischem oder enzymatischem Wege modifizierte Stärke | „Stärke“\n5. Fisch aller Art, wenn der Fisch Zutat eines anderen Lebensmittels ist und sofern sich Bezeichnung und Darstellung dieses Lebensmittels nicht auf eine bestimmte Fischart beziehen | „Fisch“\n6. Käse aller Art, wenn der Käse oder die Käsemischung Zutat eines anderen Lebensmittels ist und sofern sich Bezeichnung und Darstellung dieses Lebensmittels nicht auf eine bestimmte Käseart beziehen | „Käse“\n7. Gewürze jeder Art, die nicht mehr als 2 Gewichtsprozent des Lebensmittels ausmachen | „Gewürz(e)“ oder „Gewürzmischung“\n8. Kräuter oder Kräuterteile jeder Art, die nicht mehr als 2 Gewichtsprozent des Lebensmittels ausmachen | „Kräuter“ oder „Kräutermischung“\n9. Grundstoffe jeder Art, die für die Herstellung der Kaumasse von Kaugummi verwendet werden | „Kaumasse“\n10. Paniermehl jeglichen Ursprungs | „Paniermehl“\n11. Saccharose jeder Art | „Zucker“\n12. Dextroseanhydrid oder Dextrosemonohydrat | „Dextrose“\n13. Glucosesirup und getrockneter Glucosesirup | „Glukosesirup“\n14. Milcheiweiß aller Art (Kaseine, Kaseinate und Molkenproteine) und Mischungen daraus | „Milcheiweiß“\n15. Kakaopressbutter, Expeller-Kakaobutter, raffinierte Kakaobutter | „Kakaobutter“\n16. Weine aller Art gemäß Anhang XIb der Verordnung (EG) Nr. 1234/2007 (1) | „Wein“\n17. Skelettmuskeln (2) von Tieren der Spezies „Säugetiere“ und „Vögel“, die als für den menschlichen Verzehr geeignet gelten, mitsamt dem natürlicherweise darin eingebetteten oder damit verbundenen Gewebe, deren Gesamtanteil an Fett und Bindegewebe die nachstehend aufgeführten Werte nicht übersteigt, und soweit das Fleisch Zutat eines anderen Lebensmittels ist. Höchstwerte der Fett- und Bindegewebeanteile für Zutaten, die mit dem Begriff „… fleisch“ bezeichnet werden: Art Fettgehalt Verhältnis Kollagen/Fleischeiweiß (1) — Säugetiere (ausgenommen Kaninchen und Schweine) und Mischungen von Tierarten, bei denen Säugetiere überwiegen 25 % 25 % — Schweine 30 % 25 % — Vögel und Kaninchen 15 % 10 % (1) Das Verhältnis Kollagen/Fleischeiweiß wird als Prozentsatz des im Fleischeiweiß enthaltenen Kollagens ausgedrückt. Der Kollagengehalt ist der mit dem Faktor 8 vervielfältigte Gehalt an Hydroxyprolin. Werden diese Höchstwerte überschritten und sind alle anderen Kriterien der Definition von „… fleisch“ erfüllt, so muss der „… fleisch-Anteil“ entsprechend nach unten angepasst werden und das Zutatenverzeichnis muss neben der Angabe des Begriffs „… fleisch“ die Angabe der Zutat Fett bzw. Bindegewebe enthalten. Die unter die Definition von „Separatorenfleisch“ fallenden Erzeugnisse fallen nicht unter die vorliegende Definition. | „… fleisch“, dem der Name/die Namen (3) der Tierart, von der/denen es stammt, vorangestellt ist/sind\nArt | Fettgehalt | Verhältnis Kollagen/Fleischeiweiß (1)\n— Säugetiere (ausgenommen Kaninchen und Schweine) und Mischungen von Tierarten, bei denen Säugetiere überwiegen | 25 % | 25 %\n— Schweine | 30 % | 25 %\n— Vögel und Kaninchen | 15 % | 10 %\n(1) Das Verhältnis Kollagen/Fleischeiweiß wird als Prozentsatz des im Fleischeiweiß enthaltenen Kollagens ausgedrückt. Der Kollagengehalt ist der mit dem Faktor 8 vervielfältigte Gehalt an Hydroxyprolin.\n18. Alle Arten von Erzeugnissen, die unter die Definition von „Separatorenfleisch“ fallen | „Separatorenfleisch“, dem der Name/die Namen (3) der Tierart/Tierarten, von der/denen es stammt, vorangestellt ist/sind\n(1) Verordnung (EG) Nr. 1234/2007 des Rates vom 22. Oktober 2007 über eine gemeinsame Organisation der Agrarmärkte und mit Sondervorschriften für bestimmte landwirtschaftliche Erzeugnisse (Verordnung über die einheitliche GMO) (ABl. L 299 vom 16.11.2007, S. 1). (2) Das Zwerchfell und die Kaumuskeln gehören zu den Skelettmuskeln, während das Herz, die Zunge, die Muskeln des Kopfes (außer den Kaumuskeln), des Karpal- und Tarsalgelenks und des Schwanzes nicht darunter fallen. (3) Bei der Kennzeichnung in englischer Sprache kann diese Bezeichnung durch die allgemeine Bezeichnung für das Fleisch der betreffenden Tierspezies ersetzt werden."
+      },
+      "score": 0.4761905
+    },
+    {
+      "clause": {
+        "chunk_id": "f8a6ce5f-3c19-5f5e-82ed-3fce826e3a27",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "22",
+        "paragraph": "1",
+        "heading": "Quantitative Angabe der Zutaten",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) Die Angabe der Menge einer bei der Herstellung oder Zubereitung eines Lebensmittels verwendeten Zutat oder Zutatenklasse ist erforderlich, wenn die betreffende Zutat oder Zutatenklasse:\na) in der Bezeichnung des Lebensmittels genannt ist oder normalerweise von Verbrauchern mit dieser Bezeichnung in Verbindung gebracht wird;\nb) auf der Kennzeichnung durch Worte, Bilder oder eine graphische Darstellung hervorgehoben ist; oder\nc) von wesentlicher Bedeutung für die Charakterisierung eines Lebensmittels und seine Unterscheidung von anderen Erzeugnissen ist, mit denen es aufgrund seiner Bezeichnung oder seines Aussehens verwechselt werden könnte."
+      },
+      "score": 0.35714287
+    },
+    {
+      "clause": {
+        "chunk_id": "b238a81b-6210-5cea-b01c-40a789c8bc17",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "2",
+        "paragraph": "1",
+        "heading": "Begriffsbestimmungen",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) Für die Zwecke dieser Verordnung gelten folgende Begriffsbestimmungen:\na) die Begriffsbestimmungen für „Lebensmittel“, „Lebensmittelrecht“, „Lebensmittelunternehmen“, „Lebensmittelunternehmer“, „Einzelhandel“, „Inverkehrbringen“ und „Endverbraucher“ in Artikel 2 und Artikel 3 Absätze 1, 2, 3, 7, 8 und 18 der Verordnung (EG) Nr. 178/2002;\nb) die Begriffsbestimmungen für „Verarbeitung“, „unverarbeitete Erzeugnisse“ und „Verarbeitungserzeugnisse“ in Artikel 2 Absatz 1 Buchstaben m, n und o der Verordnung (EG) Nr. 852/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 über Lebensmittelhygiene ( 1 );\nc) die Begriffsbestimmung für „Lebensmittelenzym“ in Artikel 3 Absatz 2 Buchstabe a der Verordnung (EG) Nr. 1332/2008 des Europäischen Parlaments und des Rates vom 16. Dezember 2008 über Lebensmittelenzyme ( 2 );\nd) die Begriffsbestimmungen für „Lebensmittelzusatzstoff“ und „Verarbeitungshilfsstoff“ und „Trägerstoff“ in Artikel 3 Absatz 2 Buchstaben a und b und Anhang I Ziffer 5 der Verordnung (EG) Nr. 1333/2008 des Europäischen Parlaments und des Rates vom 16. Dezember 2008 über Lebensmittelzusatzstoffe ( 3 );\ne) die Begriffsbestimmung für „Aroma“ in Artikel 3 Absatz 2 Buchstabe a der Verordnung (EG) Nr. 1334/2008 des Europäischen Parlaments und des Rates vom 16. Dezember 2008 über Aromen und bestimmte Lebensmittelzutaten mit Aromaeigenschaften zur Verwendung in und auf Lebensmitteln ( 4 );\nf) die Begriffsbestimmungen für „Fleisch“, „Separatorenfleisch“, „Fleischzubereitungen“, „Fischereierzeugnisse“ und „Fleischerzeugnisse“ in Anhang I Nummern 1.1, 1.14, 1.15, 3.1 und 7.1 der Verordnung (EG) Nr. 853/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 mit spezifischen Hygienevorschriften für Lebensmittel tierischen Ursprungs ( 5 );\ng) die Begriffsbestimmung für „Werbung“ in Artikel 2 Buchstabe a der Richtlinie 2006/114/EG des Europäischen Parlaments und des Rates vom 12. Dezember 2006 über irreführende und vergleichende Werbung ( 6 );\n▼M3\nh) die Begriffsbestimmung für „technisch hergestellte Nanomaterialien“ in Artikel 3 Absatz 2 Buchstabe f der Verordnung (EU) 2015/2283 des Europäischen Parlaments und des Rates ( 7 ).\n▼B"
+      },
+      "score": 0.25
+    }
+  ]
+}

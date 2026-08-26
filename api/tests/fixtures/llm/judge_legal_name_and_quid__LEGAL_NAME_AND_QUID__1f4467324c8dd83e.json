@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 5062,
+  "output_tokens": 226,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given its legal name, 'Tomatensuppe mit Basilikum', which is a customary and descriptive name for this type of food. The ingredients list provides quantitative declarations (QUID) for all ingredients that appear in the name ('Tomaten' at 71% and 'Basilikum' at 1.2%). Additionally, 'SAHNE' is emphasised in the ingredients list and its percentage (4%) is also declared, fulfilling the QUID requirement for emphasised ingredients. The retrieved clauses establish the requirements for naming and QUID, and the specification meets them.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "836471af-b85d-5aba-83ab-0657f2506d20",
+        "quoted_span": "(5) Anhang VI enthält spezielle Vorschriften für die Bezeichnung eines Lebensmittels und die Angaben, die dazu zu machen sind."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

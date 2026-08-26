@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 812,
+  "output_tokens": 122,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 18(2)) requires that ingredients be designated by their specific name, in accordance with Article 17 and Annex VI. However, the verdict turns on the requirement for a quantitative ingredient declaration (QUID) when an ingredient appears in the name of the food. The cited clause does not establish the QUID requirement; that is found elsewhere in Regulation (EU) No 1169/2011, specifically in Article 22 and Annex VIII. Therefore, the clause is insufficient to ground the QUID aspect of the verdict."
+  }
+}

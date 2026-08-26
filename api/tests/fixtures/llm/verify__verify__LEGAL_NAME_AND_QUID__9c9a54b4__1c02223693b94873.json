@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 910,
+  "output_tokens": 102,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1)(a), establishes the requirement that the quantity of an ingredient must be indicated when that ingredient appears in the name of the food or is usually associated with that name. The verdict turns on this requirement by assessing whether 'apple juice concentrate' appears in the name and whether a quantitative declaration is provided. Therefore, the clause directly supports the legal grounding of the verdict."
+  }
+}

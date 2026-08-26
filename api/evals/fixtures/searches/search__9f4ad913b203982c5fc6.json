@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Tomato soup with basil, Tomatoes 71%, Onions 6%, Single CREAM 4%",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "31bdc9ab-b73e-523f-8053-3706462a80af",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "19",
+        "paragraph": "1",
+        "heading": "Omission of the list of ingredients",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The following foods shall not be required to bear a list of ingredients:\n(a) fresh fruit and vegetables, including potatoes, which have not been peeled, cut or similarly treated;\n(b) carbonated water, the description of which indicates that it has been carbonated;\n(c) fermentation vinegars derived exclusively from a single basic product, provided that no other ingredient has been added;\n(d) cheese, butter, fermented milk and cream, to which no ingredient has been added other than lactic products, food enzymes and micro-organism cultures essential to manufacture, or in the case of cheese other than fresh cheese and processed cheese the salt needed for its manufacture;\n(e) foods consisting of a single ingredient, where:\n(i) the name of the food is identical to the ingredient name; or\n(ii) the name of the food enables the nature of the ingredient to be clearly identified."
+      },
+      "score": 0.54545456
+    },
+    {
+      "clause": {
+        "chunk_id": "5d1ed487-14e4-55d5-a859-1e8c489e4dac",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "4",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "4. A herb, a spice or mixtures thereof;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "118c0267-4bc6-5074-9832-6c15a97f9eba",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part D.3",
+        "heading": "INDICATION AND DESIGNATION OF INGREDIENTS — PART D — DESIGNATION OF FLAVOURINGS IN THE LIST OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "3. Quinine and/or caffeine used as a flavouring in the production or preparation of a food shall be mentioned by name in the list of ingredients immediately after the term ‘flavouring(s)’."
+      },
+      "score": 0.39583334
+    },
+    {
+      "clause": {
+        "chunk_id": "54fa0d25-e799-5589-9374-f7d5f6a52e13",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VIII",
+        "paragraph": "1",
+        "heading": "QUANTITATIVE INDICATION OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The quantitative indication shall not be required:\n(a) in respect of an ingredient or category of ingredients:\n(i) the drained net weight of which is indicated in accordance with point 5 of Annex IX;\n(ii) the quantities of which must already appear on the labelling under Union provisions;\n(iii) which is used in small quantities for the purposes of flavouring; or\n(iv) which, while appearing in the name of the food, is not such as to govern the choice of the consumer in the country of marketing because the variation in quantity is not essential to characterise the food or does not distinguish it from similar foods;\n(b) where specific Union provisions stipulate precisely the quantity of an ingredient or of a category of ingredients without providing for the indication thereof on the labelling; or\n(c) in the cases referred to in points 4 and 5 of Part A of Annex VII."
+      },
+      "score": 0.3768116
+    },
+    {
+      "clause": {
+        "chunk_id": "9126219a-abb2-5cef-a091-5c602a7cbc63",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VIII",
+        "paragraph": "4",
+        "heading": "QUANTITATIVE INDICATION OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "4. By way of derogation from point 3:\n(a) where foods have lost moisture following heat treatment or other treatment, the quantity shall be expressed as a percentage which shall correspond to the quantity of the ingredient(s) used, related to the finished product, unless that quantity or the total quantity of all the ingredients indicated on the labelling exceeds 100 %, in which case the quantity shall be indicated on the basis of the weight of the ingredient(s) used to prepare 100 g of finished product;\n(b) the quantity of volatile ingredients shall be indicated on the basis of their proportion by weight in the finished product;\n(c) the quantity of ingredients used in concentrated or dehydrated form and reconstituted during manufacture may be indicated on the basis of their proportion by weight as recorded before their concentration or dehydration;\n(d) in the case of concentrated or dehydrated foods which are intended to be reconstituted by the addition of water, the quantity of the ingredients may be indicated on the basis of their proportion by weight in the reconstituted product."
+      },
+      "score": 0.3409091
+    }
+  ]
+}

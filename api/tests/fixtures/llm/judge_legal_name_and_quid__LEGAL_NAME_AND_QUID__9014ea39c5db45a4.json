@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 5287,
+  "output_tokens": 397,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product provides a legal name, 'Roasted mixed nuts, salted', which is a descriptive and customary name for this type of food, as required by the regulation. The ingredients list includes a quantitative declaration (QUID) for all the nuts (peanuts, cashew nuts, almonds, hazelnuts) that appear in the name and are emphasised, with their respective percentages clearly stated. This satisfies the requirement for QUID under Art. 22(1), as these ingredients appear in the name and are essential to characterise the food.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "4600cf8d-fc01-58f1-b809-63e6b2653e9a",
+        "quoted_span": "‘legal name’ means the name of a food prescribed in the Union provisions applicable to it or, in the absence of such Union provisions, the name provided for in the laws, regulations and administrative provisions applicable in the Member State in which the food is sold to the final consumer or to mass caterers;"
+      },
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer; (b) is emphasised on the labelling in words, pictures or graphics; or (c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      }
+    ],
+    "confidence": 0.98
+  }
+}

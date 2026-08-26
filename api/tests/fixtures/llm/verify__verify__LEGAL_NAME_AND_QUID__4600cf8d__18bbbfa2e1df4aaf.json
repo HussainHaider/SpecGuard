@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1885,
+  "output_tokens": 124,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (definition of 'legal name') only defines what constitutes a 'legal name' for a food product. The verdict, however, also discusses the requirement for a quantitative ingredient declaration (QUID) for ingredients essential to characterise the food and associated with the name. The definition of 'legal name' does not establish the QUID requirement or its conditions; that rule is found elsewhere in Regulation (EU) No 1169/2011. Therefore, the clause is insufficient to support the full verdict, as it does not address the QUID requirement."
+  }
+}

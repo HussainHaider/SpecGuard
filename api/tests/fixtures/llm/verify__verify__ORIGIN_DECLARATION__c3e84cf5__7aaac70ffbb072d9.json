@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 941,
+  "output_tokens": 120,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 26(3), directly establishes the requirement that when the country of origin of a food is given and it is not the same as that of its primary ingredient, the origin of the primary ingredient must also be given or it must be indicated as different. The verdict turns on this exact requirement, stating that the origin of the primary ingredient (chickpeas) is not declared, thus the requirement is not met. The clause is the correct legal grounding for the verdict."
+  }
+}

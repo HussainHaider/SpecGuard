@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 3196,
+  "output_tokens": 244,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name: 'Cloudy apple juice from concentrate', which is a customary and descriptive name for this type of product and not merely a brand or fancy name. Regarding QUID, 'apple juice concentrate' appears in the name of the food and is essential to characterise it. The ingredients list provides a quantitative declaration: 'Apple juice concentrate 12%'. This satisfies the requirement for a QUID as per Article 22(1). No exemptions from QUID in the retrieved clauses apply to this case.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer;"
+      }
+    ],
+    "confidence": 0.98
+  }
+}

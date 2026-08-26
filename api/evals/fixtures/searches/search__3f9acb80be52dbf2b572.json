@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Chicken soup with vegetables, Chicken stock 52%, Chicken 18%, Carrots 11%",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "22",
+        "paragraph": "1",
+        "heading": "Quantitative indication of ingredients",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned:\n(a) appears in the name of the food or is usually associated with that name by the consumer;\n(b) is emphasised on the labelling in words, pictures or graphics; or\n(c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      },
+      "score": 0.75
+    },
+    {
+      "clause": {
+        "chunk_id": "26fed591-2232-5305-bdcc-b84725f2ad32",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VI",
+        "paragraph": "Part A.7",
+        "heading": "NAME OF THE FOOD AND SPECIFIC ACCOMPANYING PARTICULARS — PART A — MANDATORY PARTICULARS ACCOMPANYING THE NAME OF THE FOOD",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "7. Meat products, meat preparations and fishery products which may give the impression that they are made of a whole piece of meat or fish, but actually consist of different pieces combined together by other ingredients, including food additives and food enzymes or by other means, shall bear the following indication:\nin Bulgarian | : | ‘формовано месо’ and ‘формована риба’;\nin Spanish | : | ‘elaborado a partir de piezas de carne’ and ‘elaborado a partir de piezas de pescado’;\nin Czech | : | ‘ze spojovaných kousků masa’ and ‘ze spojovaných kousků rybího masa’;\nin Danish | : | ‘Sammensat af stykker af kød’ and ‘Sammensat af stykker af fisk’;\nin German | : | ‘aus Fleischstücken zusammengefügt’ and ‘aus Fischstücken zusammengefügt’;\nin Estonian | : | ‘liidetud liha’ and ‘liidetud kala’;\nin Greek | : | ‘μορφοποιημένο κρέας’ and ‘μορφοποιημένο ψάρι’;\nin English | : | ‘formed meat’ and ‘formed fish’;\nin French | : | ‘viande reconstituée’ and ‘poisson reconstitué’;\nin Irish | : | ‘píosaí feola ceangailte’ and ‘píosaí éisc ceangailte’;\nin Italian | : | ‘costituito da parti di carne’ and ‘costituito da parti di pesce’;\nin Latvian | : | ‘formēta gaļa’ and ‘formēta zivs’;\nin Lithuanian | : | ‘sudarytas (-a) iš mėsos gabalų’ and ‘sudarytas (-a) iš žuvies gabalų’;\nin Hungarian | : | ‘darabokból újraformázott hús’ and ‘darabokból újraformázott hal’;\nin Maltese | : | ‘laħam rikostitwit’ and ‘ħut rikostitwit’;\nin Dutch | : | ‘samengesteld uit stukjes vlees’ and ‘samengesteld uit stukjes vis’;\nin Polish | : | ‘z połączonych kawałków mięsa’ and ‘z połączonych kawałków ryby’;\nin Portuguese | : | ‘carne reconstituída’ and ‘peixe reconstituído’;\nin Romanian | : | ‘carne formată’ and ‘carne de pește formată’;\nin Slovak | : | ‘zo spájaných kúskov mäsa’ and ‘zo spájaných kúskov ryby’;\nin Slovenian | : | ‘sestavljeno, iz koščkov oblikovano meso’ and ‘sestavljene, iz koščkov oblikovane ribe’;\nin Finnish | : | ‘paloista yhdistetty liha’ and ‘paloista yhdistetty kala’;\nin Swedish | : | ‘sammanfogade bitar av kött’ and ‘sammanfogade bitar av fisk’."
+      },
+      "score": 0.537037
+    },
+    {
+      "clause": {
+        "chunk_id": "e47123d0-a1d0-59a9-81ba-46b2ee866482",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VI",
+        "paragraph": "Part A.6",
+        "heading": "NAME OF THE FOOD AND SPECIFIC ACCOMPANYING PARTICULARS — PART A — MANDATORY PARTICULARS ACCOMPANYING THE NAME OF THE FOOD",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "6. In the case of meat products and meat preparations which have the appearance of a cut, joint, slice, portion or carcase of meat, the name of the food shall include an indication of the presence of added water if the added water makes up more than 5 % of the weight of the finished product. The same rules shall apply in the case of fishery products and prepared fishery products which have the appearance of a cut, joint, slice, portion, filet or of a whole fishery product."
+      },
+      "score": 0.36666667
+    },
+    {
+      "clause": {
+        "chunk_id": "eec11370-a614-5d79-a534-0a54f2a95894",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part B",
+        "heading": "INDICATION AND DESIGNATION OF INGREDIENTS — PART B — DESIGNATION OF CERTAIN INGREDIENTS BY THE NAME OF A CATEGORY RATHER THAN A SPECIFIC NAME",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Without prejudice to Article 21, ingredients which belong to one of the categories of foods listed below and are constituents of another food may be designated by the name of that category rather than the specific name.\nDefinition of category of food | Designation\n1. Refined oils of animal origin | ‘Oil’, together with either the adjective ‘animal’, or the indication of specific animal origin. The expression ‘fully hydrogenated’ or ‘partly hydrogenated’, as appropriate, must accompany the indication of a hydrogenated oil\n2. Refined fats of animal origin | ‘Fat’, together with either the adjective ‘animal’ or the indication of specific animal origin. The expression ‘fully hydrogenated’ or ‘partly hydrogenated’, as appropriate, must accompany the indication of a hydrogenated fat\n3. Mixtures of flour obtained from two or more cereal species | ‘Flour’, followed by a list of the cereals from which it has been obtained, in descending order by weight\n4. Starches, and starches modified by physical means or by enzymes | ‘Starch’\n5. All species of fish where the fish constitutes an ingredient of another food and provided that the name and presentation of such food does not refer to a specific species of fish | ‘Fish’\n6. All types of cheese where the cheese or mixture of cheeses constitutes an ingredient of another food and provided that the name and presentation of such food does not refer to a specific type of cheese | ‘Cheese’\n7. All spices not exceeding 2 % by weight of the food | ‘Spice(s)’ or ‘mixed spices’\n8. All herbs or parts of herbs not exceeding 2 % by weight of the food | ‘Herb(s)’ or ‘mixed herbs’\n9. All types of gum preparations used in the manufacture of gum base for chewing gum | ‘Gum base’\n10. All types of crumbed baked cereal products | ‘Crumbs’ or ‘rusks’ as appropriate\n11. All types of sucrose | ‘Sugar’\n12. Anhydrous dextrose or dextrose monohydrate | ‘Dextrose’\n13. Glucose syrup and anhydrous glucose syrup | ‘Glucose syrup’\n14. All types of milk protein (caseins, caseinates and whey proteins) and mixtures thereof | ‘Milk proteins’\n15. Press, expeller or refined cocoa butter | ‘Cocoa butter’\n16. All types of wine as covered by Annex XIb to Regulation (EC) No 1234/2007 (1) | ‘Wine’\n17. Skeletal muscles (2) of mammalian and bird species recognised as fit for human consumption with naturally included or adherent tissue, where the total fat and connective tissue content does not exceed the values indicated below and where the meat constitutes an ingredient of another food. Maximum fat and connective tissue contents for ingredients designated by the term ‘… meat’ Species Fat content Collagen/meat protein ratio (1) — Mammals (other than rabbits and porcines) and mixtures of species with mammals predominating, 25 % 25 % — Porcines, 30 % 25 % — Birds and rabbits, 15 % 10 % (1) The collagen/meat protein ratio is expressed as the percentage of collagen in meat protein. The collagen content means the hydroxyproline content multiplied by a factor of 8. If these maximum limits are exceeded, but all other criteria for the definition of ‘meat’ are satisfied, the ‘… meat’ content must be adjusted downwards accordingly and the list of ingredients must mention, in addition to the term ‘… meat’, the presence of fat and/or connective tissue. The products covered by the definition of ‘mechanically separated meat’ are excluded from this definition | ‘… meat’ and the name(s) (3) of the animal species from which it comes\nSpecies | Fat content | Collagen/meat protein ratio (1)\n— Mammals (other than rabbits and porcines) and mixtures of species with mammals predominating, | 25 % | 25 %\n— Porcines, | 30 % | 25 %\n— Birds and rabbits, | 15 % | 10 %\n(1) The collagen/meat protein ratio is expressed as the percentage of collagen in meat protein. The collagen content means the hydroxyproline content multiplied by a factor of 8.\n18. All types of products covered by the definition of ‘mechanically separated meat’ | ‘mechanically separated meat’ and the name(s) (3) of the animal species from which it comes\n(1) Council Regulation (EC) No 1234/2007 of 22 October 2007 establishing a common organisation of agricultural markets and on specific provisions for certain agricultural products (Single CMO Regulation) (OJ L 299, 16.11.2007, p. 1). (2) The diaphragm and the masseters are part of the skeletal muscles, while the heart, tongue, the muscles of the head (other than the masseters), the muscles of the carpus, the tarsus and the tail are excluded. (3) For labelling in English, this designation may be replaced by the generic name of the ingredient for the animal species concerned."
+      },
+      "score": 0.35964912
+    },
+    {
+      "clause": {
+        "chunk_id": "f11b1697-a132-521e-92e6-153a558d4717",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part A",
+        "heading": "INDICATION AND DESIGNATION OF INGREDIENTS — PART A — SPECIFIC PROVISIONS CONCERNING THE INDICATION OF INGREDIENTS BY DESCENDING ORDER OF WEIGHT",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Category of ingredient | Provision concerning indication by weight\n1. Added water and volatile products | Shall be listed in order of their weight in the finished product. The amount of water added as an ingredient in a food shall be calculated by deducting from the total amount of the finished product the total amount of the other ingredients used. This amount shall not be required to be taken into consideration if it does not exceed 5 % by weight of the finished product. This derogation does not apply to meat, meat preparations, unprocessed fishery products and unprocessed bivalve molluscs\n2. Ingredients used in concentrated or dehydrated form and reconstituted at the time of manufacture | May be listed in order of weight as recorded before their concentration or dehydration\n3. Ingredients used in concentrated or dehydrated foods, which are intended to be reconstituted by the addition of water | May be listed in order of proportion in the reconstituted product provided that the list of ingredients is accompanied by an expression, such as ‘ingredients of the reconstituted product’, or ‘ingredients of the ready-to-use product’\n4. Fruit, vegetables or mushrooms, none of which significantly predominates in terms of weight and which are used in proportions that are likely to vary, used in a mixture as ingredients of a food | May be grouped together in the list of ingredients under the designation ‘fruit’, ‘vegetables’ or ‘mushrooms’ followed by the phrase ‘in varying proportions’, immediately followed by a list of the fruit, vegetables or mushrooms present. In such cases, the mixture shall be included in the list of ingredients in accordance with Article 18(1), on the basis of the total weight of the fruit, vegetables or mushrooms present\n5. Mixtures of spices or herbs, where none significantly predominates in proportion by weight | May be listed in different order provided that that list of ingredients is accompanied by an expression such as ‘in variable proportion’\n6. Ingredients constituting less than 2 % of the finished product | May be listed in a different order after the other ingredients\n7. Ingredients, which are similar or mutually substitutable, likely to be used in the manufacture or preparation of a food without altering its composition, its nature or its perceived value, and in so far as they constitute less than 2 % of the finished product | May be referred to in the list of ingredients by means of the statement ‘contains … and/or …’, where at least one of no more than two ingredients is present in the finished product. This provision shall not apply to food additives or to ingredients listed in Part C of this Annex, and to substances or products listed in Annex II causing allergies or intolerances\n8. Refined oils of vegetable origin | May be grouped together in the list of ingredients under the designation ‘vegetable oils’ followed immediately by a list of indications of specific vegetable origin, and may be followed by the phrase ‘in varying proportions’. If grouped together, vegetable oils shall be included in the list of ingredients in accordance with Article 18(1), on the basis of the total weight of the vegetable oils present. The expression ‘fully hydrogenated’ or ‘partly hydrogenated’, as appropriate, must accompany the indication of a hydrogenated oil\n9. Refined fats of vegetable origin | May be grouped together in the list of ingredients under the designation ‘vegetable fats’ followed immediately by a list of indications of specific vegetable origin, and may be followed by the phrase ‘in varying proportions’. If grouped together, vegetable fats shall be included in the list of ingredients in accordance with Article 18(1), on the basis of the total weight of the vegetable fats present. The expression ‘fully hydrogenated’ or ‘partly hydrogenated’, as appropriate, must accompany the indication of a hydrogenated fat"
+      },
+      "score": 0.27222222
+    }
+  ]
+}

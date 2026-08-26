@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4196,
+  "output_tokens": 231,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given its legal name, 'Mature cheddar cheese', which is a customary and legal name for this type of product in the EU. The ingredients list is present and includes a quantitative declaration (QUID) for 'MILK' at 98%, which is appropriate since 'cheddar cheese' is made primarily from milk and 'milk' is essential to characterise the food. The retrieved clauses confirm the requirements for naming and QUID, and the specification meets them.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "31bdc9ab-b73e-523f-8053-3706462a80af",
+        "quoted_span": "cheese, butter, fermented milk and cream, to which no ingredient has been added other than lactic products, food enzymes and micro-organism cultures essential to manufacture, or in the case of cheese other than fresh cheese and processed cheese the salt needed for its manufacture;"
+      }
+    ],
+    "confidence": 0.95
+  }
+}

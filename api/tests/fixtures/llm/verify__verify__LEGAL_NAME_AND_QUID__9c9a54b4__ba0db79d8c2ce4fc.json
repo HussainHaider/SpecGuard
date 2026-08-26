@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 986,
+  "output_tokens": 123,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that a quantitative indication (QUID) is required when an ingredient appears in the name of the food, is emphasised, or is essential to characterise the food. The verdict turns on this requirement, stating that the product's ingredient ('Atlantic Salmon 100%') matches the name and composition, and the QUID requirement is satisfied by the explicit '100%' declaration. The clause is directly relevant and supports the legal grounding of the verdict."
+  }
+}

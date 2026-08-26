@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4433,
+  "output_tokens": 311,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name: 'Tomato sauce with mushrooms for pasta', which is a descriptive and customary name, not just a brand or fancy name. The ingredients list provides a quantitative declaration (QUID) for both 'Tomatoes' (62%) and 'Mushrooms' (14%), which are both mentioned in the name of the food. This satisfies the requirement that a QUID is given where an ingredient appears in the name of the food. The retrieved clauses establish both requirements and the specification meets them.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "d7b99676-bc00-5f2e-95b9-d6027762424a",
+        "quoted_span": "Ingredients shall be designated by their specific name, where applicable, in accordance with the rules laid down in Article 17 and in Annex VI."
+      },
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer;"
+      }
+    ],
+    "confidence": 1.0
+  }
+}

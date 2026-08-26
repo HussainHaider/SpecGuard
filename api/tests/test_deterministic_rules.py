@@ -45,19 +45,28 @@ def cases():
 
 
 class TestRegistry:
-    def test_registers_exactly_the_deterministic_rules(self) -> None:
-        assert registered_ids() == DETERMINISTIC
+    def test_deterministic_registry_holds_exactly_the_four(self) -> None:
+        assert set(deterministic_rules()) == DETERMINISTIC
 
-    def test_knows_which_rules_are_still_missing(self) -> None:
-        # The RAG four arrive in M3; the registry should say so rather than pretend
-        # the rule set is complete.
-        assert missing_ids() == set(RuleId) - DETERMINISTIC
+    def test_every_rule_now_has_an_implementation(self) -> None:
+        assert missing_ids() == set()
+        assert registered_ids() == set(RuleId)
 
-    def test_every_registered_rule_is_declared_deterministic(self) -> None:
+    def test_each_rule_is_registered_under_the_kind_it_declares(self) -> None:
+        # The separation is load-bearing: the deterministic set is handed a context with
+        # no client, so registering a RAG rule there would strip its retrieval silently.
         from specguard.models.rule import RULE_KINDS
+        from specguard.rules.registry import rag_rules
 
-        for rule_id in registered_ids():
+        for rule_id in deterministic_rules():
             assert RULE_KINDS[rule_id] is RuleKind.DETERMINISTIC
+        for rule_id in rag_rules():
+            assert RULE_KINDS[rule_id] is RuleKind.RAG
+
+    def test_the_two_registries_do_not_overlap(self) -> None:
+        from specguard.rules.registry import rag_rules
+
+        assert not set(deterministic_rules()) & set(rag_rules())
 
 
 class TestAgainstTheManifest:

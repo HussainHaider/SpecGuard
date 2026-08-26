@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1294,
+  "output_tokens": 147,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 2(2) definition of 'gesundheitsbezogene Angabe' or 'health claim') only defines what constitutes a health claim. The verdict, however, turns on two specific requirements: (1) that health claims must be authorised and worded within the terms of that authorisation, and (2) that claims preventing, treating, or curing disease are prohibited. These requirements are not established in the cited clause, which is purely definitional. The operative rules are found elsewhere in Regulation (EC) No 1924/2006, such as in Articles 10 and 12. Therefore, the citation is insufficient to ground the verdict."
+  }
+}

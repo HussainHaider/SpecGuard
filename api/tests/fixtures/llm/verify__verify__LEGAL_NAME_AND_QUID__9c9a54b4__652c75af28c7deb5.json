@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 936,
+  "output_tokens": 137,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)) establishes when the indication of the quantity of an ingredient (QUID) is required, specifically when an ingredient appears in the name of the food or is associated with it. The verdict, however, turns on the requirement to provide a legal or descriptive name for the food, not on the QUID requirement. The cited clause does not establish the obligation to provide a legal or descriptive name; that requirement is found elsewhere in the regulation (specifically, Article 17). Therefore, the citation is insufficient to support the verdict."
+  }
+}

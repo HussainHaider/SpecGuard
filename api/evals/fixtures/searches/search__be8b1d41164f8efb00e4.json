@@ -1,0 +1,78 @@
+{
+  "query": "Hoher Ballaststoffgehalt, conditions of use for nutrition claims, fibre 7.4 g per 100, fat 16.2 g per 100, saturates 1.8 g per 100, sugars 14.5 g per 100, salt 0.31 g per 100, protein 10.1 g per 100",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "561c3091-2d14-5bcc-b69b-011af5abffd7",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "ENERGIEARM",
+        "heading": "Nährwertbezogene Angaben und Bedingungen für ihre Verwendung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "Die Angabe, ein Lebensmittel sei energiearm, sowie jede Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn das Produkt im Falle von festen Lebensmitteln nicht mehr als 40 kcal (170 kJ)/100 g oder im Falle von flüssigen Lebensmitteln nicht mehr als 20 kcal (80 kJ)/100 ml enthält. Für Tafelsüßen gilt ein Grenzwert von 4 kcal (17 kJ) pro Portion, die der süßenden Wirkung von 6 g Saccharose (ca. 1 Teelöffel Zucker) entspricht."
+      },
+      "score": 0.5263158
+    },
+    {
+      "clause": {
+        "chunk_id": "b238a81b-6210-5cea-b01c-40a789c8bc17",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "2",
+        "paragraph": "1",
+        "heading": "Begriffsbestimmungen",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) Für die Zwecke dieser Verordnung gelten folgende Begriffsbestimmungen:\na) die Begriffsbestimmungen für „Lebensmittel“, „Lebensmittelrecht“, „Lebensmittelunternehmen“, „Lebensmittelunternehmer“, „Einzelhandel“, „Inverkehrbringen“ und „Endverbraucher“ in Artikel 2 und Artikel 3 Absätze 1, 2, 3, 7, 8 und 18 der Verordnung (EG) Nr. 178/2002;\nb) die Begriffsbestimmungen für „Verarbeitung“, „unverarbeitete Erzeugnisse“ und „Verarbeitungserzeugnisse“ in Artikel 2 Absatz 1 Buchstaben m, n und o der Verordnung (EG) Nr. 852/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 über Lebensmittelhygiene ( 1 );\nc) die Begriffsbestimmung für „Lebensmittelenzym“ in Artikel 3 Absatz 2 Buchstabe a der Verordnung (EG) Nr. 1332/2008 des Europäischen Parlaments und des Rates vom 16. Dezember 2008 über Lebensmittelenzyme ( 2 );\nd) die Begriffsbestimmungen für „Lebensmittelzusatzstoff“ und „Verarbeitungshilfsstoff“ und „Trägerstoff“ in Artikel 3 Absatz 2 Buchstaben a und b und Anhang I Ziffer 5 der Verordnung (EG) Nr. 1333/2008 des Europäischen Parlaments und des Rates vom 16. Dezember 2008 über Lebensmittelzusatzstoffe ( 3 );\ne) die Begriffsbestimmung für „Aroma“ in Artikel 3 Absatz 2 Buchstabe a der Verordnung (EG) Nr. 1334/2008 des Europäischen Parlaments und des Rates vom 16. Dezember 2008 über Aromen und bestimmte Lebensmittelzutaten mit Aromaeigenschaften zur Verwendung in und auf Lebensmitteln ( 4 );\nf) die Begriffsbestimmungen für „Fleisch“, „Separatorenfleisch“, „Fleischzubereitungen“, „Fischereierzeugnisse“ und „Fleischerzeugnisse“ in Anhang I Nummern 1.1, 1.14, 1.15, 3.1 und 7.1 der Verordnung (EG) Nr. 853/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 mit spezifischen Hygienevorschriften für Lebensmittel tierischen Ursprungs ( 5 );\ng) die Begriffsbestimmung für „Werbung“ in Artikel 2 Buchstabe a der Richtlinie 2006/114/EG des Europäischen Parlaments und des Rates vom 12. Dezember 2006 über irreführende und vergleichende Werbung ( 6 );\n▼M3\nh) die Begriffsbestimmung für „technisch hergestellte Nanomaterialien“ in Artikel 3 Absatz 2 Buchstabe f der Verordnung (EU) 2015/2283 des Europäischen Parlaments und des Rates ( 7 ).\n▼B"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "5d39869e-6d44-50cb-8495-5529872a26cb",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "ENERGIEFREI",
+        "heading": "Nährwertbezogene Angaben und Bedingungen für ihre Verwendung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "Die Angabe, ein Lebensmittel sei energiefrei, sowie jegliche Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn das Produkt nicht mehr als 4 kcal (17 kJ)/100 ml enthält. Für Tafelsüßen gilt ein Grenzwert von 0,4 kcal (1,7 kJ) pro Portion, die der süßenden Wirkung von 6 g Saccharose (ca. 1 Teelöffel Zucker) entspricht."
+      },
+      "score": 0.45833334
+    },
+    {
+      "clause": {
+        "chunk_id": "bee709a6-82d9-520f-a6ac-134ebfd0f99f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIV",
+        "paragraph": "UMRECHNUNGSFAKTOREN FÜR DIE BERECHNUNG DER ENERGIE",
+        "heading": "UMRECHNUNGSFAKTOREN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "Der anzugebende Brennwert wird unter Anwendung der folgenden Umrechnungsfaktoren berechnet:\n— Kohlenhydrate (ausgenommen mehrwertige Alkohole) | 17 kJ/g — 4 kcal/g\n— mehrwertige Alkohole | 10 kJ/g — 2,4 kcal/g\n— Eiweiß | 17 kJ/g — 4 kcal/g\n— Fett | 37 kJ/g — 9 kcal/g\n— Salatrims | 25 kJ/g — 6 kcal/g\n— Ethylalkohol | 29 kJ/g — 7 kcal/g\n— organische Säuren | 13 kJ/g — 3 kcal/g\n— Ballaststoffe | 8 kJ/g — 2 kcal/g\n— Erythritol | 0 kJ/g — 0 kcal/g"
+      },
+      "score": 0.42424244
+    },
+    {
+      "clause": {
+        "chunk_id": "b42092a8-80ee-5c9c-8b04-db98593e6f04",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "32",
+        "paragraph": "2",
+        "heading": "Angabe je 100 g oder je 100 ml",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) Der Brennwert und die Nährstoffmengen gemäß Artikel 30 Absätze 1 bis 5 sind je 100 g oder je 100 ml anzugeben."
+      },
+      "score": 0.33333334
+    }
+  ]
+}

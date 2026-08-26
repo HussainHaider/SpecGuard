@@ -364,15 +364,30 @@ def _suppress_quid(sheet: _Sheet) -> None:
     )
 
 
+#: Invented brand names with no descriptive content at all. The earlier version of this
+#: defect appended "Selection" to the product name, which left every descriptive word in
+#: place — and Art. 17 accepts a descriptive name, so the result was arguably compliant
+#: and the fixture asserted a failure a careful reviewer would dispute.
+_FANCY_NAMES: tuple[str, ...] = (
+    "Bella Selezione",
+    "Chef's Reserve",
+    "Golden Harvest Original",
+    "Maison Doree",
+    "The Pantry Collection",
+)
+
+
 def _replace_legal_name(sheet: _Sheet) -> None:
-    sheet.legal_name = f"{sheet.template.product_name} Selection"
+    index = sum(ord(c) for c in sheet.template.slug) % len(_FANCY_NAMES)
+    sheet.legal_name = _FANCY_NAMES[index]
     sheet.defects.append(
         SeededDefect(
             rule_id=RuleId.LEGAL_NAME_AND_QUID,
             kind="brand_name_as_legal_name",
             detail=(
-                "A brand-style name is given in place of the legal or customary name required "
-                "by Art. 17."
+                f"The food is named only {_FANCY_NAMES[index]!r}, which says nothing about "
+                "what the food is. Art. 17 requires the legal name, or failing that a "
+                "customary or descriptive one."
             ),
         )
     )

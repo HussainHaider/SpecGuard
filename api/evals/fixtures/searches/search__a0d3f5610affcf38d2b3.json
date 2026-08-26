@@ -1,0 +1,78 @@
+{
+  "query": "country of origin or place of provenance, primary ingredient origin indication, France, France, Chicken stock",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "fe0dad55-3dc1-55ea-98e5-b683dd0d8133",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "5",
+        "heading": "Country of origin or place of provenance",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "5. By 13 December 2014, the Commission shall submit reports to the European Parliament and the Council regarding the mandatory indication of the country of origin or place of provenance for the following foods:\n(a) types of meat other than beef and those referred to in point (b) of paragraph 2;\n(b) milk;\n(c) milk used as an ingredient in dairy products;\n(d) unprocessed foods;\n(e) single ingredient products;\n(f) ingredients that represent more than 50 % of a food."
+      },
+      "score": 0.75
+    },
+    {
+      "clause": {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "3",
+        "heading": "Country of origin or place of provenance",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "3. Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient:\n(a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or\n(b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food.\nThe application of this paragraph shall be subject to the adoption of the implementing acts referred to in paragraph 8."
+      },
+      "score": 0.7
+    },
+    {
+      "clause": {
+        "chunk_id": "9caf4bb5-e232-57ed-bcf7-4dc344fef934",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "6",
+        "heading": "Country of origin or place of provenance",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "6. By 13 December 2013, the Commission shall submit a report to the European Parliament and the Council regarding the mandatory indication of the country of origin or place of provenance for meat used as an ingredient."
+      },
+      "score": 0.5833334
+    },
+    {
+      "clause": {
+        "chunk_id": "b73d2faf-676d-5055-8d61-5ca58c92268f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "2",
+        "heading": "Country of origin or place of provenance",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "2. Indication of the country of origin or place of provenance shall be mandatory:\n(a) where failure to indicate this might mislead the consumer as to the true country of origin or place of provenance of the food, in particular if the information accompanying the food or the label as a whole would otherwise imply that the food has a different country of origin or place of provenance;\n(b) for meat falling within the Combined Nomenclature (‘CN’) codes listed in Annex XI. The application of this point shall be subject to the adoption of implementing acts referred to in paragraph 8."
+      },
+      "score": 0.53333336
+    },
+    {
+      "clause": {
+        "chunk_id": "ba1df77d-3725-5df1-97e9-b2a94c42e272",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "4",
+        "heading": "Country of origin or place of provenance",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "4. Within 5 years from the date of application of point (b) of paragraph 2, the Commission shall submit a report to the European Parliament and the Council to evaluate the mandatory indication of the country of origin or place of provenance for products referred to in that point."
+      },
+      "score": 0.25757575
+    }
+  ]
+}

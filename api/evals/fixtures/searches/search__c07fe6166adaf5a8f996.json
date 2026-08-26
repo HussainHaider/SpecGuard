@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Weizenvollkornbrot, geschnitten",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "8e13d4a7-5a58-567d-b198-ecf8d9a4807f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "11",
+        "heading": "LEBENSMITTEL, DIE VON DER VERPFLICHTENDEN NÄHRWERTDEKLARATION AUSGENOMMEN SIND",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "11. Lebensmittelzusatzstoffe;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "6b5b9efa-1a2a-5a18-ba8c-8595fef760a4",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "HOHER PROTEINGEHALT",
+        "heading": "Nährwertbezogene Angaben und Bedingungen für ihre Verwendung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "Die Angabe, ein Lebensmittel habe einen hohen Proteingehalt, sowie jegliche Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn auf den Proteinanteil mindestens 20 % des gesamten Brennwerts des Lebensmittels entfallen.\n[NAME DES VITAMINS/DER VITAMINE] UND/ODER [NAME DES MINERALSTOFFS/DER MINERALSTOFFE]-QUELLE\nDie Angabe, ein Lebensmittel sei eine Vitaminquelle oder Mineralstoffquelle, sowie jegliche Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn das Produkt mindestens eine gemäß dem Anhang der Richtlinie 90/496/EWG signifikante Menge oder eine Menge enthält, die den gemäß Artikel 6 der Verordnung (EG) Nr. 1925/2006 des Europäischen Parlaments und des Rates vom 20. Dezember 2006 über den Zusatz von Vitaminen und Mineralstoffen sowie bestimmten anderen Stoffen zu Lebensmitteln ( 17 ) zugelassenen Abweichungen entspricht.\nHOHER [NAME DES VITAMINS/DER VITAMINE] UND/ODER [NAME DES MINERALSTOFFS/DER MINERALSTOFFE]-GEHALT\nDie Angabe, ein Lebensmittel habe einen hohen Vitamingehalt und/oder Mineralstoffgehalt, sowie jegliche Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn das Produkt mindestens das Doppelte des unter „[NAME DES VITAMINS/ DER VITAMINE] und/oder [NAME DES MINERALSTOFFS/DER MINERALSTOFFE]-Quelle“ genannten Werts enthält."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "74c6d4a4-2a09-5447-9c1a-d37cae9a92c4",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "19",
+        "paragraph": "1",
+        "heading": "Ausnahme vom Erfordernis eines Zutatenverzeichnisses",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) Ein Zutatenverzeichnis ist bei folgenden Lebensmitteln nicht erforderlich:\na) frischem Obst und Gemüse — einschließlich Kartoffeln —, das nicht geschält, geschnitten oder auf ähnliche Weise behandelt worden ist;\nb) Tafelwasser, das mit Kohlensäure versetzt ist und in dessen Beschreibung dieses Merkmal aufgeführt ist,\nc) Gärungsessig, der nur aus einem Grundstoff hergestellt ist und dem keine weitere Zutat zugesetzt worden ist;\nd) Käse, Butter, fermentierter Milch und Sahne, denen keine Zutat zugesetzt wurde außer für die Herstellung notwendige Milchinhaltsstoffe, Lebensmittelenzyme und Mikroorganismen-Kulturen oder für die Herstellung von Käse — ausgenommen Frisch- oder Schmelzkäse — notwendiges Salz;\ne) Lebensmitteln, die aus einer einzigen Zutat bestehen, sofern\ni) die Bezeichnung des Lebensmittels mit der Zutatenbezeichnung identisch ist oder\nii) die Bezeichnung des Lebensmittels eindeutig auf die Art der Zutat schließen lässt."
+      },
+      "score": 0.39285713
+    },
+    {
+      "clause": {
+        "chunk_id": "257007aa-1e3b-5e1f-83b8-238945038990",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "22",
+        "paragraph": "2",
+        "heading": "Quantitative Angabe der Zutaten",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) Anhang VIII enthält technische Vorschriften für die Anwendung von Absatz 1, die sich auch auf spezielle Fälle beziehen können, in denen eine Mengenangabe für bestimmte Zutaten nicht erforderlich ist."
+      },
+      "score": 0.36904764
+    },
+    {
+      "clause": {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part E.1",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL E — BEZEICHNUNG VON ZUSAMMENGESETZTEN ZUTATEN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      },
+      "score": 0.33333334
+    }
+  ]
+}

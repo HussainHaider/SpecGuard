@@ -1,0 +1,78 @@
+{
+  "query": "country of origin or place of provenance, primary ingredient origin indication, Belgien, Ghana, Kakaomasse",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "b24bc226-c399-5f65-bcfc-39811a5305d2",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "2",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) Die Angabe des Ursprungslands oder des Herkunftsorts ist in folgenden Fällen verpflichtend:\na) falls ohne diese Angabe eine Irreführung der Verbraucher über das tatsächliche Ursprungsland oder den tatsächlichen Herkunftsort des Lebensmittels möglich wäre, insbesondere wenn die dem Lebensmittel beigefügten Informationen oder das Etikett insgesamt sonst den Eindruck erwecken würden, das Lebensmittel komme aus einem anderen Ursprungsland oder Herkunftsort;\nb) bei Fleisch, das in die Codes der Kombinierten Nomenklatur (KN) fällt, die in Anhang XI aufgeführt sind. Für die Anwendung dieses Buchstabens müssen zuvor die Durchführungsbestimmungen gemäß Absatz 8 erlassen worden sein."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "3",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(3) Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so\na) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder\nb) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel.\nFür die Anwendung dieses Absatzes müssen zuvor die Durchführungsrechtsakte gemäß Absatz 8 erlassen worden sein."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "6529a1b5-88fe-5aa6-9646-45ff37ad0661",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "5",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(5) Die Kommission übermittelt bis zum 13. Dezember 2014 einen Bericht an das Europäische Parlament und den Rat über die verpflichtende Angabe des Ursprungslands oder Herkunftsorts bei folgenden Lebensmitteln:\na) anderen Arten von Fleisch als Rindfleisch und den in Absatz 2 Buchstabe b genannten;\nb) Milch;\nc) Milch, die als Zutat in Milchprodukten verwendet wird;\nd) unverarbeiteten Lebensmitteln;\ne) Erzeugnissen aus einer Zutat;\nf) Zutaten, die über 50 % eines Lebensmittels ausmachen."
+      },
+      "score": 0.25
+    },
+    {
+      "clause": {
+        "chunk_id": "ee8bd961-9aaa-50cb-95fa-449e7f1504bb",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "1",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) 8\n9"
+      },
+      "score": 0.2
+    },
+    {
+      "clause": {
+        "chunk_id": "f64ebfa1-3651-55c9-8e5f-3623a8df5228",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "6",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(6) Die Kommission übermittelt bis zum 13. Dezember 2013 einen Bericht an das Europäische Parlament und den Rat über die verpflichtende Angabe des Ursprungslands oder Herkunftsorts bei Fleisch, das als Zutat verwendet wird."
+      },
+      "score": 0.16666667
+    }
+  ]
+}
