@@ -29,6 +29,20 @@ It is also not a compliance authority. It is a reviewer's assistant that shows i
 working, and its most important behaviour is declining to answer when the evidence does
 not support one.
 
+### How it was built
+
+Over two days, milestone by milestone, with heavy use of an AI coding agent. The commit
+graph shows that plainly and it is worth saying rather than leaving someone to infer it.
+
+The design decisions in [`docs/decisions.md`](docs/decisions.md) were written as they were
+made, not reconstructed afterwards — including the ones that record being wrong: a queue
+choice reversed two milestones later (003 → 013), a verifier that was asking the wrong
+question until the numbers said so (011), a ground-truth fixture that a model was right to
+disagree with (012), and three wiring defects that existed only because nobody had started
+the stack until M7 (024). The judgement calls — which rules never touch a model, what the
+gates are set to and why, where the evaluation is weak — are mine, and I can walk through
+any of them.
+
 ## Quickstart
 
 ```bash
