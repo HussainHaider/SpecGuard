@@ -31,6 +31,8 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql+psycopg://specguard:specguard@localhost:5432/specguard"
 
+    redis_url: str = "redis://localhost:6379/0"
+
     qdrant_url: str = "http://localhost:6333"
     qdrant_api_key: str | None = None
     qdrant_collection: str = "eu_food_law"

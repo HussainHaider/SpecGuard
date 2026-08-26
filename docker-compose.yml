@@ -1,5 +1,5 @@
-# Only db and qdrant are needed to work on the project today; api, worker and web sit
-# behind the `app` profile so `docker compose up` starts the datastores and nothing else.
+# db, qdrant and redis are the backing services; api, worker and web sit behind the
+# `app` profile, so `docker compose up` starts the datastores and nothing else.
 # Bring the application up with `docker compose --profile app up`.
 
 name: specguard
@@ -39,6 +39,18 @@ services:
       retries: 5
     restart: unless-stopped
 
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
   api:
     profiles: ["app"]
     build:
@@ -48,6 +60,7 @@ services:
     environment:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
       QDRANT_URL: http://qdrant:6333
+      REDIS_URL: redis://redis:6379/0
     ports:
       - "${API_PORT:-8000}:8000"
     volumes:
@@ -71,6 +84,7 @@ services:
     environment:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
       QDRANT_URL: http://qdrant:6333
+      REDIS_URL: redis://redis:6379/0
     volumes:
       - ./corpus:/app/corpus:ro
       - ./fixtures:/app/fixtures:ro
@@ -79,6 +93,8 @@ services:
         condition: service_healthy
       qdrant:
         condition: service_started
+      redis:
+        condition: service_healthy
 
   web:
     profiles: ["app"]
