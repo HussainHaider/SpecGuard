@@ -1,5 +1,8 @@
 # SpecGuard
 
+[![ci](https://github.com/HussainHaider/SpecGuard/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/HussainHaider/SpecGuard/actions/workflows/ci.yml)
+
+
 A supplier's food specification sheet goes in as a PDF. A per-rule **PASS / FAIL /
 NEEDS_REVIEW** report comes out, and every verdict names the article of EU food law it
 rests on, quoting the words it relied on. It is built for the person who has to sign off a
