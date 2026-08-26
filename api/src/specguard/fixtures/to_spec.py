@@ -155,13 +155,9 @@ def spec_for_sheet(sheet: _Sheet, pdf_path: Path | None = None) -> ProductSpec:
         claims.append(_field(Claim(text=sheet.health_claim, kind=ClaimKind.HEALTH)))
 
     quantity = _quantity(sheet.net_quantity) if sheet.net_quantity else None
-    # Art. 9(1)(h) wants a name *and* an address, so a suppressed address means the
-    # particular is absent, not merely partial.
-    operator = (
-        BusinessOperator(name=template.supplier, address=sheet.supplier_address)
-        if sheet.supplier_address
-        else None
-    )
+    # The document still names the operator when its address is suppressed, so ground
+    # truth says so too. Whether that is compliant is the rule's call, not the reader's.
+    operator = BusinessOperator(name=template.supplier, address=sheet.supplier_address)
 
     return ProductSpec(
         source=source,
@@ -175,7 +171,7 @@ def spec_for_sheet(sheet: _Sheet, pdf_path: Path | None = None) -> ProductSpec:
         durability=_field(_durability(sheet.durability)) if sheet.durability else None,
         storage_conditions=_field(template.storage),
         instructions_for_use=_field(template.instructions) if template.instructions else None,
-        business_operator=_field(operator) if operator else None,
+        business_operator=_field(operator),
         nutrition=_field(_nutrition(sheet)),
         origins=origins,
         claims=claims,

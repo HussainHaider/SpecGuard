@@ -8,10 +8,17 @@ Font weight and capitalisation are carried through to the extractor.
 
 from __future__ import annotations
 
+import re
+
 from pydantic import Field
 
 from specguard.models.common import SpecGuardModel
 from specguard.models.spec import EmphasisStyle, SourceDocument
+
+
+def _caps_runs(text: str) -> set[str]:
+    """Upper-case letter runs of length two or more, anywhere in the text."""
+    return set(re.findall(r"[A-ZÄÖÜÀ-Þ]{2,}", text))
 
 
 def _normalise(text: str) -> str:
@@ -30,10 +37,20 @@ class TextSpan(SpecGuardModel):
     italic: bool
 
     @property
+    def capitalised_runs(self) -> set[str]:
+        """Runs of two or more consecutive capitals inside this word.
+
+        Emphasis is often applied to part of a word, not all of it: "SOJA-Lecithin",
+        "WEIZEN-Vollkornmehl", "MILCH-Erzeugnis". Treating only fully upper-case tokens
+        as emphasised misses exactly the compound forms German labelling relies on,
+        while a one-letter run would match every ordinary capitalised noun.
+        """
+        return _caps_runs(self.text)
+
+    @property
     def is_upper(self) -> bool:
-        """Whether the word is set in capitals, ignoring punctuation and short tokens."""
-        letters = [c for c in self.text if c.isalpha()]
-        return len(letters) > 1 and all(c.isupper() for c in letters)
+        """Whether the word carries capitalised emphasis."""
+        return bool(self.capitalised_runs)
 
     @property
     def emphasis(self) -> EmphasisStyle:
@@ -95,13 +112,20 @@ class IngestedDocument(SpecGuardModel):
         return []
 
     def emphasised_words_in(self, phrase: str) -> set[str]:
-        """Normalised words carrying emphasis within ``phrase``.
+        """Emphasised tokens within ``phrase``, normalised for comparison.
+
+        A bold word contributes the whole token; a capitalised word contributes its
+        capitalised runs, so "SOJA-Lecithin" yields SOJA rather than SOJALECITHIN and
+        matches the allergen the emphasis was applied to.
 
         Empty when the phrase cannot be located, which the caller must treat as "not
         known" rather than "not emphasised" — absence of evidence is a NEEDS_REVIEW.
         """
-        return {
-            _normalise(span.text)
-            for span in self.spans_for(phrase)
-            if span.emphasis is not EmphasisStyle.NONE
-        }
+        found: set[str] = set()
+        for span in self.spans_for(phrase):
+            if span.emphasis is EmphasisStyle.NONE:
+                continue
+            found.update(span.capitalised_runs)
+            if span.bold:
+                found.add(_normalise(span.text))
+        return found

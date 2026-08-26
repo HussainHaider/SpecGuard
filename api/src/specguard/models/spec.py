@@ -176,10 +176,17 @@ class OriginDeclaration(SpecGuardModel):
 
 
 class BusinessOperator(SpecGuardModel):
-    """The food business operator under whose name the food is marketed (Art. 8(1))."""
+    """The food business operator under whose name the food is marketed (Art. 8(1)).
+
+    ``address`` is optional even though Art. 9(1)(h) requires one on the label. That is
+    the point: a required field would leave a schema-constrained extractor no way to say
+    "the document names an operator but gives no address", forcing it to either fabricate
+    one or drop the operator entirely. Both destroy the very finding this rule exists to
+    make. The model must be able to report the gap; judging it is MANDATORY_FIELDS' job.
+    """
 
     name: str = Field(min_length=1)
-    address: str = Field(min_length=1)
+    address: str | None = None
     country: str | None = None
 
 

@@ -46,6 +46,12 @@ class MandatoryFieldsRule:
         # Art. 9(1)(k) applies only above 1.2% vol, so its absence is not a failure on a
         # yogurt: the field is its own trigger and needs no separate check here.
 
+        # An operator with no address is a partial particular, not a present one:
+        # Art. 9(1)(h) requires the name *and* the address.
+        operator = spec.business_operator
+        if operator is not None and confident(operator, context) and not operator.value.address:
+            missing.append("operator address, Art. 9(1)(h)")
+
         citation = context.cite(REGULATION, "9", QUOTE, paragraph="1")
 
         if unreadable:
