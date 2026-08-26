@@ -86,3 +86,19 @@ would otherwise have to reverse-engineer from the code.
 - **Cost:** those locators are the heading text, so they are language-specific — the
   English and German citations to the same conditions read differently. Numbered
   locators stay language-independent; only sub-headings do this.
+
+## 007 — Temperature 0 is not expressible on current Claude models
+
+- **Context:** Non-negotiable #7 requires "temperature 0, schema-constrained output on
+  every model call". The current Claude models removed the sampling parameters
+  entirely — `temperature` is rejected with a 400, and the Python SDK no longer accepts
+  the keyword at all.
+- **Options:** (a) pin an older Claude model that still takes `temperature`; (b) drop
+  the requirement for Anthropic and keep it where it is supported.
+- **Choice:** (b). OpenAI is the primary provider and still accepts `temperature`, so
+  every OpenAI call is made at 0. Anthropic calls instead rely on schema-constrained
+  output plus `output_config.effort`, which is what replaced the sampling knob.
+- **Cost:** the "temperature 0 everywhere" guarantee is now provider-dependent and
+  CLAUDE.md overstates it. Schema constraint — the half that actually bounds the output
+  shape — still holds on every call, and the protocol has no free-text method, so no
+  caller can bypass it.

@@ -1,1 +1,1 @@
-"""LLM provider protocol and implementations (anthropic, openai, fake)."""
+"""LLM provider protocol and implementations (openai, anthropic, fake)."""
