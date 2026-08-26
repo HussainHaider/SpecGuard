@@ -13,7 +13,7 @@ from pathlib import Path
 from specguard.fixtures.generate import SpecFixture, build_sheets, load_manifest
 from specguard.fixtures.to_spec import spec_for_sheet
 from specguard.llm.protocol import LLMClient
-from specguard.models.rule import RuleId, Verdict
+from specguard.models.rule import RuleId, RuleResult, Verdict
 from specguard.rules.base import RagContext, RuleContext
 from specguard.rules.registry import deterministic_rules, rag_rules
 from specguard.vectorstore.protocol import VectorStore
@@ -24,13 +24,34 @@ SPEC_DIR = REPO_ROOT / "fixtures" / "specs"
 
 @dataclass
 class Outcome:
-    """One rule's result on one spec, against what the manifest expects."""
+    """One rule's result on one spec, against what the golden set expects.
+
+    Carries the whole ``RuleResult`` rather than a copy of the two or three fields the
+    first version of this file needed. Cost, latency, citations and abstention reason
+    are all metrics now, and re-deriving them from a summary would mean the number in
+    the README came from a different object than the one the pipeline produced.
+    """
 
     spec_id: str
     rule_id: RuleId
     expected: Verdict
-    actual: Verdict
-    rationale: str
+    result: RuleResult
+
+    @property
+    def actual(self) -> Verdict:
+        return self.result.verdict
+
+    @property
+    def rationale(self) -> str:
+        return self.result.rationale
+
+    @property
+    def cost_usd(self) -> float:
+        return sum(usage.cost_usd for usage in self.result.llm_usage)
+
+    @property
+    def duration_ms(self) -> int:
+        return self.result.duration_ms
 
     @property
     def correct(self) -> bool:
@@ -103,8 +124,20 @@ def load_specs() -> list[tuple[SpecFixture, object]]:
     ]
 
 
-def run(store: VectorStore, client: LLMClient, *, retrieval_limit: int = 5) -> Report:
-    """Evaluate all eight rules against every fixture spec."""
+def run(
+    store: VectorStore,
+    client: LLMClient,
+    *,
+    retrieval_limit: int = 5,
+    only: set[tuple[str, RuleId]] | None = None,
+) -> Report:
+    """Evaluate the rules against the fixture specs.
+
+    ``only`` scopes the run to specific (spec, rule) pairs — the golden set's pairs, in
+    the tier 1 eval. Without it every rule runs against every spec, which is what the
+    recorder wants: it is capturing fixtures, and a pair nobody records cannot later be
+    replayed offline.
+    """
     report = Report()
     for entry, spec in load_specs():
         source_version = f"02011R1169-20180101-{entry.language.value}"
@@ -117,26 +150,18 @@ def run(store: VectorStore, client: LLMClient, *, retrieval_limit: int = 5) -> R
             retrieval_limit=retrieval_limit,
         )
         for rule_id, rule in deterministic_rules().items():
+            if only is not None and (entry.spec_id, rule_id) not in only:
+                continue
             result = rule.evaluate(spec, plain)  # type: ignore[arg-type]
             report.outcomes.append(
-                Outcome(
-                    entry.spec_id,
-                    rule_id,
-                    entry.expected_verdicts[rule_id],
-                    result.verdict,
-                    result.rationale,
-                )
+                Outcome(entry.spec_id, rule_id, entry.expected_verdicts[rule_id], result)
             )
         for rule_id, rag_rule in rag_rules().items():
+            if only is not None and (entry.spec_id, rule_id) not in only:
+                continue
             result = rag_rule.evaluate(spec, rag)  # type: ignore[arg-type]
             report.outcomes.append(
-                Outcome(
-                    entry.spec_id,
-                    rule_id,
-                    entry.expected_verdicts[rule_id],
-                    result.verdict,
-                    result.rationale,
-                )
+                Outcome(entry.spec_id, rule_id, entry.expected_verdicts[rule_id], result)
             )
     return report
 

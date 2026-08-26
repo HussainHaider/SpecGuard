@@ -88,6 +88,9 @@ class Span:
 
     run_id: str | None
     _run: Any = None
+    #: Whether closing this handle should close the run. False when the run belongs to
+    #: someone else — LangGraph's own node span, which we annotate but must not end.
+    _owned: bool = True
 
     def tag(self, **values: Any) -> None:
         """Attach metadata to this span."""
@@ -96,7 +99,7 @@ class Span:
 
     def finish(self, **outputs: Any) -> None:
         """Close the span with its outputs. Safe to call more than once."""
-        if self._run is not None:
+        if self._run is not None and self._owned:
             self._run.end(outputs=outputs)
             self._run = None
 
@@ -129,6 +132,32 @@ def span(
             yield handle
         finally:
             handle.finish()
+
+
+@contextmanager
+def node_span(name: str, metadata: dict[str, Any]) -> Iterator[Span]:
+    """Trace one graph node, without duplicating the span LangGraph already opened.
+
+    LangGraph traces each node itself when tracing is on, but with none of the context
+    that makes a span worth opening — no job id, no correlation id, no graph version.
+    Wrapping it in a second span of our own would put every node in the tree twice, so
+    the existing run is annotated instead. Outside a graph — a node called directly, in
+    a test — there is nothing to annotate and a span is opened as normal.
+    """
+    if not tracing_enabled():
+        yield Span(run_id=None)
+        return
+
+    from langsmith.run_helpers import get_current_run_tree
+
+    current = get_current_run_tree()
+    if current is None:
+        with span(name, metadata=metadata, tags=[name]) as handle:
+            yield handle
+        return
+
+    current.add_metadata(metadata)
+    yield Span(run_id=str(current.id), _run=current, _owned=False)
 
 
 @contextmanager

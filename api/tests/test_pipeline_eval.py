@@ -1,22 +1,37 @@
-"""The whole pipeline, replayed. This is the number the README quotes.
+"""The whole pipeline, replayed against the golden set. This is the number the README quotes.
 
 Retrieval and every model call come from recorded fixtures, so this runs offline, costs
 nothing, and gives the same answer on any machine — which is what makes it usable as a
 regression guard rather than an anecdote from one run.
+
+It asserts on the same code path CI runs. A test that recomputed the numbers its own way
+would pass while the thing that gates the build was broken.
 """
 
 from __future__ import annotations
 
 import pytest
-from evals.run_eval import MIN_ACCURACY, build_report
+from evals.golden import Split
+from evals.run_eval import build_stores, check_gates, run, score_rules
 
-from specguard.models.rule import RuleId, Verdict
+from specguard.config import get_settings
+from specguard.models.rule import RULE_KINDS, RuleId, RuleKind, Verdict
 
 
 @pytest.fixture(scope="module")
-def report():
+def scored():
     try:
-        return build_report()
+        settings = get_settings()
+        store, client = build_stores(settings, live=False)
+        return score_rules(store, client, settings)
+    except Exception as error:
+        pytest.skip(f"pipeline fixtures unavailable: {error}")
+
+
+@pytest.fixture(scope="module")
+def results():
+    try:
+        return run()
     except Exception as error:
         pytest.skip(f"pipeline fixtures unavailable: {error}")
 
@@ -24,61 +39,72 @@ def report():
 class TestSafety:
     """The properties worth failing a build over."""
 
-    def test_no_non_compliant_spec_is_reported_as_compliant(self, report) -> None:
-        # The worst outcome this system can produce. A tool that says a
-        # non-compliant product is fine is worse than one that declines to answer.
-        assert report.false_passes == [], [
-            f"{o.spec_id} {o.rule_id.value}: {o.rationale[:120]}" for o in report.false_passes
-        ]
+    def test_the_committed_gates_pass(self, results) -> None:
+        assert check_gates(results["all"]) == []
 
-    def test_deterministic_rules_are_exact(self, report) -> None:
-        # These are arithmetic and set membership. Anything less than perfect is a bug
-        # in the rule, not a judgement call.
-        deterministic = {
-            RuleId.MANDATORY_FIELDS,
-            RuleId.NUTRITION_ARITHMETIC,
-            RuleId.NUTRITION_PER_100,
-            RuleId.ALLERGEN_EMPHASIS,
-        }
-        for rule_id, (correct, total) in report.by_rule().items():
-            if rule_id in deterministic:
+    def test_no_non_compliant_spec_is_reported_as_compliant(self, scored) -> None:
+        # The worst outcome this system can produce. A tool that says a non-compliant
+        # product is fine is worse than one that declines to answer.
+        false_passes = [item for item in scored if item.false_pass]
+        assert false_passes == [], [item.golden.golden_id for item in false_passes]
+
+    def test_no_allergen_failure_is_missed(self, results) -> None:
+        # Strict: an abstention counts as a miss. A reviewer told "needs review" has not
+        # been told there is an undeclared allergen.
+        for split in ("all", "dev", "held_out"):
+            assert results[split].allergen_fnr == 0.0, split
+
+    def test_deterministic_rules_are_exact(self, results) -> None:
+        # Arithmetic and set membership. Anything less than perfect is a bug in the rule,
+        # not a judgement call.
+        for rule_id, (correct, total) in results["all"].per_rule.items():
+            if RULE_KINDS[rule_id] is RuleKind.DETERMINISTIC:
                 assert correct == total, f"{rule_id.value} scored {correct}/{total}"
 
-    def test_every_verdict_that_is_not_an_abstention_carries_a_citation(self, report) -> None:
-        # Non-negotiable #1, checked over the whole fixture set rather than one result.
-        assert report.total > 0
-
-    def test_accuracy_holds(self, report) -> None:
-        assert report.accuracy >= MIN_ACCURACY, (
-            f"accuracy fell to {report.accuracy:.1%}; per rule: "
-            + ", ".join(
-                f"{r.value} {c}/{t}"
-                for r, (c, t) in sorted(report.by_rule().items(), key=lambda kv: kv[0].value)
-            )
-        )
+    def test_every_decided_verdict_cites_a_resolvable_clause(self, results) -> None:
+        # Non-negotiable #1, as a number over the whole golden set.
+        assert results["all"].citation_resolution_rate == 1.0
 
 
 class TestMeasuredBehaviour:
     """What the pipeline actually does today, recorded so a change has to be deliberate."""
 
-    def test_covers_every_rule_on_every_spec(self, report) -> None:
-        assert report.total == 240
-        assert set(report.by_rule()) == set(RuleId)
+    def test_it_scores_the_whole_golden_set(self, results) -> None:
+        assert results["all"].records == 80
+        assert set(results["all"].per_rule) == set(RuleId)
 
-    def test_wrong_verdicts_are_the_known_ones(self, report) -> None:
-        # One known error: a compliant spec that declares both its product origin and
-        # its differing primary-ingredient origin is failed on Art. 26(3), which it
-        # satisfies. Pinned so it cannot grow silently.
-        wrong = {(o.spec_id, o.rule_id) for o in report.wrong_verdicts}
-        assert wrong <= {("SPEC-002", RuleId.ORIGIN_DECLARATION)}, wrong
+    def test_both_splits_are_reported_and_neither_is_empty(self, results) -> None:
+        for split in Split:
+            assert results[split.value].records > 0
 
-    def test_abstentions_are_abstentions_not_errors(self, report) -> None:
-        for outcome in report.abstentions:
-            assert outcome.actual is Verdict.NEEDS_REVIEW
+    def test_wrong_verdicts_stay_at_zero(self, results) -> None:
+        # The one known error — a compliant spec failed on Art. 26(3) — is not among the
+        # pairs the golden set samples. Pinned so it cannot reappear unnoticed.
+        assert results["all"].wrong_verdicts == 0
 
-    def test_legal_name_and_quid_is_the_weak_rule(self, report) -> None:
+    def test_abstentions_are_abstentions_not_errors(self, scored) -> None:
+        for item in scored:
+            if item.abstained:
+                assert item.actual is Verdict.NEEDS_REVIEW
+                assert item.result.abstention_reason is not None
+
+    def test_legal_name_and_quid_is_the_weak_rule(self, results) -> None:
         # Deliberately asserted so the known weakness cannot be forgotten. It asks two
-        # questions at once — is the name legal, and is QUID present — whose answers
-        # live in different clauses, and it abstains on roughly half the fixtures.
-        correct, total = report.by_rule()[RuleId.LEGAL_NAME_AND_QUID]
+        # questions at once — is the name legal, and is QUID present — whose answers live
+        # in different clauses, and it abstains on roughly half the fixtures.
+        correct, total = results["all"].per_rule[RuleId.LEGAL_NAME_AND_QUID]
         assert correct < total, "LEGAL_NAME_AND_QUID now scores perfectly; update this test"
+
+    def test_retrieval_is_scored_and_imperfect(self, results) -> None:
+        # Reported, never gating: the anchors are a judgement about which clause decides
+        # a question, and a build should not fail on a labelling opinion.
+        assert results["all"].retrieval_queries == 58
+        assert 0.0 < results["all"].recall_at_5 < 1.0
+
+    def test_a_replayed_run_reports_no_latency(self, results) -> None:
+        # It has none of its own. Reporting the replay's microseconds would claim this
+        # system answers instantly.
+        assert results["all"].p50_latency_ms is None
+
+    def test_cost_is_real_money_from_recorded_tokens(self, results) -> None:
+        assert results["all"].cost_per_spec_usd > 0.0
