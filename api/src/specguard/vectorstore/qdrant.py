@@ -16,9 +16,11 @@ DENSE_VECTOR = "dense"
 SPARSE_VECTOR = "sparse"
 DEFAULT_COLLECTION = "eu_food_law"
 
-#: Prefetch depth per branch before fusion. Wider than the final limit on purpose:
-#: fusion can only reorder what each branch actually returned.
-PREFETCH_LIMIT = 25
+#: Prefetch depth per branch before fusion. Much wider than the final limit on purpose:
+#: fusion can only reorder what each branch actually returned, so a narrow prefetch caps
+#: how much the two retrievers can rescue each other.
+PREFETCH_LIMIT = 50
+DEFAULT_LIMIT = 5
 
 
 class QdrantVectorStore:
@@ -44,9 +46,15 @@ class QdrantVectorStore:
         self._encoder = encoder
         self._collection = collection
 
-    def ensure_collection(self) -> None:
-        """Create the collection with both named vectors if it does not exist."""
+    #: Payload fields every search filters on. A real Qdrant server rejects a filter on
+    #: an unindexed field with a 400; local in-memory mode allows it silently, so this
+    #: is exactly the kind of gap that only shows up against the real thing.
+    FILTERED_FIELDS = ("language", "regulation")
+
+    def _ensure_collection(self) -> None:
+        """Create the collection and its payload indexes if they are not already there."""
         if self._client.collection_exists(self._collection):
+            self._ensure_payload_indexes()
             return
         self._client.create_collection(
             collection_name=self._collection,
@@ -57,9 +65,21 @@ class QdrantVectorStore:
             },
             sparse_vectors_config={SPARSE_VECTOR: qm.SparseVectorParams()},
         )
+        self._ensure_payload_indexes()
 
-    def upsert_clauses(self, clauses: Sequence[Clause]) -> int:
+    def _ensure_payload_indexes(self) -> None:
+        """Index the payload fields searches filter on. Idempotent."""
+        for field in self.FILTERED_FIELDS:
+            self._client.create_payload_index(
+                collection_name=self._collection,
+                field_name=field,
+                field_schema=qm.PayloadSchemaType.KEYWORD,
+                wait=True,
+            )
+
+    def upsert(self, clauses: Sequence[Clause]) -> int:
         """Index clauses, one point each, both vectors written together."""
+        self._ensure_collection()
         if not clauses:
             return 0
         texts = [clause.embedding_text for clause in clauses]
@@ -87,7 +107,7 @@ class QdrantVectorStore:
         query: str,
         *,
         language: Language,
-        limit: int = 8,
+        limit: int = DEFAULT_LIMIT,
         regulation: str | None = None,
     ) -> list[SearchHit]:
         """Hybrid search with server-side reciprocal rank fusion."""
@@ -127,6 +147,7 @@ class QdrantVectorStore:
             if point.payload is not None
         ]
 
-    def count(self) -> int:
-        """Number of indexed points."""
-        return self._client.count(collection_name=self._collection, exact=True).count
+    def reset(self) -> None:
+        """Drop the collection and everything in it."""
+        if self._client.collection_exists(self._collection):
+            self._client.delete_collection(self._collection)
