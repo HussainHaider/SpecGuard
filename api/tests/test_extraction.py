@@ -35,8 +35,10 @@ def _extract(filename: str, client: FakeClient, language: Language = Language.EN
 
 class TestPrompt:
     def test_extraction_prompt_is_versioned(self) -> None:
+        # The literal version is deliberately not asserted: bumping a prompt is a normal
+        # act, and a test that has to be edited to allow it teaches people to edit tests.
         prompt = load_prompt(PROMPT_NAME)
-        assert prompt.version == "extract@v1"
+        assert prompt.version.startswith(f"{PROMPT_NAME}@v")
         assert prompt.body
 
     def test_a_prompt_without_a_version_is_rejected(self, tmp_path: Path) -> None:
@@ -50,8 +52,10 @@ class TestExtraction:
     def test_produces_a_spec_with_provenance(self, client: FakeClient) -> None:
         spec, usage = _extract(COMPLIANT, client)
         assert spec.source.filename == COMPLIANT
-        assert spec.extractor_prompt_version == "extract@v1"
-        assert usage.prompt_version == "extract@v1"
+        # Provenance must match the prompt that actually ran, whatever version that is.
+        expected = load_prompt(PROMPT_NAME).version
+        assert spec.extractor_prompt_version == expected
+        assert usage.prompt_version == expected
         assert spec.legal_name is not None
 
     def test_every_field_carries_a_confidence(self, client: FakeClient) -> None:

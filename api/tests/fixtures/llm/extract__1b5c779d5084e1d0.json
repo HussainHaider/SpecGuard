@@ -1,63 +1,39 @@
 {
-  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-001 (SPEC-001-digestive-biscuits.pdf)",
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-020 (SPEC-020-wholemeal-bread.pdf)",
   "input_tokens": 4709,
-  "output_tokens": 1937,
+  "output_tokens": 1897,
   "response": {
     "product_name": {
-      "value": "Wholemeal Digestive Biscuits",
+      "value": "Wholemeal Sliced Bread",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "PRODUCT SPECIFICATION\nWholemeal Digestive Biscuits"
+      "quoted_span": "PRODUCT SPECIFICATION\nWholemeal Sliced Bread"
     },
     "legal_name": {
-      "value": "Wholemeal biscuits",
+      "value": "Wholemeal wheat bread, sliced",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Legal name of the food Wholemeal biscuits"
+      "quoted_span": "Legal name of the food Wholemeal wheat bread, sliced"
     },
     "ingredients": {
       "value": {
-        "raw_text": "Wholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt",
+        "raw_text": "wholemeal wheat flour 68%, Water, Yeast, Salt, Rapeseed oil 1.4%",
         "items": [
           {
             "value": {
-              "name": "Wholemeal WHEAT flour",
-              "percentage": 51.0,
-              "emphasised": true,
-              "emphasis_style": "uppercase",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Wholemeal WHEAT flour 51%"
-          },
-          {
-            "value": {
-              "name": "Palm oil",
-              "percentage": 19.0,
+              "name": "wholemeal wheat flour",
+              "percentage": 68.0,
               "emphasised": false,
               "emphasis_style": "none",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Palm oil 19%"
+            "quoted_span": "wholemeal wheat flour 68%"
           },
           {
             "value": {
-              "name": "Sugar",
-              "percentage": 16.0,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Sugar 16%"
-          },
-          {
-            "value": {
-              "name": "Partially inverted sugar syrup",
+              "name": "Water",
               "percentage": null,
               "emphasised": false,
               "emphasis_style": "none",
@@ -65,11 +41,11 @@
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Partially inverted sugar syrup"
+            "quoted_span": "Water"
           },
           {
             "value": {
-              "name": "Raising agents",
+              "name": "Yeast",
               "percentage": null,
               "emphasised": false,
               "emphasis_style": "none",
@@ -77,7 +53,7 @@
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Raising agents"
+            "quoted_span": "Yeast"
           },
           {
             "value": {
@@ -90,13 +66,25 @@
             "confidence": 1.0,
             "page": 1,
             "quoted_span": "Salt"
+          },
+          {
+            "value": {
+              "name": "Rapeseed oil",
+              "percentage": 1.4,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Rapeseed oil 1.4%"
           }
         ],
-        "dominant_emphasis_style": "uppercase"
+        "dominant_emphasis_style": "none"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Ingredients\nWholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt"
+      "quoted_span": "Ingredients\nwholemeal wheat flour 68%, Water, Yeast, Salt, Rapeseed oil 1.4%"
     },
     "allergen_statement": {
       "value": "Allergens are emphasised in the ingredient list above.",
@@ -107,23 +95,23 @@
     "may_contain_statement": null,
     "net_quantity": {
       "value": {
-        "value": 400.0,
+        "value": 800.0,
         "unit": "g"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Net quantity 400 g"
+      "quoted_span": "Net quantity 800 g"
     },
     "drained_net_weight": null,
     "durability": {
       "value": {
-        "kind": "best_before_end",
-        "raw_text": "Best before end: 10 months from production",
+        "kind": "best_before",
+        "raw_text": "Best before: 6 days from production",
         "date": null
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Durability Best before end: 10 months from production"
+      "quoted_span": "Durability Best before: 6 days from production"
     },
     "storage_conditions": {
       "value": "Store in a cool, dry place.",
@@ -134,13 +122,13 @@
     "instructions_for_use": null,
     "business_operator": {
       "value": {
-        "name": "Ashford Biscuit Company Ltd",
-        "address": "Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom",
+        "name": "Pennine Bakeries Ltd",
+        "address": "Mill Lane, Leeds LS10 1AB, United Kingdom",
         "country": "United Kingdom"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Supplier Ashford Biscuit Company Ltd, Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom"
+      "quoted_span": "Supplier Pennine Bakeries Ltd, Mill Lane, Leeds LS10 1AB, United Kingdom"
     },
     "alcohol_strength_abv": null,
     "nutrition": {
@@ -154,62 +142,62 @@
         "portion_size": null,
         "portions_per_pack": null,
         "energy_kj": {
-          "value": 1979.0,
+          "value": 964.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 964 kJ / 228 kcal"
         },
         "energy_kcal": {
-          "value": 472.0,
+          "value": 228.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 964 kJ / 228 kcal"
         },
         "fat_g": {
-          "value": 20.9,
+          "value": 2.4,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fat 20.9 g"
+          "quoted_span": "Fat 2.4 g"
         },
         "saturates_g": {
-          "value": 9.8,
+          "value": 0.5,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which saturates 9.8 g"
+          "quoted_span": "of which saturates 0.5 g"
         },
         "mono_unsaturates_g": null,
         "polyunsaturates_g": null,
         "carbohydrate_g": {
-          "value": 62.1,
+          "value": 38.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Carbohydrate 62.1 g"
+          "quoted_span": "Carbohydrate 38.9 g"
         },
         "sugars_g": {
-          "value": 16.4,
+          "value": 2.6,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which sugars 16.4 g"
+          "quoted_span": "of which sugars 2.6 g"
         },
         "polyols_g": null,
         "starch_g": null,
         "fibre_g": {
-          "value": 4.1,
+          "value": 6.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fibre 4.1 g"
+          "quoted_span": "Fibre 6.8 g"
         },
         "protein_g": {
-          "value": 6.9,
+          "value": 9.4,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Protein 6.9 g"
+          "quoted_span": "Protein 9.4 g"
         },
         "salt_g": {
-          "value": 1.02,
+          "value": 0.98,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Salt 1.02 g"
+          "quoted_span": "Salt 0.98 g"
         },
         "alcohol_g": null,
         "organic_acids_g": null,
@@ -218,7 +206,7 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1979 kJ / 472 kcal\nFat 20.9 g\nof which saturates 9.8 g\nCarbohydrate 62.1 g\nof which sugars 16.4 g\nFibre 4.1 g\nProtein 6.9 g\nSalt 1.02 g"
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 964 kJ / 228 kcal\nFat 2.4 g\nof which saturates 0.5 g\nCarbohydrate 38.9 g\nof which sugars 2.6 g\nFibre 6.8 g\nProtein 9.4 g\nSalt 0.98 g"
     },
     "origins": [
       {
@@ -242,7 +230,18 @@
         "quoted_span": "Origin of primary ingredient United Kingdom"
       }
     ],
-    "claims": [],
+    "claims": [
+      {
+        "value": {
+          "text": "Source of fibre",
+          "kind": "nutrition",
+          "nutrient": "fibre"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Claims made on pack\n(cid:127) Source of fibre"
+      }
+    ],
     "unmapped_notes": []
   }
 }

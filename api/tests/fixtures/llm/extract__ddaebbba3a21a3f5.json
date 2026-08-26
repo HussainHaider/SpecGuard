@@ -1,90 +1,90 @@
 {
-  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-001 (SPEC-001-digestive-biscuits.pdf)",
-  "input_tokens": 4709,
-  "output_tokens": 1937,
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-005 (SPEC-005-tomato-basil-soup.pdf)",
+  "input_tokens": 4720,
+  "output_tokens": 1972,
   "response": {
     "product_name": {
-      "value": "Wholemeal Digestive Biscuits",
+      "value": "Tomato & Basil Soup",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "PRODUCT SPECIFICATION\nWholemeal Digestive Biscuits"
+      "quoted_span": "PRODUCT SPECIFICATION\nTomato & Basil Soup"
     },
     "legal_name": {
-      "value": "Wholemeal biscuits",
+      "value": "Tomato soup with basil",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Legal name of the food Wholemeal biscuits"
+      "quoted_span": "Legal name of the food Tomato soup with basil"
     },
     "ingredients": {
       "value": {
-        "raw_text": "Wholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt",
+        "raw_text": "Tomatoes 71%, Water, Onions 6%, Single CREAM 4%, Basil 1.2%, Salt",
         "items": [
           {
             "value": {
-              "name": "Wholemeal WHEAT flour",
-              "percentage": 51.0,
+              "name": "Tomatoes",
+              "percentage": 71.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Tomatoes 71%"
+          },
+          {
+            "value": {
+              "name": "Water",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Water"
+          },
+          {
+            "value": {
+              "name": "Onions",
+              "percentage": 6.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Onions 6%"
+          },
+          {
+            "value": {
+              "name": "Single CREAM",
+              "percentage": 4.0,
               "emphasised": true,
               "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Wholemeal WHEAT flour 51%"
+            "quoted_span": "Single CREAM 4%"
           },
           {
             "value": {
-              "name": "Palm oil",
-              "percentage": 19.0,
+              "name": "Basil",
+              "percentage": 1.2,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Palm oil 19%"
-          },
-          {
-            "value": {
-              "name": "Sugar",
-              "percentage": 16.0,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Sugar 16%"
-          },
-          {
-            "value": {
-              "name": "Partially inverted sugar syrup",
-              "percentage": null,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Partially inverted sugar syrup"
-          },
-          {
-            "value": {
-              "name": "Raising agents",
-              "percentage": null,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Raising agents"
+            "quoted_span": "Basil 1.2%"
           },
           {
             "value": {
               "name": "Salt",
               "percentage": null,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
@@ -96,7 +96,7 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Ingredients\nWholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt"
+      "quoted_span": "Ingredients\nTomatoes 71%, Water, Onions 6%, Single CREAM 4%, Basil 1.2%, Salt"
     },
     "allergen_statement": {
       "value": "Allergens are emphasised in the ingredient list above.",
@@ -107,109 +107,114 @@
     "may_contain_statement": null,
     "net_quantity": {
       "value": {
-        "value": 400.0,
-        "unit": "g"
+        "value": 600.0,
+        "unit": "ml"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Net quantity 400 g"
+      "quoted_span": "Net quantity 600 ml"
     },
     "drained_net_weight": null,
     "durability": {
       "value": {
-        "kind": "best_before_end",
-        "raw_text": "Best before end: 10 months from production",
+        "kind": "use_by",
+        "raw_text": "Use by: 14 days from production",
         "date": null
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Durability Best before end: 10 months from production"
+      "quoted_span": "Durability Use by: 14 days from production"
     },
     "storage_conditions": {
-      "value": "Store in a cool, dry place.",
+      "value": "Keep refrigerated. Consume within 3 days of opening.",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Storage conditions Store in a cool, dry place."
+      "quoted_span": "Storage conditions Keep refrigerated. Consume within 3 days of opening."
     },
-    "instructions_for_use": null,
+    "instructions_for_use": {
+      "value": "Heat gently until piping hot. Do not boil.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Instructions for use Heat gently until piping hot. Do not boil."
+    },
     "business_operator": {
       "value": {
-        "name": "Ashford Biscuit Company Ltd",
-        "address": "Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom",
-        "country": "United Kingdom"
+        "name": "Conserve del Sole S.p.A.",
+        "address": "Via Garibaldi 88, 84013 Cava de' Tirreni, Italy",
+        "country": "Italy"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Supplier Ashford Biscuit Company Ltd, Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom"
+      "quoted_span": "Supplier Conserve del Sole S.p.A., Via Garibaldi 88, 84013 Cava de' Tirreni, Italy"
     },
     "alcohol_strength_abv": null,
     "nutrition": {
       "value": {
         "basis": {
-          "value": "per_100g",
+          "value": "per_100ml",
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Nutrient per 100 g"
+          "quoted_span": "Nutrient per 100 ml"
         },
         "portion_size": null,
         "portions_per_pack": null,
         "energy_kj": {
-          "value": 1979.0,
+          "value": 207.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 207 kJ / 50 kcal"
         },
         "energy_kcal": {
-          "value": 472.0,
+          "value": 50.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 207 kJ / 50 kcal"
         },
         "fat_g": {
-          "value": 20.9,
+          "value": 2.1,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fat 20.9 g"
+          "quoted_span": "Fat 2.1 g"
         },
         "saturates_g": {
-          "value": 9.8,
+          "value": 1.1,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which saturates 9.8 g"
+          "quoted_span": "of which saturates 1.1 g"
         },
         "mono_unsaturates_g": null,
         "polyunsaturates_g": null,
         "carbohydrate_g": {
-          "value": 62.1,
+          "value": 5.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Carbohydrate 62.1 g"
+          "quoted_span": "Carbohydrate 5.8 g"
         },
         "sugars_g": {
-          "value": 16.4,
+          "value": 4.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which sugars 16.4 g"
+          "quoted_span": "of which sugars 4.9 g"
         },
         "polyols_g": null,
         "starch_g": null,
         "fibre_g": {
-          "value": 4.1,
+          "value": 1.1,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fibre 4.1 g"
+          "quoted_span": "Fibre 1.1 g"
         },
         "protein_g": {
-          "value": 6.9,
+          "value": 1.3,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Protein 6.9 g"
+          "quoted_span": "Protein 1.3 g"
         },
         "salt_g": {
-          "value": 1.02,
+          "value": 0.62,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Salt 1.02 g"
+          "quoted_span": "Salt 0.62 g"
         },
         "alcohol_g": null,
         "organic_acids_g": null,
@@ -218,28 +223,28 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1979 kJ / 472 kcal\nFat 20.9 g\nof which saturates 9.8 g\nCarbohydrate 62.1 g\nof which sugars 16.4 g\nFibre 4.1 g\nProtein 6.9 g\nSalt 1.02 g"
+      "quoted_span": "Nutrition declaration\nNutrient per 100 ml\nEnergy 207 kJ / 50 kcal\nFat 2.1 g\nof which saturates 1.1 g\nCarbohydrate 5.8 g\nof which sugars 4.9 g\nFibre 1.1 g\nProtein 1.3 g\nSalt 0.62 g"
     },
     "origins": [
       {
         "value": {
           "scope": "product",
-          "country": "United Kingdom",
-          "raw_text": "Country of origin United Kingdom"
+          "country": "Italy",
+          "raw_text": "Country of origin Italy"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Country of origin United Kingdom"
+        "quoted_span": "Country of origin Italy"
       },
       {
         "value": {
           "scope": "primary_ingredient",
-          "country": "United Kingdom",
-          "raw_text": "Origin of primary ingredient United Kingdom"
+          "country": "Italy",
+          "raw_text": "Origin of primary ingredient Italy"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Origin of primary ingredient United Kingdom"
+        "quoted_span": "Origin of primary ingredient Italy"
       }
     ],
     "claims": [],

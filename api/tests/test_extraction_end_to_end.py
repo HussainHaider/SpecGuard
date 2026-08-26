@@ -117,26 +117,42 @@ class TestEndToEnd:
 
 
 @pytest.mark.skipif(not CASES, reason="no recorded extraction fixtures")
-def test_confidence_scores_are_not_uniformly_maximal() -> None:
-    """Confidence has to vary to be worth anything.
+def test_low_confidence_abstention_is_exercised_by_real_output() -> None:
+    """Does the abstention guardrail ever actually fire on real model output?
 
-    The abstention guardrail routes low-confidence fields to a human. If the model
-    reports 1.0 for everything it ever reads, that gate never fires and the guardrail is
-    decorative. This records what the model actually does rather than assuming.
+    Rules abstain when a field is read below MIN_EXTRACTION_CONFIDENCE, routing it to a
+    human instead of blaming the supplier. That gate is only worth anything if real
+    extractions sometimes fall below it. This test does not assert a threshold anyone
+    would like to be true — it records what the model actually reports, and xfails when
+    the guardrail turns out to be untested by real data rather than pretending it is
+    covered.
     """
+    from specguard.config import get_settings
+
+    threshold = get_settings().min_extraction_confidence
     client = FakeClient(LLM_FIXTURES, model="recorded")
     scores: list[float] = []
     for entry, document in CASES:
         spec, _ = extract_spec(document, client, language=entry.language)
         scores.extend(
             field.confidence
-            for name in ("legal_name", "net_quantity", "nutrition", "ingredients", "durability")
+            for name in (
+                "legal_name",
+                "net_quantity",
+                "nutrition",
+                "ingredients",
+                "durability",
+                "business_operator",
+            )
             if (field := getattr(spec, name)) is not None
         )
-    assert scores
-    unique = set(scores)
-    if unique == {1.0}:
+
+    assert scores, "no fields extracted at all"
+    below = [score for score in scores if score < threshold]
+    if not below:
         pytest.xfail(
-            f"the model returned confidence 1.0 for all {len(scores)} extracted fields; "
-            "the low-confidence abstention path is untested by real output"
+            f"across {len(scores)} extracted fields the lowest confidence was "
+            f"{min(scores)}, never below the {threshold} abstention threshold. The "
+            "low-confidence path is therefore exercised only by synthetic specs, and "
+            "the threshold has not been calibrated against real output."
         )

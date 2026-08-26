@@ -1,90 +1,102 @@
 {
-  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-001 (SPEC-001-digestive-biscuits.pdf)",
-  "input_tokens": 4709,
-  "output_tokens": 1937,
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-014 (SPEC-014-chicken-soup.pdf)",
+  "input_tokens": 4704,
+  "output_tokens": 2023,
   "response": {
     "product_name": {
-      "value": "Wholemeal Digestive Biscuits",
+      "value": "Chicken & Vegetable Soup",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "PRODUCT SPECIFICATION\nWholemeal Digestive Biscuits"
+      "quoted_span": "PRODUCT SPECIFICATION\nChicken & Vegetable Soup"
     },
     "legal_name": {
-      "value": "Wholemeal biscuits",
+      "value": "Chicken soup with vegetables",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Legal name of the food Wholemeal biscuits"
+      "quoted_span": "Legal name of the food Chicken soup with vegetables"
     },
     "ingredients": {
       "value": {
-        "raw_text": "Wholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt",
+        "raw_text": "Chicken stock 52%, Chicken 18%, Carrots 11%, Leeks 7%, WHEAT flour 3%, CELERY 2%, Salt",
         "items": [
           {
             "value": {
-              "name": "Wholemeal WHEAT flour",
-              "percentage": 51.0,
+              "name": "Chicken stock",
+              "percentage": 52.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chicken stock 52%"
+          },
+          {
+            "value": {
+              "name": "Chicken",
+              "percentage": 18.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chicken 18%"
+          },
+          {
+            "value": {
+              "name": "Carrots",
+              "percentage": 11.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Carrots 11%"
+          },
+          {
+            "value": {
+              "name": "Leeks",
+              "percentage": 7.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Leeks 7%"
+          },
+          {
+            "value": {
+              "name": "WHEAT flour",
+              "percentage": 3.0,
               "emphasised": true,
               "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Wholemeal WHEAT flour 51%"
+            "quoted_span": "WHEAT flour 3%"
           },
           {
             "value": {
-              "name": "Palm oil",
-              "percentage": 19.0,
-              "emphasised": false,
-              "emphasis_style": "none",
+              "name": "CELERY",
+              "percentage": 2.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Palm oil 19%"
-          },
-          {
-            "value": {
-              "name": "Sugar",
-              "percentage": 16.0,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Sugar 16%"
-          },
-          {
-            "value": {
-              "name": "Partially inverted sugar syrup",
-              "percentage": null,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Partially inverted sugar syrup"
-          },
-          {
-            "value": {
-              "name": "Raising agents",
-              "percentage": null,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Raising agents"
+            "quoted_span": "CELERY 2%"
           },
           {
             "value": {
               "name": "Salt",
               "percentage": null,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
@@ -96,7 +108,7 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Ingredients\nWholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt"
+      "quoted_span": "Ingredients\nChicken stock 52%, Chicken 18%, Carrots 11%, Leeks 7%, WHEAT flour 3%, CELERY 2%, Salt"
     },
     "allergen_statement": {
       "value": "Allergens are emphasised in the ingredient list above.",
@@ -117,30 +129,35 @@
     "drained_net_weight": null,
     "durability": {
       "value": {
-        "kind": "best_before_end",
-        "raw_text": "Best before end: 10 months from production",
+        "kind": "use_by",
+        "raw_text": "Use by: 10 days from production",
         "date": null
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Durability Best before end: 10 months from production"
+      "quoted_span": "Durability Use by: 10 days from production"
     },
     "storage_conditions": {
-      "value": "Store in a cool, dry place.",
+      "value": "Keep refrigerated. Use within 2 days of opening.",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Storage conditions Store in a cool, dry place."
+      "quoted_span": "Storage conditions Keep refrigerated. Use within 2 days of opening."
     },
-    "instructions_for_use": null,
+    "instructions_for_use": {
+      "value": "Empty into a saucepan and heat until piping hot.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Instructions for use Empty into a saucepan and heat until piping hot."
+    },
     "business_operator": {
       "value": {
-        "name": "Ashford Biscuit Company Ltd",
-        "address": "Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom",
-        "country": "United Kingdom"
+        "name": "Potages Duval SAS",
+        "address": null,
+        "country": null
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Supplier Ashford Biscuit Company Ltd, Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom"
+      "quoted_span": "Supplier Potages Duval SAS"
     },
     "alcohol_strength_abv": null,
     "nutrition": {
@@ -154,62 +171,62 @@
         "portion_size": null,
         "portions_per_pack": null,
         "energy_kj": {
-          "value": 1979.0,
+          "value": 269.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 269 kJ / 64 kcal"
         },
         "energy_kcal": {
-          "value": 472.0,
+          "value": 64.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 269 kJ / 64 kcal"
         },
         "fat_g": {
-          "value": 20.9,
+          "value": 2.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fat 20.9 g"
+          "quoted_span": "Fat 2.8 g"
         },
         "saturates_g": {
-          "value": 9.8,
+          "value": 0.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which saturates 9.8 g"
+          "quoted_span": "of which saturates 0.9 g"
         },
         "mono_unsaturates_g": null,
         "polyunsaturates_g": null,
         "carbohydrate_g": {
-          "value": 62.1,
+          "value": 4.4,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Carbohydrate 62.1 g"
+          "quoted_span": "Carbohydrate 4.4 g"
         },
         "sugars_g": {
-          "value": 16.4,
+          "value": 1.7,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which sugars 16.4 g"
+          "quoted_span": "of which sugars 1.7 g"
         },
         "polyols_g": null,
         "starch_g": null,
         "fibre_g": {
-          "value": 4.1,
+          "value": 0.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fibre 4.1 g"
+          "quoted_span": "Fibre 0.9 g"
         },
         "protein_g": {
-          "value": 6.9,
+          "value": 4.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Protein 6.9 g"
+          "quoted_span": "Protein 4.9 g"
         },
         "salt_g": {
-          "value": 1.02,
+          "value": 0.79,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Salt 1.02 g"
+          "quoted_span": "Salt 0.79 g"
         },
         "alcohol_g": null,
         "organic_acids_g": null,
@@ -218,28 +235,28 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1979 kJ / 472 kcal\nFat 20.9 g\nof which saturates 9.8 g\nCarbohydrate 62.1 g\nof which sugars 16.4 g\nFibre 4.1 g\nProtein 6.9 g\nSalt 1.02 g"
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 269 kJ / 64 kcal\nFat 2.8 g\nof which saturates 0.9 g\nCarbohydrate 4.4 g\nof which sugars 1.7 g\nFibre 0.9 g\nProtein 4.9 g\nSalt 0.79 g"
     },
     "origins": [
       {
         "value": {
           "scope": "product",
-          "country": "United Kingdom",
-          "raw_text": "Country of origin United Kingdom"
+          "country": "France",
+          "raw_text": "Country of origin France"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Country of origin United Kingdom"
+        "quoted_span": "Country of origin France"
       },
       {
         "value": {
           "scope": "primary_ingredient",
-          "country": "United Kingdom",
-          "raw_text": "Origin of primary ingredient United Kingdom"
+          "country": "France",
+          "raw_text": "Origin of primary ingredient France"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Origin of primary ingredient United Kingdom"
+        "quoted_span": "Origin of primary ingredient France"
       }
     ],
     "claims": [],

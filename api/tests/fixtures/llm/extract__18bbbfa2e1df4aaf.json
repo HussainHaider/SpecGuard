@@ -1,63 +1,63 @@
 {
-  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-008 (SPEC-008-de-zartbitterschokolade.pdf)",
-  "input_tokens": 4755,
-  "output_tokens": 1866,
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-007 (SPEC-007-dark-chocolate.pdf)",
+  "input_tokens": 4697,
+  "output_tokens": 1763,
   "response": {
     "product_name": {
-      "value": "Zartbitterschokolade 70%",
+      "value": "Dark Chocolate 70%",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "PRODUKTSPEZIFIKATION\nZartbitterschokolade 70%"
+      "quoted_span": "PRODUCT SPECIFICATION\nDark Chocolate 70%"
     },
     "legal_name": {
-      "value": "Zartbitterschokolade",
+      "value": "Dark chocolate",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Bezeichnung des Lebensmittels Zartbitterschokolade"
+      "quoted_span": "Legal name of the food Dark chocolate"
     },
     "ingredients": {
       "value": {
-        "raw_text": "Kakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin",
+        "raw_text": "Cocoa mass 58%, Sugar 29%, Cocoa butter 12%, SOYA lecithin",
         "items": [
           {
             "value": {
-              "name": "Kakaomasse",
+              "name": "Cocoa mass",
               "percentage": 58.0,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Kakaomasse 58%"
+            "quoted_span": "Cocoa mass 58%"
           },
           {
             "value": {
-              "name": "Zucker",
+              "name": "Sugar",
               "percentage": 29.0,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Zucker 29%"
+            "quoted_span": "Sugar 29%"
           },
           {
             "value": {
-              "name": "Kakaobutter",
+              "name": "Cocoa butter",
               "percentage": 12.0,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Kakaobutter 12%"
+            "quoted_span": "Cocoa butter 12%"
           },
           {
             "value": {
-              "name": "SOJA-Lecithin",
+              "name": "SOYA lecithin",
               "percentage": null,
               "emphasised": true,
               "emphasis_style": "uppercase",
@@ -65,20 +65,20 @@
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "SOJA-Lecithin"
+            "quoted_span": "SOYA lecithin"
           }
         ],
         "dominant_emphasis_style": "uppercase"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Zutaten\nKakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin"
+      "quoted_span": "Ingredients\nCocoa mass 58%, Sugar 29%, Cocoa butter 12%, SOYA lecithin"
     },
     "allergen_statement": {
-      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "value": "Allergens are emphasised in the ingredient list above.",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
     },
     "may_contain_statement": null,
     "net_quantity": {
@@ -88,35 +88,35 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Nettofuellmenge 100 g"
+      "quoted_span": "Net quantity 100 g"
     },
     "drained_net_weight": null,
     "durability": {
       "value": {
         "kind": "best_before_end",
-        "raw_text": "Mindestens haltbar bis Ende: 15 Monate ab Herstellung",
+        "raw_text": "Best before end: 15 months from production",
         "date": null
       },
-      "confidence": 0.8,
-      "page": 1,
-      "quoted_span": "Haltbarkeit Mindestens haltbar bis Ende: 15 Monate ab Herstellung"
-    },
-    "storage_conditions": {
-      "value": "Unter 18 °C trocken lagern.",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Aufbewahrungsbedingungen Unter 18 °C trocken lagern."
+      "quoted_span": "Durability Best before end: 15 months from production"
+    },
+    "storage_conditions": {
+      "value": "Store below 18 °C in a dry place.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Store below 18 °C in a dry place."
     },
     "instructions_for_use": null,
     "business_operator": {
       "value": {
         "name": "Chocolaterie Verhoeven N.V.",
-        "address": "Nijverheidslaan 3, 9000 Gent, Belgien",
-        "country": "Belgien"
+        "address": "Nijverheidslaan 3, 9000 Ghent, Belgium",
+        "country": "Belgium"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Lieferant Chocolaterie Verhoeven N.V., Nijverheidslaan 3, 9000 Gent, Belgien"
+      "quoted_span": "Supplier Chocolaterie Verhoeven N.V., Nijverheidslaan 3, 9000 Ghent, Belgium"
     },
     "alcohol_strength_abv": null,
     "nutrition": {
@@ -125,7 +125,7 @@
           "value": "per_100g",
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Naehrstoff per 100 g"
+          "quoted_span": "Nutrient per 100 g"
         },
         "portion_size": null,
         "portions_per_pack": null,
@@ -133,25 +133,25 @@
           "value": 2352.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energie 2352 kJ / 567 kcal"
+          "quoted_span": "Energy 2352 kJ / 567 kcal"
         },
         "energy_kcal": {
           "value": 567.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energie 2352 kJ / 567 kcal"
+          "quoted_span": "Energy 2352 kJ / 567 kcal"
         },
         "fat_g": {
           "value": 42.1,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fett 42.1 g"
+          "quoted_span": "Fat 42.1 g"
         },
         "saturates_g": {
           "value": 25.3,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "davon gesaettigte Fettsaeuren 25.3 g"
+          "quoted_span": "of which saturates 25.3 g"
         },
         "mono_unsaturates_g": null,
         "polyunsaturates_g": null,
@@ -159,13 +159,13 @@
           "value": 33.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Kohlenhydrate 33.8 g"
+          "quoted_span": "Carbohydrate 33.8 g"
         },
         "sugars_g": {
           "value": 29.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "davon Zucker 29.0 g"
+          "quoted_span": "of which sugars 29.0 g"
         },
         "polyols_g": null,
         "starch_g": null,
@@ -173,19 +173,19 @@
           "value": 10.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Ballaststoffe 10.9 g"
+          "quoted_span": "Fibre 10.9 g"
         },
         "protein_g": {
           "value": 7.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Eiweiss 7.8 g"
+          "quoted_span": "Protein 7.8 g"
         },
         "salt_g": {
           "value": 0.02,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Salz 0.02 g"
+          "quoted_span": "Salt 0.02 g"
         },
         "alcohol_g": null,
         "organic_acids_g": null,
@@ -194,28 +194,28 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 g\nEnergie 2352 kJ / 567 kcal\nFett 42.1 g\ndavon gesaettigte Fettsaeuren 25.3 g\nKohlenhydrate 33.8 g\ndavon Zucker 29.0 g\nBallaststoffe 10.9 g\nEiweiss 7.8 g\nSalz 0.02 g"
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 2352 kJ / 567 kcal\nFat 42.1 g\nof which saturates 25.3 g\nCarbohydrate 33.8 g\nof which sugars 29.0 g\nFibre 10.9 g\nProtein 7.8 g\nSalt 0.02 g"
     },
     "origins": [
       {
         "value": {
           "scope": "product",
-          "country": "Belgien",
-          "raw_text": "Ursprungsland Belgien"
+          "country": "Belgium",
+          "raw_text": "Country of origin Belgium"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Ursprungsland Belgien"
+        "quoted_span": "Country of origin Belgium"
       },
       {
         "value": {
           "scope": "primary_ingredient",
           "country": "Ghana",
-          "raw_text": "Ursprung der primaeren Zutat Ghana"
+          "raw_text": "Origin of primary ingredient Ghana"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Ursprung der primaeren Zutat Ghana"
+        "quoted_span": "Origin of primary ingredient Ghana"
       }
     ],
     "claims": [],

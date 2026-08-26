@@ -1,90 +1,90 @@
 {
-  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-001 (SPEC-001-digestive-biscuits.pdf)",
-  "input_tokens": 4709,
-  "output_tokens": 1937,
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-002 (SPEC-002-mixed-nuts.pdf)",
+  "input_tokens": 4726,
+  "output_tokens": 2029,
   "response": {
     "product_name": {
-      "value": "Wholemeal Digestive Biscuits",
+      "value": "Roasted Mixed Nuts",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "PRODUCT SPECIFICATION\nWholemeal Digestive Biscuits"
+      "quoted_span": "PRODUCT SPECIFICATION\nRoasted Mixed Nuts"
     },
     "legal_name": {
-      "value": "Wholemeal biscuits",
+      "value": "Roasted mixed nuts, salted",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Legal name of the food Wholemeal biscuits"
+      "quoted_span": "Legal name of the food Roasted mixed nuts, salted"
     },
     "ingredients": {
       "value": {
-        "raw_text": "Wholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt",
+        "raw_text": "PEANUTS 42%, CASHEW NUTS 26%, ALMONDS 18%, HAZELNUTS 12%, Sunflower oil, Salt",
         "items": [
           {
             "value": {
-              "name": "Wholemeal WHEAT flour",
-              "percentage": 51.0,
+              "name": "PEANUTS",
+              "percentage": 42.0,
               "emphasised": true,
               "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Wholemeal WHEAT flour 51%"
+            "quoted_span": "PEANUTS 42%"
           },
           {
             "value": {
-              "name": "Palm oil",
-              "percentage": 19.0,
-              "emphasised": false,
-              "emphasis_style": "none",
+              "name": "CASHEW NUTS",
+              "percentage": 26.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Palm oil 19%"
+            "quoted_span": "CASHEW NUTS 26%"
           },
           {
             "value": {
-              "name": "Sugar",
-              "percentage": 16.0,
-              "emphasised": false,
-              "emphasis_style": "none",
+              "name": "ALMONDS",
+              "percentage": 18.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Sugar 16%"
+            "quoted_span": "ALMONDS 18%"
           },
           {
             "value": {
-              "name": "Partially inverted sugar syrup",
+              "name": "HAZELNUTS",
+              "percentage": 12.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "HAZELNUTS 12%"
+          },
+          {
+            "value": {
+              "name": "Sunflower oil",
               "percentage": null,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Partially inverted sugar syrup"
-          },
-          {
-            "value": {
-              "name": "Raising agents",
-              "percentage": null,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Raising agents"
+            "quoted_span": "Sunflower oil"
           },
           {
             "value": {
               "name": "Salt",
               "percentage": null,
               "emphasised": false,
-              "emphasis_style": "none",
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
@@ -96,7 +96,7 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Ingredients\nWholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt"
+      "quoted_span": "Ingredients\nPEANUTS 42%, CASHEW NUTS 26%, ALMONDS 18%, HAZELNUTS 12%, Sunflower oil, Salt"
     },
     "allergen_statement": {
       "value": "Allergens are emphasised in the ingredient list above.",
@@ -107,40 +107,40 @@
     "may_contain_statement": null,
     "net_quantity": {
       "value": {
-        "value": 400.0,
+        "value": 200.0,
         "unit": "g"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Net quantity 400 g"
+      "quoted_span": "Net quantity 200 g"
     },
     "drained_net_weight": null,
     "durability": {
       "value": {
         "kind": "best_before_end",
-        "raw_text": "Best before end: 10 months from production",
+        "raw_text": "Best before end: 8 months from production",
         "date": null
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Durability Best before end: 10 months from production"
+      "quoted_span": "Durability Best before end: 8 months from production"
     },
     "storage_conditions": {
-      "value": "Store in a cool, dry place.",
+      "value": "Store in a cool, dry place away from direct sunlight.",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Storage conditions Store in a cool, dry place."
+      "quoted_span": "Storage conditions Store in a cool, dry place away from direct sunlight."
     },
     "instructions_for_use": null,
     "business_operator": {
       "value": {
-        "name": "Ashford Biscuit Company Ltd",
-        "address": "Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom",
-        "country": "United Kingdom"
+        "name": "Nussmeister Handels GmbH",
+        "address": "Am Hafen 23, 20457 Hamburg, Germany",
+        "country": null
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Supplier Ashford Biscuit Company Ltd, Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom"
+      "quoted_span": "Supplier Nussmeister Handels GmbH, Am Hafen 23, 20457 Hamburg, Germany"
     },
     "alcohol_strength_abv": null,
     "nutrition": {
@@ -154,62 +154,62 @@
         "portion_size": null,
         "portions_per_pack": null,
         "energy_kj": {
-          "value": 1979.0,
+          "value": 2479.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 2479 kJ / 599 kcal"
         },
         "energy_kcal": {
-          "value": 472.0,
+          "value": 599.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energy 1979 kJ / 472 kcal"
+          "quoted_span": "Energy 2479 kJ / 599 kcal"
         },
         "fat_g": {
-          "value": 20.9,
+          "value": 49.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fat 20.9 g"
+          "quoted_span": "Fat 49.8 g"
         },
         "saturates_g": {
-          "value": 9.8,
+          "value": 7.2,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which saturates 9.8 g"
+          "quoted_span": "of which saturates 7.2 g"
         },
         "mono_unsaturates_g": null,
         "polyunsaturates_g": null,
         "carbohydrate_g": {
-          "value": 62.1,
+          "value": 12.1,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Carbohydrate 62.1 g"
+          "quoted_span": "Carbohydrate 12.1 g"
         },
         "sugars_g": {
-          "value": 16.4,
+          "value": 4.3,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "of which sugars 16.4 g"
+          "quoted_span": "of which sugars 4.3 g"
         },
         "polyols_g": null,
         "starch_g": null,
         "fibre_g": {
-          "value": 4.1,
+          "value": 7.9,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fibre 4.1 g"
+          "quoted_span": "Fibre 7.9 g"
         },
         "protein_g": {
-          "value": 6.9,
+          "value": 21.6,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Protein 6.9 g"
+          "quoted_span": "Protein 21.6 g"
         },
         "salt_g": {
-          "value": 1.02,
+          "value": 0.94,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Salt 1.02 g"
+          "quoted_span": "Salt 0.94 g"
         },
         "alcohol_g": null,
         "organic_acids_g": null,
@@ -218,31 +218,42 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1979 kJ / 472 kcal\nFat 20.9 g\nof which saturates 9.8 g\nCarbohydrate 62.1 g\nof which sugars 16.4 g\nFibre 4.1 g\nProtein 6.9 g\nSalt 1.02 g"
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 2479 kJ / 599 kcal\nFat 49.8 g\nof which saturates 7.2 g\nCarbohydrate 12.1 g\nof which sugars 4.3 g\nFibre 7.9 g\nProtein 21.6 g\nSalt 0.94 g"
     },
     "origins": [
       {
         "value": {
           "scope": "product",
-          "country": "United Kingdom",
-          "raw_text": "Country of origin United Kingdom"
+          "country": "Germany",
+          "raw_text": "Country of origin Germany"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Country of origin United Kingdom"
+        "quoted_span": "Country of origin Germany"
       },
       {
         "value": {
           "scope": "primary_ingredient",
-          "country": "United Kingdom",
-          "raw_text": "Origin of primary ingredient United Kingdom"
+          "country": "Argentina",
+          "raw_text": "Origin of primary ingredient Argentina"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Origin of primary ingredient United Kingdom"
+        "quoted_span": "Origin of primary ingredient Argentina"
       }
     ],
-    "claims": [],
+    "claims": [
+      {
+        "value": {
+          "text": "High in protein",
+          "kind": "nutrition",
+          "nutrient": "protein"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Claims made on pack\n(cid:127) High in protein"
+      }
+    ],
     "unmapped_notes": []
   }
 }

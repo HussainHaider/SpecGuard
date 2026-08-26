@@ -1,51 +1,39 @@
 {
-  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-008 (SPEC-008-de-zartbitterschokolade.pdf)",
-  "input_tokens": 4755,
-  "output_tokens": 1866,
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-010 (SPEC-010-de-erdbeerjoghurt.pdf)",
+  "input_tokens": 4756,
+  "output_tokens": 1861,
   "response": {
     "product_name": {
-      "value": "Zartbitterschokolade 70%",
+      "value": "Erdbeerjoghurt",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "PRODUKTSPEZIFIKATION\nZartbitterschokolade 70%"
+      "quoted_span": "PRODUKTSPEZIFIKATION\nErdbeerjoghurt"
     },
     "legal_name": {
-      "value": "Zartbitterschokolade",
+      "value": "Erdbeerjoghurt mit lebenden Kulturen",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Bezeichnung des Lebensmittels Zartbitterschokolade"
+      "quoted_span": "Bezeichnung des Lebensmittels Erdbeerjoghurt mit lebenden Kulturen"
     },
     "ingredients": {
       "value": {
-        "raw_text": "Kakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin",
+        "raw_text": "Joghurt (MILCH) 82%, Erdbeeren 12%, Zucker 5%, Pektin",
         "items": [
           {
             "value": {
-              "name": "Kakaomasse",
-              "percentage": 58.0,
-              "emphasised": false,
-              "emphasis_style": "none",
+              "name": "Joghurt (MILCH)",
+              "percentage": 82.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Kakaomasse 58%"
+            "quoted_span": "Joghurt (MILCH) 82%"
           },
           {
             "value": {
-              "name": "Zucker",
-              "percentage": 29.0,
-              "emphasised": false,
-              "emphasis_style": "none",
-              "sub_ingredients": []
-            },
-            "confidence": 1.0,
-            "page": 1,
-            "quoted_span": "Zucker 29%"
-          },
-          {
-            "value": {
-              "name": "Kakaobutter",
+              "name": "Erdbeeren",
               "percentage": 12.0,
               "emphasised": false,
               "emphasis_style": "none",
@@ -53,26 +41,38 @@
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "Kakaobutter 12%"
+            "quoted_span": "Erdbeeren 12%"
           },
           {
             "value": {
-              "name": "SOJA-Lecithin",
-              "percentage": null,
-              "emphasised": true,
-              "emphasis_style": "uppercase",
+              "name": "Zucker",
+              "percentage": 5.0,
+              "emphasised": false,
+              "emphasis_style": "none",
               "sub_ingredients": []
             },
             "confidence": 1.0,
             "page": 1,
-            "quoted_span": "SOJA-Lecithin"
+            "quoted_span": "Zucker 5%"
+          },
+          {
+            "value": {
+              "name": "Pektin",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Pektin"
           }
         ],
         "dominant_emphasis_style": "uppercase"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Zutaten\nKakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin"
+      "quoted_span": "Zutaten\nJoghurt (MILCH) 82%, Erdbeeren 12%, Zucker 5%, Pektin"
     },
     "allergen_statement": {
       "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
@@ -83,40 +83,40 @@
     "may_contain_statement": null,
     "net_quantity": {
       "value": {
-        "value": 100.0,
+        "value": 500.0,
         "unit": "g"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Nettofuellmenge 100 g"
+      "quoted_span": "Nettofuellmenge 500 g"
     },
     "drained_net_weight": null,
     "durability": {
       "value": {
-        "kind": "best_before_end",
-        "raw_text": "Mindestens haltbar bis Ende: 15 Monate ab Herstellung",
+        "kind": "use_by",
+        "raw_text": "Verbrauchen bis: 21 Tage ab Herstellung",
         "date": null
       },
       "confidence": 0.8,
       "page": 1,
-      "quoted_span": "Haltbarkeit Mindestens haltbar bis Ende: 15 Monate ab Herstellung"
+      "quoted_span": "Haltbarkeit Verbrauchen bis: 21 Tage ab Herstellung"
     },
     "storage_conditions": {
-      "value": "Unter 18 °C trocken lagern.",
+      "value": "Bei 0-5 °C gekühlt aufbewahren.",
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Aufbewahrungsbedingungen Unter 18 °C trocken lagern."
+      "quoted_span": "Aufbewahrungsbedingungen Bei 0-5 °C gekühlt aufbewahren."
     },
     "instructions_for_use": null,
     "business_operator": {
       "value": {
-        "name": "Chocolaterie Verhoeven N.V.",
-        "address": "Nijverheidslaan 3, 9000 Gent, Belgien",
-        "country": "Belgien"
+        "name": "Nordmilch Erzeugnisse GmbH",
+        "address": "Industriestrasse 12, 28195 Bremen, Deutschland",
+        "country": "Deutschland"
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Lieferant Chocolaterie Verhoeven N.V., Nijverheidslaan 3, 9000 Gent, Belgien"
+      "quoted_span": "Lieferant Nordmilch Erzeugnisse GmbH, Industriestrasse 12, 28195 Bremen, Deutschland"
     },
     "alcohol_strength_abv": null,
     "nutrition": {
@@ -130,62 +130,62 @@
         "portion_size": null,
         "portions_per_pack": null,
         "energy_kj": {
-          "value": 2352.0,
+          "value": 390.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energie 2352 kJ / 567 kcal"
+          "quoted_span": "Energie 390 kJ / 93 kcal"
         },
         "energy_kcal": {
-          "value": 567.0,
+          "value": 93.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Energie 2352 kJ / 567 kcal"
+          "quoted_span": "Energie 390 kJ / 93 kcal"
         },
         "fat_g": {
-          "value": 42.1,
+          "value": 3.1,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Fett 42.1 g"
+          "quoted_span": "Fett 3.1 g"
         },
         "saturates_g": {
-          "value": 25.3,
+          "value": 2.0,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "davon gesaettigte Fettsaeuren 25.3 g"
+          "quoted_span": "davon gesaettigte Fettsaeuren 2.0 g"
         },
         "mono_unsaturates_g": null,
         "polyunsaturates_g": null,
         "carbohydrate_g": {
-          "value": 33.8,
+          "value": 12.4,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Kohlenhydrate 33.8 g"
+          "quoted_span": "Kohlenhydrate 12.4 g"
         },
         "sugars_g": {
-          "value": 29.0,
+          "value": 11.8,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "davon Zucker 29.0 g"
+          "quoted_span": "davon Zucker 11.8 g"
         },
         "polyols_g": null,
         "starch_g": null,
         "fibre_g": {
-          "value": 10.9,
+          "value": 0.4,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Ballaststoffe 10.9 g"
+          "quoted_span": "Ballaststoffe 0.4 g"
         },
         "protein_g": {
-          "value": 7.8,
+          "value": 3.6,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Eiweiss 7.8 g"
+          "quoted_span": "Eiweiss 3.6 g"
         },
         "salt_g": {
-          "value": 0.02,
+          "value": 0.12,
           "confidence": 1.0,
           "page": 1,
-          "quoted_span": "Salz 0.02 g"
+          "quoted_span": "Salz 0.12 g"
         },
         "alcohol_g": null,
         "organic_acids_g": null,
@@ -194,28 +194,28 @@
       },
       "confidence": 1.0,
       "page": 1,
-      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 g\nEnergie 2352 kJ / 567 kcal\nFett 42.1 g\ndavon gesaettigte Fettsaeuren 25.3 g\nKohlenhydrate 33.8 g\ndavon Zucker 29.0 g\nBallaststoffe 10.9 g\nEiweiss 7.8 g\nSalz 0.02 g"
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 g\nEnergie 390 kJ / 93 kcal\nFett 3.1 g\ndavon gesaettigte Fettsaeuren 2.0 g\nKohlenhydrate 12.4 g\ndavon Zucker 11.8 g\nBallaststoffe 0.4 g\nEiweiss 3.6 g\nSalz 0.12 g"
     },
     "origins": [
       {
         "value": {
           "scope": "product",
-          "country": "Belgien",
-          "raw_text": "Ursprungsland Belgien"
+          "country": "Deutschland",
+          "raw_text": "Ursprungsland Deutschland"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Ursprungsland Belgien"
+        "quoted_span": "Ursprungsland Deutschland"
       },
       {
         "value": {
           "scope": "primary_ingredient",
-          "country": "Ghana",
-          "raw_text": "Ursprung der primaeren Zutat Ghana"
+          "country": "Deutschland",
+          "raw_text": "Ursprung der primaeren Zutat Deutschland"
         },
         "confidence": 1.0,
         "page": 1,
-        "quoted_span": "Ursprung der primaeren Zutat Ghana"
+        "quoted_span": "Ursprung der primaeren Zutat Deutschland"
       }
     ],
     "claims": [],

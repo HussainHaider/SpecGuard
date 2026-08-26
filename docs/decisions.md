@@ -102,3 +102,32 @@ would otherwise have to reverse-engineer from the code.
   CLAUDE.md overstates it. Schema constraint — the half that actually bounds the output
   shape — still holds on every call, and the protocol has no free-text method, so no
   caller can bypass it.
+
+## 008 — Extraction fixtures are recorded, not hand-authored
+
+- **Context:** The default test suite may not reach a live API, so FakeClient replays
+  fixtures. Those fixtures can either be written by hand or recorded from a real call.
+- **Options:** (a) hand-author them from the generator's ground truth, which is exact and
+  free; (b) record real responses once and commit them.
+- **Choice:** (b), with `specguard.llm.record` doing the recording and hand-authoring
+  kept only for a schema that has never been called.
+- **Cost:** roughly $0.73 per full re-record, fixtures that pin one model's behaviour,
+  and a re-record needed whenever the prompt or schema changes. Worth it: hand-authored
+  fixtures contain only what the author already believed the model would say, and the
+  first recorded run immediately exposed two bugs invisible to them — a required
+  `address` field that forced the model to fabricate a missing operator address, and
+  emphasis detection that missed partially-capitalised German compounds.
+
+## 009 — The abstention threshold is uncalibrated
+
+- **Context:** Rules abstain below `MIN_EXTRACTION_CONFIDENCE` (0.60) so a badly-read
+  field never becomes a FAIL against the supplier. Across 178 fields from 30 real
+  extractions, the model never reported below 0.80.
+- **Options:** (a) raise the threshold until it fires; (b) leave it and record that the
+  path is untested by real output; (c) drop self-reported confidence for a computed
+  signal.
+- **Choice:** (b) for now, asserted by a test that xfails with the measured distribution
+  rather than passing silently.
+- **Cost:** the guardrail is currently exercised only by synthetic specs. A threshold
+  tuned to a number the model never emits is decorative, and picking one now would be
+  fitting to 30 documents from one generator. Revisit in M5 with the eval set.
