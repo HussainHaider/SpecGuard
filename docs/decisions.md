@@ -35,7 +35,7 @@ would otherwise have to reverse-engineer from the code.
   can move the threshold without any citation changing. Accepted, because the
   alternative is a citation that overstates what the regulation actually says.
 
-## 003 — Postgres is the job queue; there is no broker
+## 003 — Postgres is the job queue; there is no broker (superseded by 013)
 
 - **Context:** The worker runs check jobs asynchronously, but the compose stack is five
   services and a broker would be a sixth.
@@ -196,3 +196,31 @@ would otherwise have to reverse-engineer from the code.
   legitimate: the defect did not implement its own stated description, the same failure
   as seeding an allergen defect on a product with no allergens (decision 011's
   neighbour in M2). Generation is deterministic, so only the two affected PDFs changed.
+
+
+## 013 — Redis, superseding the Postgres job queue
+
+- **Context:** Decision 003 chose to poll a Postgres jobs table specifically to avoid a
+  sixth compose service. M4 specifies arq for background execution, and arq is a Redis
+  library — there is no Postgres backend for it.
+- **Options:** (a) keep the Postgres queue and drop arq; (b) take arq and add Redis.
+- **Choice:** (b). The reasoning in 003 was never "Postgres is the better queue", it was
+  "one fewer service"; once a broker is asked for, that argument is spent. arq also
+  brings job timeouts, retries and concurrency limits that the polling loop would have
+  had to grow anyway.
+- **Cost:** a sixth service, and Redis is now on the path for submitting a check. The
+  API degrades rather than fails when it is down — reports already stored stay readable
+  and /healthz reports the problem — but nothing new can be queued.
+
+## 014 — Uploads are scratch, reports are the record
+
+- **Context:** The worker needs the PDF on disk, and something has to decide how long it
+  stays there.
+- **Options:** (a) keep every upload for reproducibility; (b) delete it once the check
+  succeeds, keeping the sha256 and the report.
+- **Choice:** (b). The report is what a person read and is what an audit needs; the
+  hash identifies the document that produced it.
+- **Cost:** a report cannot be regenerated from scratch after the fact without the
+  original file being resubmitted. Retaining third-party specification sheets after the
+  work is done is a liability rather than an asset, and the hash still proves which
+  document a report describes.
