@@ -129,6 +129,33 @@ Qdrant's lexical half is a bm25 vector from fastembed; Postgres has no bm25, so 
 `ts_rank_cd` over a `tsvector`. Fusion is server-side RRF in Qdrant and hand-written SQL in
 Postgres. At 734 clauses a latency difference would be noise either way.
 
+## The review UI
+
+Two routes, React 18 + Vite + TypeScript + TanStack Query, plain CSS and no component
+library.
+
+`/` takes a spec sheet, polls the job, and lists verdicts grouped by severity — failures
+first, abstentions next, passes last, because that is the order a reviewer works through
+and an abstention below a pass buries the cases this system exists to surface. Selecting a
+finding opens the evidence panel: the cited article, with the words the verdict actually
+rested on highlighted inside it, the suggested fix, and accept / override controls that
+post to the feedback endpoint.
+
+The override asks *what the verdict should have been* rather than offering a thumbs-down,
+because "this is wrong" is not usable as an eval label and "this should have been PASS"
+is — and the correction is attached to the LangSmith run that produced the verdict.
+
+`/ops` renders the tier 1 table above from `web/public/evals.json`, a build-time artefact
+written by `run_eval --json`, plus a link out to the traces.
+
+Two notes on what the UI does not do. The evidence panel needs the clause a citation
+points at, which no endpoint returned, so `GET /clauses/{chunk_id}` was added and serves it
+from the corpus already loaded in the API process — `VectorStore` stays at three methods.
+And the highlight is matched on whitespace-normalised text, the same way the backend's
+verification pass matches: a paraphrase fails to match and nothing is highlighted, which
+is the honest outcome, since highlighting text the rule did not quote would be worse than
+highlighting none.
+
 ## Observability
 
 Every model call is traced with prompt version, rule id, tokens, cost and latency; one

@@ -34,6 +34,7 @@ from specguard.guardrails.verdicts import needs_human_review
 from specguard.llm.factory import build_client
 from specguard.logging import bind_correlation_id, configure_logging, get_logger
 from specguard.models.report import CheckReport
+from specguard.queue import WORKER_FUNCTION
 from specguard.tracing import configure_tracing
 from specguard.vectorstore.qdrant import QdrantVectorStore
 
@@ -172,3 +173,8 @@ class WorkerSettings:
     @staticmethod
     def redis_settings() -> RedisSettings:
         return RedisSettings.from_dsn(get_settings().redis_url)
+
+
+# The API enqueues by name and arq resolves by name, so a rename on either side is
+# silent until a job is submitted. Checked here, at import.
+assert run_check_job.__name__ == WORKER_FUNCTION

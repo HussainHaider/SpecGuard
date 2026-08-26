@@ -68,6 +68,10 @@ class Settings(BaseSettings):
     min_retrieval_score: float = Field(default=0.35, ge=0.0)
     min_extraction_confidence: float = Field(default=0.60, ge=0.0, le=1.0)
 
+    #: Origins the review UI is served from. A list rather than "*": this API takes file
+    #: uploads and records reviewer decisions, neither of which belongs behind a wildcard.
+    cors_origins: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
+
     graph_version: str = "graph@v1"
     log_level: str = "INFO"
 

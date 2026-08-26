@@ -78,12 +78,14 @@ services:
 
   worker:
     profiles: ["app"]
-    # Same image as the api; it polls the jobs table (FOR UPDATE SKIP LOCKED) and runs
-    # the check graph. No broker service, so Postgres is the queue.
+    # Same image as the api; it takes jobs off Redis and runs the check graph.
+    # See docs/decisions.md 013 — arq supersedes the Postgres job queue.
     build:
       context: ./api
       dockerfile: Dockerfile
-    command: ["python", "-m", "specguard.worker"]
+    # arq is the runner. `python -m specguard.worker` imported the module and exited,
+    # so the container stayed up and every job stayed queued.
+    command: ["arq", "specguard.worker.WorkerSettings"]
     env_file: [.env]
     environment:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-specguard}:${POSTGRES_PASSWORD:-specguard}@db:5432/${POSTGRES_DB:-specguard}
@@ -105,8 +107,11 @@ services:
     build:
       context: ./web
       dockerfile: Dockerfile
-    environment:
-      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000}
+      # Vite inlines these at build time, so they are build args rather than runtime
+      # environment. Changing the API host means rebuilding the image.
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000}
+        VITE_LANGSMITH_URL: ${VITE_LANGSMITH_URL:-https://smith.langchain.com}
     ports:
       - "${WEB_PORT:-5173}:5173"
     depends_on:

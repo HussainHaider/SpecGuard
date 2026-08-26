@@ -21,9 +21,12 @@ Two paths, same code:
 from __future__ import annotations
 
 import argparse
+import datetime as dt
+import json
 import sys
 import tomllib
 from pathlib import Path
+from typing import Any
 
 import evals.metrics as metrics
 import evals.pipeline as pipeline
@@ -228,6 +231,49 @@ def markdown(results: dict[str, metrics.Metrics]) -> str:
     return "\n".join([*lines, *per_rule])
 
 
+#: Where the review UI reads its numbers from. A build-time artefact, committed, rather
+#: than an endpoint: the eval takes seconds and touches the corpus and every fixture,
+#: and none of that belongs on the path of someone opening a page.
+OPS_REPORT = Path(__file__).resolve().parents[2] / "web" / "public" / "evals.json"
+
+
+def as_json(results: dict[str, metrics.Metrics], *, live: bool) -> dict[str, Any]:
+    """The report the /ops page renders."""
+    return {
+        "generated_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+        "mode": "live" if live else "offline",
+        "baseline": _baseline(),
+        "gates": tomllib.loads(THRESHOLDS.read_text(encoding="utf-8"))["gates"],
+        "splits": {
+            name: {
+                "split": measured.split,
+                "records": measured.records,
+                "specs": measured.specs,
+                "accuracy": measured.accuracy,
+                "abstention_rate": measured.abstention_rate,
+                "allergen_fnr": measured.allergen_fnr,
+                "allergen_cases": measured.allergen_cases,
+                "false_passes": measured.false_passes,
+                "wrong_verdicts": measured.wrong_verdicts,
+                "citation_resolution_rate": measured.citation_resolution_rate,
+                "recall_at_5": measured.recall_at_5,
+                "hit_rate_at_5": measured.hit_rate_at_5,
+                "retrieval_queries": measured.retrieval_queries,
+                "p50_latency_ms": measured.p50_latency_ms,
+                "p95_latency_ms": measured.p95_latency_ms,
+                "cost_per_spec_usd": measured.cost_per_spec_usd,
+                "per_rule": {
+                    rule_id.value: list(score)
+                    for rule_id, score in sorted(
+                        measured.per_rule.items(), key=lambda kv: kv[0].value
+                    )
+                },
+            }
+            for name, measured in results.items()
+        },
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -241,12 +287,27 @@ def main() -> None:
         help="Exit non-zero if the combined split is below evals/thresholds.toml.",
     )
     parser.add_argument("--markdown", action="store_true", help="Print the README table.")
+    parser.add_argument(
+        "--json",
+        nargs="?",
+        const=str(OPS_REPORT),
+        help=f"Write the report the /ops page reads. Defaults to {OPS_REPORT}.",
+    )
     args = parser.parse_args()
 
     results = run(live=args.live)
 
     if args.markdown:
         print(markdown(results))
+        return
+
+    if args.json:
+        destination = Path(args.json)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(
+            json.dumps(as_json(results, live=args.live), indent=2) + "\n", encoding="utf-8"
+        )
+        print(f"wrote {destination}")
         return
 
     print(f"mode: {'live' if args.live else 'offline (replayed fixtures, no network)'}\n")

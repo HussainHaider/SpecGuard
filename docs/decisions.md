@@ -297,3 +297,37 @@ would otherwise have to reverse-engineer from the code.
 - **Cost:** an unrun benchmark in the repository is a claim nobody has checked, and it
   will stay that way until someone with Docker runs one command. At 734 clauses a latency
   difference would be noise in any case; recall is the only column worth reading.
+
+## 019 — The evidence panel needed an endpoint that did not exist
+
+- **Context:** M6 specifies an evidence panel showing "the cited article text with the
+  relied-on span highlighted". A `Citation` carries `quoted_span` — the words a rule
+  relied on — but not the clause they came from, and nothing in the API could return it.
+- **Options:** (a) show only the span, which is what the report already contains;
+  (b) put the full clause text in every citation in the report; (c) add
+  `GET /clauses/{chunk_id}`.
+- **Choice:** (c), served from the corpus loaded once in the API process. (a) is not the
+  feature — a span with no surrounding text cannot be judged, and the panel exists so a
+  reviewer can see what the verdict rested on *in context*. (b) would put several
+  kilobytes of duplicated legal text into every stored report, for text that is already
+  pinned and immutable.
+- **Cost:** a sixth endpoint, where M4 specified five, and the API now loads 734 clauses
+  at startup. The clauses were already being loaded by the worker for exactly this kind of
+  resolution check, and the alternative was a report that got larger every time a rule
+  cited an extra clause.
+
+## 020 — A span that cannot be located is not highlighted
+
+- **Context:** The quoted span rarely matches the stored clause byte for byte: the text a
+  rule was shown had been re-wrapped, so line breaks and runs of spaces differ even when
+  the words are identical. A plain `indexOf` finds nothing most of the time.
+- **Options:** (a) fuzzy-match the span and highlight the closest region; (b) normalise
+  whitespace, search on the normalised copy, and map the result back to real source
+  offsets; (c) show the span beside the clause without highlighting anything.
+- **Choice:** (b), which is the same rule the backend's verification pass applies, so the
+  UI and the verifier agree about what counts as a quote. Where it fails to match, the
+  panel says so and falls back to (c) rather than guessing.
+- **Cost:** a paraphrase highlights nothing, and a reviewer may read that as a defect in
+  the tool. It is the right way round: the highlight is evidence, and marking text the
+  rule did not actually quote would misrepresent what the verdict rested on — which is the
+  one thing this panel exists to show honestly.
