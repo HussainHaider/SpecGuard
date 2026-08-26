@@ -236,3 +236,66 @@ class TestGatesOnlyEverAddCaution:
         )
         outcome = apply_gates(abstained, known_chunk_ids=set(), min_confidence=0.6)
         assert outcome.result.verdict is Verdict.NEEDS_REVIEW
+
+
+class TestFixedCitationsResolve:
+    """Every clause a rule cites without retrieving must exist in the index.
+
+    A fixed citation is written by hand against a locator, and nothing checks it at the
+    point it is written. This is that check. It caught NUTRITION_ARITHMETIC citing
+    "Annex XIV" with no paragraph while the corpus indexes that annex under its own
+    heading — a citation promising a clause a reviewer could never open.
+    """
+
+    def test_every_deterministic_and_governing_citation_is_in_the_corpus(self) -> None:
+        from pathlib import Path
+
+        from specguard.corpus.seed import load_clauses
+        from specguard.models.citation import chunk_id_for
+        from specguard.models.common import Language
+        from specguard.rules.deterministic import (
+            allergen_emphasis,
+            mandatory_fields,
+            nutrition_arithmetic,
+            nutrition_per_100,
+        )
+        from specguard.rules.registry import rag_rules
+
+        corpus = Path(__file__).resolve().parents[2] / "corpus"
+        if not (corpus / "sources.json").exists():
+            pytest.skip("corpus not fetched")
+        indexed = {clause.chunk_id for clause in load_clauses(corpus)}
+
+        fixed: list[tuple[str, str, str, str | None]] = [
+            ("MANDATORY_FIELDS", mandatory_fields.REGULATION, "9", "1"),
+            (
+                "NUTRITION_ARITHMETIC",
+                nutrition_arithmetic.REGULATION,
+                nutrition_arithmetic.ARTICLE,
+                nutrition_arithmetic.PARAGRAPH,
+            ),
+            ("NUTRITION_PER_100", nutrition_per_100.REGULATION, "32", "2"),
+            ("ALLERGEN_EMPHASIS", allergen_emphasis.REGULATION, "21", "1"),
+        ]
+        for rule in rag_rules().values():
+            fixed.append(
+                (
+                    rule.rule_id.value,
+                    rule.governing_regulation,
+                    rule.governing_article,
+                    rule.governing_paragraph,
+                )
+            )
+
+        from specguard.corpus.sources import source_version_for
+
+        unresolved: list[str] = []
+        for name, regulation, article, paragraph in fixed:
+            for language in (Language.EN, Language.DE):
+                version = source_version_for(regulation, language)
+                if chunk_id_for(regulation, article, paragraph, version) not in indexed:
+                    unresolved.append(
+                        f"{name} -> {regulation} {article}({paragraph}) [{language.value}]"
+                    )
+
+        assert not unresolved, "fixed citations that do not resolve:\n" + "\n".join(unresolved)

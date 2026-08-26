@@ -7,7 +7,13 @@ from specguard.models.spec import NutritionDeclaration, ProductSpec
 from specguard.rules.base import RuleContext, abstain, confident
 
 REGULATION = "Regulation (EU) No 1169/2011"
-QUOTE = "The energy value to be declared shall be calculated using the following conversion factors"
+#: Art. 31(1) is the obligation; Annex XIV is the table it points at. Citing the article
+#: is both the better citation and the only one that resolves in every language: an annex
+#: section is located by its own heading text, which differs between language versions,
+#: so a fixed citation to one cannot be language-independent.
+ARTICLE = "31"
+PARAGRAPH = "1"
+QUOTE = "The energy value shall be calculated using the conversion factors listed in Annex XIV."
 
 #: Annex XIV, kJ and kcal per gram.
 FACTORS_KJ: dict[str, float] = {
@@ -76,7 +82,7 @@ class NutritionArithmeticRule:
                 AbstentionReason.FIELD_MISSING,
             )
 
-        citation = context.cite(REGULATION, "Annex XIV", QUOTE)
+        citation = context.cite(REGULATION, ARTICLE, QUOTE, paragraph=PARAGRAPH)
         tolerance = context.energy_tolerance_pct
         metrics: dict[str, float] = {"tolerance_pct": tolerance}
         problems: list[str] = []
