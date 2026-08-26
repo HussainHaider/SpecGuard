@@ -273,3 +273,27 @@ would otherwise have to reverse-engineer from the code.
   a reviewer has to run `--live` to see a latency figure at all. Both alternatives were
   worse in the same direction: (a) and (b) each say this system answers in under a
   millisecond, which is a lie that a replay makes very easy to tell by accident.
+
+## 018 — pgvector is implemented and not yet measured
+
+- **Context:** CLAUDE.md sanctions the `VectorStore` protocol on the grounds that the
+  Qdrant/pgvector comparison is a deliverable. `PgVectorStore` and
+  `evals/benchmark_retrieval.py` now exist and score both stores on the same golden
+  queries and the same relevance labels the tier 1 eval uses.
+- **Options:** (a) run the benchmark elsewhere and paste in numbers; (b) estimate from
+  the shape of the two implementations; (c) ship the comparison unrun and say so.
+- **Choice:** (c). Docker is not available on the machine this was written on, so neither
+  store could be brought up. The brief for this work said the honest finding is worth more
+  than a fabricated one, and an estimate presented as a measurement is the fabrication it
+  was warning about. Run `docker compose up -d db qdrant` then
+  `uv run python -m evals.benchmark_retrieval --seed` and paste the table here.
+- **What can be said without measuring:** the comparison is not "the same hybrid search on
+  different storage". Qdrant's lexical half is a bm25 vector from fastembed; Postgres has
+  no bm25, so it is `ts_rank_cd` over a `tsvector` with its own stemming. Fusion is
+  Qdrant's own RRF server-side, and hand-written SQL for Postgres — the project forbids
+  application-layer fusion, and this is that rule's cost made visible rather than broken.
+  Any recall difference is therefore partly a difference between two lexical retrievers,
+  which is worth stating before the numbers rather than after them.
+- **Cost:** an unrun benchmark in the repository is a claim nobody has checked, and it
+  will stay that way until someone with Docker runs one command. At 734 clauses a latency
+  difference would be noise in any case; recall is the only column worth reading.

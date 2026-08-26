@@ -117,6 +117,18 @@ Regenerate with `uv run python -m evals.run_eval --markdown`. Gates live in
 - **Cost is real money** — recorded token counts priced at the model that produced them,
   for a complete eight-rule check.
 
+### Qdrant vs pgvector
+
+`PgVectorStore` sits behind the same `VectorStore` protocol, and
+`evals/benchmark_retrieval.py` scores both stores on the golden retrieval set. **The
+benchmark has not been run** — see [`docs/decisions.md`](docs/decisions.md) 018 — so no
+numbers are quoted here. It needs `docker compose up -d db qdrant` and one command.
+
+Worth knowing before reading any result: this is not the same search on different storage.
+Qdrant's lexical half is a bm25 vector from fastembed; Postgres has no bm25, so it is
+`ts_rank_cd` over a `tsvector`. Fusion is server-side RRF in Qdrant and hand-written SQL in
+Postgres. At 734 clauses a latency difference would be noise either way.
+
 ## Observability
 
 Every model call is traced with prompt version, rule id, tokens, cost and latency; one
