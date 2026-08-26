@@ -225,7 +225,6 @@ node_modules/
 web/dist/
 .cache/
 qdrant_storage/
-fixtures/specs/generated/
 corpus/cache/
 .ruff_cache/
 .DS_Store
