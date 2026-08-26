@@ -331,3 +331,70 @@ would otherwise have to reverse-engineer from the code.
   the tool. It is the right way round: the highlight is evidence, and marking text the
   rule did not actually quote would misrepresent what the verdict rested on — which is the
   one thing this panel exists to show honestly.
+
+## 021 — n8n refuses to start without an encryption key
+
+- **Context:** n8n encrypts saved credentials with `N8N_ENCRYPTION_KEY`. Left unset it
+  generates one into its own volume on first start, and every credential saved under that
+  key becomes permanently unreadable after a volume reset or on a fresh clone.
+- **Options:** (a) let n8n generate a key and document the risk; (b) default it to a fixed
+  string in compose; (c) require it, so compose refuses to start without one.
+- **Choice:** (c), via `${N8N_ENCRYPTION_KEY:?}`. (a) is the failure mode itself. (b) is
+  worse than (a): a shared default that ships in a public repository is a credential store
+  anyone can decrypt, and it looks like it was handled.
+- **Cost:** the guard is evaluated when compose parses the file, so an unset key breaks
+  *every* compose command, including ones that have nothing to do with n8n. That cost is
+  paid once, by `cp .env.example .env`, and the alternative is losing credentials silently
+  at the worst possible moment.
+
+## 022 — The watcher compares quoted spans, not chunk ids
+
+- **Context:** The weekly regulation watcher re-indexes and then has to decide which stored
+  checks to re-run. Consolidated acts are immutable, so an amendment arrives as a new CELEX
+  id, therefore a new `source_version`, therefore a new `chunk_id` for every clause in the
+  act.
+- **Options:** (a) re-run every stored check after any corpus change; (b) compare stored
+  citation ids against the new index; (c) match on clause coordinates — regulation, article,
+  paragraph — and then check whether the words the verdict relied on still appear.
+- **Choice:** (c). (a) is wasteful and, on a real corpus, expensive. (b) looks precise and
+  is useless: after any consolidation *no* stored id matches, so every check is flagged and
+  the watcher is (a) with extra steps.
+- **Cost:** a clause that is renumbered but textually unchanged is treated as unchanged,
+  which is right for the verdict and wrong for the citation a reader clicks — they will be
+  sent to an article number that has moved. Accepted: the alternative flags everything, and
+  a watcher that always says "re-run all of it" is one nobody will leave switched on.
+
+## 023 — The public deployment cannot call a model at all
+
+- **Context:** The deployed instance is public. A real upload endpoint on it means a
+  stranger's PDF spending money on model calls and a queue anyone can fill.
+- **Options:** (a) deploy the real pipeline behind basic auth and a rate limit; (b) deploy
+  with a spending cap on the provider account; (c) serve pre-computed reports and call
+  nothing.
+- **Choice:** (c). Reports are matched to uploads by content hash, so an unknown document
+  is refused rather than answered with somebody else's verdicts, and every replayed report
+  is labelled as replayed in the API response and in the UI.
+- **Cost:** a visitor cannot check their own document, which is the thing the tool does.
+  Mitigated by shipping the specifications that *do* work, including deliberately defective
+  ones. The guarantee is structural rather than a promise — `specguard.demo` imports no LLM
+  factory and no vector store, and a test asserts that by reading the module's source, so
+  there is no configuration under which the public instance starts spending.
+
+## 024 — Three defects that only existed when the stack ran
+
+- **Context:** Through M4 to M6 the compose stack was never actually started; the tests
+  stub the queue and the graph runs in-process. Bringing it up for the first time at M7
+  found three separate faults in the same path, none of which any test could have caught.
+- **What they were:** arq reads `WorkerSettings.redis_settings` as a value and it was
+  declared as a `@staticmethod`, so the worker died on startup; the API wrote uploads to a
+  container-local `/tmp` that the worker could not see; and `config` derived a repository
+  root by walking up from `__file__`, which lands on `/` inside the image, so the corpus and
+  fixture paths were both wrong in Docker.
+- **Choice:** fix all three, and add tests that assert the *wiring* rather than the
+  behaviour — that the enqueued name matches a registered worker function, that
+  `redis_settings` is a value, that the compose command runs arq. Those are the assertions
+  that would have failed in CI.
+- **Cost:** three tests that look like they are testing configuration rather than code,
+  which is exactly what they are. The general lesson is the entry in this file: a path that
+  is never executed is not covered by anything, and "the tests pass" said nothing at all
+  about whether this system could start.

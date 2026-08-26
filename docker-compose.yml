@@ -30,7 +30,10 @@ services:
     restart: unless-stopped
 
   qdrant:
-    image: qdrant/qdrant:v1.12.4
+    # Pinned to match the qdrant-client the lockfile resolves to. The client refuses a
+    # major mismatch and warns on more than one minor, and a warning nobody acts on is
+    # how a genuine incompatibility gets missed later.
+    image: qdrant/qdrant:v1.19.0
     ports:
       - "${QDRANT_HTTP_PORT:-6333}:6333"   # REST + dashboard at /dashboard
       - "${QDRANT_GRPC_PORT:-6334}:6334"   # gRPC, used by qdrant-client
