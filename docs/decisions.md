@@ -224,3 +224,52 @@ would otherwise have to reverse-engineer from the code.
   original file being resubmitted. Retaining third-party specification sheets after the
   work is done is a liability rather than an asset, and the hash still proves which
   document a report describes.
+
+## 015 — The golden set is two files, because the labels are not equally strong
+
+- **Context:** Tier 1 needs both verdict labels and retrieval labels, and the milestone
+  brief called for one file as the single source of truth.
+- **Options:** (a) one file, with relevant chunk ids hanging off each verdict record;
+  (b) two files — `rules.jsonl` for verdicts, `retrieval.jsonl` for queries.
+- **Choice:** (b). A verdict label is mechanical: the generator seeded a named defect and
+  recorded which rule should catch it, so the label is derived from how the document was
+  built. A retrieval anchor is a judgement about which article decides a question, written
+  out in `evals/build_golden.py` and checked to exist in the corpus, but a judgement all
+  the same. Putting both in one record would give them one `provenance` block and imply
+  one provenance.
+- **Cost:** two files to keep in step, and "single source of truth" now means one
+  directory rather than one file. Worth it: the alternative was a retrieval label quietly
+  inheriting the credibility of a verdict label, and a recall number gating a build on the
+  strength of somebody's opinion about Art. 22.
+
+## 016 — The split is stratified by defect, and holds out more than it should
+
+- **Context:** 30 specifications carry 20 seeded defects between them, some rules having
+  only two failure cases in the entire set. A random 70/30 split puts both of a rule's
+  failures on the same side often enough to matter.
+- **Options:** (a) a random split by specification; (b) group specifications by their
+  defect signature and hold out every third within each group.
+- **Choice:** (b), with the split assigned per specification either way — a spec's eight
+  outcomes share one document and one extraction, so splitting between them would put the
+  same evidence on both sides and make the held-out figure a second reading of the dev one.
+- **Cost:** the groups are small, so "every third within a group" holds out 13 of 30 specs
+  — 43%, well above the conventional 30%, and the dev split is correspondingly thin. Taken
+  deliberately: every rule's failures now appear in both splits, and a held-out
+  false-negative rate that is *defined* beats a larger dev set that cannot answer the
+  question the metric exists to ask.
+
+## 017 — Latency is reported as absent; cost is reconstructed
+
+- **Context:** The tier 1 eval runs offline against recorded fixtures, and the milestone
+  asks for p50/p95 latency and cost per spec. A replay has neither.
+- **Options:** (a) report the replay's own wall time; (b) report zero; (c) report nothing
+  for latency and reconstruct cost from the recorded token counts.
+- **Choice:** (c). Fixtures store real input and output token counts, so pricing them at
+  the model that produced them gives a cost that is real money really spent —
+  $0.0313 for a complete eight-rule check. Latency cannot be reconstructed that way, so it
+  prints as `—` and the fixture format now records `latency_ms` and `cost_usd` for
+  everything captured from here on.
+- **Cost:** the headline table has two empty rows until the fixtures are re-recorded, and
+  a reviewer has to run `--live` to see a latency figure at all. Both alternatives were
+  worse in the same direction: (a) and (b) each say this system answers in under a
+  millisecond, which is a lie that a replay makes very easy to tell by accident.

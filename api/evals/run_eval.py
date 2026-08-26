@@ -177,8 +177,15 @@ def _cell(value: float | None, kind: str) -> str:
     return f"{value:.0f}"
 
 
+def _baseline() -> dict[str, float]:
+    """The committed reference figures for the combined split."""
+    config = tomllib.loads(THRESHOLDS.read_text(encoding="utf-8"))
+    baseline = config.get("baseline", {}).get("all", {})
+    return {key: float(value) for key, value in baseline.items()}
+
+
 def markdown(results: dict[str, metrics.Metrics]) -> str:
-    """The README table: one row per metric, one column per split."""
+    """The README table: the committed baseline beside the current figure, per split."""
     rows: list[tuple[str, str, str]] = [
         ("accuracy", "pct", "accuracy"),
         ("abstention rate", "pct", "abstention_rate"),
@@ -193,15 +200,25 @@ def markdown(results: dict[str, metrics.Metrics]) -> str:
         ("cost per spec", "usd", "cost_per_spec_usd"),
     ]
     splits = ["all", "dev", "held_out"]
+    baseline = _baseline()
     lines = [
-        "| metric | " + " | ".join(splits) + " |",
-        "|---|" + "---|" * len(splits),
+        "| metric | baseline | current | dev | held-out |",
+        "|---|---|---|---|---|",
     ]
     for label, kind, attribute in rows:
         cells = [_cell(getattr(results[split], attribute), kind) for split in splits]
-        lines.append(f"| {label} | " + " | ".join(cells) + " |")
+        reference = baseline.get(attribute)
+        lines.append(
+            f"| {label} | {_cell(reference, kind) if reference is not None else '—'} | "
+            + " | ".join(cells)
+            + " |"
+        )
 
-    per_rule = ["", "| rule | " + " | ".join(splits) + " |", "|---|" + "---|" * len(splits)]
+    per_rule = [
+        "",
+        "| rule | all | dev | held-out |",
+        "|---|---|---|---|",
+    ]
     for rule_id in sorted(RuleId, key=lambda r: r.value):
         cells = []
         for split in splits:

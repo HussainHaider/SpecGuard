@@ -1,0 +1,66 @@
+name: nightly
+
+# Tier 2 is judged by a model, and non-negotiable #6 says no LLM judge gates the build.
+# It runs on a schedule rather than on a pull request, and reports rather than blocks:
+# a judged number moves when the judge changes, and a build that fails because a vendor
+# shipped a new checkpoint teaches everyone to ignore the build.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  judged:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    env:
+      LLM_PROVIDER: fake  # The output being judged is replayed; only the judge is live.
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      LANGSMITH_TRACING: ${{ secrets.LANGSMITH_API_KEY != '' }}
+      LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+      LANGSMITH_PROJECT: specguard-nightly
+      DEEPEVAL_TELEMETRY_OPT_OUT: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: api/uv.lock
+      - run: uv python install 3.12
+      - run: uv sync --locked --all-groups
+
+      - name: sync the golden set to LangSmith
+        if: env.LANGSMITH_API_KEY != ''
+        run: uv run python -m evals.sync_langsmith
+
+      - name: tier 2 judged evals
+        id: judged
+        # Never fails the workflow. The report is the deliverable; a red cross here
+        # would only train people to stop reading it.
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          uv run pytest evals/test_generation_quality.py -m slow -v 2>&1 | tee tier2.log
+
+      - name: report
+        if: always()
+        run: |
+          {
+            echo "## Tier 2 — judged, reported only"
+            echo
+            echo "Outcome: \`${{ steps.judged.outcome }}\` (never merge-blocking)"
+            echo
+            echo '```'
+            tail -n 60 tier2.log || echo "no output captured"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tier2-report
+          path: api/tier2.log
+          if-no-files-found: warn

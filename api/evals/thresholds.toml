@@ -44,3 +44,18 @@ cost_per_spec = true
 milestone = "M5"
 measured_on = "2026-08-26"
 mode = "offline"
+
+# The combined split at M5, written by hand from a run of `evals.run_eval`. The README
+# renders this beside the current figure, so a regression is visible in the table rather
+# than only in a failing gate — and a number nobody can reproduce cannot sit here,
+# because the offline run that produces it needs no key and no network.
+[baseline.all]
+accuracy = 0.888
+abstention_rate = 0.112
+allergen_fnr = 0.0
+false_passes = 0
+wrong_verdicts = 0
+citation_resolution_rate = 1.0
+recall_at_5 = 0.572
+hit_rate_at_5 = 0.759
+cost_per_spec_usd = 0.0313

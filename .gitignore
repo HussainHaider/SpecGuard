@@ -226,5 +226,7 @@ web/dist/
 .cache/
 qdrant_storage/
 corpus/cache/
+api/tier2.log
+.deepeval*
 .ruff_cache/
 .DS_Store

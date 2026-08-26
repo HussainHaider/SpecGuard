@@ -10,6 +10,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Whether the live eval can run at all. Secrets are not readable from a job-level `if`,
+  # so the decision is made in a step and passed on as an output.
+  config:
+    runs-on: ubuntu-latest
+    outputs:
+      live: ${{ steps.probe.outputs.live }}
+    steps:
+      - id: probe
+        run: |
+          echo "live=${{ secrets.OPENAI_API_KEY != '' && secrets.QDRANT_URL != '' }}" >> "$GITHUB_OUTPUT"
+
   api:
     runs-on: ubuntu-latest
     defaults:
@@ -18,6 +29,8 @@ jobs:
     env:
       # No test in the default run may reach a live API.
       LLM_PROVIDER: fake
+      LANGSMITH_TRACING: "false"
+      DEEPEVAL_TELEMETRY_OPT_OUT: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
@@ -34,7 +47,62 @@ jobs:
         run: uv run mypy
       - name: pytest
         run: uv run pytest -m "not slow"
-      # Tier 1 evals are deterministic ground-truth metrics and gate the build.
-      # Tier 2 (deepeval) is reported, never merge-blocking — non-negotiable #6.
-      - name: tier 1 evals
+
+      # Tier 1 is deterministic ground-truth scoring and gates the build. Offline: every
+      # model call and every search replays from a recorded fixture, so this needs no
+      # secret, costs nothing, and gives the same answer on any machine — which is what
+      # makes it fit to fail a build. Thresholds live in evals/thresholds.toml so moving
+      # one shows up as a diff.
+      - name: tier 1 evals (offline)
         run: uv run python -m evals.run_eval --fail-under-config
+
+      - name: tier 1 summary
+        if: always()
+        run: |
+          {
+            echo "## Tier 1 — offline"
+            echo
+            uv run python -m evals.run_eval --markdown
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # The same gates against real retrieval and a real provider. Runs only where the
+  # secrets exist, which means not on a fork's pull request — so it can never be the
+  # reason an outside contribution fails.
+  eval-live:
+    needs: [config, api]
+    if: needs.config.outputs.live == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    services:
+      qdrant:
+        image: qdrant/qdrant:v1.12.4
+        ports: ["6333:6333"]
+    env:
+      LLM_PROVIDER: openai
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      QDRANT_URL: http://localhost:6333
+      LANGSMITH_TRACING: ${{ secrets.LANGSMITH_API_KEY != '' }}
+      LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+      LANGSMITH_PROJECT: specguard-ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: api/uv.lock
+      - run: uv python install 3.12
+      - run: uv sync --locked --all-groups
+      - name: seed the corpus
+        run: uv run python -m specguard.corpus.seed
+      - name: tier 1 evals (live)
+        run: uv run python -m evals.run_eval --live --fail-under-config
+      - name: tier 1 summary
+        if: always()
+        run: |
+          {
+            echo "## Tier 1 — live"
+            echo
+            uv run python -m evals.run_eval --live --markdown
+          } >> "$GITHUB_STEP_SUMMARY"
