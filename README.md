@@ -108,9 +108,13 @@ namespace UUID is frozen for the life of the project, and the id is opaque where
 prefix would have been greppable. (001)
 
 **Vectors are in Qdrant, not Postgres.** Hybrid dense + sparse retrieval with native RRF
-fusion server-side, rather than fusing in application code over two queries. *Cost:* a
-fifth service. pgvector is implemented behind the same interface for comparison — and the
-benchmark is written but has not been run, which is recorded rather than estimated. (018)
+fusion server-side, rather than fusing in application code over two queries. pgvector is
+implemented behind the same interface and benchmarked on the same 58 golden queries:
+**Qdrant 57.2% recall@5 against pgvector's 46.8%**, and pgvector about 23 ms faster at p50.
+The recall gap is a bm25-versus-`ts_rank_cd` difference rather than a storage one, and the
+latency difference is not a win worth claiming — dense query encoding alone is 22.1 ms, so
+the encoder costs more than either database. *Cost:* a fifth service, for ten points of
+recall. (018)
 
 **Abstention over best guess.** A rule that cannot cite a resolvable clause returns
 `NEEDS_REVIEW`. Across 112 evaluations the verification pass produced no wrong verdict; the
