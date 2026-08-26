@@ -1,0 +1,223 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-024 (SPEC-024-de-apfelsaft.pdf)",
+  "input_tokens": 4778,
+  "output_tokens": 1858,
+  "response": {
+    "product_name": {
+      "value": "Naturtrueber Apfelsaft",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUKTSPEZIFIKATION\nNaturtrueber Apfelsaft"
+    },
+    "legal_name": {
+      "value": "Apfelsaft aus Apfelsaftkonzentrat, naturtrueb",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Bezeichnung des Lebensmittels Apfelsaft aus Apfelsaftkonzentrat, naturtrueb"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Wasser, Apfelsaftkonzentrat 12%, Ascorbinsaeure",
+        "items": [
+          {
+            "value": {
+              "name": "Wasser",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Wasser"
+          },
+          {
+            "value": {
+              "name": "Apfelsaftkonzentrat",
+              "percentage": 12.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Apfelsaftkonzentrat 12%"
+          },
+          {
+            "value": {
+              "name": "Ascorbinsaeure",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Ascorbinsaeure"
+          }
+        ],
+        "dominant_emphasis_style": "none"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Zutaten\nWasser, Apfelsaftkonzentrat 12%, Ascorbinsaeure"
+    },
+    "allergen_statement": {
+      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 750.0,
+        "unit": "ml"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nettofuellmenge 750 ml"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before",
+        "raw_text": "Mindestens haltbar bis: 12 Monate ab Herstellung",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Haltbarkeit Mindestens haltbar bis: 12 Monate ab Herstellung"
+    },
+    "storage_conditions": {
+      "value": "Nach dem Oeffnen gekuehlt aufbewahren.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Aufbewahrungsbedingungen Nach dem Oeffnen gekuehlt aufbewahren."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Sady Wisly Sp. z o.o.",
+        "address": "ul. Owocowa 5, 24-100 Pulawy, Polen",
+        "country": "Polen"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Lieferant Sady Wisly Sp. z o.o., ul. Owocowa 5, 24-100 Pulawy, Polen"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100ml",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Naehrstoff per 100 ml"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 186.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 186 kJ / 44 kcal"
+        },
+        "energy_kcal": {
+          "value": 44.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 186 kJ / 44 kcal"
+        },
+        "fat_g": {
+          "value": 0.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fett 0.1 g"
+        },
+        "saturates_g": {
+          "value": 0.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon gesaettigte Fettsaeuren 0.0 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 10.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Kohlenhydrate 10.4 g"
+        },
+        "sugars_g": {
+          "value": 10.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon Zucker 10.1 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 0.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Ballaststoffe 0.2 g"
+        },
+        "protein_g": {
+          "value": 0.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Eiweiss 0.2 g"
+        },
+        "salt_g": {
+          "value": 0.01,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salz 0.01 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 ml\nEnergie 186 kJ / 44 kcal\nFett 0.1 g\ndavon gesaettigte Fettsaeuren 0.0 g\nKohlenhydrate 10.4 g\ndavon Zucker 10.1 g\nBallaststoffe 0.2 g\nEiweiss 0.2 g\nSalz 0.01 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Polen",
+          "raw_text": "Ursprungsland Polen"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprungsland Polen"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Polen",
+          "raw_text": "Ursprung der primaeren Zutat Polen"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprung der primaeren Zutat Polen"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Calcium makes your bones unbreakable",
+          "kind": "health",
+          "nutrient": "Calcium"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Calcium makes your bones unbreakable"
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

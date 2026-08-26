@@ -1,0 +1,265 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-014 (SPEC-014-chicken-soup.pdf)",
+  "input_tokens": 4704,
+  "output_tokens": 2023,
+  "response": {
+    "product_name": {
+      "value": "Chicken & Vegetable Soup",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nChicken & Vegetable Soup"
+    },
+    "legal_name": {
+      "value": "Chicken soup with vegetables",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Chicken soup with vegetables"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Chicken stock 52%, Chicken 18%, Carrots 11%, Leeks 7%, WHEAT flour 3%, CELERY 2%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Chicken stock",
+              "percentage": 52.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chicken stock 52%"
+          },
+          {
+            "value": {
+              "name": "Chicken",
+              "percentage": 18.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chicken 18%"
+          },
+          {
+            "value": {
+              "name": "Carrots",
+              "percentage": 11.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Carrots 11%"
+          },
+          {
+            "value": {
+              "name": "Leeks",
+              "percentage": 7.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Leeks 7%"
+          },
+          {
+            "value": {
+              "name": "WHEAT flour",
+              "percentage": 3.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "WHEAT flour 3%"
+          },
+          {
+            "value": {
+              "name": "CELERY",
+              "percentage": 2.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "CELERY 2%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nChicken stock 52%, Chicken 18%, Carrots 11%, Leeks 7%, WHEAT flour 3%, CELERY 2%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 400.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 400 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Use by: 10 days from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Use by: 10 days from production"
+    },
+    "storage_conditions": {
+      "value": "Keep refrigerated. Use within 2 days of opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Keep refrigerated. Use within 2 days of opening."
+    },
+    "instructions_for_use": {
+      "value": "Empty into a saucepan and heat until piping hot.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Instructions for use Empty into a saucepan and heat until piping hot."
+    },
+    "business_operator": {
+      "value": {
+        "name": "Potages Duval SAS",
+        "address": null,
+        "country": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Potages Duval SAS"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 269.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 269 kJ / 64 kcal"
+        },
+        "energy_kcal": {
+          "value": 64.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 269 kJ / 64 kcal"
+        },
+        "fat_g": {
+          "value": 2.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 2.8 g"
+        },
+        "saturates_g": {
+          "value": 0.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 0.9 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 4.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 4.4 g"
+        },
+        "sugars_g": {
+          "value": 1.7,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 1.7 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 0.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 0.9 g"
+        },
+        "protein_g": {
+          "value": 4.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 4.9 g"
+        },
+        "salt_g": {
+          "value": 0.79,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.79 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 269 kJ / 64 kcal\nFat 2.8 g\nof which saturates 0.9 g\nCarbohydrate 4.4 g\nof which sugars 1.7 g\nFibre 0.9 g\nProtein 4.9 g\nSalt 0.79 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "France",
+          "raw_text": "Country of origin France"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin France"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "France",
+          "raw_text": "Origin of primary ingredient France"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient France"
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

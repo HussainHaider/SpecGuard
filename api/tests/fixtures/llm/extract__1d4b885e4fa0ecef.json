@@ -1,0 +1,224 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-009 (SPEC-009-cheddar-cheese.pdf)",
+  "input_tokens": 4690,
+  "output_tokens": 1723,
+  "response": {
+    "product_name": {
+      "value": "Mature Cheddar Cheese",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nMature Cheddar Cheese"
+    },
+    "legal_name": {
+      "value": "Mature cheddar cheese",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Mature cheddar cheese"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "MILK 98%, Salt, Starter cultures, Vegetarian rennet",
+        "items": [
+          {
+            "value": {
+              "name": "MILK",
+              "percentage": 98.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "MILK 98%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          },
+          {
+            "value": {
+              "name": "Starter cultures",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Starter cultures"
+          },
+          {
+            "value": {
+              "name": "Vegetarian rennet",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Vegetarian rennet"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nMILK 98%, Salt, Starter cultures, Vegetarian rennet"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 350.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 350 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Use by: 60 days from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Use by: 60 days from production"
+    },
+    "storage_conditions": {
+      "value": "Keep refrigerated at 0-5 °C.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Keep refrigerated at 0-5 °C."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Shannon Creamery Co-operative",
+        "address": "Coolrain Road, Co. Limerick V94 X2P8, Ireland",
+        "country": "Ireland"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Shannon Creamery Co-operative, Coolrain Road, Co. Limerick V94 X2P8, Ireland"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 1725.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 1725 kJ / 416 kcal"
+        },
+        "energy_kcal": {
+          "value": 416.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 1725 kJ / 416 kcal"
+        },
+        "fat_g": {
+          "value": 34.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 34.9 g"
+        },
+        "saturates_g": {
+          "value": 21.7,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 21.7 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 0.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 0.1 g"
+        },
+        "sugars_g": {
+          "value": 0.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 0.1 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 0.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 0.0 g"
+        },
+        "protein_g": {
+          "value": 25.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 25.4 g"
+        },
+        "salt_g": {
+          "value": 1.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 1.80 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1725 kJ / 416 kcal\nFat 34.9 g\nof which saturates 21.7 g\nCarbohydrate 0.1 g\nof which sugars 0.1 g\nFibre 0.0 g\nProtein 25.4 g\nSalt 1.80 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Ireland",
+          "raw_text": "Country of origin Ireland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Ireland"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Ireland",
+          "raw_text": "Origin of primary ingredient Ireland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Ireland"
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

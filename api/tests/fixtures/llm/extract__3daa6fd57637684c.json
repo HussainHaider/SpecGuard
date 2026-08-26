@@ -1,0 +1,232 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-025 (SPEC-025-de-tomatensuppe.pdf)",
+  "input_tokens": 4773,
+  "output_tokens": 1956,
+  "response": {
+    "product_name": {
+      "value": "Tomatensuppe mit Basilikum",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUKTSPEZIFIKATION\nTomatensuppe mit Basilikum"
+    },
+    "legal_name": {
+      "value": "Tomatensuppe mit Basilikum",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Bezeichnung des Lebensmittels Tomatensuppe mit Basilikum"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Tomaten 71%, Wasser, Zwiebeln 6%, SAHNE 4%, Basilikum 1.2%, Speisesalz",
+        "items": [
+          {
+            "value": {
+              "name": "Tomaten",
+              "percentage": 71.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Tomaten 71%"
+          },
+          {
+            "value": {
+              "name": "Wasser",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Wasser"
+          },
+          {
+            "value": {
+              "name": "Zwiebeln",
+              "percentage": 6.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Zwiebeln 6%"
+          },
+          {
+            "value": {
+              "name": "SAHNE",
+              "percentage": 4.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "SAHNE 4%"
+          },
+          {
+            "value": {
+              "name": "Basilikum",
+              "percentage": 1.2,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Basilikum 1.2%"
+          },
+          {
+            "value": {
+              "name": "Speisesalz",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Speisesalz"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Zutaten\nTomaten 71%, Wasser, Zwiebeln 6%, SAHNE 4%, Basilikum 1.2%, Speisesalz"
+    },
+    "allergen_statement": {
+      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 600.0,
+        "unit": "ml"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nettofuellmenge 600 ml"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Verbrauchen bis: 14 Tage ab Herstellung",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Haltbarkeit Verbrauchen bis: 14 Tage ab Herstellung"
+    },
+    "storage_conditions": {
+      "value": "Gekuehlt aufbewahren. Nach dem Oeffnen innerhalb von 3 Tagen verbrauchen.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Aufbewahrungsbedingungen Gekuehlt aufbewahren. Nach dem Oeffnen innerhalb von 3 Tagen verbrauchen."
+    },
+    "instructions_for_use": {
+      "value": "Vorsichtig erhitzen, nicht kochen lassen.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Gebrauchsanleitung Vorsichtig erhitzen, nicht kochen lassen."
+    },
+    "business_operator": {
+      "value": {
+        "name": "Conserve del Sole S.p.A.",
+        "address": "Via Garibaldi 88, 84013 Cava de' Tirreni, Italien",
+        "country": "Italien"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Lieferant Conserve del Sole S.p.A., Via Garibaldi 88, 84013 Cava de' Tirreni, Italien"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100ml",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Naehrstoff per 100 ml"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 207.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 207 kJ / 50 kcal"
+        },
+        "energy_kcal": {
+          "value": 50.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 207 kJ / 50 kcal"
+        },
+        "fat_g": {
+          "value": 2.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fett 2.1 g"
+        },
+        "saturates_g": {
+          "value": 1.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon gesaettigte Fettsaeuren 1.1 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 5.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Kohlenhydrate 5.8 g"
+        },
+        "sugars_g": {
+          "value": 4.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon Zucker 4.9 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 1.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Ballaststoffe 1.1 g"
+        },
+        "protein_g": {
+          "value": 1.3,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Eiweiss 1.3 g"
+        },
+        "salt_g": {
+          "value": 0.62,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salz 0.62 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 ml\nEnergie 207 kJ / 50 kcal\nFett 2.1 g\ndavon gesaettigte Fettsaeuren 1.1 g\nKohlenhydrate 5.8 g\ndavon Zucker 4.9 g\nBallaststoffe 1.1 g\nEiweiss 1.3 g\nSalz 0.62 g"
+    },
+    "origins": [],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

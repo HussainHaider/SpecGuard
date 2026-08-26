@@ -1,0 +1,259 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-006 (SPEC-006-oat-granola.pdf)",
+  "input_tokens": 4728,
+  "output_tokens": 2030,
+  "response": {
+    "product_name": {
+      "value": "Honey & Almond Oat Granola",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nHoney & Almond Oat Granola"
+    },
+    "legal_name": {
+      "value": "Toasted oat cereal with honey and almonds",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Toasted oat cereal with honey and almonds"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Wholegrain OAT flakes 64%, ALMONDS 9%, Honey 8%, Sunflower oil 7%, Raisins 6%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Wholegrain OAT flakes",
+              "percentage": 64.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Wholegrain OAT flakes 64%"
+          },
+          {
+            "value": {
+              "name": "ALMONDS",
+              "percentage": 9.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "ALMONDS 9%"
+          },
+          {
+            "value": {
+              "name": "Honey",
+              "percentage": 8.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Honey 8%"
+          },
+          {
+            "value": {
+              "name": "Sunflower oil",
+              "percentage": 7.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Sunflower oil 7%"
+          },
+          {
+            "value": {
+              "name": "Raisins",
+              "percentage": 6.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Raisins 6%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nWholegrain OAT flakes 64%, ALMONDS 9%, Honey 8%, Sunflower oil 7%, Raisins 6%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 750.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 750 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before_end",
+        "raw_text": "Best before end: 12 months from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Best before end: 12 months from production"
+    },
+    "storage_conditions": {
+      "value": "Store in a cool, dry place. Reseal after opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Store in a cool, dry place. Reseal after opening."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "De Graanmolen B.V.",
+        "address": "Havenweg 44, 3011 XA Rotterdam, Netherlands",
+        "country": "Netherlands"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier De Graanmolen B.V., Havenweg 44, 3011 XA Rotterdam, Netherlands"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 1816.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 1816 kJ / 433 kcal"
+        },
+        "energy_kcal": {
+          "value": 433.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 1816 kJ / 433 kcal"
+        },
+        "fat_g": {
+          "value": 16.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 16.2 g"
+        },
+        "saturates_g": {
+          "value": 1.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 1.8 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 58.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 58.0 g"
+        },
+        "sugars_g": {
+          "value": 14.5,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 14.5 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 7.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 7.4 g"
+        },
+        "protein_g": {
+          "value": 10.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 10.1 g"
+        },
+        "salt_g": {
+          "value": 0.31,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.31 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1816 kJ / 433 kcal\nFat 16.2 g\nof which saturates 1.8 g\nCarbohydrate 58.0 g\nof which sugars 14.5 g\nFibre 7.4 g\nProtein 10.1 g\nSalt 0.31 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Netherlands",
+          "raw_text": "Country of origin Netherlands"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Netherlands"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Finland",
+          "raw_text": "Origin of primary ingredient Finland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Finland"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "High in fibre",
+          "kind": "nutrition",
+          "nutrient": "fibre"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Claims made on pack\n(cid:127) High in fibre"
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

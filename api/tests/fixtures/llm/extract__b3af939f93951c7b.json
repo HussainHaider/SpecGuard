@@ -1,0 +1,259 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-012 (SPEC-012-de-haferknusper.pdf)",
+  "input_tokens": 4815,
+  "output_tokens": 2195,
+  "response": {
+    "product_name": {
+      "value": "Hafer-Knuspermuesli mit Honig und Mandeln",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUKTSPEZIFIKATION\nHafer-Knuspermuesli mit Honig und Mandeln"
+    },
+    "legal_name": {
+      "value": "Geroestetes Hafercerealien-Erzeugnis mit Honig und Mandeln",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Bezeichnung des Lebensmittels Geroestetes Hafercerealien-Erzeugnis mit Honig und Mandeln"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Zutaten\nHAFER-Vollkornflocken 64%, MANDELN 9%, Honig 8%, Sonnenblumenoel 7%, Rosinen 6%, Speisesalz",
+        "items": [
+          {
+            "value": {
+              "name": "HAFER-Vollkornflocken",
+              "percentage": 64.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "HAFER-Vollkornflocken 64%"
+          },
+          {
+            "value": {
+              "name": "MANDELN",
+              "percentage": 9.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "MANDELN 9%"
+          },
+          {
+            "value": {
+              "name": "Honig",
+              "percentage": 8.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Honig 8%"
+          },
+          {
+            "value": {
+              "name": "Sonnenblumenoel",
+              "percentage": 7.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Sonnenblumenoel 7%"
+          },
+          {
+            "value": {
+              "name": "Rosinen",
+              "percentage": 6.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Rosinen 6%"
+          },
+          {
+            "value": {
+              "name": "Speisesalz",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Speisesalz"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Zutaten\nHAFER-Vollkornflocken 64%, MANDELN 9%, Honig 8%, Sonnenblumenoel 7%, Rosinen 6%, Speisesalz"
+    },
+    "allergen_statement": {
+      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 750.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nettofuellmenge 750 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before_end",
+        "raw_text": "Mindestens haltbar bis Ende: 12 Monate ab Herstellung",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Haltbarkeit Mindestens haltbar bis Ende: 12 Monate ab Herstellung"
+    },
+    "storage_conditions": {
+      "value": "Kuehl und trocken lagern. Nach dem Oeffnen wieder verschliessen.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Aufbewahrungsbedingungen Kuehl und trocken lagern. Nach dem Oeffnen wieder verschliessen."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "De Graanmolen B.V.",
+        "address": "Havenweg 44, 3011 XA Rotterdam, Niederlande",
+        "country": "Niederlande"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Lieferant De Graanmolen B.V., Havenweg 44, 3011 XA Rotterdam, Niederlande"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Naehrstoff per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 1816.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 1816 kJ / 433 kcal"
+        },
+        "energy_kcal": {
+          "value": 433.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 1816 kJ / 433 kcal"
+        },
+        "fat_g": {
+          "value": 16.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fett 16.2 g"
+        },
+        "saturates_g": {
+          "value": 1.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon gesaettigte Fettsaeuren 1.8 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 58.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Kohlenhydrate 58.0 g"
+        },
+        "sugars_g": {
+          "value": 14.5,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon Zucker 14.5 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 7.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Ballaststoffe 7.4 g"
+        },
+        "protein_g": {
+          "value": 10.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Eiweiss 10.1 g"
+        },
+        "salt_g": {
+          "value": 0.31,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salz 0.31 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 g\nEnergie 1816 kJ / 433 kcal\nFett 16.2 g\ndavon gesaettigte Fettsaeuren 1.8 g\nKohlenhydrate 58.0 g\ndavon Zucker 14.5 g\nBallaststoffe 7.4 g\nEiweiss 10.1 g\nSalz 0.31 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Niederlande",
+          "raw_text": "Ursprungsland Niederlande"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprungsland Niederlande"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Finnland",
+          "raw_text": "Ursprung der primaeren Zutat Finnland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprung der primaeren Zutat Finnland"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Hoher Ballaststoffgehalt",
+          "kind": "nutrition",
+          "nutrient": "Ballaststoffe"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Hoher Ballaststoffgehalt"
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

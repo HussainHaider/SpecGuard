@@ -1,0 +1,232 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-003 (SPEC-003-strawberry-yogurt.pdf)",
+  "input_tokens": 4697,
+  "output_tokens": 1797,
+  "response": {
+    "product_name": {
+      "value": "Strawberry Yogurt",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nStrawberry Yogurt"
+    },
+    "legal_name": {
+      "value": "Strawberry yogurt with live cultures",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Strawberry yogurt with live cultures"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Yogurt (MILK) 82%, Strawberries 12%, Sugar 5%, Pectin",
+        "items": [
+          {
+            "value": {
+              "name": "Yogurt (MILK)",
+              "percentage": 82.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": [
+                {
+                  "name": "MILK",
+                  "percentage": null,
+                  "emphasised": true,
+                  "emphasis_style": "uppercase",
+                  "sub_ingredients": []
+                }
+              ]
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Yogurt (MILK) 82%"
+          },
+          {
+            "value": {
+              "name": "Strawberries",
+              "percentage": 12.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Strawberries 12%"
+          },
+          {
+            "value": {
+              "name": "Sugar",
+              "percentage": 5.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Sugar 5%"
+          },
+          {
+            "value": {
+              "name": "Pectin",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Pectin"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nYogurt (MILK) 82%, Strawberries 12%, Sugar 5%, Pectin"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 500.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 500 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Use by: 21 days from production",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Durability Use by: 21 days from production"
+    },
+    "storage_conditions": {
+      "value": "Keep refrigerated at 0-5 °C.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Keep refrigerated at 0-5 °C."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Nordmilch Erzeugnisse GmbH",
+        "address": "Industriestrasse 12, 28195 Bremen, Germany",
+        "country": "Germany"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Nordmilch Erzeugnisse GmbH, Industriestrasse 12, 28195 Bremen, Germany"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 390.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 390 kJ / 93 kcal"
+        },
+        "energy_kcal": {
+          "value": 93.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 390 kJ / 93 kcal"
+        },
+        "fat_g": {
+          "value": 3.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 3.1 g"
+        },
+        "saturates_g": {
+          "value": 2.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 2.0 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 12.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 12.4 g"
+        },
+        "sugars_g": {
+          "value": 11.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 11.8 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 0.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 0.4 g"
+        },
+        "protein_g": {
+          "value": 3.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 3.6 g"
+        },
+        "salt_g": {
+          "value": 0.12,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.12 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 390 kJ / 93 kcal\nFat 3.1 g\nof which saturates 2.0 g\nCarbohydrate 12.4 g\nof which sugars 11.8 g\nFibre 0.4 g\nProtein 3.6 g\nSalt 0.12 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Germany",
+          "raw_text": "Country of origin Germany"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Germany"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Germany",
+          "raw_text": "Origin of primary ingredient Germany"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Germany"
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

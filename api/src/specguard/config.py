@@ -15,11 +15,19 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from specguard.embedding.encoder import DENSE_MODEL, SPARSE_MODEL
 
+_REPO_ROOT = Path(__file__).resolve().parents[3]
+
 
 class Settings(BaseSettings):
     """Configuration, mirroring ``.env.example``."""
 
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+    # The .env lives at the repository root but the package runs from api/, so both
+    # locations are searched. Later entries win, letting a local api/.env override.
+    model_config = SettingsConfigDict(
+        env_file=(_REPO_ROOT / ".env", Path(".env")),
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     database_url: str = "postgresql+psycopg://specguard:specguard@localhost:5432/specguard"
 
@@ -32,7 +40,7 @@ class Settings(BaseSettings):
     llm_max_retries: int = 2
     llm_timeout_s: float = 60.0
     anthropic_api_key: str | None = None
-    anthropic_model: str = "claude-sonnet-5"
+    anthropic_model: str = "claude-opus-5"
     openai_api_key: str | None = None
     openai_model: str = "gpt-4.1"
 

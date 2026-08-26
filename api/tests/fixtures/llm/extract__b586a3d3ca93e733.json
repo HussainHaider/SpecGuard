@@ -1,0 +1,224 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-010 (SPEC-010-de-erdbeerjoghurt.pdf)",
+  "input_tokens": 4756,
+  "output_tokens": 1861,
+  "response": {
+    "product_name": {
+      "value": "Erdbeerjoghurt",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUKTSPEZIFIKATION\nErdbeerjoghurt"
+    },
+    "legal_name": {
+      "value": "Erdbeerjoghurt mit lebenden Kulturen",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Bezeichnung des Lebensmittels Erdbeerjoghurt mit lebenden Kulturen"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Joghurt (MILCH) 82%, Erdbeeren 12%, Zucker 5%, Pektin",
+        "items": [
+          {
+            "value": {
+              "name": "Joghurt (MILCH)",
+              "percentage": 82.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Joghurt (MILCH) 82%"
+          },
+          {
+            "value": {
+              "name": "Erdbeeren",
+              "percentage": 12.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Erdbeeren 12%"
+          },
+          {
+            "value": {
+              "name": "Zucker",
+              "percentage": 5.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Zucker 5%"
+          },
+          {
+            "value": {
+              "name": "Pektin",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Pektin"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Zutaten\nJoghurt (MILCH) 82%, Erdbeeren 12%, Zucker 5%, Pektin"
+    },
+    "allergen_statement": {
+      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 500.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nettofuellmenge 500 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Verbrauchen bis: 21 Tage ab Herstellung",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Haltbarkeit Verbrauchen bis: 21 Tage ab Herstellung"
+    },
+    "storage_conditions": {
+      "value": "Bei 0-5 °C gekühlt aufbewahren.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Aufbewahrungsbedingungen Bei 0-5 °C gekühlt aufbewahren."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Nordmilch Erzeugnisse GmbH",
+        "address": "Industriestrasse 12, 28195 Bremen, Deutschland",
+        "country": "Deutschland"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Lieferant Nordmilch Erzeugnisse GmbH, Industriestrasse 12, 28195 Bremen, Deutschland"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Naehrstoff per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 390.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 390 kJ / 93 kcal"
+        },
+        "energy_kcal": {
+          "value": 93.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 390 kJ / 93 kcal"
+        },
+        "fat_g": {
+          "value": 3.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fett 3.1 g"
+        },
+        "saturates_g": {
+          "value": 2.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon gesaettigte Fettsaeuren 2.0 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 12.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Kohlenhydrate 12.4 g"
+        },
+        "sugars_g": {
+          "value": 11.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon Zucker 11.8 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 0.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Ballaststoffe 0.4 g"
+        },
+        "protein_g": {
+          "value": 3.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Eiweiss 3.6 g"
+        },
+        "salt_g": {
+          "value": 0.12,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salz 0.12 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 g\nEnergie 390 kJ / 93 kcal\nFett 3.1 g\ndavon gesaettigte Fettsaeuren 2.0 g\nKohlenhydrate 12.4 g\ndavon Zucker 11.8 g\nBallaststoffe 0.4 g\nEiweiss 3.6 g\nSalz 0.12 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Deutschland",
+          "raw_text": "Ursprungsland Deutschland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprungsland Deutschland"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Deutschland",
+          "raw_text": "Ursprung der primaeren Zutat Deutschland"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprung der primaeren Zutat Deutschland"
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}

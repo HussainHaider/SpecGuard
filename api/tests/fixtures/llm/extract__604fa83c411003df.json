@@ -1,0 +1,224 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2 for SPEC-008 (SPEC-008-de-zartbitterschokolade.pdf)",
+  "input_tokens": 4755,
+  "output_tokens": 1866,
+  "response": {
+    "product_name": {
+      "value": "Zartbitterschokolade 70%",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUKTSPEZIFIKATION\nZartbitterschokolade 70%"
+    },
+    "legal_name": {
+      "value": "Zartbitterschokolade",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Bezeichnung des Lebensmittels Zartbitterschokolade"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Kakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin",
+        "items": [
+          {
+            "value": {
+              "name": "Kakaomasse",
+              "percentage": 58.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Kakaomasse 58%"
+          },
+          {
+            "value": {
+              "name": "Zucker",
+              "percentage": 29.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Zucker 29%"
+          },
+          {
+            "value": {
+              "name": "Kakaobutter",
+              "percentage": 12.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Kakaobutter 12%"
+          },
+          {
+            "value": {
+              "name": "SOJA-Lecithin",
+              "percentage": null,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "SOJA-Lecithin"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Zutaten\nKakaomasse 58%, Zucker 29%, Kakaobutter 12%, SOJA-Lecithin"
+    },
+    "allergen_statement": {
+      "value": "Allergene sind im Zutatenverzeichnis hervorgehoben.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergeninformationen\nAllergene sind im Zutatenverzeichnis hervorgehoben."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 100.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nettofuellmenge 100 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before_end",
+        "raw_text": "Mindestens haltbar bis Ende: 15 Monate ab Herstellung",
+        "date": null
+      },
+      "confidence": 0.8,
+      "page": 1,
+      "quoted_span": "Haltbarkeit Mindestens haltbar bis Ende: 15 Monate ab Herstellung"
+    },
+    "storage_conditions": {
+      "value": "Unter 18 °C trocken lagern.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Aufbewahrungsbedingungen Unter 18 °C trocken lagern."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Chocolaterie Verhoeven N.V.",
+        "address": "Nijverheidslaan 3, 9000 Gent, Belgien",
+        "country": "Belgien"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Lieferant Chocolaterie Verhoeven N.V., Nijverheidslaan 3, 9000 Gent, Belgien"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Naehrstoff per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 2352.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 2352 kJ / 567 kcal"
+        },
+        "energy_kcal": {
+          "value": 567.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energie 2352 kJ / 567 kcal"
+        },
+        "fat_g": {
+          "value": 42.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fett 42.1 g"
+        },
+        "saturates_g": {
+          "value": 25.3,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon gesaettigte Fettsaeuren 25.3 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 33.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Kohlenhydrate 33.8 g"
+        },
+        "sugars_g": {
+          "value": 29.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "davon Zucker 29.0 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 10.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Ballaststoffe 10.9 g"
+        },
+        "protein_g": {
+          "value": 7.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Eiweiss 7.8 g"
+        },
+        "salt_g": {
+          "value": 0.02,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salz 0.02 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Naehrwertdeklaration\nNaehrstoff per 100 g\nEnergie 2352 kJ / 567 kcal\nFett 42.1 g\ndavon gesaettigte Fettsaeuren 25.3 g\nKohlenhydrate 33.8 g\ndavon Zucker 29.0 g\nBallaststoffe 10.9 g\nEiweiss 7.8 g\nSalz 0.02 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Belgien",
+          "raw_text": "Ursprungsland Belgien"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprungsland Belgien"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Ghana",
+          "raw_text": "Ursprung der primaeren Zutat Ghana"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Ursprung der primaeren Zutat Ghana"
+      }
+    ],
+    "claims": [],
+    "unmapped_notes": []
+  }
+}
