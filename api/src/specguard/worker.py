@@ -34,6 +34,7 @@ from specguard.guardrails.verdicts import needs_human_review
 from specguard.llm.factory import build_client
 from specguard.logging import bind_correlation_id, configure_logging, get_logger
 from specguard.models.report import CheckReport
+from specguard.tracing import configure_tracing
 from specguard.vectorstore.qdrant import QdrantVectorStore
 
 log = get_logger(__name__)
@@ -43,6 +44,10 @@ async def startup(ctx: dict[str, Any]) -> None:
     """Build the expensive dependencies once for the life of the worker."""
     settings = get_settings()
     configure_logging(settings.log_level)
+    # Before the client is built: the factory only wraps it in tracing if tracing is on
+    # by then, and the worker is the process that makes every model call.
+    if configure_tracing(settings):
+        log.info("tracing.enabled", project=settings.langsmith_project)
 
     client = QdrantClient(url=settings.qdrant_url, api_key=settings.qdrant_api_key, timeout=60)
     store = QdrantVectorStore(
@@ -82,6 +87,7 @@ def _persist(job: Job, report: CheckReport) -> list[Result]:
                 metrics=dict(result.metrics),
                 cost_usd=sum(u.cost_usd for u in result.llm_usage),
                 duration_ms=result.duration_ms,
+                langsmith_run_id=result.langsmith_run_id,
             )
         )
     return rows

@@ -49,6 +49,18 @@ class Settings(BaseSettings):
     dense_embedding_model: str = DENSE_MODEL
     sparse_embedding_model: str = SPARSE_MODEL
 
+    # --- Tracing and evaluation ---------------------------------------------
+    langsmith_tracing: bool = False
+    langsmith_api_key: str | None = None
+    langsmith_project: str = "specguard"
+    langsmith_endpoint: str = "https://api.smith.langchain.com"
+    langsmith_dataset: str = "specguard-golden"
+
+    #: The model that judges tier 2's open-ended output. Pinned here rather than left to
+    #: deepeval's default, because a judged number is only comparable against another
+    #: number from the same judge — and non-negotiable #6 means it never gates a build.
+    judge_model: str = "gpt-4.1"
+
     corpus_dir: Path = Path("corpus")
 
     retrieval_top_k: int = Field(default=5, ge=1)

@@ -13,6 +13,7 @@ from specguard.llm.anthropic import AnthropicClient
 from specguard.llm.fake import FakeClient
 from specguard.llm.openai import OpenAIClient
 from specguard.llm.protocol import LLMClient
+from specguard.tracing import TracedClient, tracing_enabled
 
 FIXTURE_DIR = Path(__file__).resolve().parents[3] / "tests" / "fixtures" / "llm"
 
@@ -22,7 +23,18 @@ class ProviderError(ValueError):
 
 
 def build_client(settings: Settings, fixture_dir: Path | None = None) -> LLMClient:
-    """Build the configured client."""
+    """Build the configured client, wrapped in tracing when tracing is on.
+
+    The wrap happens here so that it happens once, for every provider, including the
+    fake one. Tracing a replayed call is deliberate: a trace of an offline eval run is
+    how the prompt versions and token counts behind a committed number stay inspectable.
+    """
+    client = _build(settings, fixture_dir)
+    return TracedClient(client) if tracing_enabled() else client
+
+
+def _build(settings: Settings, fixture_dir: Path | None = None) -> LLMClient:
+    """The provider itself, untraced."""
     provider = settings.llm_provider.lower()
 
     if provider == "fake":

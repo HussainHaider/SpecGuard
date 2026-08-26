@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import hashlib
 import uuid
+from functools import partial
 from pathlib import Path
 from typing import Annotated
 
@@ -25,11 +26,12 @@ from specguard.api.schemas import (
     Health,
 )
 from specguard.config import get_settings
-from specguard.db.models import Feedback, Job, JobStatus
+from specguard.db.models import Feedback, Job, JobStatus, Result
 from specguard.guardrails.upload import UploadRejectedError, check_upload
 from specguard.logging import bind_correlation_id, get_logger
 from specguard.models.report import CheckReport
 from specguard.models.rule import RuleId
+from specguard.tracing import record_feedback
 
 log = get_logger(__name__)
 router = APIRouter()
@@ -134,20 +136,46 @@ async def submit_feedback(
     if body.rule_id not in {rule.value for rule in RuleId}:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Unknown rule {body.rule_id!r}.")
 
+    # The run that produced the verdict being corrected. Without it the correction is
+    # still a usable eval label, it just is not attached to anything a person can open.
+    stored = (
+        await session.execute(
+            select(Result).where(Result.job_id == job.id, Result.rule_id == body.rule_id)
+        )
+    ).scalar_one_or_none()
+
     entry = Feedback(
         job_id=job.id,
         rule_id=body.rule_id,
         corrected_verdict=body.corrected_verdict.value,
         comment=body.comment,
         reviewer=body.reviewer,
+        langsmith_run_id=stored.langsmith_run_id if stored else None,
     )
     session.add(entry)
     await session.flush()
+
+    if entry.langsmith_run_id:
+        # Off the event loop: this is an outbound HTTP call to a third party, and the
+        # correction is already committed whether or not it lands.
+        entry.langsmith_feedback_id = await anyio.to_thread.run_sync(
+            partial(
+                record_feedback,
+                entry.langsmith_run_id,
+                corrected_verdict=body.corrected_verdict.value,
+                original_verdict=stored.verdict if stored else None,
+                comment=body.comment,
+                reviewer=body.reviewer,
+            )
+        )
+
     log.info(
         "feedback.recorded",
         job_id=str(job.id),
         rule_id=body.rule_id,
         corrected=body.corrected_verdict.value,
+        run_id=entry.langsmith_run_id,
+        attached=bool(entry.langsmith_feedback_id),
     )
     return FeedbackOut(
         id=entry.id,

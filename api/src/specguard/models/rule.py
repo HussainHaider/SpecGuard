@@ -122,6 +122,11 @@ class RuleResult(SpecGuardModel):
         description="One entry per model call. Empty for deterministic rules, by construction.",
     )
     duration_ms: int = Field(default=0, ge=0)
+    langsmith_run_id: str | None = Field(
+        default=None,
+        description="The traced run that produced this verdict. A reviewer's correction "
+        "is attached back to it, so a human override lands on the trace it disagrees with.",
+    )
 
     @computed_field  # type: ignore[prop-decorator]
     @property

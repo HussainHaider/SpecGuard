@@ -110,6 +110,9 @@ class Result(Base):
 
     cost_usd: Mapped[float] = mapped_column(Float, default=0.0)
     duration_ms: Mapped[int] = mapped_column(Integer, default=0)
+    #: The LangSmith run that produced this verdict. Stored so a reviewer's correction
+    #: can be attached to the trace it disagrees with, months after the run.
+    langsmith_run_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
 
     job: Mapped[Job] = relationship(back_populates="results")
 
@@ -135,5 +138,11 @@ class Feedback(Base):
     created_at: Mapped[dt.datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+
+    #: The run this correction was attached to, and the id LangSmith gave the feedback.
+    #: A null feedback id against a non-null run id means the push did not land — worth
+    #: being able to see, rather than pretending every correction reached the trace.
+    langsmith_run_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    langsmith_feedback_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
 
     job: Mapped[Job] = relationship(back_populates="feedback")
