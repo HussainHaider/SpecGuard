@@ -5,10 +5,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Protocol, runtime_checkable
 
+from specguard.corpus.sources import source_version_for
+from specguard.llm.protocol import LLMClient
 from specguard.models.citation import Citation
 from specguard.models.common import ExtractedField, Language
 from specguard.models.rule import AbstentionReason, RuleId, RuleResult, Verdict
 from specguard.models.spec import ProductSpec
+from specguard.vectorstore.protocol import VectorStore
 
 
 @dataclass(frozen=True)
@@ -29,13 +32,32 @@ class RuleContext:
         in advance, so it is named directly rather than searched for, and the citation
         resolves against the same index a RAG rule's would.
         """
+        try:
+            source_version = source_version_for(regulation, self.language)
+        except KeyError:
+            source_version = self.source_version
         return Citation.for_clause(
             regulation=regulation,
             article=article,
             paragraph=paragraph,
             quoted_span=quoted_span,
-            source_version=self.source_version,
+            source_version=source_version,
         )
+
+
+@dataclass(frozen=True)
+class RagContext(RuleContext):
+    """A RuleContext that also carries retrieval and a model client.
+
+    Deterministic rules take a plain RuleContext, which has neither. That is the point:
+    non-negotiable #2 is enforced by what the rule is handed, so a deterministic rule has
+    nothing to make a model call *with*, however carelessly someone edits it later.
+    """
+
+    store: VectorStore = None  # type: ignore[assignment]
+    client: LLMClient = None  # type: ignore[assignment]
+    retrieval_limit: int = 5
+    min_retrieval_score: float = 0.35
 
 
 @runtime_checkable

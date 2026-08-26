@@ -46,3 +46,16 @@ SOURCES: tuple[SourceSpec, ...] = (
 def raw_filename(celex: str, language: Language) -> str:
     """Filename for one language version of one act under ``corpus/raw/``."""
     return f"{celex}-{language.value}.txt"
+
+
+def source_version_for(regulation: str, language: Language) -> str:
+    """The ``source_version`` of one act's text in one language.
+
+    Chunk ids are salted with this, so a citation built without it points at nothing.
+    Each act has its own consolidation date, so there is no single corpus-wide version
+    to fall back on.
+    """
+    for source in SOURCES:
+        if source.regulation == regulation:
+            return f"{source.celex}-{language.value}"
+    raise KeyError(f"{regulation!r} is not an indexed act")
