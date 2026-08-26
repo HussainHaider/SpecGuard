@@ -1,0 +1,78 @@
+{
+  "query": "High in protein, conditions of use for nutrition claims, fibre 7.9 g per 100, fat 49.8 g per 100, saturates 7.2 g per 100, sugars 4.3 g per 100, salt 0.94 g per 100, protein 21.6 g per 100",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "2b129020-c04c-5c18-a177-9a0c60fca4d7",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "HIGH FIBRE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is high in fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 6 g of fibre per 100 g or at least 3 g of fibre per 100 (kcal."
+      },
+      "score": 0.8333334
+    },
+    {
+      "clause": {
+        "chunk_id": "d48a1c4c-5313-545b-886b-efebd8f8b196",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIV",
+        "paragraph": "CONVERSION FACTORS FOR THE CALCULATION OF ENERGY",
+        "heading": "CONVERSION FACTORS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "The energy value to be declared shall be calculated using the following conversion factors:\n— carbohydrate (except polyols), | 17 kJ/g — 4 kcal/g\n— polyols, | 10 kJ/g — 2,4 kcal/g\n— protein, | 17 kJ/g — 4 kcal/g\n— fat, | 37 kJ/g — 9 kcal/g\n— salatrims, | 25 kJ/g — 6 kcal/g\n— alcohol (ethanol), | 29 kJ/g — 7 kcal/g\n— organic acid, | 13 kJ/g — 3 kcal/g\n— fibre, | 8 kJ/g — 2 kcal/g\n— erythritol, | 0 kJ/g — 0 kcal/g"
+      },
+      "score": 0.5344828
+    },
+    {
+      "clause": {
+        "chunk_id": "0de6dd30-34b6-509d-9ded-eab9adfb18de",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part B",
+        "heading": "REFERENCE INTAKES — PART B — REFERENCE INTAKES FOR ENERGY AND SELECTED NUTRIENTS OTHER THAN VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Energy or nutrient | Reference intake\nEnergy | 8 400 kJ/2 000 kcal\nTotal fat | 70 g\nSaturates | 20 g\nCarbohydrate | 260 g\nSugars | 90 g\nProtein | 50 g\nSalt | 6 g"
+      },
+      "score": 0.4166667
+    },
+    {
+      "clause": {
+        "chunk_id": "617aa302-c545-5846-af07-5d0fbbab219f",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "HIGH OMEGA-3 FATTY ACIDS",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is high in omega-3 fatty acids, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 0,6 g alpha-linolenic acid per 100 g and per 100 kcal, or at least 80 mg of the sum of eicosapentaenoic acid and docosahexaenoic acid per 100 g and per 100 kcal."
+      },
+      "score": 0.36666667
+    },
+    {
+      "clause": {
+        "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "SOURCE OF FIBRE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal."
+      },
+      "score": 0.32142857
+    }
+  ]
+}

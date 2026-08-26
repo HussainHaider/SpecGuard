@@ -1,0 +1,78 @@
+{
+  "query": "Ballaststoffquelle, conditions of use for nutrition claims, fibre 6.8 g per 100, fat 2.4 g per 100, saturates 0.5 g per 100, sugars 2.6 g per 100, salt 0.98 g per 100, protein 9.4 g per 100",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "b42092a8-80ee-5c9c-8b04-db98593e6f04",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "32",
+        "paragraph": "2",
+        "heading": "Angabe je 100 g oder je 100 ml",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) Der Brennwert und die Nährstoffmengen gemäß Artikel 30 Absätze 1 bis 5 sind je 100 g oder je 100 ml anzugeben."
+      },
+      "score": 0.6
+    },
+    {
+      "clause": {
+        "chunk_id": "bee709a6-82d9-520f-a6ac-134ebfd0f99f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIV",
+        "paragraph": "UMRECHNUNGSFAKTOREN FÜR DIE BERECHNUNG DER ENERGIE",
+        "heading": "UMRECHNUNGSFAKTOREN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "Der anzugebende Brennwert wird unter Anwendung der folgenden Umrechnungsfaktoren berechnet:\n— Kohlenhydrate (ausgenommen mehrwertige Alkohole) | 17 kJ/g — 4 kcal/g\n— mehrwertige Alkohole | 10 kJ/g — 2,4 kcal/g\n— Eiweiß | 17 kJ/g — 4 kcal/g\n— Fett | 37 kJ/g — 9 kcal/g\n— Salatrims | 25 kJ/g — 6 kcal/g\n— Ethylalkohol | 29 kJ/g — 7 kcal/g\n— organische Säuren | 13 kJ/g — 3 kcal/g\n— Ballaststoffe | 8 kJ/g — 2 kcal/g\n— Erythritol | 0 kJ/g — 0 kcal/g"
+      },
+      "score": 0.5588235
+    },
+    {
+      "clause": {
+        "chunk_id": "f0f0f7a6-0991-5533-ba52-f3d6dfbb88c9",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "32",
+        "paragraph": "4",
+        "heading": "Angabe je 100 g oder je 100 ml",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(4) Der Brennwert und die Nährstoffmengen gemäß Artikel 30 Absätze 1, 3, 4 und 5 können zusätzlich zu der in Absatz 2 dieses Artikels genannten Form der Angabe gegebenenfalls als Prozentsatz der in Anhang XIII Teil B festgelegten Referenzmengen im Verhältnis zu 100 g oder zu 100 ml ausgedrückt werden."
+      },
+      "score": 0.4166667
+    },
+    {
+      "clause": {
+        "chunk_id": "b8aed779-537c-521f-bc66-b4a81dc8bca1",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "32",
+        "paragraph": "5",
+        "heading": "Angabe je 100 g oder je 100 ml",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(5) Werden Angaben nach Absatz 4 gemacht, muss in unmittelbarer Nähe folgende zusätzliche Erklärung angegeben werden: „Referenzmenge für einen durchschnittlichen Erwachsenen (8 400 kJ/2 000 kcal)“."
+      },
+      "score": 0.38333336
+    },
+    {
+      "clause": {
+        "chunk_id": "561c3091-2d14-5bcc-b69b-011af5abffd7",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "ENERGIEARM",
+        "heading": "Nährwertbezogene Angaben und Bedingungen für ihre Verwendung",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "Die Angabe, ein Lebensmittel sei energiearm, sowie jede Angabe, die für den Verbraucher voraussichtlich dieselbe Bedeutung hat, ist nur zulässig, wenn das Produkt im Falle von festen Lebensmitteln nicht mehr als 40 kcal (170 kJ)/100 g oder im Falle von flüssigen Lebensmitteln nicht mehr als 20 kcal (80 kJ)/100 ml enthält. Für Tafelsüßen gilt ein Grenzwert von 4 kcal (17 kJ) pro Portion, die der süßenden Wirkung von 6 g Saccharose (ca. 1 Teelöffel Zucker) entspricht."
+      },
+      "score": 0.3768116
+    }
+  ]
+}

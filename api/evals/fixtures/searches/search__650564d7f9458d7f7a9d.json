@@ -1,0 +1,78 @@
+{
+  "query": "Calcium makes your bones unbreakable, authorised health claims, general principles, permitted wording",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "2984fd45-ba9b-5843-ba47-6ad9eb19a59e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part A.1",
+        "heading": "REFERENZMENGEN — TEIL A — REFERENZMENGEN FÜR DIE TÄGLICHE ZUFUHR VON VITAMINEN UND MINERALSTOFFEN (ERWACHSENE)",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Vitamine und Mineralstoffe, die angegeben werden können, sowie ihre Nährstoffbezugswerte (nutrient reference values — NRV)\nVitamin A (μg) | 800\nVitamin D (μg) | 5\nVitamin E (mg) | 12\nVitamin K (μg) | 75\nVitamin C (mg) | 80\nThiamin (mg) | 1,1\nRiboflavin (mg) | 1,4\nNiacin (mg) | 16\nVitamin B6 (mg) | 1,4\nFolsäure (μg) | 200\nVitamin B12 (μg) | 2,5\nBiotin (μg) | 50\nPantothensäure (mg) | 6\nKalium (mg) | 2 000\n►C1 Chlorid (mg) ◄ | 800\nCalcium (mg) | 800\nPhosphor (mg) | 700\nMagnesium (mg) | 375\nEisen (mg) | 14\nZink (mg) | 10\nKupfer (mg) | 1\nMangan (mg) | 2\n►C1 Fluorid (mg) ◄ | 3,5\nSelen (μg) | 55\nChrom (μg) | 40\nMolybdän (μg) | 50\nJod (μg) | 150"
+      },
+      "score": 0.5555556
+    },
+    {
+      "clause": {
+        "chunk_id": "f13eb8ac-4b77-5d33-99a5-2f98551190fe",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "7",
+        "paragraph": "3",
+        "heading": "Lauterkeit der Informationspraxis",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(3) Vorbehaltlich der in den Unionsvorschriften über natürliche Mineralwässer und über Lebensmittel, die für eine besondere Ernährung bestimmt sind, vorgesehenen Ausnahmen dürfen Informationen über ein Lebensmittel diesem keine Eigenschaften der Vorbeugung, Behandlung oder Heilung einer menschlichen Krankheit zuschreiben oder den Eindruck dieser Eigenschaften entstehen lassen."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "dcfa1f1d-a7b4-5ff9-92d0-016d8cb5ba01",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "4",
+        "paragraph": "2",
+        "heading": "Bedingungen für die Verwendung nährwert- und gesundheitsbezogener Angaben",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "(2) Abweichend von Absatz 1 sind nährwertbezogene Angaben zulässig,\na) die sich auf die Verringerung von Fett, gesättigten Fettsäuren, trans-Fettsäuren, Zucker und Salz/Natrium beziehen, ohne Bezugnahme auf ein Profil für den/die konkreten Nährstoff(e), zu dem/denen die Angabe gemacht wird, sofern sie den Bedingungen dieser Verordnung entsprechen;\nb) wenn ein einziger Nährstoff das Nährstoffprofil übersteigt, sofern in unmittelbarer Nähe der nährwertbezogenen Angabe auf derselben Seite und genau so deutlich sichtbar wie diese ein Hinweis auf diesen Nährstoff angebracht wird. Dieser Hinweis lautet: „Hoher Gehalt an ( 15 )“."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "19e72bb6-69c7-5323-82db-502e561c0704",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "10",
+        "paragraph": "3",
+        "heading": "Spezielle Bedingungen",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "(3) Verweise auf allgemeine, nichtspezifische Vorteile des Nährstoffs oder Lebensmittels für die Gesundheit im Allgemeinen oder das gesundheitsbezogene Wohlbefinden sind nur zulässig, wenn ihnen eine in einer der Listen nach Artikel 13 oder 14 enthaltene spezielle gesundheitsbezogene Angabe beigefügt ist."
+      },
+      "score": 0.25
+    },
+    {
+      "clause": {
+        "chunk_id": "44f026a5-8515-5c97-a154-161bcd6d8141",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "2",
+        "paragraph": "2",
+        "heading": "Begriffsbestimmungen",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "(2) Ferner bezeichnet der Ausdruck\n1. „Angabe“ jede Aussage oder Darstellung, die nach dem Gemeinschaftsrecht oder den nationalen Vorschriften nicht obligatorisch ist, einschließlich Darstellungen durch Bilder, grafische Elemente oder Symbole in jeder Form, und mit der erklärt, suggeriert oder auch nur mittelbar zum Ausdruck gebracht wird, dass ein Lebensmittel besondere Eigenschaften besitzt;\n2. „Nährstoff“ ein Protein, ein Kohlenhydrat, ein Fett, einen Ballaststoff, Natrium, eines der im Anhang der Richtlinie 90/496/EWG aufgeführten Vitamine und Mineralstoffe, sowie jeden Stoff, der zu einer dieser Kategorien gehört oder Bestandteil eines Stoffes aus einer dieser Kategorien ist;\n3. „andere Substanz“ einen anderen Stoff als einen Nährstoff, der eine ernährungsbezogene Wirkung oder eine physiologische Wirkung hat;\n4. „nährwertbezogene Angabe“ jede Angabe, mit der erklärt, suggeriert oder auch nur mittelbar zum Ausdruck gebracht wird, dass ein Lebensmittel besondere positive Nährwerteigenschaften besitzt, und zwar aufgrund\na) der Energie (des Brennwerts), die es\ni) liefert,\nii) in vermindertem oder erhöhtem Maße liefert oder\niii) nicht liefert, und/oder\nb) der Nährstoffe oder anderen Substanzen, die es\ni) enthält,\nii) in verminderter oder erhöhter Menge enthält oder\niii) nicht enthält;\n5. „gesundheitsbezogene Angabe“ jede Angabe, mit der erklärt, suggeriert oder auch nur mittelbar zum Ausdruck gebracht wird, dass ein Zusammenhang zwischen einer Lebensmittelkategorie, einem Lebensmittel oder einem seiner Bestandteile einerseits und der Gesundheit andererseits besteht;\n6. „Angabe über die Reduzierung eines Krankheitsrisikos“ jede Angabe, mit der erklärt, suggeriert oder auch nur mittelbar zum Ausdruck gebracht wird, dass der Verzehr einer Lebensmittelkategorie, eines Lebensmittels oder eines Lebensmittelbestandteils einen Risikofaktor für die Entwicklung einer Krankheit beim Menschen deutlich senkt;\n7. „Behörde“ die Europäische Behörde für Lebensmittelsicherheit, die durch die Verordnung (EG) Nr. 178/2002 eingesetzt wurde.\nKAPITEL II\nALLGEMEINE GRUNDSÄTZE"
+      },
+      "score": 0.2
+    }
+  ]
+}

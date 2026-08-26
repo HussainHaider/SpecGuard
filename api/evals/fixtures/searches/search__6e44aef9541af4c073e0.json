@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Erdbeerjoghurt mit lebenden Kulturen, Joghurt (MILCH) 82%, Erdbeeren 12%, Zucker 5%",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "77bb60a7-3657-5617-911a-1d180d1f6816",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "30",
+        "paragraph": "5",
+        "heading": "Inhalt",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(5) Unbeschadet des Artikels 44 und abweichend von Artikel 36 Absatz 1 darf sich für den Fall, dass die Kennzeichnung der in Artikel 44 Absatz 1 genannten Erzeugnisse eine Nährwertdeklaration enthält, der Inhalt der Deklaration lediglich auf\na) den Brennwert oder\nb) den Brennwert zusammen mit den Mengen an Fett, gesättigten Fettsäuren, Zucker und Salz beschränken."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "8e13d4a7-5a58-567d-b198-ecf8d9a4807f",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "11",
+        "heading": "LEBENSMITTEL, DIE VON DER VERPFLICHTENDEN NÄHRWERTDEKLARATION AUSGENOMMEN SIND",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "11. Lebensmittelzusatzstoffe;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "c308ca05-a6ac-5735-b0b8-f06bd7773df8",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "20",
+        "paragraph": "2",
+        "heading": "Gemeinschaftsregister",
+        "language": "de",
+        "source_version": "02006R1924-20141213-de",
+        "text": "(2) Das Register enthält Folgendes:\na) die nährwertbezogenen Angaben und die Bedingungen für ihre Verwendung gemäß dem Anhang;\nb) gemäß Artikel 4 Absatz 5 festgelegte Einschränkungen;\nc) die zugelassenen gesundheitsbezogenen Angaben und die Bedingungen für ihre Verwendung nach Artikel 13 Absätze 3 und 5, Artikel 14 Absatz 1, Artikel 19 Absatz 2, Artikel 21, Artikel 24 Absatz 2 und Artikel 28 Absatz 6 sowie die innerstaatlichen Maßnahmen nach Artikel 23 Absatz 3;\nd) eine Liste abgelehnter gesundheitsbezogener Angaben und die Gründe für ihre Ablehnung.\nGesundheitsbezogene Angaben, die aufgrund geschützter Daten zugelassen wurden, werden in einen gesonderten Anhang des Registers aufgenommen, zusammen mit folgenden Informationen:\n1. Datum der Zulassung der gesundheitsbezogenen Angabe durch die Kommission und Name des ursprünglichen Antragstellers, dem die Zulassung erteilt wurde;\n2. die Tatsache, dass die Kommission die gesundheitsbezogene Angabe auf der Grundlage geschützter Daten und mit Einschränkung der Verwendung zugelassen hat;\n3. in den in Artikel 17 Absatz 3 Unterabsatz 2 und Artikel 18 Absatz 5 Unterabsatz 2 genannten Fällen die Tatsache, dass die gesundheitsbezogene Angabe auf begrenzte Zeit zugelassen ist."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "878fad61-a762-5dac-a951-374f6ec9299e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part E.1",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL E — BEZEICHNUNG VON ZUSAMMENGESETZTEN ZUTATEN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "1. Eine zusammengesetzte Zutat kann im Zutatenverzeichnis unter ihrer Bezeichnung, sofern diese in einer Rechtsvorschrift festgelegt oder üblich ist, nach Maßgabe ihres Gesamtgewichtsanteils angegeben werden, sofern unmittelbar danach eine Aufzählung ihrer Zutaten folgt."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "d073683c-e0f7-5e5d-980a-e5883dbb2a1e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part B",
+        "heading": "ANGABE UND BEZEICHNUNG VON ZUTATEN — TEIL B — BEZEICHNUNG BESTIMMTER ZUTATEN, BEI DENEN DIE SPEZIELLE BEZEICHNUNG DURCH DIE BEZEICHNUNG EINER KLASSE ERSETZT WERDEN KANN",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "Unbeschadet des Artikels 21 können Zutaten, die zu einer der im Folgenden aufgeführten Lebensmittelklasse gehören und die Bestandteile eines anderen Lebensmittels sind, statt mit ihrer speziellen Bezeichnung mit der Bezeichnung der betreffenden Klasse benannt werden.\nDefinition der Lebensmittelklasse | Bezeichnung\n1. Raffinierte Öle tierischer Herkunft | „Öl“, ergänzt entweder durch das Adjektiv „tierisch“ oder die Angabe der speziellen tierischen Herkunft Der Hinweis auf ein gehärtetes Öl muss gegebenenfalls mit dem Ausdruck „ganz gehärtet“ oder „teilweise gehärtet“ versehen sein.\n2. Raffinierte Fette tierischer Herkunft | „Fett“, ergänzt entweder durch das Adjektiv „tierisch“ oder die Angabe der speziellen tierischen Herkunft Der Hinweis auf ein gehärtetes Fett muss gegebenenfalls mit dem Ausdruck „ganz gehärtet“ oder „teilweise gehärtet“ versehen sein.\n3. Mischungen von Mehl aus zwei oder mehr Getreidearten | „Mehl“, gefolgt von der Aufzählung der Getreidearten, aus denen es hergestellt ist, in abnehmender Reihenfolge ihres Gewichtsanteils\n4. Natürliche Stärke und auf physikalischem oder enzymatischem Wege modifizierte Stärke | „Stärke“\n5. Fisch aller Art, wenn der Fisch Zutat eines anderen Lebensmittels ist und sofern sich Bezeichnung und Darstellung dieses Lebensmittels nicht auf eine bestimmte Fischart beziehen | „Fisch“\n6. Käse aller Art, wenn der Käse oder die Käsemischung Zutat eines anderen Lebensmittels ist und sofern sich Bezeichnung und Darstellung dieses Lebensmittels nicht auf eine bestimmte Käseart beziehen | „Käse“\n7. Gewürze jeder Art, die nicht mehr als 2 Gewichtsprozent des Lebensmittels ausmachen | „Gewürz(e)“ oder „Gewürzmischung“\n8. Kräuter oder Kräuterteile jeder Art, die nicht mehr als 2 Gewichtsprozent des Lebensmittels ausmachen | „Kräuter“ oder „Kräutermischung“\n9. Grundstoffe jeder Art, die für die Herstellung der Kaumasse von Kaugummi verwendet werden | „Kaumasse“\n10. Paniermehl jeglichen Ursprungs | „Paniermehl“\n11. Saccharose jeder Art | „Zucker“\n12. Dextroseanhydrid oder Dextrosemonohydrat | „Dextrose“\n13. Glucosesirup und getrockneter Glucosesirup | „Glukosesirup“\n14. Milcheiweiß aller Art (Kaseine, Kaseinate und Molkenproteine) und Mischungen daraus | „Milcheiweiß“\n15. Kakaopressbutter, Expeller-Kakaobutter, raffinierte Kakaobutter | „Kakaobutter“\n16. Weine aller Art gemäß Anhang XIb der Verordnung (EG) Nr. 1234/2007 (1) | „Wein“\n17. Skelettmuskeln (2) von Tieren der Spezies „Säugetiere“ und „Vögel“, die als für den menschlichen Verzehr geeignet gelten, mitsamt dem natürlicherweise darin eingebetteten oder damit verbundenen Gewebe, deren Gesamtanteil an Fett und Bindegewebe die nachstehend aufgeführten Werte nicht übersteigt, und soweit das Fleisch Zutat eines anderen Lebensmittels ist. Höchstwerte der Fett- und Bindegewebeanteile für Zutaten, die mit dem Begriff „… fleisch“ bezeichnet werden: Art Fettgehalt Verhältnis Kollagen/Fleischeiweiß (1) — Säugetiere (ausgenommen Kaninchen und Schweine) und Mischungen von Tierarten, bei denen Säugetiere überwiegen 25 % 25 % — Schweine 30 % 25 % — Vögel und Kaninchen 15 % 10 % (1) Das Verhältnis Kollagen/Fleischeiweiß wird als Prozentsatz des im Fleischeiweiß enthaltenen Kollagens ausgedrückt. Der Kollagengehalt ist der mit dem Faktor 8 vervielfältigte Gehalt an Hydroxyprolin. Werden diese Höchstwerte überschritten und sind alle anderen Kriterien der Definition von „… fleisch“ erfüllt, so muss der „… fleisch-Anteil“ entsprechend nach unten angepasst werden und das Zutatenverzeichnis muss neben der Angabe des Begriffs „… fleisch“ die Angabe der Zutat Fett bzw. Bindegewebe enthalten. Die unter die Definition von „Separatorenfleisch“ fallenden Erzeugnisse fallen nicht unter die vorliegende Definition. | „… fleisch“, dem der Name/die Namen (3) der Tierart, von der/denen es stammt, vorangestellt ist/sind\nArt | Fettgehalt | Verhältnis Kollagen/Fleischeiweiß (1)\n— Säugetiere (ausgenommen Kaninchen und Schweine) und Mischungen von Tierarten, bei denen Säugetiere überwiegen | 25 % | 25 %\n— Schweine | 30 % | 25 %\n— Vögel und Kaninchen | 15 % | 10 %\n(1) Das Verhältnis Kollagen/Fleischeiweiß wird als Prozentsatz des im Fleischeiweiß enthaltenen Kollagens ausgedrückt. Der Kollagengehalt ist der mit dem Faktor 8 vervielfältigte Gehalt an Hydroxyprolin.\n18. Alle Arten von Erzeugnissen, die unter die Definition von „Separatorenfleisch“ fallen | „Separatorenfleisch“, dem der Name/die Namen (3) der Tierart/Tierarten, von der/denen es stammt, vorangestellt ist/sind\n(1) Verordnung (EG) Nr. 1234/2007 des Rates vom 22. Oktober 2007 über eine gemeinsame Organisation der Agrarmärkte und mit Sondervorschriften für bestimmte landwirtschaftliche Erzeugnisse (Verordnung über die einheitliche GMO) (ABl. L 299 vom 16.11.2007, S. 1). (2) Das Zwerchfell und die Kaumuskeln gehören zu den Skelettmuskeln, während das Herz, die Zunge, die Muskeln des Kopfes (außer den Kaumuskeln), des Karpal- und Tarsalgelenks und des Schwanzes nicht darunter fallen. (3) Bei der Kennzeichnung in englischer Sprache kann diese Bezeichnung durch die allgemeine Bezeichnung für das Fleisch der betreffenden Tierspezies ersetzt werden."
+      },
+      "score": 0.3125
+    }
+  ]
+}

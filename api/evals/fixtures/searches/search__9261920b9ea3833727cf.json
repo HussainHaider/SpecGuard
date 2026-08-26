@@ -1,0 +1,78 @@
+{
+  "query": "High in fibre, conditions of use for nutrition claims, fibre 7.4 g per 100, fat 16.2 g per 100, saturates 1.8 g per 100, sugars 14.5 g per 100, salt 0.31 g per 100, protein 10.1 g per 100",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "6c0b9d9f-ec1e-53ea-8fd5-22f8d18cd324",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "LOW SATURATED FAT",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is low in saturated fat, and any claim likely to have the same meaning for the consumer, may only be made if the sum of saturated fatty acids and trans-fatty acids in the product does not exceed 1,5 g per 100 g for solids or 0,75 g/100 ml for liquids and in either case the sum of saturated fatty acids and trans-fatty acids must not provide more than 10 % of energy."
+      },
+      "score": 0.5588235
+    },
+    {
+      "clause": {
+        "chunk_id": "2b129020-c04c-5c18-a177-9a0c60fca4d7",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "HIGH FIBRE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is high in fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 6 g of fibre per 100 g or at least 3 g of fibre per 100 (kcal."
+      },
+      "score": 0.5588235
+    },
+    {
+      "clause": {
+        "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "SOURCE OF FIBRE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal."
+      },
+      "score": 0.44444445
+    },
+    {
+      "clause": {
+        "chunk_id": "43c4de01-c73b-51a2-858e-f90a28f9ec75",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "4",
+        "paragraph": "2",
+        "heading": "Conditions for the use of nutrition and health claims",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "2. By way of derogation from paragraph 1, nutrition claims:\n(a) referring to the reduction of fat, saturated fatty acids, trans-fatty acids, sugars and salt/sodium shall be allowed without reference to a profile for the specific nutrient/s for which the claim is made, provided they comply with the conditions laid down in this Regulation;\n(b) shall be allowed, where a single nutrient exceeds the nutrient profile provided that a statement about the specific nutrient appears in close proximity to, on the same side and with the same prominence as the claim. This statement shall read as follows: ‘High ( *1 ) content’."
+      },
+      "score": 0.37333333
+    },
+    {
+      "clause": {
+        "chunk_id": "f9be9d6e-03f4-54e1-b9ff-e6cbf9e7377d",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "LOW FAT",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is low in fat, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 3 g of fat per 100 g for solids or 1,5 g of fat per 100 ml for liquids (1,8 g of fat per 100 ml for semi-skimmed milk)."
+      },
+      "score": 0.33333334
+    }
+  ]
+}

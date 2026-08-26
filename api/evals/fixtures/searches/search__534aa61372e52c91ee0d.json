@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Orange juice, Orange juice 100%",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "22",
+        "paragraph": "1",
+        "heading": "Quantitative indication of ingredients",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned:\n(a) appears in the name of the food or is usually associated with that name by the consumer;\n(b) is emphasised on the labelling in words, pictures or graphics; or\n(c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      },
+      "score": 0.5833333
+    },
+    {
+      "clause": {
+        "chunk_id": "118c0267-4bc6-5074-9832-6c15a97f9eba",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part D.3",
+        "heading": "INDICATION AND DESIGNATION OF INGREDIENTS — PART D — DESIGNATION OF FLAVOURINGS IN THE LIST OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "3. Quinine and/or caffeine used as a flavouring in the production or preparation of a food shall be mentioned by name in the list of ingredients immediately after the term ‘flavouring(s)’."
+      },
+      "score": 0.5714286
+    },
+    {
+      "clause": {
+        "chunk_id": "94ccbb01-66ce-55fc-b02f-5888453a3e61",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VIII",
+        "paragraph": "2",
+        "heading": "QUANTITATIVE INDICATION OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "2. Points (a) and (b) of Article 22(1) shall not apply in the case of:\n(a) any ingredient or category of ingredients covered by the indication ‘with sweetener(s)’ or ‘with sugar(s) and sweetener(s)’ if that indication accompanies the name of the food, pursuant Annex III; or\n(b) any added vitamin and mineral if that substance is subject to a nutrition declaration."
+      },
+      "score": 0.4761905
+    },
+    {
+      "clause": {
+        "chunk_id": "9126219a-abb2-5cef-a091-5c602a7cbc63",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VIII",
+        "paragraph": "4",
+        "heading": "QUANTITATIVE INDICATION OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "4. By way of derogation from point 3:\n(a) where foods have lost moisture following heat treatment or other treatment, the quantity shall be expressed as a percentage which shall correspond to the quantity of the ingredient(s) used, related to the finished product, unless that quantity or the total quantity of all the ingredients indicated on the labelling exceeds 100 %, in which case the quantity shall be indicated on the basis of the weight of the ingredient(s) used to prepare 100 g of finished product;\n(b) the quantity of volatile ingredients shall be indicated on the basis of their proportion by weight in the finished product;\n(c) the quantity of ingredients used in concentrated or dehydrated form and reconstituted during manufacture may be indicated on the basis of their proportion by weight as recorded before their concentration or dehydration;\n(d) in the case of concentrated or dehydrated foods which are intended to be reconstituted by the addition of water, the quantity of the ingredients may be indicated on the basis of their proportion by weight in the reconstituted product."
+      },
+      "score": 0.375
+    },
+    {
+      "clause": {
+        "chunk_id": "54fa0d25-e799-5589-9374-f7d5f6a52e13",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VIII",
+        "paragraph": "1",
+        "heading": "QUANTITATIVE INDICATION OF INGREDIENTS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The quantitative indication shall not be required:\n(a) in respect of an ingredient or category of ingredients:\n(i) the drained net weight of which is indicated in accordance with point 5 of Annex IX;\n(ii) the quantities of which must already appear on the labelling under Union provisions;\n(iii) which is used in small quantities for the purposes of flavouring; or\n(iv) which, while appearing in the name of the food, is not such as to govern the choice of the consumer in the country of marketing because the variation in quantity is not essential to characterise the food or does not distinguish it from similar foods;\n(b) where specific Union provisions stipulate precisely the quantity of an ingredient or of a category of ingredients without providing for the indication thereof on the labelling; or\n(c) in the cases referred to in points 4 and 5 of Part A of Annex VII."
+      },
+      "score": 0.3655914
+    }
+  ]
+}

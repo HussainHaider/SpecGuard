@@ -1,0 +1,78 @@
+{
+  "query": "country of origin or place of provenance, primary ingredient origin indication, Polen, Polen, Wasser",
+  "language": "de",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "f44577c4-4d2f-58ca-9d4f-2d34280748db",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VI",
+        "paragraph": "Part A.6",
+        "heading": "BEZEICHNUNG DES LEBENSMITTELS UND SPEZIELLE ZUSÄTZLICHE ANGABEN — TEIL A — VERPFLICHTENDE ANGABEN ZUR ERGÄNZUNG DER BEZEICHNUNG DES LEBENSMITTELS",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "6. Bei Fleischerzeugnissen und Fleischzubereitungen, die ►C1 aussehen wie ein Abschnitt, ein Stück, eine Scheibe oder eine Portion Fleisch oder wie ein Tierkörper ◄ , enthält die Bezeichnung des Lebensmittels die Angabe, dass Wasser zugesetzt wurde, wenn das zugesetzte Wasser mehr als 5 % des Gewichts des Enderzeugnisses ausmacht. Diese Bestimmung gilt auch für Fischereierzeugnisse und zubereitete Fischereierzeugnisse, die ►C1 aussehen wie ein Abschnitt, ein Stück, eine Scheibe oder eine Portion Fisch, ein Filet oder wie ein ganzes Fischereierzeugnis ◄ ."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "3",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(3) Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so\na) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder\nb) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel.\nFür die Anwendung dieses Absatzes müssen zuvor die Durchführungsrechtsakte gemäß Absatz 8 erlassen worden sein."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "a3eb3c36-ac31-540e-b75f-ae7d4dfde4d4",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "3",
+        "heading": "LEBENSMITTEL, DIE VON DER VERPFLICHTENDEN NÄHRWERTDEKLARATION AUSGENOMMEN SIND",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "3. für den menschlichen Gebrauch bestimmtes Wasser, auch solches, dem lediglich Kohlendioxid und/oder Aromen zugesetzt wurden;"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "b24bc226-c399-5f65-bcfc-39811a5305d2",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "2",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(2) Die Angabe des Ursprungslands oder des Herkunftsorts ist in folgenden Fällen verpflichtend:\na) falls ohne diese Angabe eine Irreführung der Verbraucher über das tatsächliche Ursprungsland oder den tatsächlichen Herkunftsort des Lebensmittels möglich wäre, insbesondere wenn die dem Lebensmittel beigefügten Informationen oder das Etikett insgesamt sonst den Eindruck erwecken würden, das Lebensmittel komme aus einem anderen Ursprungsland oder Herkunftsort;\nb) bei Fleisch, das in die Codes der Kombinierten Nomenklatur (KN) fällt, die in Anhang XI aufgeführt sind. Für die Anwendung dieses Buchstabens müssen zuvor die Durchführungsbestimmungen gemäß Absatz 8 erlassen worden sein."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "ee8bd961-9aaa-50cb-95fa-449e7f1504bb",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "26",
+        "paragraph": "1",
+        "heading": "Ursprungsland oder Herkunftsort",
+        "language": "de",
+        "source_version": "02011R1169-20180101-de",
+        "text": "(1) 8\n9"
+      },
+      "score": 0.25
+    }
+  ]
+}

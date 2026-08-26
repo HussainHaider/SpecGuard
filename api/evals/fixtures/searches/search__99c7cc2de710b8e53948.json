@@ -1,0 +1,78 @@
+{
+  "query": "name of the food, legal name, quantitative indication of ingredients QUID, Potato crisps, lightly salted, Potatoes 88%, Sunflower oil 11%, Salt 1%",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "31bdc9ab-b73e-523f-8053-3706462a80af",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "19",
+        "paragraph": "1",
+        "heading": "Omission of the list of ingredients",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The following foods shall not be required to bear a list of ingredients:\n(a) fresh fruit and vegetables, including potatoes, which have not been peeled, cut or similarly treated;\n(b) carbonated water, the description of which indicates that it has been carbonated;\n(c) fermentation vinegars derived exclusively from a single basic product, provided that no other ingredient has been added;\n(d) cheese, butter, fermented milk and cream, to which no ingredient has been added other than lactic products, food enzymes and micro-organism cultures essential to manufacture, or in the case of cheese other than fresh cheese and processed cheese the salt needed for its manufacture;\n(e) foods consisting of a single ingredient, where:\n(i) the name of the food is identical to the ingredient name; or\n(ii) the name of the food enables the nature of the ingredient to be clearly identified."
+      },
+      "score": 0.6
+    },
+    {
+      "clause": {
+        "chunk_id": "95430191-50d1-5dd5-9801-4a3669efb229",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "5",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "5. Salt and salt substitutes;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "eec11370-a614-5d79-a534-0a54f2a95894",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex VII",
+        "paragraph": "Part B",
+        "heading": "INDICATION AND DESIGNATION OF INGREDIENTS — PART B — DESIGNATION OF CERTAIN INGREDIENTS BY THE NAME OF A CATEGORY RATHER THAN A SPECIFIC NAME",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Without prejudice to Article 21, ingredients which belong to one of the categories of foods listed below and are constituents of another food may be designated by the name of that category rather than the specific name.\nDefinition of category of food | Designation\n1. Refined oils of animal origin | ‘Oil’, together with either the adjective ‘animal’, or the indication of specific animal origin. The expression ‘fully hydrogenated’ or ‘partly hydrogenated’, as appropriate, must accompany the indication of a hydrogenated oil\n2. Refined fats of animal origin | ‘Fat’, together with either the adjective ‘animal’ or the indication of specific animal origin. The expression ‘fully hydrogenated’ or ‘partly hydrogenated’, as appropriate, must accompany the indication of a hydrogenated fat\n3. Mixtures of flour obtained from two or more cereal species | ‘Flour’, followed by a list of the cereals from which it has been obtained, in descending order by weight\n4. Starches, and starches modified by physical means or by enzymes | ‘Starch’\n5. All species of fish where the fish constitutes an ingredient of another food and provided that the name and presentation of such food does not refer to a specific species of fish | ‘Fish’\n6. All types of cheese where the cheese or mixture of cheeses constitutes an ingredient of another food and provided that the name and presentation of such food does not refer to a specific type of cheese | ‘Cheese’\n7. All spices not exceeding 2 % by weight of the food | ‘Spice(s)’ or ‘mixed spices’\n8. All herbs or parts of herbs not exceeding 2 % by weight of the food | ‘Herb(s)’ or ‘mixed herbs’\n9. All types of gum preparations used in the manufacture of gum base for chewing gum | ‘Gum base’\n10. All types of crumbed baked cereal products | ‘Crumbs’ or ‘rusks’ as appropriate\n11. All types of sucrose | ‘Sugar’\n12. Anhydrous dextrose or dextrose monohydrate | ‘Dextrose’\n13. Glucose syrup and anhydrous glucose syrup | ‘Glucose syrup’\n14. All types of milk protein (caseins, caseinates and whey proteins) and mixtures thereof | ‘Milk proteins’\n15. Press, expeller or refined cocoa butter | ‘Cocoa butter’\n16. All types of wine as covered by Annex XIb to Regulation (EC) No 1234/2007 (1) | ‘Wine’\n17. Skeletal muscles (2) of mammalian and bird species recognised as fit for human consumption with naturally included or adherent tissue, where the total fat and connective tissue content does not exceed the values indicated below and where the meat constitutes an ingredient of another food. Maximum fat and connective tissue contents for ingredients designated by the term ‘… meat’ Species Fat content Collagen/meat protein ratio (1) — Mammals (other than rabbits and porcines) and mixtures of species with mammals predominating, 25 % 25 % — Porcines, 30 % 25 % — Birds and rabbits, 15 % 10 % (1) The collagen/meat protein ratio is expressed as the percentage of collagen in meat protein. The collagen content means the hydroxyproline content multiplied by a factor of 8. If these maximum limits are exceeded, but all other criteria for the definition of ‘meat’ are satisfied, the ‘… meat’ content must be adjusted downwards accordingly and the list of ingredients must mention, in addition to the term ‘… meat’, the presence of fat and/or connective tissue. The products covered by the definition of ‘mechanically separated meat’ are excluded from this definition | ‘… meat’ and the name(s) (3) of the animal species from which it comes\nSpecies | Fat content | Collagen/meat protein ratio (1)\n— Mammals (other than rabbits and porcines) and mixtures of species with mammals predominating, | 25 % | 25 %\n— Porcines, | 30 % | 25 %\n— Birds and rabbits, | 15 % | 10 %\n(1) The collagen/meat protein ratio is expressed as the percentage of collagen in meat protein. The collagen content means the hydroxyproline content multiplied by a factor of 8.\n18. All types of products covered by the definition of ‘mechanically separated meat’ | ‘mechanically separated meat’ and the name(s) (3) of the animal species from which it comes\n(1) Council Regulation (EC) No 1234/2007 of 22 October 2007 establishing a common organisation of agricultural markets and on specific provisions for certain agricultural products (Single CMO Regulation) (OJ L 299, 16.11.2007, p. 1). (2) The diaphragm and the masseters are part of the skeletal muscles, while the heart, tongue, the muscles of the head (other than the masseters), the muscles of the carpus, the tarsus and the tail are excluded. (3) For labelling in English, this designation may be replaced by the generic name of the ingredient for the animal species concerned."
+      },
+      "score": 0.38596493
+    },
+    {
+      "clause": {
+        "chunk_id": "f92f6994-808a-502d-8b8d-626010bc9ba2",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "10",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "10. Flavourings;"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "22",
+        "paragraph": "1",
+        "heading": "Quantitative indication of ingredients",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned:\n(a) appears in the name of the food or is usually associated with that name by the consumer;\n(b) is emphasised on the labelling in words, pictures or graphics; or\n(c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      },
+      "score": 0.29347825
+    }
+  ]
+}

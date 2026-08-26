@@ -1,0 +1,78 @@
+{
+  "query": "Helps prevent colds and shortens their duration, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "1",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Notwithstanding Article 2(1)(b) of Directive 2000/13/EC, the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      },
+      "score": 0.6666667
+    },
+    {
+      "clause": {
+        "chunk_id": "25a474ab-2df7-5503-bfa0-042f7de781c1",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "20",
+        "paragraph": "2",
+        "heading": "Community Register",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "2. The Register shall include the following:\n(a) the nutrition claims and the conditions applying to them as set out in the Annex;\n(b) restrictions adopted in accordance with Article 4(5);\n(c) the authorised health claims and the conditions applying to them provided for in Articles 13(3) and (5), 14(1), 19(2), 21, 24(2) and 28(6) and the national measures referred to in Article 23(3);\n(d) a list of rejected health claims and the reasons for their rejection.\nHealth claims authorised on the basis of proprietary data shall be recorded in a separate Annex to the Register together with the following information:\n1) the date the Commission authorised the health claim and the name of the original applicant that was granted authorisation.\n2) the fact that the Commission authorised the health claim on the basis of proprietary data and restricted use;\n3) in the cases referred to in Article 17(3), second subparagraph, and Article 18(5), second subparagraph, the fact that the health claim is authorised for a limited duration."
+      },
+      "score": 0.5625
+    },
+    {
+      "clause": {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "15",
+        "paragraph": "3",
+        "heading": "Application for authorisation",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. The application shall include the following:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which the health claim is to be made and its particular characteristics;\n(c) a copy of the studies, including, where available, independent, peer-reviewed studies, which have been carried out with regard to the health claim and any other material which is available to demonstrate that the health claim complies with the criteria provided for in this Regulation;\n(d) where appropriate, an indication of the information which should be regarded as proprietary accompanied by verifiable justification;\n(e) a copy of other scientific studies which are relevant to that health claim;\n(f) a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;\n(g) a summary of the application."
+      },
+      "score": 0.4047619
+    },
+    {
+      "clause": {
+        "chunk_id": "b103dab6-8f07-527c-9b8a-a29047ee2dae",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "17",
+        "paragraph": "5",
+        "heading": "Community authorisation",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "5. Health claims included in the lists provided for in Articles 13 and 14 may be used, in conformity with the conditions applying to them, by any food business operator, if they are not restricted for use in accordance with the provisions of Article 21."
+      },
+      "score": 0.3678161
+    },
+    {
+      "clause": {
+        "chunk_id": "142a7250-39d1-5797-b6db-90033300da3c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "5",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "5. Any additions of claims to the list referred to in paragraph 3 based on newly developed scientific evidence and/or which include a request for the protection of proprietary data shall be adopted following the procedure laid down in Article 18, except claims referring to children's development and health, which shall be authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19."
+      },
+      "score": 0.30882353
+    }
+  ]
+}
