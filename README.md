@@ -6,6 +6,11 @@ rests on, quoting the words it relied on. It is built for the person who has to 
 private-label product before it ships and who currently does that by reading a PDF against
 a regulation in another tab.
 
+![Uploading a specification sheet, the verdict list, and the evidence panel showing the cited article with the relied-on words highlighted](docs/demo.gif)
+
+*Recorded against the running stack: upload, poll, verdicts grouped by severity, then the
+clause the failing verdict rests on with the quoted words marked inside it.*
+
 ## What this is and isn't
 
 An **independent portfolio project**. Not affiliated with any retailer, and no proprietary

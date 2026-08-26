@@ -398,3 +398,20 @@ would otherwise have to reverse-engineer from the code.
   which is exactly what they are. The general lesson is the entry in this file: a path that
   is never executed is not covered by anything, and "the tests pass" said nothing at all
   about whether this system could start.
+
+## 025 — The vector store is disposable, and that is a design property
+
+- **Context:** Pinning the Qdrant image to match the client (the mismatch was warning on
+  every seed) broke an existing volume: v1.19 could not read segments written by v1.12,
+  and the container restart-looped on `unknown variant \`on_disk\``.
+- **Options:** (a) stay on the old image and live with the client warning; (b) migrate the
+  volume; (c) drop the volume and re-index.
+- **Choice:** (c), in about a minute. There is no migration to write because there is
+  nothing in Qdrant that is not derived: the corpus text is committed, chunk ids are
+  deterministic, and `corpus.seed` reproduces the collection exactly — including the ids
+  that citations stored in Postgres resolve against.
+- **Cost:** a Qdrant upgrade is a brief outage rather than a rolling one, and anyone who
+  assumed the vector store was durable state will be surprised once. Worth stating plainly
+  because it is the same property the weekly re-index depends on: if re-indexing could not
+  reproduce ids, neither the upgrade path nor the regulation watcher would be safe.
+  Postgres is the durable store; Qdrant is a cache with good manners.

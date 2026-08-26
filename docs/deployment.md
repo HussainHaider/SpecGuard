@@ -107,6 +107,21 @@ Two volumes hold anything that cannot be rebuilt:
   Worthless without that key, which is why the key belongs in your password manager and
   not only in `.env` on the box.
 
+**Upgrading Qdrant needs a re-seed, not a restore.** Qdrant's on-disk segment format is
+not backward compatible across releases — moving the image from v1.12 to v1.19 produced
+`unknown variant \`on_disk\`` on startup and a container that restart-looped. The fix is
+to drop the volume and re-index, which takes about a minute:
+
+```bash
+docker compose --profile app down
+docker volume rm specguard_qdrant_data
+docker compose --profile app up -d
+docker compose exec api python -m specguard.corpus.seed
+```
+
+That this is a one-minute operation rather than a data-loss incident is the point of the
+next paragraph.
+
 `qdrant_data` is deliberately not backed up: it is derived from the committed corpus and
 `corpus.seed` rebuilds it byte-identically, because chunk ids are deterministic. That is
 the same property that lets the weekly re-index run without invalidating stored citations.
