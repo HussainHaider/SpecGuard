@@ -297,6 +297,36 @@ would otherwise have to reverse-engineer from the code.
 - **Cost:** an unrun benchmark in the repository is a claim nobody has checked, and it
   will stay that way until someone with Docker runs one command. At 734 clauses a latency
   difference would be noise in any case; recall is the only column worth reading.
+- **Measured** (2026-08-26, both stores seeded from the same 734 clauses and scored on the
+  same 58 golden queries, three runs):
+
+  | store | recall@5 | hit rate@5 | p50 | p95 |
+  |---|---|---|---|---|
+  | Qdrant — dense + bm25, server-side RRF | 57.2% | 75.9% | ~70 ms | ~87 ms |
+  | pgvector — dense + tsvector, RRF in SQL | 46.8% | 56.9% | ~47 ms | ~66 ms |
+
+  Recall was byte-identical across all three runs; latency varied by a few milliseconds
+  after the first, warm-up run. Qdrant's 57.2% / 75.9% is exactly the figure the tier 1
+  eval reports, which is the check that matters: the benchmark and the eval are measuring
+  the same thing on the same labels rather than two things that happen to agree.
+
+  **The recall gap is real and it is not about storage.** Qdrant's lexical half is a bm25
+  vector from fastembed; Postgres has no bm25, so it is `ts_rank_cd` over a `tsvector`
+  with its own stemming. That is a different retriever, and 10 points of recall is what it
+  costs here. Anyone reading this as "Qdrant beats Postgres" has read it wrong.
+
+  **On latency, the honest answer is that neither store is the expensive part.** pgvector
+  is about 23 ms faster at p50 and that is not a win worth claiming: dense query encoding
+  alone is 22.1 ms, which is roughly half of pgvector's entire 47 ms and a third of
+  Qdrant's 70 ms. The thing to optimise, if anyone needed to, is the encoder.
+
+  One hypothesis died here, which is the reason for measuring rather than reasoning: the
+  gap was expected to be Qdrant paying for a second query encoding. It is not — bm25 query
+  encoding measures 0.0 ms, because it is a lexical tokeniser and not a neural model.
+- **Standing:** the abstraction stays, and so does Qdrant. Not because it is faster — it is
+  not — but because the retrieval it makes available is better on the metric that bounds
+  what the judge can conclude, and because fusion stays in the engine rather than in our
+  code.
 
 ## 019 — The evidence panel needed an endpoint that did not exist
 
