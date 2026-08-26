@@ -227,6 +227,8 @@ web/dist/
 qdrant_storage/
 corpus/cache/
 api/tier2.log
+web/tsconfig.tsbuildinfo
 .deepeval*
 .ruff_cache/
 .DS_Store
+.gstack/

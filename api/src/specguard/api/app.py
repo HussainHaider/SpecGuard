@@ -9,11 +9,13 @@ from typing import Any
 from arq import create_pool
 from arq.connections import RedisSettings
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from specguard.api.metrics import CHECKS_TOTAL
 from specguard.api.routers import router
 from specguard.config import get_settings
+from specguard.corpus.seed import load_clauses
 from specguard.logging import bind_correlation_id, configure_logging, get_logger
 from specguard.tracing import configure_tracing
 
@@ -33,6 +35,21 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     configure_logging(settings.log_level)
     if configure_tracing(settings):
         log.info("tracing.enabled", project=settings.langsmith_project)
+
+    # The corpus, once, so a citation can be read in context without a round trip to
+    # the vector store. 734 clauses is a few megabytes; loading it per request would be
+    # the only slow thing about serving a report someone is already looking at.
+    try:
+        app.state.clauses = {
+            clause.chunk_id: clause for clause in load_clauses(settings.corpus_dir)
+        }
+        log.info("corpus.loaded", clauses=len(app.state.clauses))
+    except Exception as error:
+        # The API is still useful without it: reports render, only the evidence panel
+        # degrades. Failing to start would trade a whole service for one panel.
+        app.state.clauses = {}
+        log.error("corpus.unavailable", error=str(error))
+
     try:
         app.state.queue = await create_pool(RedisSettings.from_dsn(settings.redis_url))
         log.info("queue.connected")
@@ -51,6 +68,19 @@ def create_app() -> FastAPI:
         version="0.1.0",
         summary="Per-rule EU food law compliance checks over supplier specification sheets.",
         lifespan=lifespan,
+    )
+
+    # The review UI is served from a different origin in development (Vite on :5173)
+    # and may be in production too. Origins are configured rather than "*": this API
+    # accepts file uploads and records reviewer decisions, and neither belongs behind a
+    # wildcard.
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=get_settings().cors_origins,
+        allow_credentials=True,
+        allow_methods=["GET", "POST", "OPTIONS"],
+        allow_headers=["*"],
+        expose_headers=["x-correlation-id"],
     )
 
     @app.middleware("http")

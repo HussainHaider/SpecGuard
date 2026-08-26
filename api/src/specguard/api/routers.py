@@ -21,6 +21,7 @@ from specguard.api.metrics import GUARDRAIL_TRIPS, REGISTRY
 from specguard.api.schemas import (
     CheckAccepted,
     CheckStatus,
+    ClauseText,
     FeedbackIn,
     FeedbackOut,
     Health,
@@ -31,6 +32,7 @@ from specguard.guardrails.upload import UploadRejectedError, check_upload
 from specguard.logging import bind_correlation_id, get_logger
 from specguard.models.report import CheckReport
 from specguard.models.rule import RuleId
+from specguard.queue import WORKER_FUNCTION
 from specguard.tracing import record_feedback
 
 log = get_logger(__name__)
@@ -86,7 +88,9 @@ async def submit_check(
 
     queue = request.app.state.queue
     if queue is not None:
-        await queue.enqueue_job("run_check", str(job.id), _job_id=str(job.id))
+        # Must match the name arq registers, which is the function's own __name__.
+        # WorkerSettings.functions is the one place that mapping is defined.
+        await queue.enqueue_job(WORKER_FUNCTION, str(job.id), _job_id=str(job.id))
     log.info("check.queued", job_id=str(job.id), filename=filename, bytes=len(payload))
 
     return CheckAccepted(job_id=job.id, status=job.status, correlation_id=correlation_id)
@@ -183,6 +187,43 @@ async def submit_feedback(
         rule_id=entry.rule_id,
         corrected_verdict=body.corrected_verdict,
         created_at=entry.created_at or dt.datetime.now(dt.UTC),
+    )
+
+
+@router.get("/clauses/{chunk_id}", response_model=ClauseText)
+async def get_clause(chunk_id: str, request: Request) -> ClauseText:
+    """The full text of a cited clause, so a verdict can be read in context.
+
+    Served from the corpus already loaded in this process rather than from the vector
+    store. Retrieval by id is not a retrieval concern, and adding a fetch method to
+    VectorStore would widen an abstraction that exists for one comparison and is
+    deliberately kept to three methods.
+    """
+    clauses = getattr(request.app.state, "clauses", None)
+    if not clauses:
+        raise HTTPException(
+            status.HTTP_503_SERVICE_UNAVAILABLE,
+            "The regulation corpus is not loaded; run `python -m specguard.corpus.fetch`.",
+        )
+
+    clause = clauses.get(chunk_id)
+    if clause is None:
+        # A citation that does not resolve is exactly the failure non-negotiable #1
+        # exists to prevent, so it is a 404 rather than an empty body.
+        raise HTTPException(
+            status.HTTP_404_NOT_FOUND, f"No indexed clause with chunk_id {chunk_id}."
+        )
+
+    return ClauseText(
+        chunk_id=clause.chunk_id,
+        regulation=clause.regulation,
+        article=clause.article,
+        paragraph=clause.paragraph,
+        heading=clause.heading,
+        language=clause.language.value,
+        source_version=clause.source_version,
+        text=clause.text,
+        reference=clause.to_citation("x").reference,
     )
 
 

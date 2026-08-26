@@ -60,6 +60,26 @@ class FeedbackOut(BaseModel):
     created_at: dt.datetime
 
 
+class ClauseText(BaseModel):
+    """Returned by GET /clauses/{chunk_id}.
+
+    A citation carries the span a verdict relied on but not the clause it came from, so
+    on its own it cannot be shown in context. This is what makes "no verdict without a
+    resolvable citation" resolvable for a reader rather than only for the system: the
+    reviewer sees the article, with the relied-on words inside it.
+    """
+
+    chunk_id: str
+    regulation: str
+    article: str
+    paragraph: str | None = None
+    heading: str | None = None
+    language: str
+    source_version: str
+    text: str
+    reference: str = Field(description="Human-readable locator, e.g. 'Art. 21(1)'.")
+
+
 class Health(BaseModel):
     """Returned by GET /healthz."""
 

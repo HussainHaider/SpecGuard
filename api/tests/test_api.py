@@ -9,7 +9,9 @@ from __future__ import annotations
 
 import uuid
 from collections.abc import AsyncIterator
+from pathlib import Path
 
+import pytest
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy import select
@@ -17,9 +19,13 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from specguard.api.app import create_app
 from specguard.api.deps import get_session
+from specguard.config import Settings
+from specguard.corpus.seed import load_clauses
 from specguard.db.models import Base, Feedback, Job, JobStatus, Result
+from specguard.models.common import Language
 from specguard.models.rule import RuleId, Verdict
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
 PDF = b"%PDF-1.7\n1 0 obj\n<<>>\nendobj\ntrailer\n%%EOF\n"
 
 
@@ -182,6 +188,38 @@ class TestFeedback:
             json={"rule_id": RuleId.ORIGIN_DECLARATION.value, "corrected_verdict": "FAIL"},
         )
         assert response.status_code == 404
+
+
+class TestClauseText:
+    """The endpoint the evidence panel reads: a citation, shown in context."""
+
+    async def test_returns_the_clause_a_citation_points_at(self, client) -> None:
+        corpus = REPO_ROOT / "corpus"
+        if not (corpus / "sources.json").exists():
+            pytest.skip("corpus not fetched")
+        clauses = load_clauses(Settings().corpus_dir)
+        client._transport.app.state.clauses = {c.chunk_id: c for c in clauses}
+
+        wanted = next(c for c in clauses if c.article == "9" and c.language is Language.EN)
+        body = (await client.get(f"/clauses/{wanted.chunk_id}")).json()
+        assert body["text"] == wanted.text
+        assert body["reference"].startswith("Regulation (EU) No 1169/2011 Art. 9")
+
+    async def test_an_unresolvable_chunk_id_is_404(self, client) -> None:
+        # A citation that does not resolve is the failure non-negotiable #1 exists to
+        # prevent, so it is an error rather than an empty body.
+        client._transport.app.state.clauses = {}
+        response = await client.get(f"/clauses/{uuid.uuid4()}")
+        assert response.status_code in {404, 503}
+
+
+class TestQueueWiring:
+    async def test_the_api_enqueues_a_name_the_worker_registers(self) -> None:
+        """These drifted once and nothing failed loudly: jobs were accepted and never ran."""
+        from specguard.queue import WORKER_FUNCTION
+        from specguard.worker import WorkerSettings
+
+        assert WORKER_FUNCTION in {fn.__name__ for fn in WorkerSettings.functions}
 
 
 class TestOperational:

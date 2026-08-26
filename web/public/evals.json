@@ -1,0 +1,180 @@
+{
+  "generated_at": "2026-08-26T17:11:08+00:00",
+  "mode": "offline",
+  "baseline": {
+    "accuracy": 0.888,
+    "abstention_rate": 0.112,
+    "allergen_fnr": 0.0,
+    "false_passes": 0.0,
+    "wrong_verdicts": 0.0,
+    "citation_resolution_rate": 1.0,
+    "recall_at_5": 0.572,
+    "hit_rate_at_5": 0.759,
+    "cost_per_spec_usd": 0.0313
+  },
+  "gates": {
+    "min_accuracy": 0.85,
+    "max_allergen_false_negative_rate": 0.0,
+    "max_false_passes": 0,
+    "max_wrong_verdicts": 1,
+    "min_citation_resolution": 1.0
+  },
+  "splits": {
+    "all": {
+      "split": "all",
+      "records": 80,
+      "specs": 18,
+      "accuracy": 0.8875,
+      "abstention_rate": 0.1125,
+      "allergen_fnr": 0.0,
+      "allergen_cases": 6,
+      "false_passes": 0,
+      "wrong_verdicts": 0,
+      "citation_resolution_rate": 1.0,
+      "recall_at_5": 0.57183908045977,
+      "hit_rate_at_5": 0.7586206896551724,
+      "retrieval_queries": 58,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "cost_per_spec_usd": 0.03128055555555556,
+      "per_rule": {
+        "ALLERGEN_EMPHASIS": [
+          10,
+          10
+        ],
+        "HEALTH_CLAIM_AUTHORISED": [
+          10,
+          10
+        ],
+        "LEGAL_NAME_AND_QUID": [
+          5,
+          12
+        ],
+        "MANDATORY_FIELDS": [
+          12,
+          12
+        ],
+        "NUTRITION_ARITHMETIC": [
+          10,
+          10
+        ],
+        "NUTRITION_CLAIM_CONDITIONS": [
+          9,
+          10
+        ],
+        "NUTRITION_PER_100": [
+          8,
+          8
+        ],
+        "ORIGIN_DECLARATION": [
+          7,
+          8
+        ]
+      }
+    },
+    "dev": {
+      "split": "dev",
+      "records": 42,
+      "specs": 9,
+      "accuracy": 0.8571428571428571,
+      "abstention_rate": 0.14285714285714285,
+      "allergen_fnr": 0.0,
+      "allergen_cases": 3,
+      "false_passes": 0,
+      "wrong_verdicts": 0,
+      "citation_resolution_rate": 1.0,
+      "recall_at_5": 0.5641025641025641,
+      "hit_rate_at_5": 0.717948717948718,
+      "retrieval_queries": 39,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "cost_per_spec_usd": 0.030412666666666668,
+      "per_rule": {
+        "ALLERGEN_EMPHASIS": [
+          5,
+          5
+        ],
+        "HEALTH_CLAIM_AUTHORISED": [
+          6,
+          6
+        ],
+        "LEGAL_NAME_AND_QUID": [
+          2,
+          6
+        ],
+        "MANDATORY_FIELDS": [
+          6,
+          6
+        ],
+        "NUTRITION_ARITHMETIC": [
+          6,
+          6
+        ],
+        "NUTRITION_CLAIM_CONDITIONS": [
+          4,
+          5
+        ],
+        "NUTRITION_PER_100": [
+          4,
+          4
+        ],
+        "ORIGIN_DECLARATION": [
+          3,
+          4
+        ]
+      }
+    },
+    "held_out": {
+      "split": "held_out",
+      "records": 38,
+      "specs": 9,
+      "accuracy": 0.9210526315789473,
+      "abstention_rate": 0.07894736842105263,
+      "allergen_fnr": 0.0,
+      "allergen_cases": 3,
+      "false_passes": 0,
+      "wrong_verdicts": 0,
+      "citation_resolution_rate": 1.0,
+      "recall_at_5": 0.587719298245614,
+      "hit_rate_at_5": 0.8421052631578947,
+      "retrieval_queries": 19,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "cost_per_spec_usd": 0.032148444444444445,
+      "per_rule": {
+        "ALLERGEN_EMPHASIS": [
+          5,
+          5
+        ],
+        "HEALTH_CLAIM_AUTHORISED": [
+          4,
+          4
+        ],
+        "LEGAL_NAME_AND_QUID": [
+          3,
+          6
+        ],
+        "MANDATORY_FIELDS": [
+          6,
+          6
+        ],
+        "NUTRITION_ARITHMETIC": [
+          4,
+          4
+        ],
+        "NUTRITION_CLAIM_CONDITIONS": [
+          5,
+          5
+        ],
+        "NUTRITION_PER_100": [
+          4,
+          4
+        ],
+        "ORIGIN_DECLARATION": [
+          4,
+          4
+        ]
+      }
+    }
+  }
+}
