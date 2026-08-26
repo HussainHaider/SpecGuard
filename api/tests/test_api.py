@@ -276,3 +276,32 @@ class TestSchema:
             await session.refresh(stored, ["results", "feedback"])
             assert stored.results[0].requires_human_review
             assert stored.feedback[0].corrected_verdict == Verdict.PASS.value
+
+
+class TestWorkerWiring:
+    """The worker path, asserted without Docker.
+
+    Three separate defects lived here, all invisible to the existing tests because they
+    stub the queue: the container ran a module with no __main__, the API enqueued a name
+    arq had not registered, and redis_settings was a staticmethod where arq reads a
+    value. Each one alone means a submitted check sits at `queued` forever.
+    """
+
+    def test_redis_settings_is_a_value_not_a_method(self) -> None:
+        from arq.connections import RedisSettings
+
+        from specguard.worker import WorkerSettings
+
+        assert isinstance(WorkerSettings.redis_settings, RedisSettings)
+
+    def test_the_compose_command_runs_arq_not_the_module(self) -> None:
+        import re
+
+        compose = (REPO_ROOT / "docker-compose.yml").read_text(encoding="utf-8")
+        worker = compose.split("  worker:", 1)[1].split("\n  web:", 1)[0]
+        command = re.search(r"command: (\[.*\])", worker)
+        assert command is not None, "worker service has no command"
+        # `python -m specguard.worker` imports the module and exits: the container stays
+        # up and every job stays queued.
+        assert "arq" in command.group(1)
+        assert "specguard.worker.WorkerSettings" in command.group(1)

@@ -63,10 +63,21 @@ class Settings(BaseSettings):
 
     corpus_dir: Path = Path("corpus")
 
+    #: Where the synthetic specifications and the pre-computed demo reports live.
+    #: Explicit for the same reason as corpus_dir: inside the container the package sits
+    #: at /app/src/specguard, so walking up from __file__ lands on / rather than on a
+    #: repository root that does not exist there. compose sets both paths outright.
+    fixtures_dir: Path = Path("fixtures")
+
     retrieval_top_k: int = Field(default=5, ge=1)
     retrieval_prefetch_k: int = Field(default=50, ge=1)
     min_retrieval_score: float = Field(default=0.35, ge=0.0)
     min_extraction_confidence: float = Field(default=0.60, ge=0.0, le=1.0)
+
+    #: Serve pre-computed reports from ``fixtures/reports`` instead of running the graph.
+    #: Zero model calls, zero embedding calls, no Qdrant and no worker — which is what
+    #: makes a public deployment safe to leave running and free to leave up.
+    demo_mode: bool = False
 
     #: Origins the review UI is served from. A list rather than "*": this API takes file
     #: uploads and records reviewer decisions, neither of which belongs behind a wildcard.
@@ -75,7 +86,7 @@ class Settings(BaseSettings):
     graph_version: str = "graph@v1"
     log_level: str = "INFO"
 
-    @field_validator("corpus_dir")
+    @field_validator("corpus_dir", "fixtures_dir")
     @classmethod
     def _anchor_to_repo_root(cls, value: Path) -> Path:
         """Resolve a relative path against the repository root, not the working directory.

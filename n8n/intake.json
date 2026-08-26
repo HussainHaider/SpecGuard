@@ -1,0 +1,196 @@
+{
+  "name": "SpecGuard intake",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": { "interval": [{ "field": "minutes", "minutesInterval": 2 }] }
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000001",
+      "name": "Every 2 minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-460, 300]
+    },
+    {
+      "parameters": {
+        "command": "=ls -1 {{$env.INTAKE_WATCH_DIR || '/workflows/intake/inbox'}}/*.pdf 2>/dev/null || true"
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000002",
+      "name": "List inbox",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [-240, 300],
+      "notes": "Polled rather than watched. A filesystem watcher fires on the first byte of a file that is still being copied, and a half-written PDF is rejected as not-a-PDF for reasons nobody can reproduce."
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per file, and nothing at all when the inbox is empty — an empty\n// string would otherwise become a single item with a blank path.\nconst listing = ($input.first().json.stdout || '').trim();\nif (!listing) { return []; }\nreturn listing.split('\\n').filter(Boolean).map((path) => ({ json: { path, filename: path.split('/').pop() } }));"
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000003",
+      "name": "One item per file",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-20, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://api:8000/checks",
+        "method": "POST",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": { "response": { "response": { "neverError": true, "fullResponse": true } } }
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000005",
+      "name": "POST /checks",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [420, 300],
+      "notes": "http://api:8000 — the compose service name. localhost here resolves to the n8n container itself, which is the single most confusing way this workflow can fail."
+    },
+    {
+      "parameters": {
+        "filePath": "={{ $json.path }}",
+        "dataPropertyName": "data"
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000004",
+      "name": "Read the PDF",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": { "amount": 8, "unit": "seconds" },
+      "id": "b1a1e1c0-0001-4000-8000-000000000006",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [640, 300],
+      "webhookId": "b1a1e1c0-0001-4000-8000-0000000000ff"
+    },
+    {
+      "parameters": {
+        "url": "=http://api:8000/checks/{{ $('POST /checks').item.json.body.job_id }}",
+        "options": { "response": { "response": { "neverError": true, "fullResponse": true } } }
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000007",
+      "name": "GET /checks/{id}",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [860, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "version": 2 },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.status }}",
+              "rightValue": "succeeded",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000008",
+      "name": "Finished?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1080, 300],
+      "notes": "Not finished loops back to Wait. A check is several model calls and takes tens of seconds, so the first poll almost never finds it done."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "version": 2 },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.report.overall_verdict }}",
+              "rightValue": "PASS",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "b1a1e1c0-0001-4000-8000-000000000009",
+      "name": "Compliant?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1300, 300]
+    },
+    {
+      "parameters": {
+        "command": "=mkdir -p {{$env.INTAKE_ARCHIVE_DIR || '/workflows/intake/archive'}} && mv -f '{{ $('One item per file').item.json.path }}' {{$env.INTAKE_ARCHIVE_DIR || '/workflows/intake/archive'}}/"
+      },
+      "id": "b1a1e1c0-0001-4000-8000-00000000000a",
+      "name": "Archive it",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1540, 180],
+      "notes": "Moved out of the inbox, which is what makes the run idempotent: the next poll cannot pick the same file up again."
+    },
+    {
+      "parameters": {
+        "jsCode": "// A summary a person can act on without opening the tool: which rules failed,\n// what each one said, and the clause it cited.\nconst body = $input.first().json.body;\nconst report = body.report;\nconst failing = report.results.filter((r) => r.verdict === 'FAIL');\nconst review = report.results.filter((r) => r.verdict === 'NEEDS_REVIEW');\nconst lines = failing.map((r) => {\n  const citation = (r.citations || [])[0];\n  const reference = citation ? `${citation.regulation} ${citation.article}` : 'no citation';\n  return `• ${r.rule_id} — ${r.rationale} [${reference}]`;\n});\nreturn [{ json: {\n  filename: body.filename,\n  job_id: body.job_id,\n  overall_verdict: report.overall_verdict,\n  failing: failing.length,\n  needs_review: review.length,\n  summary: lines.join('\\n') || 'No rule failed outright; see the report.',\n  escalated: failing.some((r) => ['ALLERGEN_EMPHASIS', 'MANDATORY_FIELDS'].includes(r.rule_id)),\n} }];"
+      },
+      "id": "b1a1e1c0-0001-4000-8000-00000000000b",
+      "name": "Summarise the failure",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1540, 420]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.INTAKE_FAILURE_WEBHOOK }}",
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": { "response": { "response": { "neverError": true } } }
+      },
+      "id": "b1a1e1c0-0001-4000-8000-00000000000c",
+      "name": "Notify",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1760, 420],
+      "notes": "INTAKE_FAILURE_WEBHOOK is read from the environment rather than stored as a credential, so nothing secret is exported to n8n/*.json. The file stays out of the inbox either way; a failing spec is not archived, so a human sees it is still there."
+    }
+  ],
+  "connections": {
+    "Every 2 minutes": { "main": [[{ "node": "List inbox", "type": "main", "index": 0 }]] },
+    "List inbox": { "main": [[{ "node": "One item per file", "type": "main", "index": 0 }]] },
+    "One item per file": { "main": [[{ "node": "Read the PDF", "type": "main", "index": 0 }]] },
+    "Read the PDF": { "main": [[{ "node": "POST /checks", "type": "main", "index": 0 }]] },
+    "POST /checks": { "main": [[{ "node": "Wait", "type": "main", "index": 0 }]] },
+    "Wait": { "main": [[{ "node": "GET /checks/{id}", "type": "main", "index": 0 }]] },
+    "GET /checks/{id}": { "main": [[{ "node": "Finished?", "type": "main", "index": 0 }]] },
+    "Finished?": {
+      "main": [
+        [{ "node": "Compliant?", "type": "main", "index": 0 }],
+        [{ "node": "Wait", "type": "main", "index": 0 }]
+      ]
+    },
+    "Compliant?": {
+      "main": [
+        [{ "node": "Archive it", "type": "main", "index": 0 }],
+        [{ "node": "Summarise the failure", "type": "main", "index": 0 }]
+      ]
+    },
+    "Summarise the failure": { "main": [[{ "node": "Notify", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "active": false,
+  "versionId": "m7-intake-v1",
+  "id": "specguard-intake",
+  "tags": []
+}

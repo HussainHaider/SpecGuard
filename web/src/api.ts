@@ -63,6 +63,8 @@ export interface CheckReport {
   created_at: string;
   results: RuleResult[];
   guardrails: GuardrailFlags;
+  demo: boolean;
+  demo_note: string | null;
   corpus_version: string;
   graph_version: string;
   duration_ms: number;

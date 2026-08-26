@@ -255,6 +255,15 @@ textarea {
   color: var(--pass);
 }
 
+/* Distinct from the verdict colours on purpose: this is a statement about the
+   provenance of the whole report, not a severity. */
+.notice--demo {
+  border-color: var(--border-strong);
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  color: var(--ink-muted);
+}
+
 .notice--escalated {
   border-color: #fda29b;
   background: var(--fail-tint);

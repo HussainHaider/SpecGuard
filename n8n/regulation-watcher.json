@@ -1,0 +1,149 @@
+{
+  "name": "SpecGuard regulation watcher",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "weeks", "triggerAtDay": [1], "triggerAtHour": 4 }]
+        }
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000001",
+      "name": "Weekly, Monday 04:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-480, 320],
+      "notes": "Fires in GENERIC_TIMEZONE. Unset, this runs at an hour nobody chose."
+    },
+    {
+      "parameters": {
+        "command": "cd /app && python -m specguard.corpus.fetch --corpus-dir /app/corpus && python -c \"import json,hashlib,pathlib;d=pathlib.Path('/app/corpus/sources.json');print(json.dumps({'digest':hashlib.sha256(d.read_bytes()).hexdigest(),'sources':json.loads(d.read_text())}))\""
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000002",
+      "name": "Fetch the acts",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [-260, 320],
+      "notes": "Re-downloads the consolidated acts and prints the manifest digest. Cheap: two documents, and the fetcher writes only when the text actually differs."
+    },
+    {
+      "parameters": {
+        "jsCode": "// A consolidated act is immutable — when the EU consolidates again it gets a new\n// CELEX id. So a change here is either a new consolidation or an amended text, and\n// either way the sha256 of the manifest moves. Nothing downstream runs when it hasn't.\nconst payload = JSON.parse($input.first().json.stdout.trim().split('\\n').pop());\nconst previous = $getWorkflowStaticData('global');\nconst changed = previous.digest !== payload.digest;\nprevious.digest = payload.digest;\nprevious.checked_at = new Date().toISOString();\nreturn [{ json: { changed, digest: payload.digest, sources: payload.sources } }];"
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000003",
+      "name": "Did the corpus change?",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-40, 320],
+      "notes": "Static workflow data holds the last digest, so a week with no change is a no-op rather than a full re-index and a re-run of every stored check."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "version": 2 },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.changed }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true", "singleValue": true }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000004",
+      "name": "Changed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [180, 320]
+    },
+    {
+      "parameters": {
+        "command": "cd /app && python -m specguard.corpus.seed"
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000005",
+      "name": "Re-index",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [420, 240],
+      "notes": "Idempotent by construction. A clause's point id is its deterministic chunk_id, derived from (regulation, article, paragraph, source_version), so a re-index overwrites the same points rather than duplicating them — and every citation already stored in Postgres still resolves. No --reset: dropping the collection is only correct when the chunking itself changed."
+    },
+    {
+      "parameters": {
+        "command": "cd /app && python -m specguard.ops.affected --json"
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000006",
+      "name": "Which checks are affected?",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [660, 240],
+      "notes": "Compares the text behind each stored citation against the freshly indexed corpus and returns only the passed checks whose cited clauses actually changed. Derived from the corpus, never from a list this workflow keeps — a stored worklist would drift the moment a run failed halfway."
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per affected job, and nothing when none are. An empty array here is the\n// normal outcome: most consolidations touch articles no stored report ever cited.\nconst payload = JSON.parse($input.first().json.stdout.trim().split('\\n').pop());\nreturn (payload.affected || []).map((job) => ({ json: job }));"
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000007",
+      "name": "One item per affected check",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [880, 240]
+    },
+    {
+      "parameters": {
+        "url": "=http://api:8000/checks/{{ $json.job_id }}/recheck",
+        "method": "POST",
+        "options": { "response": { "response": { "neverError": true, "fullResponse": true } } }
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000008",
+      "name": "Re-run the check",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1100, 240],
+      "notes": "http://api:8000 — the compose service name. Re-running is keyed on the original job id, and the API refuses if the source document is no longer retained, so a re-run cannot invent a report from a document nobody has."
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst requeued = items.filter((i) => (i.json.statusCode || 0) < 300).length;\nreturn [{ json: {\n  digest: $('Did the corpus change?').first().json.digest,\n  affected: items.length,\n  requeued,\n  refused: items.length - requeued,\n} }];"
+      },
+      "id": "c2b2f2d0-0002-4000-8000-000000000009",
+      "name": "Summarise the run",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1320, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "// The no-change path still reports, so a silent week is distinguishable from a\n// workflow that stopped running.\nreturn [{ json: { digest: $json.digest, affected: 0, requeued: 0, refused: 0, unchanged: true } }];"
+      },
+      "id": "c2b2f2d0-0002-4000-8000-00000000000a",
+      "name": "Nothing changed",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [420, 440]
+    }
+  ],
+  "connections": {
+    "Weekly, Monday 04:00": { "main": [[{ "node": "Fetch the acts", "type": "main", "index": 0 }]] },
+    "Fetch the acts": { "main": [[{ "node": "Did the corpus change?", "type": "main", "index": 0 }]] },
+    "Did the corpus change?": { "main": [[{ "node": "Changed?", "type": "main", "index": 0 }]] },
+    "Changed?": {
+      "main": [
+        [{ "node": "Re-index", "type": "main", "index": 0 }],
+        [{ "node": "Nothing changed", "type": "main", "index": 0 }]
+      ]
+    },
+    "Re-index": { "main": [[{ "node": "Which checks are affected?", "type": "main", "index": 0 }]] },
+    "Which checks are affected?": {
+      "main": [[{ "node": "One item per affected check", "type": "main", "index": 0 }]]
+    },
+    "One item per affected check": {
+      "main": [[{ "node": "Re-run the check", "type": "main", "index": 0 }]]
+    },
+    "Re-run the check": { "main": [[{ "node": "Summarise the run", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "active": false,
+  "versionId": "m7-watcher-v1",
+  "id": "specguard-regulation-watcher",
+  "tags": []
+}

@@ -49,6 +49,14 @@ class CheckReport(SpecGuardModel):
     results: list[RuleResult]
     guardrails: GuardrailFlags = Field(default_factory=GuardrailFlags)
 
+    demo: bool = Field(
+        default=False,
+        description="This report was replayed from a stored fixture, not computed now. "
+        "Carried on the report itself so every consumer sees it — a replayed result that "
+        "looks live is a lie told to whoever is evaluating the system.",
+    )
+    demo_note: str | None = None
+
     corpus_version: str = Field(
         min_length=1,
         description="Corpus snapshot the citations resolve against, e.g. '2024-11-01'.",

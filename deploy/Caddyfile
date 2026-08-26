@@ -1,0 +1,66 @@
+# Caddy terminates TLS, serves the built UI, and proxies the API. It is the only
+# process on the box listening on a public port.
+#
+# Basic auth lives here rather than in the application. The application has no user
+# model and is not getting one (CLAUDE.md puts authentication out of scope), so the
+# choice is between a real access boundary at the edge and a fake one in code that
+# would have to be maintained as though it were real.
+#
+# Set SPECGUARD_DOMAIN and SPECGUARD_BASIC_AUTH_HASH in the environment Caddy runs with.
+# Generate the hash with:  docker run --rm caddy caddy hash-password --plaintext 'secret'
+
+{
+	# A real address here turns on automatic HTTPS via Let's Encrypt.
+	email {$CADDY_EMAIL:admin@example.com}
+	# The admin API is a full control plane over this proxy. Nothing needs it here.
+	admin off
+}
+
+{$SPECGUARD_DOMAIN:localhost} {
+	encode zstd gzip
+
+	# Applied before any route below, so nothing is reachable unauthenticated —
+	# including a route someone adds later and forgets to protect.
+	basic_auth {
+		{$SPECGUARD_BASIC_AUTH_USER:reviewer} {$SPECGUARD_BASIC_AUTH_HASH}
+	}
+
+	# The API. Rate-limited by Caddy's own connection handling rather than a plugin:
+	# this is one reviewer at a time, and a rate-limit module is a dependency to keep
+	# current for a threat this deployment does not have.
+	handle /checks* {
+		reverse_proxy api:8000
+	}
+	handle /clauses* {
+		reverse_proxy api:8000
+	}
+	handle /healthz {
+		reverse_proxy api:8000
+	}
+
+	# Prometheus exposition. Deliberately not public: it publishes verdict counts, spend
+	# and guardrail trips, which is operational detail about a system a stranger has no
+	# business profiling. Reachable over the SSH tunnel on the internal network.
+	handle /metrics {
+		respond "Not exposed publicly. Reach it over the tunnel at http://localhost:8000/metrics." 404
+	}
+
+	# Everything else is the single-page app. try_files at the nginx layer inside the
+	# web image already handles the two client-side routes.
+	handle {
+		reverse_proxy web:5173
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+
+	log {
+		output stdout
+		format json
+	}
+}
