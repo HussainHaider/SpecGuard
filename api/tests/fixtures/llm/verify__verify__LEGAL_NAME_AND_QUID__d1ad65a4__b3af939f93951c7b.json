@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 897,
-  "output_tokens": 110,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1105,
+  "output_tokens": 137,
   "response": {
     "support": "insufficient",
-    "reason": "The cited clause (Art. 9(1)(d)) requires the indication of the quantity of certain ingredients or categories of ingredients, which is the QUID requirement. However, the verdict also discusses the requirement for a legal/customary/descriptive name, which is covered by Art. 9(1)(a), not (d). The cited clause supports only the QUID part of the verdict, not the naming requirement. Therefore, the clause is insufficient to fully support the verdict as stated."
+    "reason": "The cited clause (Art. 9(1)(a)) requires the name of the food to be provided, which supports the part of the verdict about the product having a legal or descriptive name. However, the verdict also claims compliance with the QUID (quantitative ingredient declaration) requirement for named ingredients. The QUID requirement is established in Art. 9(1)(d) and further detailed in Art. 22, not in Art. 9(1)(a). Therefore, the clause cited is insufficient to support the full verdict, as it does not establish the QUID requirement."
   }
 }

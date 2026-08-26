@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 700,
-  "output_tokens": 165,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 910,
+  "output_tokens": 102,
   "response": {
-    "support": "insufficient",
-    "reason": "The cited clause (Art. 22(1)(a)) requires a quantitative indication (QUID) when an ingredient appears in the name of the food or is usually associated with that name. However, the verdict also asserts that the product provides a QUID ('Apple juice concentrate 12%') and that this satisfies the requirement. The clause does not state what constitutes a sufficient QUID declaration or how it must be presented—only that it is required in certain cases. Therefore, the clause establishes when QUID is required, but does not confirm that the specific declaration given ('Apple juice concentrate 12%') satisfies the requirement. Additional regulatory text would be needed to verify that the manner of declaration is compliant. Thus, the clause is insufficient to fully support the verdict."
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1)(a), establishes the requirement that the quantity of an ingredient must be indicated when that ingredient appears in the name of the food or is usually associated with that name. The verdict turns on this requirement by assessing whether 'apple juice concentrate' appears in the name and whether a quantitative declaration is provided. Therefore, the clause directly supports the legal grounding of the verdict."
   }
 }

@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 795,
-  "output_tokens": 140,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1005,
+  "output_tokens": 114,
   "response": {
-    "support": "insufficient",
-    "reason": "The quoted clause (Art. 26(2)(a)) requires origin labeling if omitting it could mislead consumers about the true origin of the food, especially if the labeling or information would otherwise suggest a different origin. The verdict claims compliance because the origin is declared and there is no indication of potential consumer deception. However, the clause does not itself state that declaring the origin is sufficient to satisfy all requirements, nor does it address the specifics of primary ingredient origin (which is covered in Art. 26(3), not quoted here). Therefore, the clause alone is insufficient to fully support the verdict as stated."
+    "support": "supports",
+    "reason": "The quoted clause from Art. 26(2)(a) of Regulation (EU) No 1169/2011 establishes that indication of the country of origin or place of provenance is mandatory if omitting it could mislead consumers about the true origin of the food, especially if the labeling or information would otherwise suggest a different origin. The verdict turns on this requirement, stating that the origin is declared and there is no risk of misleading the consumer. Therefore, the clause directly supports the requirement being assessed in the verdict."
   }
 }

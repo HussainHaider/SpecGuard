@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 728,
-  "output_tokens": 73,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 938,
+  "output_tokens": 105,
   "response": {
     "support": "supports",
-    "reason": "The clause requires that the quantity of an ingredient must be indicated if it appears in the name of the food. The verdict states that the product name includes 'honey' and 'almonds', and the ingredients list provides their percentages. This directly satisfies the requirement stated in the clause, so the clause supports the verdict."
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1)(a), specifically requires a quantitative indication (QUID) for ingredients that appear in the name of the food. The verdict turns on this requirement, stating that the product name includes 'honey' and 'almonds', and that their percentages are provided in the ingredients list. This is exactly the obligation set out in the cited clause, so the citation supports the verdict."
   }
 }

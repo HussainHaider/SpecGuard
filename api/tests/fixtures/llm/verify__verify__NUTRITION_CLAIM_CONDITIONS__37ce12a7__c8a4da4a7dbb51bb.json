@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 858,
+  "output_tokens": 106,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause from Regulation (EC) No 1924/2006 Annex explicitly states the conditions under which a 'source of fibre' claim may be made: the product must contain at least 3 g of fibre per 100 g or at least 1.5 g of fibre per 100 kcal. The verdict turns on whether the product meets these thresholds, which it does according to the declared nutrition values. Therefore, the clause directly establishes the requirement the verdict is about."
+  }
+}

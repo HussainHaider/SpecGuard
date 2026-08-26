@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 774,
-  "output_tokens": 137,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 984,
+  "output_tokens": 116,
   "response": {
-    "support": "insufficient",
-    "reason": "The quoted clause (Art. 26(2)(a)) requires the indication of origin if omitting it could mislead consumers, especially if the labeling would otherwise suggest a different origin. However, the verdict also references a requirement from Art. 26(3) about declaring the origin of the primary ingredient if it differs from the product's origin. The quoted clause does not mention this primary ingredient requirement; it only addresses the general obligation to indicate origin to prevent misleading consumers. Therefore, the clause alone is insufficient to support the full reasoning of the verdict, which relies on both Art. 26(2) and (3)."
+    "support": "supports",
+    "reason": "The cited clause (Art. 26(2)(a) of Regulation (EU) No 1169/2011) establishes that the indication of the country of origin or place of provenance is mandatory if omitting it could mislead consumers, especially if the labeling would otherwise suggest a different origin. The verdict turns on this requirement, stating that both the product and its primary ingredient are declared as 'Deutschland', so there is no risk of misleading the consumer. The clause is directly relevant and supports the legal grounding of the verdict."
   }
 }

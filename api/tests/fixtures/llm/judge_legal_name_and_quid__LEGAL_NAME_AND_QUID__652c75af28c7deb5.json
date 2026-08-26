@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4333,
+  "output_tokens": 296,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product does not provide a legal name or a customary/descriptive name as required. The 'legal_name' field is given as 'Chef's Reserve', which is a brand or fancy name, not a legal or descriptive name for the food. The product name 'Pasta Sauce with Mushrooms' would be an acceptable descriptive name, but it is not listed as the legal name. For the QUID requirement, the ingredient 'Mushrooms' appears in the product name, and its percentage (14%) is declared in the ingredients list, which satisfies the QUID requirement. However, because the legal name requirement is not met, the overall verdict is FAIL.",
+    "suggested_fix": "Replace the legal name 'Chef's Reserve' with a proper legal or descriptive name such as 'Pasta Sauce with Mushrooms'.",
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer;"
+      }
+    ],
+    "confidence": 0.95
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 776,
-  "output_tokens": 132,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 986,
+  "output_tokens": 123,
   "response": {
-    "support": "insufficient",
-    "reason": "The clause (Art. 22(1)) specifies when a quantitative indication (QUID) is required—if the ingredient appears in the name, is emphasised, or is essential to characterise the food. However, it does not specify what constitutes a sufficient QUID declaration or whether stating '100%' is always adequate. The verdict claims the QUID requirement is satisfied by the '100%' declaration, but the clause does not address sufficiency of the form or placement of the QUID, only the circumstances under which it is required. Therefore, the clause is insufficient to support the verdict as stated."
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that a quantitative indication (QUID) is required when an ingredient appears in the name of the food, is emphasised, or is essential to characterise the food. The verdict turns on this requirement, stating that the product's ingredient ('Atlantic Salmon 100%') matches the name and composition, and the QUID requirement is satisfied by the explicit '100%' declaration. The clause is directly relevant and supports the legal grounding of the verdict."
   }
 }

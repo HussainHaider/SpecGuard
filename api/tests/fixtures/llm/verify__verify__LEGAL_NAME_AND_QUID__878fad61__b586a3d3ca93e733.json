@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 676,
-  "output_tokens": 112,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 886,
+  "output_tokens": 152,
   "response": {
     "support": "insufficient",
-    "reason": "The cited clause only addresses how a compound ingredient may be listed in the ingredients list—specifically, that it can be named by its established or customary name, with its proportion by weight, provided its ingredients are listed immediately after. It does not establish requirements for QUID (quantitative ingredient declarations) when an ingredient appears in the product name or is essential to characterise the food. Therefore, the clause is insufficient to support the verdict, which references QUID requirements and naming rules beyond what this clause covers."
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Annex VII, Part E.1) addresses how a compound ingredient may be listed in the ingredients list—specifically, that it can be named by its legal or customary name, provided its ingredients are listed immediately after. The verdict, however, turns on the requirement for QUID (quantitative ingredient declaration) when an ingredient appears in the name or is essential to characterise the food. The cited clause does not establish the QUID requirement; that is found elsewhere in Regulation (EU) No 1169/2011 (specifically Article 22 and Annex VIII). Therefore, the clause is insufficient to ground the verdict."
   }
 }

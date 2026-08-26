@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 968,
+  "output_tokens": 168,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)) establishes when the indication of the quantity of an ingredient (QUID) is required, specifically when the ingredient appears in the name, is emphasised, or is essential to characterise the food. However, the verdict turns primarily on whether the correct legal name is used ('Bella Selezione' vs. 'Atlantic Salmon Fillets'), which is a requirement addressed elsewhere in the regulation (specifically, Article 17 on the name of the food). The clause cited is about QUID, not about the requirements for the legal name of the food. Therefore, the citation is insufficient to ground the verdict about the legal name, though it is relevant to the QUID discussion."
+  }
+}

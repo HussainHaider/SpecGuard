@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 717,
-  "output_tokens": 89,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 927,
+  "output_tokens": 115,
   "response": {
     "support": "supports",
-    "reason": "The clause requires that the quantity of an ingredient be indicated when it appears in the name of the food or is usually associated with that name. The verdict states that the product provides a legal name ('Chicken soup with vegetables') and declares the percentages of 'Chicken' and 'Vegetable' ingredients in the ingredient list. This directly satisfies the requirement stated in the clause, so the clause supports the verdict."
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)(a)) establishes the requirement that the quantity of an ingredient must be indicated when that ingredient appears in the name of the food or is usually associated with that name. The verdict turns on whether the product meets this requirement by providing the percentages of 'Chicken' and 'Vegetable' ingredients in the name 'Chicken & Vegetable Soup.' The clause is directly about the obligation the verdict addresses, so the citation supports the verdict."
   }
 }

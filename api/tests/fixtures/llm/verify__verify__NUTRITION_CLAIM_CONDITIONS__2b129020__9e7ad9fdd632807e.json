@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 628,
-  "output_tokens": 78,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 838,
+  "output_tokens": 95,
   "response": {
     "support": "supports",
-    "reason": "The clause explicitly states that a food may be claimed as 'high in fibre' if it contains at least 6 g of fibre per 100 g. The verdict confirms that the product contains 7.4 g of fibre per 100 g, which meets this requirement. Therefore, the clause directly supports the verdict that the claim is compliant."
+    "reason": "The cited clause from Regulation (EC) No 1924/2006 Annex explicitly states the requirement for making a 'high in fibre' claim: the product must contain at least 6 g of fibre per 100 g or at least 3 g per 100 kcal. The verdict turns on this exact requirement, assessing compliance based on the product's fibre content per 100 g. Therefore, the clause supports the verdict."
   }
 }

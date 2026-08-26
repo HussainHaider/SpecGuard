@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 720,
-  "output_tokens": 109,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 930,
+  "output_tokens": 115,
   "response": {
-    "support": "insufficient",
-    "reason": "The cited clause states that certain claims (reduction of disease risk, and claims referring to children's development and health) may be made only if authorised according to a specific procedure. However, it does not itself prohibit unauthorised claims, nor does it specify that claims about preventing, treating, or curing diseases are prohibited unless authorised. The verdict asserts a prohibition and overstatement that is not directly established by this clause alone; additional regulatory text would be needed to support the full reasoning of the verdict."
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EC) No 1924/2006 Art. 14(1)) establishes that reduction of disease risk claims and claims referring to children's development and health may only be made if they have been authorised according to a specific procedure. The verdict turns on the requirement that such claims must be authorised, and finds non-compliance because the claim in question ('Helps prevent colds and shortens their duration') is not shown to be authorised. The clause directly establishes the requirement the verdict relies on."
   }
 }

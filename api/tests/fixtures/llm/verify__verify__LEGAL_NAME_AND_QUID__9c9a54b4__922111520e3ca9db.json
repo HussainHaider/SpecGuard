@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 736,
-  "output_tokens": 174,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 946,
+  "output_tokens": 104,
   "response": {
-    "support": "insufficient",
-    "reason": "The cited clause (Art. 22(1)(a)) establishes that a QUID declaration is required for ingredients that appear in the name of the food. However, the verdict also claims that the QUID requirement is satisfied because the main vegetables are individually quantified. The clause does not specify whether quantifying individual vegetables (rather than a total 'vegetables' amount) is sufficient, nor does it address whether all named ingredients must be quantified or how to handle categories. Therefore, while the clause supports the need for a QUID declaration for 'Chicken' and 'Vegetable(s)', it does not establish that the way the QUID is presented in the ingredients list (individual quantification) satisfies the requirement. Additional regulatory text would be needed to confirm this. Thus, the clause is insufficient to fully support the verdict."
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)(a)) establishes that a quantitative ingredient declaration (QUID) is required when an ingredient appears in the name of the food. The verdict turns on this requirement, stating that 'Chicken' and 'Vegetable(s)' appear in the name and that their quantities are declared, thus satisfying the QUID requirement. The clause directly supports the legal basis for the verdict."
   }
 }

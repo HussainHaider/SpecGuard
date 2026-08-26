@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 754,
-  "output_tokens": 130,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 964,
+  "output_tokens": 107,
   "response": {
-    "support": "insufficient",
-    "reason": "The clause (Art. 22(1)) establishes when the indication of the quantity of an ingredient (QUID) is required, specifically if the ingredient appears in the name, is emphasised, or is essential to characterise the food. However, the verdict also claims that the product is given a legal or customary name, which is not addressed by this clause. The clause does support the requirement for QUID in the circumstances described, but it does not address or establish the requirements for what constitutes a legal or customary name. Therefore, the clause is insufficient to fully support the verdict as stated."
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement for a quantitative ingredient declaration (QUID) when an ingredient appears in the name of the food, is emphasised on the label, or is essential to characterise the food. The verdict turns on whether 'Wholemeal WHEAT flour' meets these criteria and whether its percentage is declared. The clause directly sets out these requirements, so it supports the verdict."
   }
 }

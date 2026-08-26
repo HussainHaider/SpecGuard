@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 3688,
+  "output_tokens": 334,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product specification lists 'Bella Selezione' as the legal name, which is a brand or fancy name, not a legal, customary, or descriptive name for the food. The actual product name is 'Atlantic Salmon Fillets', which is a descriptive name and would be compliant if used as the legal name. The requirement is not met because the legal name field does not provide the correct name. For the QUID requirement, the ingredient 'Atlantic SALMON' appears in the name and is emphasised, and its percentage (100%) is declared, which satisfies the QUID requirement.",
+    "suggested_fix": "Replace 'Bella Selezione' in the legal name field with 'Atlantic Salmon Fillets' or another appropriate legal, customary, or descriptive name for the food.",
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer; (b) is emphasised on the labelling in words, pictures or graphics; or (c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

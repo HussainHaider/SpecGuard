@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 1673,
-  "output_tokens": 92,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1883,
+  "output_tokens": 111,
   "response": {
     "support": "insufficient",
-    "reason": "The quoted clause only defines 'legal name' as the name prescribed by Union or Member State law. It does not address the requirements for QUID (quantitative ingredient declaration) or specify when QUID is required. The verdict discusses compliance with QUID requirements under Art. 22(1), but this clause does not establish those requirements. Therefore, the clause is insufficient to support the verdict."
+    "reason": "The quoted clause (definition of 'legal name' in Art. 2(2)(n)) only defines what a 'legal name' is; it does not establish the requirement to provide a legal name, nor does it address the requirement for QUID (quantitative ingredient declaration) for ingredients appearing in the name. The verdict turns on compliance with the QUID requirement under Art. 22(1), which is not contained in this clause. Therefore, this clause is insufficient to ground the verdict."
   }
 }

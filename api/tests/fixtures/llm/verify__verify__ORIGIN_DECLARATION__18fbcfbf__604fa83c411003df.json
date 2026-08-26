@@ -1,9 +1,9 @@
 {
-  "note": "recorded from openai/gpt-4.1 with verify@v1",
-  "input_tokens": 732,
-  "output_tokens": 92,
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 942,
+  "output_tokens": 108,
   "response": {
     "support": "supports",
-    "reason": "The clause requires that if the origin of the food is given and it differs from that of the primary ingredient, the origin of the primary ingredient must also be given or a statement that it differs. The verdict states that both the food's origin (Belgium) and the primary ingredient's origin (Ghana) are declared, which directly fulfills the requirement stated in the clause. Therefore, the clause supports the verdict."
+    "reason": "The cited clause (Art. 26(3) of Regulation (EU) No 1169/2011) establishes the requirement that if the origin of a food is indicated and it differs from that of its primary ingredient, the origin of the primary ingredient must also be indicated or it must be stated that it is different. The verdict turns on this exact requirement, stating that both origins are declared in the specification, thus satisfying the obligation. The clause is directly relevant and supports the verdict."
   }
 }

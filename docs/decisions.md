@@ -169,7 +169,30 @@ would otherwise have to reverse-engineer from the code.
 - **Choice:** not (a) — the verifier is the reason no wrong verdict was produced in 112
   evaluations, and every mismatch was an abstention rather than a false PASS or FAIL.
   Leaning toward (b), with (c) for LEGAL_NAME_AND_QUID, which asks two questions at once.
-- **Cost:** the abstention rate is currently far too high to be useful — 23 of 28 specs
-  abstained on LEGAL_NAME_AND_QUID. Left unfixed in this milestone rather than tuned
-  blind: the account ran out of API credits mid-run, and changing a prompt without being
-  able to re-measure is how you convince yourself of an improvement you never made.
+- **Resolution (measured, verify@v2):** the verifier was being asked whether a clause
+  *proves compliance*. It cannot: compliance is a fact about the specification, and a
+  clause's job is to establish what the obligation is. v2 asks for legal grounding
+  instead, while still rejecting a clause about a different obligation. Correct verdicts
+  went from 74/112 to 96/120, and `NUTRITION_CLAIM_CONDITIONS` held at 4/4 → 5/5, which
+  is what distinguishes a discriminating change from a blanket-permissive one.
+- **Cost:** one wrong verdict appeared where there had been none — a false FAIL on a
+  compliant spec whose origins are both declared. The safer direction to err, but still
+  an error, and worth stating plainly: v1's clean record came from abstaining on 82% of
+  one rule, which suppresses bad judgements by accident rather than catching them.
+
+## 012 — A defect must implement what it claims
+
+- **Context:** Two specs flipped to false PASS under verify@v2, both on
+  `brand_name_as_legal_name`. The defect built the name as `f"{product_name} Selection"`
+  — which keeps every descriptive word and appends a marketing one.
+- **Cause:** Art. 17 accepts a descriptive name, so "Pasta Sauce with Mushrooms
+  Selection" is arguably compliant. The fixture asserted a failure a careful reviewer
+  would dispute, and the model was right to pass it.
+- **Choice:** fix the fixture, not the verifier. The defect now uses names with no
+  descriptive content at all ("Bella Selezione", "Chef's Reserve"), which is what "a
+  brand name in place of the legal name" actually means. Both false PASSes disappeared.
+- **Cost:** ground truth had to be revised after a model disagreed with it, which is one
+  step away from fitting the test to the answer. The distinction that makes it
+  legitimate: the defect did not implement its own stated description, the same failure
+  as seeding an allergen defect on a product with no allergens (decision 011's
+  neighbour in M2). Generation is deterministic, so only the two affected PDFs changed.
