@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3285,
+  "output_tokens": 416,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares the country of origin for both the product and its primary ingredient (Polen/Poland). The primary ingredient is likely water (as it is listed first and has no percentage, while apple juice concentrate is only 12%), but both water and apple juice concentrate are declared as originating from Poland. There is no indication that omitting the origin would mislead the consumer, and the origin of the primary ingredient matches the declared origin of the product. Therefore, the requirements of Art. 26(2) and Art. 26(3) are satisfied.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "b24bc226-c399-5f65-bcfc-39811a5305d2",
+        "quoted_span": "Die Angabe des Ursprungslands oder des Herkunftsorts ist in folgenden Fällen verpflichtend: a) falls ohne diese Angabe eine Irreführung der Verbraucher über das tatsächliche Ursprungsland oder den tatsächlichen Herkunftsort des Lebensmittels möglich wäre, insbesondere wenn die dem Lebensmittel beigefügten Informationen oder das Etikett insgesamt sonst den Eindruck erwecken würden, das Lebensmittel komme aus einem anderen Ursprungsland oder Herkunftsort;"
+      },
+      {
+        "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+        "quoted_span": "Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so a) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder b) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

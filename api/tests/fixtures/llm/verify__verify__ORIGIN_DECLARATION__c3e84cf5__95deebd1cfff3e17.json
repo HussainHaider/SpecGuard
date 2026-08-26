@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 743,
+  "output_tokens": 93,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that if the country of origin of a food is given and it is not the same as that of its primary ingredient, the origin of the primary ingredient must also be given or indicated as different. The verdict states that both the product and its primary ingredient have the same origin (Spain), so the requirement to specify a different origin does not apply. The clause directly supports the reasoning and conclusion in the verdict."
+  }
+}

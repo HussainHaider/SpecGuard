@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 637,
+  "output_tokens": 110,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 22(2)) only states that Annex VIII contains technical provisions for the application of paragraph 1, including possible exemptions from QUID for certain ingredients. It does not itself specify when a QUID is required or when exemptions apply. The verdict asserts that a QUID is required and not exempted, but this clause does not establish those requirements or exemptions; it merely refers to where such rules can be found. Therefore, the clause is insufficient to support the verdict."
+  }
+}

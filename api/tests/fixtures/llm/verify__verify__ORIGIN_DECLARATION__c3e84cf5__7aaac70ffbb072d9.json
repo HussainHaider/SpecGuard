@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 731,
+  "output_tokens": 116,
+  "response": {
+    "support": "supports",
+    "reason": "The clause explicitly states that if the country of origin of a food is given and it is not the same as that of its primary ingredient, the country of origin or place of provenance of the primary ingredient must also be given, or it must be indicated that it is different. The verdict correctly applies this requirement to the case where the food's origin is declared as 'Greece', the primary ingredient is chickpeas, and no origin for the chickpeas is provided. Therefore, the clause supports the verdict that the requirement is not met."
+  }
+}

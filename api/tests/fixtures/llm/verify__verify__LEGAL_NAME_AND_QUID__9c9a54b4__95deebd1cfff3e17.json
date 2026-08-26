@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 693,
+  "output_tokens": 100,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that the quantity of an ingredient be indicated when it appears in the name of the food or is usually associated with that name. The verdict states that the product is named 'Orange juice', the ingredient list specifies 'Orange juice 100%', and this is the only ingredient. This directly fulfills the requirement stated in the clause, as the quantitative indication (QUID) is present and clear for the ingredient that appears in the name of the food."
+  }
+}

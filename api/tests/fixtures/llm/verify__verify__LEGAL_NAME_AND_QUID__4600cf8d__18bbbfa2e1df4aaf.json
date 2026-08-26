@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 1661,
+  "output_tokens": 109,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause only defines what a 'descriptive name' is: a name that describes the food and, if necessary, its use, in a way that is clear to consumers. It does not establish requirements for providing a legal name, for the use of customary names, or for the quantitative ingredient declaration (QUID). The verdict discusses compliance with legal name and QUID requirements, but this clause does not address those requirements or exemptions. Therefore, the clause is insufficient to support the verdict."
+  }
+}

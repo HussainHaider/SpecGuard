@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 695,
+  "output_tokens": 88,
+  "response": {
+    "support": "supports",
+    "reason": "The clause explicitly states that a 'low fat' claim for liquids may only be made if the product contains no more than 1.5 g of fat per 100 ml. The verdict points out that the product contains 12.4 g of fat per 100 ml, which exceeds this threshold. Therefore, the clause directly supports the verdict that the claim does not meet the regulatory condition."
+  }
+}

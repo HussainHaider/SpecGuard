@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3226,
+  "output_tokens": 259,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares the country of origin for the product (Belgien) and for the primary ingredient (Kakaomasse, 58%, from Ghana). According to Art. 26(3), if the origin of the food is given and differs from that of the primary ingredient, the origin of the primary ingredient must also be given or a statement that it differs. Here, both origins are explicitly stated, satisfying the requirement.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "18fbcfbf-1d26-5f43-9a92-e893f7357209",
+        "quoted_span": "Ist das Ursprungsland oder der Herkunftsort eines Lebensmittels angegeben und dieses/dieser nicht mit dem Ursprungsland oder dem Herkunftsort seiner primären Zutat identisch, so\na) ist auch das Ursprungsland oder der Herkunftsort der primären Zutat anzugeben; oder\nb) ist anzugeben, dass die primäre Zutat aus einem anderen Ursprungsland oder Herkunftsort kommt als das Lebensmittel."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

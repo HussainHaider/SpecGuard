@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 728,
+  "output_tokens": 73,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that the quantity of an ingredient must be indicated if it appears in the name of the food. The verdict states that the product name includes 'honey' and 'almonds', and the ingredients list provides their percentages. This directly satisfies the requirement stated in the clause, so the clause supports the verdict."
+  }
+}

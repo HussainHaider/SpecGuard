@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 766,
+  "output_tokens": 115,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 22(1)) establishes when the quantity of an ingredient (QUID) must be indicated—specifically, when the ingredient appears in the name, is emphasized, or is essential to characterizing the food. It does not, however, establish requirements for the use of a legal, customary, or descriptive name for the product. The clause supports the QUID requirement but not the naming requirement. Therefore, it is insufficient to support the full verdict as stated."
+  }
+}

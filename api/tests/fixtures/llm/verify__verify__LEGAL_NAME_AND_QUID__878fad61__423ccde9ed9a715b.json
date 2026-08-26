@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 648,
+  "output_tokens": 128,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Annex VII, Part E.1) addresses how a compound ingredient may be listed in the ingredients list—specifically, that it can be named by its established or customary name, with its proportion given, provided its ingredients are listed immediately after. The verdict, however, concerns QUID (Quantitative Ingredient Declaration) requirements, specifically when an ingredient appears in the product name or is emphasized. The clause does not mention QUID requirements or when quantitative declarations are required; it only specifies how to list compound ingredients. Therefore, the clause is insufficient to support the verdict."
+  }
+}

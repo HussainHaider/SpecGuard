@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 745,
+  "output_tokens": 100,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 26(3)) requires disclosure if the origin of the food and its primary ingredient differ, but does not explicitly state what is required if both origins are the same. The verdict claims compliance because both origins are the same and declared, but the clause only addresses the case where they differ. Therefore, the clause does not directly support the verdict; it is insufficient to establish that declaring both as the same satisfies the requirement."
+  }
+}

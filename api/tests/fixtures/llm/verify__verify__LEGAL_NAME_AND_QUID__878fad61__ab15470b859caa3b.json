@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 652,
+  "output_tokens": 106,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause allows a compound ingredient to be listed under its customary or legally established name in the ingredients list, provided its ingredients are listed immediately after. However, it does not address the requirement for quantitative ingredient declaration (QUID) when an ingredient appears in the name of the food. The verdict claims compliance with QUID requirements, but this clause does not mention QUID or the specific rules for when quantitative declarations are required. Therefore, the clause is insufficient to support the verdict."
+  }
+}

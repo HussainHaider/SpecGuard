@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 774,
+  "output_tokens": 137,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause (Art. 26(2)(a)) requires the indication of origin if omitting it could mislead consumers, especially if the labeling would otherwise suggest a different origin. However, the verdict also references a requirement from Art. 26(3) about declaring the origin of the primary ingredient if it differs from the product's origin. The quoted clause does not mention this primary ingredient requirement; it only addresses the general obligation to indicate origin to prevent misleading consumers. Therefore, the clause alone is insufficient to support the full reasoning of the verdict, which relies on both Art. 26(2) and (3)."
+  }
+}

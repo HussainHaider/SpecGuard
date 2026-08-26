@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4235,
+  "output_tokens": 298,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name, 'Wholemeal biscuits', which is a customary and descriptive name for this type of product and is not a brand or fancy name. The QUID (quantitative ingredient declaration) requirement is also satisfied: 'Wholemeal WHEAT flour' is both emphasised (uppercase) and appears in the legal name ('Wholemeal biscuits'), and its percentage (51%) is declared in the ingredients list. This meets the requirements of Article 22(1) for QUID, as well as the requirement for a legal or customary name.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer; (b) is emphasised on the labelling in words, pictures or graphics; or (c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      }
+    ],
+    "confidence": 0.98
+  }
+}

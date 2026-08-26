@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 766,
+  "output_tokens": 129,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 19(1)(d)) specifies when cheese, butter, fermented milk, and cream are exempt from the requirement to bear a list of ingredients—namely, when no ingredient has been added other than certain specified ones. It does not address requirements for naming the product, the use of customary or legal names, or the need for a quantitative ingredients declaration (QUID). Therefore, this clause does not support the verdict regarding naming or QUID requirements; it is about exemption from ingredient listing, not about how to name the product or when QUID is required."
+  }
+}

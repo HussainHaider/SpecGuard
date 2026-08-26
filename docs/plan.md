@@ -91,10 +91,25 @@ computation and fanning them out would buy nothing.
 4. a second schema-constrained call answers whether that span *supports* the verdict,
    returning `supports` / `contradicts` / `insufficient`.
 
-Anything other than a clean pass on all four becomes `NEEDS_REVIEW` with an
-`AbstentionReason`, after at most one retry with a widened query. This is what
-non-negotiable #1 looks like at runtime, and abstention rate is a reported metric, not a
-defect count.
+Checks 1 to 3 are pure Python and free, so they run first: only a structurally sound
+citation is worth paying a model to reason about. Anything other than a clean pass
+becomes `NEEDS_REVIEW` with an `AbstentionReason`. This is what non-negotiable #1 looks
+like at runtime, and abstention rate is a reported metric, not a defect count.
+
+**A judge may cite up to three clauses.** Real requirements span them: Art. 22(1) says
+when a quantitative declaration is required and Annex VIII says how it must be made. A
+judge allowed a single citation has to pick, and verification then correctly rejects the
+verdict for resting on a clause that establishes half the argument. Verification stops
+at the first clause that supports the verdict.
+
+**A rule whose requirement is not triggered returns PASS, not NEEDS_REVIEW**, citing the
+provision it enforces as a fixed clause. A product making no health claim complies with
+the rules on health claims; calling that an abstention would bury the genuine ones. This
+path costs no model calls.
+
+Measured behaviour of this pass is in `docs/decisions.md` 011: it produced no wrong
+verdict in 112 evaluations, but PASS verdicts are much harder to cite than FAIL verdicts
+and the abstention rate is currently too high.
 
 ## What each rule needs from `ProductSpec`
 

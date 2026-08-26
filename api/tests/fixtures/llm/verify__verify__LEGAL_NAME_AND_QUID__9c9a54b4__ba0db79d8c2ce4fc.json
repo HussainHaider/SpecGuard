@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 776,
+  "output_tokens": 132,
+  "response": {
+    "support": "insufficient",
+    "reason": "The clause (Art. 22(1)) specifies when a quantitative indication (QUID) is required—if the ingredient appears in the name, is emphasised, or is essential to characterise the food. However, it does not specify what constitutes a sufficient QUID declaration or whether stating '100%' is always adequate. The verdict claims the QUID requirement is satisfied by the '100%' declaration, but the clause does not address sufficiency of the form or placement of the QUID, only the circumstances under which it is required. Therefore, the clause is insufficient to support the verdict as stated."
+  }
+}

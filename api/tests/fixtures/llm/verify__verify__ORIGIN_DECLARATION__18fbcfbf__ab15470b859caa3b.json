@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 756,
+  "output_tokens": 127,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause specifies what must be done if the origin of the food and its primary ingredient differ: the origin of the primary ingredient must also be declared, or a statement must be made that it differs. However, it does not explicitly state what is required if the origins are the same, nor does it address whether omitting the origin would mislead the consumer. The verdict's reasoning that 'no additional statement is required' when both origins are the same is plausible, but this is not directly established by the quoted clause. Therefore, the clause is insufficient to fully support the verdict."
+  }
+}

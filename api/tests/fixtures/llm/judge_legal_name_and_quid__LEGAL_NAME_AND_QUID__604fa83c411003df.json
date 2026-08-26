@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 5266,
+  "output_tokens": 246,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product provides a legal name ('Zartbitterschokolade'), which is a customary and descriptive name for this type of food, satisfying the first requirement. For the QUID requirement, the ingredient 'Kakaomasse' is mentioned in the name ('Zartbitterschokolade 70%'), and its percentage (58%) is declared in the ingredients list. The percentages for other major ingredients are also provided. The retrieved regulation clauses establish both requirements, and the specification meets them.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "f8a6ce5f-3c19-5f5e-82ed-3fce826e3a27",
+        "quoted_span": "Die Angabe der Menge einer bei der Herstellung oder Zubereitung eines Lebensmittels verwendeten Zutat oder Zutatenklasse ist erforderlich, wenn die betreffende Zutat oder Zutatenklasse: a) in der Bezeichnung des Lebensmittels genannt ist oder normalerweise von Verbrauchern mit dieser Bezeichnung in Verbindung gebracht wird;"
+      }
+    ],
+    "confidence": 0.98
+  }
+}

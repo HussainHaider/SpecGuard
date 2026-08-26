@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3148,
+  "output_tokens": 414,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares the country of origin for both the product and its primary ingredient (apple juice concentrate) as Poland. Regulation (EU) No 1169/2011 Art. 26(3) requires that if the origin of the food is given and it differs from that of its primary ingredient, the origin of the primary ingredient must also be given or a statement that it differs. Here, both are declared as Poland, so there is no difference to disclose. Additionally, Art. 26(2) requires origin to be given if omitting it would mislead the consumer, but there is no evidence of misleading information or implication of a different origin. The requirement is therefore met.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      },
+      {
+        "chunk_id": "b73d2faf-676d-5055-8d61-5ca58c92268f",
+        "quoted_span": "Indication of the country of origin or place of provenance shall be mandatory: (a) where failure to indicate this might mislead the consumer as to the true country of origin or place of provenance of the food, in particular if the information accompanying the food or the label as a whole would otherwise imply that the food has a different country of origin or place of provenance;"
+      }
+    ],
+    "confidence": 1.0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 847,
+  "output_tokens": 122,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause from Regulation (EU) No 1169/2011 Annex VIII, 1, specifies when a quantitative indication (QUID) is not required for certain ingredients. It does not establish the requirement for a legal name or for QUID itself; rather, it provides exceptions to the QUID requirement. Therefore, while the clause is relevant to when QUID is not needed, it does not support the verdict's claim that the requirements for a legal name and QUID are established or met. Additional clauses would be needed to establish those requirements."
+  }
+}

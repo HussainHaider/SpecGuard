@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 830,
+  "output_tokens": 94,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause (Art. 9(1)(a)) only requires that the name of the food be indicated. It does not address the requirement for quantitative indication of ingredients (QUID), which is referenced in the verdict. The QUID requirement is covered by Article 22(1), not by Article 9(1)(a). Therefore, this clause is insufficient to support the verdict regarding QUID compliance."
+  }
+}

@@ -131,3 +131,45 @@ would otherwise have to reverse-engineer from the code.
 - **Cost:** the guardrail is currently exercised only by synthetic specs. A threshold
   tuned to a number the model never emits is decorative, and picking one now would be
   fitting to 30 documents from one generator. Revisit in M5 with the eval set.
+
+## 010 — No cross-encoder reranker
+
+- **Context:** A cross-encoder rerank over the fused candidates is the standard next
+  quality lever in a hybrid RAG pipeline, and retrieval quality directly bounds what the
+  judge can conclude.
+- **Options:** (a) add a cross-encoder over the top ~50 fused candidates; (b) rely on
+  dense + sparse RRF alone and spend the effort on verification instead.
+- **Choice:** (b), deliberately deferred rather than overlooked. The corpus is 734
+  clauses of one legal domain, retrieval already returns the governing clause at rank 1
+  for the queries the rules actually issue, and a reranker adds a model download, a
+  second inference hop per query and latency to every RAG rule.
+- **Cost:** recall@5 is whatever RRF gives us, with no second opinion on ranking. The
+  honest reason to skip it here is that a wrong verdict in this system comes from
+  *reasoning over* a clause rather than from failing to retrieve it — which is why the
+  verification pass got the effort instead. Revisit if M5's eval shows retrieval misses
+  rather than judgement errors.
+
+## 011 — PASS verdicts are harder to cite than FAIL verdicts
+
+- **Context:** Across 112 rule evaluations on real model output, verification supported
+  30 citations and rejected 40 as `insufficient` — and on inspection the verifier was
+  right every time. Support rates split sharply by rule:
+  `NUTRITION_CLAIM_CONDITIONS` 4/4, `ORIGIN_DECLARATION` 20/32,
+  `LEGAL_NAME_AND_QUID` 5/31.
+- **Cause, which is structural rather than a prompt defect:** citing a breach is easy —
+  you quote the obligation that was broken. Citing compliance often means establishing
+  that *no obligation arose*, and a clause stating a conditional requirement cannot
+  prove its condition was absent. The conditions of use in the 1924/2006 Annex verify
+  perfectly because each entry states a self-contained threshold; Art. 22 does not,
+  because *when* QUID is required (22(1)), *how* it must be given (Annex VIII) and when
+  it is exempt (22(2)) are three different clauses.
+- **Options:** (a) relax the verifier; (b) let a rule reach its PASS through the
+  not-applicable path, citing the governing provision, when the requirement was never
+  triggered; (c) split the compound rules.
+- **Choice:** not (a) — the verifier is the reason no wrong verdict was produced in 112
+  evaluations, and every mismatch was an abstention rather than a false PASS or FAIL.
+  Leaning toward (b), with (c) for LEGAL_NAME_AND_QUID, which asks two questions at once.
+- **Cost:** the abstention rate is currently far too high to be useful — 23 of 28 specs
+  abstained on LEGAL_NAME_AND_QUID. Left unfixed in this milestone rather than tuned
+  blind: the account ran out of API credits mid-run, and changing a prompt without being
+  able to re-measure is how you convince yourself of an improvement you never made.

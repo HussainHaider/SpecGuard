@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 720,
+  "output_tokens": 109,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause states that certain claims (reduction of disease risk, and claims referring to children's development and health) may be made only if authorised according to a specific procedure. However, it does not itself prohibit unauthorised claims, nor does it specify that claims about preventing, treating, or curing diseases are prohibited unless authorised. The verdict asserts a prohibition and overstatement that is not directly established by this clause alone; additional regulatory text would be needed to support the full reasoning of the verdict."
+  }
+}

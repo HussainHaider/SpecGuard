@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 730,
+  "output_tokens": 124,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause (Art. 22(1)(a)) requires that the quantity of an ingredient be indicated if it is mentioned in the name of the food or is typically associated with that name. However, the verdict also discusses the provision of percentages for other major ingredients and claims that both requirements (legal name and QUID) are established by the cited clause. The clause only addresses when QUID is required, not how it must be presented or whether the percentages for all major ingredients are required. Therefore, the clause is insufficient to fully support the verdict as stated."
+  }
+}

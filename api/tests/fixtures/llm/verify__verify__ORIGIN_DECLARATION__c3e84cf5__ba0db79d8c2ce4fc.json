@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 729,
+  "output_tokens": 125,
+  "response": {
+    "support": "insufficient",
+    "reason": "The clause requires disclosure or clarification only when the country of origin or place of provenance of the food is given and it is not the same as that of its primary ingredient. The clause does not explicitly state what is required when both origins are the same, nor does it state that no further action is required in that case. The verdict's conclusion that the requirement is satisfied when both origins are the same is reasonable, but the clause itself does not directly establish this; it is silent on the scenario where both origins match. Therefore, the clause is insufficient to fully support the verdict."
+  }
+}

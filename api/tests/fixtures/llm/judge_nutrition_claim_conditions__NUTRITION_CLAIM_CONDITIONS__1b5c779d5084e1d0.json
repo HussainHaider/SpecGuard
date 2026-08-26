@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3362,
+  "output_tokens": 234,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product makes the nutrition claim 'Source of fibre'. According to the retrieved regulation clause, this claim may only be made where the product contains at least 3 g of fibre per 100 g or at least 1.5 g of fibre per 100 kcal. The product's declared nutrition values are 6.8 g fibre per 100 g and 228 kcal per 100 g, which clearly exceeds both thresholds. Therefore, the claim is compliant.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+        "quoted_span": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

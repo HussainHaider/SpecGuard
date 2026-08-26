@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 738,
+  "output_tokens": 134,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 26(3)) only addresses the situation where the origin of the primary ingredient is different from that of the food product. It requires disclosure or a statement only in that case. It does not state what is required if both origins are the same, nor does it address the general requirement to declare origin if omitting it could mislead (which is covered by Art. 26(2), not (3)). Therefore, this clause alone is insufficient to support the verdict that the requirement is satisfied simply because both origins are 'Deutschland'; it does not establish what is required in that scenario."
+  }
+}

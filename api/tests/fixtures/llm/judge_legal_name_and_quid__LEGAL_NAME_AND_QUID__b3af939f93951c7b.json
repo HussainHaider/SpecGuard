@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 5019,
+  "output_tokens": 279,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name: 'Geroestetes Hafercerealien-Erzeugnis mit Honig und Mandeln', which is a descriptive and customary name for this type of food, not just a brand or fancy name. The quantitative ingredient declaration (QUID) is present for all ingredients that appear in the name ('Hafer', 'Honig', 'Mandeln'), with their respective percentages (Hafer-Vollkornflocken 64%, Mandeln 9%, Honig 8%) clearly stated in the ingredients list. This satisfies both the requirement for a legal/customary/descriptive name and the QUID requirement for named or emphasised ingredients.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "d1ad65a4-5cff-588e-b833-1f14674b3751",
+        "quoted_span": "a) die Bezeichnung des Lebensmittels;"
+      },
+      {
+        "chunk_id": "d1ad65a4-5cff-588e-b833-1f14674b3751",
+        "quoted_span": "d) die Menge bestimmter Zutaten oder Klassen von Zutaten;"
+      }
+    ],
+    "confidence": 0.98
+  }
+}

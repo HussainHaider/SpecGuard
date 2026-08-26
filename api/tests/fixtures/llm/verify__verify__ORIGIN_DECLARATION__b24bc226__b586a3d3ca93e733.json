@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 781,
+  "output_tokens": 127,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause (Art. 26(2)(a)) requires the indication of origin if omitting it could mislead consumers about the true origin of the food. The verdict discusses compliance with both Art. 26(2) and Art. 26(3), but the quoted clause does not address the situation where both the product and its primary ingredient have the same origin and are declared. It also does not mention the requirement in Art. 26(3) about differing origins. Therefore, the clause alone is insufficient to support the full reasoning and conclusion of the verdict."
+  }
+}

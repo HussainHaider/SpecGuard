@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3403,
+  "output_tokens": 346,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The specification declares the country of origin for the product as 'Germany' and for the primary ingredient (peanuts, 42%) as 'Argentina'. According to Art. 26(3), when the country of origin of the food is given and it is not the same as that of its primary ingredient, the origin of the primary ingredient must also be given or it must be indicated that it is different. While the specification does list both origins, it does not provide a statement on the label indicating that the origin of the primary ingredient is different from that of the food, nor does it clearly present both origins in a way that would be compliant for consumer information purposes. The regulation requires this to be explicit and clear to the consumer.",
+    "suggested_fix": "On the label, explicitly state: 'Country of origin: Germany. Primary ingredient (peanuts) origin: Argentina.' or use a compliant statement indicating the difference in origin as per implementing acts.",
+    "citations": [
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

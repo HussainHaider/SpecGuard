@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 614,
+  "output_tokens": 124,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 17(5) of Regulation (EU) No 1169/2011) merely states that Annex VI contains specific rules for the naming of food and related declarations. It does not itself establish the requirements for legal naming or QUID (quantitative ingredient declarations), nor does it specify what those requirements are. The verdict relies on the existence and fulfillment of such requirements, but this clause only refers to where those requirements can be found (Annex VI), not what they are. Therefore, the clause is insufficient to support the verdict."
+  }
+}

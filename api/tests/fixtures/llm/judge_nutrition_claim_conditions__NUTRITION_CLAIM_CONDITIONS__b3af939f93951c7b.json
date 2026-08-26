@@ -1,0 +1,12 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 4200,
+  "output_tokens": 187,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product makes the nutrition claim 'Hoher Ballaststoffgehalt' (high fibre). However, none of the retrieved regulation clauses includes the specific conditions of use for the 'high fibre' claim from the Annex to Regulation (EC) No 1924/2006. The retrieved clauses only cover 'energiearm', 'energiefrei', and energy calculation factors, but not fibre-related claims. Therefore, I cannot determine compliance for this claim based on the supplied evidence.",
+    "suggested_fix": "Retrieve the specific conditions of use for the 'high fibre' claim from the Annex to Regulation (EC) No 1924/2006 and compare them to the declared fibre content (7.4g/100g) to determine compliance.",
+    "citations": [],
+    "confidence": 0.9
+  }
+}

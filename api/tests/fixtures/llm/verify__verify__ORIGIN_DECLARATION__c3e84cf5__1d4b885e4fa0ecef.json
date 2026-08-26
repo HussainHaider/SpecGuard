@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 728,
+  "output_tokens": 135,
+  "response": {
+    "support": "insufficient",
+    "reason": "The clause requires that if the country of origin of the food is given and it is not the same as that of its primary ingredient, then the origin of the primary ingredient must also be given or indicated as different. However, the clause does not address the situation where both origins are the same, nor does it state that no further action is required in that case. The verdict concludes that the requirement is satisfied because both origins are declared as Ireland, but the clause itself does not explicitly state this; it is silent on what is required when the origins are the same. Therefore, the clause is insufficient to fully support the verdict."
+  }
+}

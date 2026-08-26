@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 700,
+  "output_tokens": 153,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 22(1)(a)) requires a quantitative indication (QUID) when an ingredient appears in the name of the food or is usually associated with that name. The verdict claims that the product name includes 'apple juice concentrate' and that a QUID is provided ('Apple juice concentrate 12%'), concluding this satisfies the requirement. However, the clause only states when QUID is required, not what constitutes a satisfactory QUID declaration or whether the specific declaration given meets all regulatory requirements. The clause does not address whether the provided QUID ('12%') is correct or sufficient, nor does it address exemptions. Therefore, the clause is insufficient to fully support the verdict as stated."
+  }
+}

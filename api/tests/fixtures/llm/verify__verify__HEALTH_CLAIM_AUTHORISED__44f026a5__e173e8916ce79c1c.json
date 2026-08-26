@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 1084,
+  "output_tokens": 107,
+  "response": {
+    "support": "insufficient",
+    "reason": "The quoted clause only defines what constitutes a 'health claim' (gesundheitsbezogene Angabe) as any statement suggesting a relationship between a food (or its components) and health. It does not address the requirements for authorisation, the need to use specific wording, or the prohibition of disease prevention or cure claims. Therefore, while the clause establishes that the claim is a health claim, it does not support the verdict's conclusions about authorisation or prohibition of certain types of claims."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 751,
+  "output_tokens": 146,
+  "response": {
+    "support": "insufficient",
+    "reason": "The clause (Art. 22(1)) specifies when a quantitative indication of ingredients (QUID) is required—namely, when the ingredient appears in the name, is emphasised, or is essential to characterise the food. However, the verdict claims that the product provides a legal name and that QUID is given for all relevant nuts, thus satisfying the requirement. The clause does not address whether the product actually provides QUID or whether the legal name is appropriate; it only sets out when QUID is required. Therefore, the clause is insufficient to support the verdict, as it does not establish that the product's labelling actually complies, only when it must."
+  }
+}

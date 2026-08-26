@@ -1,0 +1,17 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3436,
+  "output_tokens": 216,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product makes the claim 'High in fibre'. According to the retrieved regulation clause, a food can be claimed as 'high in fibre' if it contains at least 6 g of fibre per 100 g. The nutrition information for this product states it contains 7.4 g of fibre per 100 g, which meets the requirement. Therefore, the claim is compliant.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "2b129020-c04c-5c18-a177-9a0c60fca4d7",
+        "quoted_span": "A claim that a food is high in fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 6 g of fibre per 100 g or at least 3 g of fibre per 100 (kcal."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

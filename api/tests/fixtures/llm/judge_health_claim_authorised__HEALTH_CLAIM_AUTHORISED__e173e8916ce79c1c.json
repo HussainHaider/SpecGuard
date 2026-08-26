@@ -1,0 +1,21 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3887,
+  "output_tokens": 350,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product specification includes the claim 'Calcium makes your bones unbreakable', which is a health claim. According to the retrieved regulation clauses, health claims may only be made if they are authorised and must be worded within the terms of that authorisation. Furthermore, claims that a food prevents, treats, or cures a disease are prohibited. The claim in question overstates the effect of calcium by suggesting bones become 'unbreakable', which is not only unauthorised but also implies a disease-preventing or curing property, which is explicitly prohibited.",
+    "suggested_fix": "Remove or reword the claim to align with authorised health claims for calcium, ensuring it does not overstate the effect or imply disease prevention or cure.",
+    "citations": [
+      {
+        "chunk_id": "44f026a5-8515-5c97-a154-161bcd6d8141",
+        "quoted_span": "„gesundheitsbezogene Angabe“ jede Angabe, mit der erklärt, suggeriert oder auch nur mittelbar zum Ausdruck gebracht wird, dass ein Zusammenhang zwischen einer Lebensmittelkategorie, einem Lebensmittel oder einem seiner Bestandteile einerseits und der Gesundheit andererseits besteht;"
+      },
+      {
+        "chunk_id": "f13eb8ac-4b77-5d33-99a5-2f98551190fe",
+        "quoted_span": "dürfen Informationen über ein Lebensmittel diesem keine Eigenschaften der Vorbeugung, Behandlung oder Heilung einer menschlichen Krankheit zuschreiben oder den Eindruck dieser Eigenschaften entstehen lassen."
+      }
+    ],
+    "confidence": 0.98
+  }
+}

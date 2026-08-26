@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 766,
+  "output_tokens": 145,
+  "response": {
+    "support": "insufficient",
+    "reason": "The clause requires that if the country of origin of the food is given and it differs from that of its primary ingredient, then either the origin of the primary ingredient must also be given, or it must be indicated that it is different. The verdict claims non-compliance because the label does not explicitly state the difference or present both origins clearly for consumer information purposes. However, the clause does not specify how the information must be presented or require an explicit statement that the origins are different, only that the origin of the primary ingredient must be given or the difference indicated. Therefore, the clause alone is insufficient to support the verdict's requirement for explicitness or clarity beyond the basic disclosure."
+  }
+}

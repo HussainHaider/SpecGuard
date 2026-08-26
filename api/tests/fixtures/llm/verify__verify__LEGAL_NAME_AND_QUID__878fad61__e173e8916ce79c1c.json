@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 663,
+  "output_tokens": 122,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause only addresses how a compound ingredient may be listed in the ingredients list: it may be named by its established or customary name, with its total percentage, provided its ingredients are listed immediately after. The clause does not establish requirements for the legal name of the product, nor does it address when QUID (quantitative ingredient declaration) is required, nor does it specify rules about naming when an ingredient appears in the product name. Therefore, the clause is insufficient to support the full verdict, which covers naming, QUID, and compliance with naming requirements."
+  }
+}

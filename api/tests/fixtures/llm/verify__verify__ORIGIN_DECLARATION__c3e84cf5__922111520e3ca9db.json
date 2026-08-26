@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 724,
+  "output_tokens": 71,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires an additional statement only if the country of origin of the food is given and it differs from that of its primary ingredient. The verdict correctly notes that since both the food and its primary ingredient have the same origin (France), no additional statement is required. The clause directly supports this reasoning and conclusion."
+  }
+}

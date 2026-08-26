@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 732,
+  "output_tokens": 92,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that if the origin of the food is given and it differs from that of the primary ingredient, the origin of the primary ingredient must also be given or a statement that it differs. The verdict states that both the food's origin (Belgium) and the primary ingredient's origin (Ghana) are declared, which directly fulfills the requirement stated in the clause. Therefore, the clause supports the verdict."
+  }
+}

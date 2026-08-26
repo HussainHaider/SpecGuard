@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 897,
+  "output_tokens": 110,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 9(1)(d)) requires the indication of the quantity of certain ingredients or categories of ingredients, which is the QUID requirement. However, the verdict also discusses the requirement for a legal/customary/descriptive name, which is covered by Art. 9(1)(a), not (d). The cited clause supports only the QUID part of the verdict, not the naming requirement. Therefore, the clause is insufficient to fully support the verdict as stated."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 704,
+  "output_tokens": 98,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that when the country of origin of a food is given and it differs from that of its primary ingredient, the origin of the primary ingredient must also be given or it must be indicated that it is different. The verdict states that the specification declares the country of origin for the product (Belgium) and for the primary ingredient (Ghana), which directly fulfills the requirement stated in the clause. Therefore, the clause supports the verdict."
+  }
+}

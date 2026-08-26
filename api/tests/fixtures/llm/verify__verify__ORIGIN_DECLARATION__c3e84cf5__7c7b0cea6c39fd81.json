@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 732,
+  "output_tokens": 103,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that if the country of origin of a food is given and it differs from that of its primary ingredient, the origin of the primary ingredient must also be given or indicated as different. The verdict correctly notes that in this case, both the food and its primary ingredient have the same origin, and both are declared. Therefore, the requirement in the clause is satisfied, as there is no difference to disclose. The reasoning follows directly from the text of the clause."
+  }
+}

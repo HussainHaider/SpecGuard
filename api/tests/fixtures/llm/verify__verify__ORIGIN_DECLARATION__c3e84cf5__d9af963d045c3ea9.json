@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 715,
+  "output_tokens": 82,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires that if the country of origin of a food is given and it differs from that of its primary ingredient, the difference must be declared. The verdict correctly states that since both the product and its primary ingredient have the same country of origin (Germany), no additional statement is required. The reasoning follows directly from the clause, so the clause supports the verdict."
+  }
+}

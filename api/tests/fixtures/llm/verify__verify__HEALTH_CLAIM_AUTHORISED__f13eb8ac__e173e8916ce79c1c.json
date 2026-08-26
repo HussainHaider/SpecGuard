@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 653,
+  "output_tokens": 104,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause from Regulation (EU) No 1169/2011 Art. 7(3) explicitly prohibits attributing to a food any properties of preventing, treating, or curing a human disease, or creating such an impression. The claim 'Calcium makes your bones unbreakable' implies a disease-preventing property by suggesting immunity to bone fractures, which are a medical condition. Therefore, the clause directly supports the verdict that such a claim is prohibited."
+  }
+}

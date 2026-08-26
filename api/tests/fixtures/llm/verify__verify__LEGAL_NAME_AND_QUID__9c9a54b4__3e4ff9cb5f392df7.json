@@ -1,0 +1,9 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v1",
+  "input_tokens": 699,
+  "output_tokens": 82,
+  "response": {
+    "support": "supports",
+    "reason": "The clause requires a quantitative indication (QUID) for any ingredient that appears in the name of the food. The verdict states that both 'Tomatoes' and 'Mushrooms' are named in the product's legal name and that their quantities are declared in the ingredients list. This directly satisfies the requirement stated in the clause, so the clause supports the verdict."
+  }
+}
