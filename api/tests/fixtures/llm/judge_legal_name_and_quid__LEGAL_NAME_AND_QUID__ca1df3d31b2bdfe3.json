@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4921,
+  "output_tokens": 417,
+  "cost_usd": 0.013178,
+  "latency_ms": 3759,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name: 'Toasted oat cereal with honey and almonds', which is a descriptive name and not just a brand or fancy name. This satisfies the first requirement. For the second requirement, a quantitative indication (QUID) is required for ingredients that appear in the name of the food, are emphasised, or are essential to characterise the food. The product name is 'Honey & Almond Oat Granola', and the legal name repeats 'honey' and 'almonds'. The ingredient list provides percentages for 'Wholegrain OAT flakes' (64%), 'ALMONDS' (9%), and 'Honey' (8%), all of which are either in the name or emphasised. This satisfies the QUID requirement.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "fcbb7bf7-a38b-5338-b0a8-96f15aa28610",
+        "quoted_span": "1. In accordance with Articles 10 to 35 and subject to the exceptions contained in this Chapter, indication of the following particulars shall be mandatory: (a) the name of the food;"
+      },
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "1. The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer; (b) is emphasised on the labelling in words, pictures or graphics; or (c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

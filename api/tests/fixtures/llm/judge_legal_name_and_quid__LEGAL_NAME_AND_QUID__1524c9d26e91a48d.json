@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 3646,
+  "output_tokens": 265,
+  "cost_usd": 0.009412,
+  "latency_ms": 3467,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given its legal name, 'Orange juice', which is clearly stated in the specification. This satisfies the requirement for a legal, customary, or descriptive name. For the QUID requirement, the only ingredient is 'Orange juice 100%', and the ingredient appears in the name of the food. The quantitative declaration is provided as 'Orange juice 100%', which meets the requirement for QUID as per Article 22(1). There are no exceptions from Annex VIII, 1 that would apply to this product, as the ingredient is not used in small quantities for flavouring, nor is it covered by any other listed exceptions.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer;"
+      }
+    ],
+    "confidence": 1.0
+  }
+}

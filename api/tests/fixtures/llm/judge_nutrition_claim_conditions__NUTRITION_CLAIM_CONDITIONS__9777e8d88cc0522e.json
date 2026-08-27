@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3702,
+  "output_tokens": 148,
+  "cost_usd": 0.008588,
+  "latency_ms": 2759,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The only nutrition claim listed in the product specification is 'Source of calcium.' However, none of the retrieved regulation clauses include the conditions of use for the claim 'Source of calcium.' The retrieved clauses only cover 'source of fibre,' 'high fibre,' and 'low fat.' Therefore, I cannot determine compliance for the 'Source of calcium' claim based on the supplied regulatory text.",
+    "suggested_fix": "Retrieve and review the specific conditions of use for the 'Source of calcium' claim from Regulation (EC) No 1924/2006 Annex.",
+    "citations": [],
+    "confidence": 1.0
+  }
+}

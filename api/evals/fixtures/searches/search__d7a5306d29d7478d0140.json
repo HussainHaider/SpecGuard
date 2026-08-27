@@ -1,0 +1,78 @@
+{
+  "query": "Calcium contributes to normal blood clotting, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "15",
+        "paragraph": "3",
+        "heading": "Application for authorisation",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. The application shall include the following:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which the health claim is to be made and its particular characteristics;\n(c) a copy of the studies, including, where available, independent, peer-reviewed studies, which have been carried out with regard to the health claim and any other material which is available to demonstrate that the health claim complies with the criteria provided for in this Regulation;\n(d) where appropriate, an indication of the information which should be regarded as proprietary accompanied by verifiable justification;\n(e) a copy of other scientific studies which are relevant to that health claim;\n(f) a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;\n(g) a summary of the application."
+      },
+      "score": 0.5625
+    },
+    {
+      "clause": {
+        "chunk_id": "7321502f-0070-5dfd-9463-9405d1bbd296",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex V",
+        "paragraph": "12",
+        "heading": "FOODS WHICH ARE EXEMPTED FROM THE REQUIREMENT OF THE MANDATORY NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "12. Processing aids;"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "5861c5d9-df57-5d7e-8464-c6aaad14795d",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "10",
+        "paragraph": "3",
+        "heading": "Specific conditions",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. Reference to general, non-specific benefits of the nutrient or food for overall good health or health-related well-being may only be made if accompanied by a specific health claim included in the lists provided for in Article 13 or 14."
+      },
+      "score": 0.3768116
+    },
+    {
+      "clause": {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "16",
+        "paragraph": "4",
+        "heading": "Opinion of the Authority",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "4. In the event of an opinion in favour of authorising the health claim, the opinion shall include the following particulars:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which a claim is to be made and its particular characteristics;\n(c) a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;\n(d) where applicable, conditions or restrictions of use of the food and/or an additional statement or warning that should accompany the health claim on the label and in advertising."
+      },
+      "score": 0.3577236
+    },
+    {
+      "clause": {
+        "chunk_id": "27fbb6a0-b5fc-560e-8323-566a13eb067e",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "10",
+        "paragraph": "1",
+        "heading": "Specific conditions",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Health claims shall be prohibited unless they comply with the general requirements in Chapter II and the specific requirements in this Chapter and are authorised in accordance with this Regulation and included in the lists of authorised claims provided for in Articles 13 and 14."
+      },
+      "score": 0.25
+    }
+  ]
+}

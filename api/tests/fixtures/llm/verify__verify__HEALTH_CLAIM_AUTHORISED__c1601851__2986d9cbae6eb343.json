@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 946,
+  "output_tokens": 102,
+  "cost_usd": 0.002708,
+  "latency_ms": 2394,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EC) No 1924/2006 Art. 14(1), establishes that reduction of disease risk claims and claims referring to children's development and health may only be made if they have been authorised according to the specified procedure. The verdict turns on the requirement that such claims must be authorised and used within the terms of that authorisation. The clause is directly about the legal requirement the verdict addresses, so the citation supports the verdict."
+  }
+}

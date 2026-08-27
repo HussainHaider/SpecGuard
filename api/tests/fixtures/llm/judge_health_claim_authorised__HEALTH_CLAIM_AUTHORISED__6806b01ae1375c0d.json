@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 4242,
+  "output_tokens": 340,
+  "cost_usd": 0.011204,
+  "latency_ms": 3068,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product specification for 'Tomato & Basil Soup' includes the health claim: 'Docosahexaenoic acid (DHA) intake contributes to the normal visual development of infants up to 12 months of age.' However, there is no evidence in the specification or the retrieved regulation clauses that this claim has been authorised for this product, nor is there any indication that the product contains DHA or is intended for infants. Regulation (EC) No 1924/2006 Art. 14(1) makes clear that such claims referring to children's development and health may only be made where they have been authorised in accordance with the specified procedure. The claim as presented is not substantiated by the product's composition or authorisation status, and therefore does not comply.",
+    "suggested_fix": "Remove the unauthorised health claim regarding DHA and infant visual development unless the product is specifically formulated for infants, contains sufficient DHA, and the claim is authorised for this product.",
+    "citations": [
+      {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "quoted_span": "the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

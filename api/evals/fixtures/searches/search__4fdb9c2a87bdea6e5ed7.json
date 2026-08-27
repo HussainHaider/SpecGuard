@@ -1,0 +1,78 @@
+{
+  "query": "Iron contributes to normal cognitive function, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "bafee060-6dc5-5bfb-8ce5-ad6c086d1258",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "3",
+        "paragraph": null,
+        "heading": "General principles for all claims",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "Nutrition and health claims may be used in the labelling, presentation and advertising of foods placed on the market in the Community only if they comply with the provisions of this Regulation.\nWithout prejudice to Directives 2000/13/EC and 84/450/EEC, the use of nutrition and health claims shall not:\n(a) be false, ambiguous or misleading;\n(b) give rise to doubt about the safety and/or the nutritional adequacy of other foods;\n(c) encourage or condone excess consumption of a food;\n(d) state, suggest or imply that a balanced and varied diet cannot provide appropriate quantities of nutrients in general. Derogations in the case of nutrients for which sufficient quantities cannot be provided by a balanced and varied diet, including the conditions for their application, and designed to amend non-essential elements of this Regulation by supplementing it may be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), taking into account the special conditions present in Member States;\n(e) refer to changes in bodily functions which could give rise to or exploit fear in the consumer, either textually or through pictorial, graphic or symbolic representations."
+      },
+      "score": 0.5625
+    },
+    {
+      "clause": {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "16",
+        "paragraph": "4",
+        "heading": "Opinion of the Authority",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "4. In the event of an opinion in favour of authorising the health claim, the opinion shall include the following particulars:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which a claim is to be made and its particular characteristics;\n(c) a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;\n(d) where applicable, conditions or restrictions of use of the food and/or an additional statement or warning that should accompany the health claim on the label and in advertising."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "a295e4b6-8209-5528-8f55-bf35c091b54c",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "1",
+        "paragraph": "1",
+        "heading": "Subject matter and scope",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. This Regulation provides the basis for the assurance of a high level of consumer protection in relation to food information, taking into account the differences in the perception of consumers and their information needs whilst ensuring the smooth functioning of the internal market."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "15",
+        "paragraph": "3",
+        "heading": "Application for authorisation",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. The application shall include the following:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which the health claim is to be made and its particular characteristics;\n(c) a copy of the studies, including, where available, independent, peer-reviewed studies, which have been carried out with regard to the health claim and any other material which is available to demonstrate that the health claim complies with the criteria provided for in this Regulation;\n(d) where appropriate, an indication of the information which should be regarded as proprietary accompanied by verifiable justification;\n(e) a copy of other scientific studies which are relevant to that health claim;\n(f) a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;\n(g) a summary of the application."
+      },
+      "score": 0.3809524
+    },
+    {
+      "clause": {
+        "chunk_id": "5861c5d9-df57-5d7e-8464-c6aaad14795d",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "10",
+        "paragraph": "3",
+        "heading": "Specific conditions",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. Reference to general, non-specific benefits of the nutrient or food for overall good health or health-related well-being may only be made if accompanied by a specific health claim included in the lists provided for in Article 13 or 14."
+      },
+      "score": 0.375
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3755,
+  "output_tokens": 297,
+  "cost_usd": 0.009886,
+  "latency_ms": 4522,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares both the country of origin of the product (United Kingdom) and the origin of the primary ingredient (Wholemeal WHEAT flour, 68%) as United Kingdom. Regulation (EU) No 1169/2011 Art. 26(3) requires that if the origin of the food is given and it differs from that of the primary ingredient, the origin of the primary ingredient must also be given or a statement that it differs. Here, both are declared and are the same, so there is no risk of misleading the consumer. There is no evidence in the specification or the retrieved clauses that would trigger a mandatory origin declaration beyond what is already provided.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient:\n(a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or\n(b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 0.98
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3923,
+  "output_tokens": 437,
+  "cost_usd": 0.011342,
+  "latency_ms": 5300,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The retrieved regulation clauses establish that health claims may only be made if they are authorised and must be worded within the terms of that authorisation (see Art. 3 and Art. 15/16 of Regulation (EC) No 1924/2006). The product specification includes the health claim: 'Vitamin C contributes to maintain the normal function of the immune system during and after intense physical exercise.' However, none of the retrieved clauses provide the specific authorised wording for this claim or the conditions under which it may be used. Without access to the register of authorised health claims or the specific authorisation for this wording, it is not possible to confirm that the claim is worded within the terms of its authorisation. Therefore, a verdict cannot be reached based solely on the supplied evidence.",
+    "suggested_fix": "Retrieve the relevant register or annex listing the authorised health claims and their exact wording for vitamin C and its effect on the immune system, including any specific conditions of use.",
+    "citations": [
+      {
+        "chunk_id": "bafee060-6dc5-5bfb-8ce5-ad6c086d1258",
+        "quoted_span": "Nutrition and health claims may be used in the labelling, presentation and advertising of foods placed on the market in the Community only if they comply with the provisions of this Regulation."
+      },
+      {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "quoted_span": "a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;"
+      },
+      {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "quoted_span": "a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;"
+      }
+    ],
+    "confidence": 0.7
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3888,
+  "output_tokens": 142,
+  "cost_usd": 0.008912,
+  "latency_ms": 2303,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product makes the nutrition claim 'Source of magnesium'. However, none of the retrieved regulation clauses include the conditions of use for the claim 'Source of magnesium' or any other mineral except fibre and saturated fat. Therefore, I cannot determine compliance for this claim based on the supplied clauses. The health claim present is also not covered by the retrieved clauses.",
+    "suggested_fix": "Retrieve the relevant clause from Regulation (EC) No 1924/2006 Annex that specifies the conditions for the claim 'Source of magnesium'.",
+    "citations": [],
+    "confidence": 1.0
+  }
+}

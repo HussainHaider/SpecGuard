@@ -1,0 +1,78 @@
+{
+  "query": "Lipil® contributes to optimal brain development of infants and young children., authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "142a7250-39d1-5797-b6db-90033300da3c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "5",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "5. Any additions of claims to the list referred to in paragraph 3 based on newly developed scientific evidence and/or which include a request for the protection of proprietary data shall be adopted following the procedure laid down in Article 18, except claims referring to children's development and health, which shall be authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19."
+      },
+      "score": 0.8333334
+    },
+    {
+      "clause": {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "1",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Notwithstanding Article 2(1)(b) of Directive 2000/13/EC, the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      },
+      "score": 0.6666667
+    },
+    {
+      "clause": {
+        "chunk_id": "d9a04b8b-a8f3-57ce-983c-1b09f8bdb889",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "1",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Health claims describing or referring to:\n(a) the role of a nutrient or other substance in growth, development and the functions of the body; or\n(b) psychological and behavioural functions; or\n(c) without prejudice to Directive 96/8/EC, slimming or weight-control or a reduction in the sense of hunger or an increase in the sense of satiety or to the reduction of the available energy from the diet,\nwhich are indicated in the list provided for in paragraph 3 may be made without undergoing the procedures laid down in Articles 15 to 19, if they are:\n(i) based on generally accepted scientific evidence; and\n(ii) well understood by the average consumer."
+      },
+      "score": 0.53333336
+    },
+    {
+      "clause": {
+        "chunk_id": "af37c4dc-ee93-5585-9c18-6816d5cf511f",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "2",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "2. In addition to the general requirements laid down in this Regulation and the specific requirements of paragraph 1, for reduction of disease risk claims the labelling or, if no such labelling exists, the presentation or advertising shall also bear a statement indicating that the disease to which the claim is referring has multiple risk factors and that altering one of these risk factors may or may not have a beneficial effect."
+      },
+      "score": 0.39285713
+    },
+    {
+      "clause": {
+        "chunk_id": "ab837051-fc58-521b-9c95-a3dd3efa1ad9",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "3",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. After consulting the Authority, the Commission shall adopt, in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), a Community list, designed to amend non-essential elements of this Regulation by supplementing it, of permitted claims as referred to in paragraph 1 and all necessary conditions for the use of these claims by 31 January 2010 at the latest."
+      },
+      "score": 0.33333334
+    }
+  ]
+}

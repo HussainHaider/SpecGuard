@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 953,
+  "output_tokens": 116,
+  "cost_usd": 0.002834,
+  "latency_ms": 2049,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 26(2)(a)) establishes that the country of origin or place of provenance must be indicated where failure to do so might mislead the consumer. However, the verdict also relies on a rule that if the origin of the food is given and differs from the primary ingredient, this must be declared. That specific requirement is found in Art. 26(3), not in the cited clause. Therefore, the clause does not fully establish the requirement the verdict turns on, making the citation insufficient."
+  }
+}

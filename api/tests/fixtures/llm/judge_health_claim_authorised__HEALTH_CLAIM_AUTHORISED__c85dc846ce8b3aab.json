@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3937,
+  "output_tokens": 384,
+  "cost_usd": 0.010946,
+  "latency_ms": 3711,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The retrieved regulation clauses establish that health claims may only be made if they are authorised and must be worded within the terms of that authorisation (see Art. 14(1) and Art. 2(2)). The product specification includes the health claim: 'Magnesium contributes to a reduction of tiredness and fatigue.' However, the retrieved clauses do not provide the list of authorised health claims or the exact authorised wording for magnesium. Therefore, it is not possible to determine from the supplied evidence whether the claim is worded within the terms of its authorisation or if it overstates the effect. No clause was retrieved that lists or describes the permitted wording for magnesium-related health claims.",
+    "suggested_fix": "Retrieve the relevant EU Register of Nutrition and Health Claims to confirm whether the claim 'Magnesium contributes to a reduction of tiredness and fatigue' is authorised and if the wording matches the authorised claim.",
+    "citations": [
+      {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "quoted_span": "the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims"
+      },
+      {
+        "chunk_id": "48772ac6-2bb7-53a4-9e62-d6ce99c2a021",
+        "quoted_span": "‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;"
+      }
+    ],
+    "confidence": 0.7
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1057,
+  "output_tokens": 134,
+  "cost_usd": 0.003186,
+  "latency_ms": 2754,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause from Regulation (EU) No 1169/2011 Annex VIII, 1, sets out the exemptions from the requirement to provide a quantitative indication of ingredients (QUID). The verdict discusses whether the QUID requirement applies to 'strawberries' in 'Strawberry yogurt with live cultures', and concludes that it does, because strawberries are essential to characterise the food. The clause specifically addresses when QUID is not required, and by implication, when it is required. Therefore, this is the correct legal grounding for the verdict, as it establishes the conditions under which QUID must be provided."
+  }
+}

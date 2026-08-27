@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 4226,
+  "output_tokens": 435,
+  "cost_usd": 0.011932,
+  "latency_ms": 4119,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product specification includes the claim: 'OPC Plus has been shown to increase the microcirculation and may therefore reduce the risk of chronic venous insufficiency.' This is a health claim, specifically a reduction of disease risk claim, as it suggests that the product may reduce the risk of a specific disease (chronic venous insufficiency). According to the retrieved clauses, such claims may only be made if they have been authorised and must comply with all necessary conditions for use, including specific wording and additional statements. There is no evidence in the specification that this claim is authorised or that the required conditions (such as the statement about multiple risk factors) are met. Therefore, the claim as worded is not compliant.",
+    "suggested_fix": "Remove the unauthorised health claim or replace it with a claim that is authorised under the relevant EU regulation, ensuring all required conditions and wording are met.",
+    "citations": [
+      {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "quoted_span": "the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;"
+      },
+      {
+        "chunk_id": "48772ac6-2bb7-53a4-9e62-d6ce99c2a021",
+        "quoted_span": "‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;\n‘reduction of disease risk claim’ means any health claim that states, suggests or implies that the consumption of a food category, a food or one of its constituents significantly reduces a risk factor in the development of a human disease;"
+      }
+    ],
+    "confidence": 0.95
+  }
+}

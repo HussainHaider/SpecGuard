@@ -1,0 +1,78 @@
+{
+  "query": "Source of vitamin D, conditions of use for nutrition claims, fibre 0 g per 100, fat 34.9 g per 100, saturates 21.7 g per 100, sugars 0.1 g per 100, salt 1.8 g per 100, protein 25.4 g per 100",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "0de6dd30-34b6-509d-9ded-eab9adfb18de",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part B",
+        "heading": "REFERENCE INTAKES — PART B — REFERENCE INTAKES FOR ENERGY AND SELECTED NUTRIENTS OTHER THAN VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Energy or nutrient | Reference intake\nEnergy | 8 400 kJ/2 000 kcal\nTotal fat | 70 g\nSaturates | 20 g\nCarbohydrate | 260 g\nSugars | 90 g\nProtein | 50 g\nSalt | 6 g"
+      },
+      "score": 0.55263156
+    },
+    {
+      "clause": {
+        "chunk_id": "49d7266d-7890-50c0-aefe-1c8a2fca9efb",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "SATURATED FAT-FREE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food does not contain saturated fat, and any claim likely to have the same meaning for the consumer, may only be made where the sum of saturated fat and trans-fatty acids does not exceed 0,1 g of saturated fat per 100 g or 100 ml."
+      },
+      "score": 0.5217391
+    },
+    {
+      "clause": {
+        "chunk_id": "4a4ede93-e2c6-56cb-89b3-e6175fd060b7",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XV",
+        "paragraph": null,
+        "heading": "EXPRESSION AND PRESENTATION OF NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "The units of measurement to be used in the nutrition declaration for energy (kilojoules (kJ) and kilocalories (kcal)) and mass (grams (g), milligrams (mg) or micrograms (μg)) and the order of presentation of the information, as appropriate, shall be the following:\nenergy | kJ/kcal\nfat | g\nof which\n— saturates, | g\n— mono-unsaturates, | g\n— polyunsaturates, | g\ncarbohydrate | g\nof which\n— sugars, | g\n— polyols, | g\n— starch, | g\nfibre | g\nprotein | g\nsalt | g\nvitamins and minerals | the units specified in point 1 of Part A of Annex XIII"
+      },
+      "score": 0.375
+    },
+    {
+      "clause": {
+        "chunk_id": "0438a816-9d5a-5e1c-b6c6-e3b847e6b6fb",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part A.2",
+        "heading": "REFERENCE INTAKES — PART A — DAILY REFERENCE INTAKES FOR VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "2. Significant amount of vitamins and minerals\nAs a rule, the following values should be taken into consideration in deciding what constitutes a significant amount:\n— 15 % of the nutrient reference values specified in point 1 supplied by 100 g or 100 ml in the case of products other than beverages,\n— 7,5 % of the nutrient reference values specified in point 1 supplied by 100 ml in the case of beverages, or,\n— 15 % of the nutrient reference values specified in point 1 per portion if the package contains only a single portion,"
+      },
+      "score": 0.3627451
+    },
+    {
+      "clause": {
+        "chunk_id": "d48a1c4c-5313-545b-886b-efebd8f8b196",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIV",
+        "paragraph": "CONVERSION FACTORS FOR THE CALCULATION OF ENERGY",
+        "heading": "CONVERSION FACTORS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "The energy value to be declared shall be calculated using the following conversion factors:\n— carbohydrate (except polyols), | 17 kJ/g — 4 kcal/g\n— polyols, | 10 kJ/g — 2,4 kcal/g\n— protein, | 17 kJ/g — 4 kcal/g\n— fat, | 37 kJ/g — 9 kcal/g\n— salatrims, | 25 kJ/g — 6 kcal/g\n— alcohol (ethanol), | 29 kJ/g — 7 kcal/g\n— organic acid, | 13 kJ/g — 3 kcal/g\n— fibre, | 8 kJ/g — 2 kcal/g\n— erythritol, | 0 kJ/g — 0 kcal/g"
+      },
+      "score": 0.28225806
+    }
+  ]
+}

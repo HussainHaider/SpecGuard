@@ -1,0 +1,261 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2",
+  "input_tokens": 4733,
+  "output_tokens": 2022,
+  "cost_usd": 0.025642,
+  "latency_ms": 19385,
+  "response": {
+    "product_name": {
+      "value": "Wholemeal Digestive Biscuits",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nWholemeal Digestive Biscuits"
+    },
+    "legal_name": {
+      "value": "Wholemeal biscuits",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Wholemeal biscuits"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Wholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Wholemeal WHEAT flour",
+              "percentage": 51.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Wholemeal WHEAT flour 51%"
+          },
+          {
+            "value": {
+              "name": "Palm oil",
+              "percentage": 19.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Palm oil 19%"
+          },
+          {
+            "value": {
+              "name": "Sugar",
+              "percentage": 16.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Sugar 16%"
+          },
+          {
+            "value": {
+              "name": "Partially inverted sugar syrup",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Partially inverted sugar syrup"
+          },
+          {
+            "value": {
+              "name": "Raising agents",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Raising agents"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nWholemeal WHEAT flour 51%, Palm oil 19%, Sugar 16%, Partially inverted sugar syrup, Raising agents, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 400.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 400 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before_end",
+        "raw_text": "Best before end: 10 months from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Best before end: 10 months from production"
+    },
+    "storage_conditions": {
+      "value": "Store in a cool, dry place.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Store in a cool, dry place."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Ashford Biscuit Company Ltd",
+        "address": "Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom",
+        "country": "United Kingdom"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Ashford Biscuit Company Ltd, Unit 4, Chartham Estate, Kent CT4 7HT, United Kingdom"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 1979.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 1979 kJ / 472 kcal"
+        },
+        "energy_kcal": {
+          "value": 472.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 1979 kJ / 472 kcal"
+        },
+        "fat_g": {
+          "value": 20.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 20.9 g"
+        },
+        "saturates_g": {
+          "value": 9.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 9.8 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 62.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 62.1 g"
+        },
+        "sugars_g": {
+          "value": 16.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 16.4 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 4.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 4.1 g"
+        },
+        "protein_g": {
+          "value": 6.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 6.9 g"
+        },
+        "salt_g": {
+          "value": 1.02,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 1.02 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 1979 kJ / 472 kcal\nFat 20.9 g\nof which saturates 9.8 g\nCarbohydrate 62.1 g\nof which sugars 16.4 g\nFibre 4.1 g\nProtein 6.9 g\nSalt 1.02 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "United Kingdom",
+          "raw_text": "Country of origin United Kingdom"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin United Kingdom"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "United Kingdom",
+          "raw_text": "Origin of primary ingredient United Kingdom"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient United Kingdom"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Enfamil® Premium contributes to optimal brain development of infants and young children.",
+          "kind": "health",
+          "nutrient": null
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Enfamil® Premium contributes to optimal brain development of infants and young children."
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 997,
+  "output_tokens": 112,
+  "cost_usd": 0.00289,
+  "latency_ms": 1774,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that a quantitative indication (QUID) is required for ingredients that appear in the name of the food, are emphasised on the labelling, or are essential to characterise the food. The verdict turns on this exact requirement, assessing whether the specification provides the necessary QUID for 'Wholemeal WHEAT flour' in 'Wholemeal biscuits.' Therefore, the clause supports the verdict."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 927,
+  "output_tokens": 111,
+  "cost_usd": 0.002742,
+  "latency_ms": 1580,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 26(3), establishes the requirement that if the country of origin or place of provenance of a food is given and it is not the same as that of its primary ingredient, the origin of the primary ingredient must also be given or indicated as different. The verdict turns on this requirement, explaining that both origins are declared and are the same, so the obligation is satisfied. The clause is directly relevant and supports the verdict."
+  }
+}

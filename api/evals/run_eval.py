@@ -30,7 +30,7 @@ from typing import Any
 
 import evals.metrics as metrics
 import evals.pipeline as pipeline
-from evals.golden import load_retrieval, load_rules
+from evals.golden import GoldenRule, Split, load_retrieval, load_rules
 from specguard.config import Settings, get_settings
 from specguard.corpus.seed import load_clauses
 from specguard.llm.factory import FIXTURE_DIR, build_client
@@ -72,7 +72,7 @@ def build_stores(settings: Settings, *, live: bool) -> tuple[VectorStore, LLMCli
 
 def score_rules(store: VectorStore, client: LLMClient, settings: Settings) -> list[metrics.Scored]:
     """Run the pipeline over exactly the pairs the golden set labels."""
-    golden = load_rules()
+    golden = [record for record in load_rules() if record.split is not Split.EXTERNAL]
     wanted = {(record.spec_id, record.rule_id) for record in golden}
     report = pipeline.run(store, client, retrieval_limit=settings.retrieval_top_k, only=wanted)
 
@@ -87,6 +87,49 @@ def score_rules(store: VectorStore, client: LLMClient, settings: Settings) -> li
                 f"{record.golden_id}: the pipeline produced no result for "
                 f"{record.spec_id}/{record.rule_id.value}"
             )
+        scored.append(metrics.Scored(golden=record, result=result))
+    return scored
+
+
+def score_external(
+    store: VectorStore, client: LLMClient, settings: Settings, golden: list[GoldenRule]
+) -> list[metrics.Scored]:
+    """Score the externally-labelled documents by running the graph over them.
+
+    A separate path because these specifications are not in the seeded generator's set —
+    they are built by `specguard.fixtures.external` from the EU register, and the pipeline
+    helper only walks the generator's own manifest. Same replayed fixtures, same offline
+    guarantee.
+    """
+    from specguard.corpus.seed import load_clauses
+    from specguard.fixtures.external import SPEC_DIR as EXTERNAL_SPEC_DIR
+    from specguard.graph.graph import run_check
+    from specguard.graph.nodes import Dependencies
+
+    if not golden:
+        return []
+
+    deps = Dependencies(
+        settings=settings,
+        client=client,
+        store=store,
+        corpus_chunk_ids={clause.chunk_id for clause in load_clauses(settings.corpus_dir)},
+    )
+
+    scored: list[metrics.Scored] = []
+    for record in golden:
+        state = run_check(
+            deps,
+            {
+                "job_id": record.spec_id,
+                "correlation_id": record.spec_id,
+                "pdf_path": str(EXTERNAL_SPEC_DIR / "generated" / record.filename),
+                "language": record.language.value,
+            },
+        )
+        result = state["report"].result_for(record.rule_id)
+        if result is None:
+            raise RuntimeError(f"{record.golden_id}: {record.rule_id.value} did not run")
         scored.append(metrics.Scored(golden=record, result=result))
     return scored
 
@@ -127,7 +170,11 @@ def run(*, live: bool = False) -> dict[str, metrics.Metrics]:
     settings = get_settings()
     store, client = build_stores(settings, live=live)
     known = {clause.chunk_id for clause in load_clauses(settings.corpus_dir)}
-    scored = score_rules(store, client, settings)
+    external = [record for record in load_rules() if record.split is Split.EXTERNAL]
+    scored = [
+        *score_rules(store, client, settings),
+        *score_external(store, client, settings, external),
+    ]
     return metrics.by_split(
         scored,
         score_retrieval(store, settings),
@@ -170,6 +217,24 @@ def check_gates(measured: metrics.Metrics) -> list[str]:
     return failures
 
 
+def check_external_gates(measured: metrics.Metrics) -> list[str]:
+    """The floor for the externally-labelled split.
+
+    Separate from the main gates and set below today's figure. This split asks a harder
+    question — not "does the system agree with its own fixtures" but "is it right about
+    the law" — so it gets a floor that catches a regression rather than a target that
+    pretends the number is good.
+    """
+    if measured.records == 0:
+        return []
+    config = tomllib.loads(THRESHOLDS.read_text(encoding="utf-8"))
+    gates = config.get("gates", {}).get("external", {})
+    floor = float(gates.get("min_accuracy", 0.0))
+    if measured.accuracy < floor:
+        return [f"external accuracy {measured.accuracy:.1%} is below the {floor:.0%} floor"]
+    return []
+
+
 def _cell(value: float | None, kind: str) -> str:
     if value is None:
         return "—"
@@ -202,11 +267,11 @@ def markdown(results: dict[str, metrics.Metrics]) -> str:
         ("p95 latency (ms)", "raw", "p95_latency_ms"),
         ("cost per spec", "usd", "cost_per_spec_usd"),
     ]
-    splits = ["all", "dev", "held_out"]
+    splits = ["internal", "dev", "held_out", "external"]
     baseline = _baseline()
     lines = [
-        "| metric | baseline | current | dev | held-out |",
-        "|---|---|---|---|---|",
+        "| metric | baseline | internal | dev | held-out | external |",
+        "|---|---|---|---|---|---|",
     ]
     for label, kind, attribute in rows:
         cells = [_cell(getattr(results[split], attribute), kind) for split in splits]
@@ -219,8 +284,8 @@ def markdown(results: dict[str, metrics.Metrics]) -> str:
 
     per_rule = [
         "",
-        "| rule | all | dev | held-out |",
-        "|---|---|---|---|",
+        "| rule | internal | dev | held-out | external |",
+        "|---|---|---|---|---|",
     ]
     for rule_id in sorted(RuleId, key=lambda r: r.value):
         cells = []
@@ -311,14 +376,15 @@ def main() -> None:
         return
 
     print(f"mode: {'live' if args.live else 'offline (replayed fixtures, no network)'}\n")
-    for split in ("all", "dev", "held_out"):
+    for split in ("internal", "dev", "held_out", "external"):
         print(metrics.render(results[split]))
         print()
 
     if not args.fail_under_config:
         return
 
-    failures = check_gates(results["all"])
+    failures = check_gates(results["internal"])
+    failures += check_external_gates(results["external"])
     if failures:
         print("FAILED: " + "; ".join(failures), file=sys.stderr)
         raise SystemExit(1)

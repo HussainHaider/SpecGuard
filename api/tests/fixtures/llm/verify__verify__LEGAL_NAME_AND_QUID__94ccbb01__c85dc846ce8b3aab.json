@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 959,
+  "output_tokens": 148,
+  "cost_usd": 0.003102,
+  "latency_ms": 1913,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Annex VIII, 2) provides exemptions from the QUID (Quantitative Ingredient Declaration) requirement for certain ingredients (sweeteners and added vitamins/minerals under specific conditions). The verdict, however, is about the general satisfaction of the QUID requirement for cocoa content in 'Dark Chocolate 70%'. The cited clause does not establish the general QUID requirement or its application to cocoa content; it only specifies exemptions. Therefore, the clause is insufficient to support the verdict, as the relevant obligation is found elsewhere (specifically, Article 22 and Annex VIII, point 1, not point 2)."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3996,
+  "output_tokens": 373,
+  "cost_usd": 0.010976,
+  "latency_ms": 4495,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product specification for 'Cloudy Apple Juice' includes the health claim: 'Docosahexaenoic acid (DHA) and arachidonic acid (ARA) contribute to the optimal brain development of infants and young children.' However, the ingredient list does not mention DHA or ARA as present in the product. Furthermore, even if these substances were present, health claims referring to children's development and health may only be made if they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17, and 19, and must be worded within the terms of that authorisation. The claim as worded ('contribute to the optimal brain development') overstates the effect compared to the typical authorised wording (which is usually limited to 'contributes to normal brain development'). Therefore, the claim is not compliant with the requirements established in the retrieved clauses.",
+    "suggested_fix": "Remove the health claim or ensure that DHA and ARA are present in the product and that the claim is worded exactly as authorised by the EU Register of Nutrition and Health Claims, without overstating the effect.",
+    "citations": [
+      {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "quoted_span": "the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

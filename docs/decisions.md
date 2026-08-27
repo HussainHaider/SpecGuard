@@ -445,3 +445,42 @@ would otherwise have to reverse-engineer from the code.
   because it is the same property the weekly re-index depends on: if re-indexing could not
   reproduce ids, neither the upgrade path nor the regulation watcher would be safe.
   Postgres is the durable store; Qdrant is a cache with good manners.
+
+## 026 — The external split found a missing regulation
+
+- **Context:** Every one of the 80 golden records was labelled by the same generator that
+  writes the documents. `build_golden.py` conceded the ceiling in its own docstring: if the
+  generator and a rule shared a misreading of an article, the test passes and both are
+  wrong, and nothing in the set could catch it.
+- **Options:** (a) leave the concession in the docstring, which is honest but untested;
+  (b) have a food lawyer relabel the set, which is the right answer and not available;
+  (c) add records whose labels come from EU law rather than from this repository.
+- **Choice:** (c). `evals/fetch_register.py` reads 247 claims from the Commission's own
+  authorising and refusing regulations, and `specguard.fixtures.external` puts fourteen of
+  them on specification sheets — seven authorised, seven refused. The label is a fact about
+  EU law. Only `HEALTH_CLAIM_AUTHORISED` is labelled, because an authorised claim is lawful
+  only where the food meets its conditions of use, and inventing labels for the other rules
+  would reintroduce the exact circularity being removed.
+- **What it found, immediately:** the internal set scores `HEALTH_CLAIM_AUTHORISED` at
+  10/10. The external set scores it **8/14**. All seven refused claims are correctly
+  rejected; six of the seven authorised claims are *abstained on* rather than passed.
+
+  The cause is not the judge. **Regulation (EU) No 432/2012 — the Union list of permitted
+  health claims — is not in the corpus.** `docs/plan.md` has named it as the source of
+  authorised wordings for this rule since M0; only 1169/2011 and 1924/2006 were ever
+  indexed. So the judge can establish from Art. 10(1) that a claim must be authorised, and
+  then cannot check whether *this* claim is on the list, because the list is not
+  retrievable. It abstains, which is the designed response to missing evidence.
+
+  It also means the 7/7 on refused claims is right for a weaker reason than it looks: the
+  system cannot find those claims on a list it cannot see either.
+- **Cost:** the headline for this rule drops from 10/10 to 8/14 and the honest number is
+  much worse. That is the finding working. A circular golden set reported a rule as
+  perfect while the regulation it is built around was absent from the index, and no
+  internal metric could ever have shown it. Indexing 432/2012 is the fix, and it is
+  deliberately *not* bundled into this change: the point of this entry is the measurement,
+  and a fix committed alongside it would make the number look like it was never wrong.
+- **Not gated against the main baseline.** The external split has its own floor in
+  `thresholds.toml`, set below today's figure. The committed baseline was measured before
+  these records existed, and comparing a number to a baseline that answers a different
+  question is not a regression test.

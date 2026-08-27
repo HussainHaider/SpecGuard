@@ -167,11 +167,18 @@ The golden set is `evals/golden/rules.jsonl` (80 verdict labels) and
 LangSmith by `evals/sync_langsmith.py` and read into deepeval through its own loader, never
 authored in two places.
 
-**Two label sources, and they are not equally strong.** Verdict labels are mechanical — the
-generator seeded a named defect and recorded which rule should catch it, so the label
+**Three label sources, and they are not equally strong.** Verdict labels are mechanical —
+the generator seeded a named defect and recorded which rule should catch it, so the label
 follows from how the document was built. Retrieval labels are a judgement about which
 article decides a question, written out explicitly in `evals/build_golden.py` and checked to
-exist in the corpus. They are separate files so one provenance is not claimed for both.
+exist in the corpus. Both are separate files so one provenance is not claimed for both.
+
+The third is the outside check. Fourteen records carry claims read from the Commission's
+own authorising and refusing regulations by `evals/fetch_register.py` — seven authorised,
+seven refused — so their labels are facts about EU law rather than about this repository.
+They are reported as the **external** split and gated separately, because they answer a
+different question: not "is the system consistent with its own fixtures" but "is it right
+about the law".
 
 The split is per specification *and* per defect signature: per spec because a spec's eight
 outcomes share one document and one extraction, per defect group so a rule with only two
@@ -184,17 +191,18 @@ fix is actionable, faithfulness of the rationale, relevancy of retrieval. A judg
 moves when the judge changes, and a build that fails because a vendor shipped a new
 checkpoint teaches everyone to ignore the build.
 
-| metric | baseline | current | dev | held-out |
-|---|---|---|---|---|
-| accuracy | 88.8% | 88.8% | 85.7% | 92.1% |
-| abstention rate | 11.2% | 11.2% | 14.3% | 7.9% |
-| allergen false-negative rate | 0.0% | 0.0% | 0.0% | 0.0% |
-| false passes | 0 | 0 | 0 | 0 |
-| wrong verdicts | 0 | 0 | 0 | 0 |
-| citation resolution | 100.0% | 100.0% | 100.0% | 100.0% |
-| recall@5 | 57.2% | 57.2% | 56.4% | 58.8% |
-| hit rate@5 | 75.9% | 75.9% | 71.8% | 84.2% |
-| cost per spec | $0.0313 | $0.0313 | $0.0304 | $0.0321 |
+| metric | baseline | internal | dev | held-out | external |
+|---|---|---|---|---|---|
+| accuracy | 88.8% | 88.8% | 85.7% | 92.1% | **57.1%** |
+| abstention rate | 11.2% | 11.2% | 14.3% | 7.9% | 42.9% |
+| allergen false-negative rate | 0.0% | 0.0% | 0.0% | 0.0% | — |
+| false passes | 0 | 0 | 0 | 0 | 0 |
+| wrong verdicts | 0 | 0 | 0 | 0 | 0 |
+| citation resolution | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
+| recall@5 | 57.2% | 57.2% | 56.4% | 58.8% | — |
+| hit rate@5 | 75.9% | 75.9% | 71.8% | 84.2% | — |
+| p50 / p95 latency (ms) | — | — | — | — | 5224 / 6958 |
+| cost per spec | $0.0313 | $0.0313 | $0.0304 | $0.0321 | — |
 
 | rule | all | dev | held-out |
 |---|---|---|---|
@@ -206,6 +214,10 @@ checkpoint teaches everyone to ignore the build.
 | `NUTRITION_CLAIM_CONDITIONS` | 9/10 | 4/5 | 5/5 |
 | `NUTRITION_PER_100` | 8/8 | 4/4 | 4/4 |
 | `ORIGIN_DECLARATION` | 7/8 | 3/4 | 4/4 |
+
+`HEALTH_CLAIM_AUTHORISED` scores 10/10 against the internal labels and **8/14** against the
+external ones. That gap is the most useful number in this README, and the next section is
+about why.
 
 Reproduce with `just eval`, or `cd api && uv run python -m evals.run_eval`. Gates live in
 [`api/evals/thresholds.toml`](api/evals/thresholds.toml) so moving one shows up in a diff.
@@ -228,9 +240,33 @@ behind it.
 in the top five at all. That is what decision 010 costs, and the hit rate — 76%, at least
 one relevant clause — is the number that actually bounds whether a rule can be answered.
 
-**The labels are mine, not an expert's.** A food lawyer would disagree with some of them,
-and the seeded-defect design means the ground truth is only as good as the generator's idea
-of what non-compliance looks like — which decision 012 already caught being wrong once.
+**The labels are mostly mine, not an expert's.** A food lawyer would disagree with some of
+them, and the seeded-defect design means the internal ground truth is only as good as the
+generator's idea of what non-compliance looks like — which decision 012 already caught
+being wrong once. The external split is the partial answer to that, and the first thing it
+did was find a real defect.
+
+### What the external split found
+
+The internal set scores `HEALTH_CLAIM_AUTHORISED` at 10/10. Against labels taken from the
+Commission's own regulations it scores **8/14**: all seven refused claims correctly
+rejected, and six of the seven authorised claims *abstained on* rather than passed.
+
+The judge is not the problem. **Regulation (EU) No 432/2012 — the Union list of permitted
+health claims — is not in the corpus.** `docs/plan.md` has named it as the source of
+authorised wordings for this rule since the first milestone; only 1169/2011 and 1924/2006
+were ever indexed. So the judge establishes from Art. 10(1) that a claim must be
+authorised, then cannot check whether *this* claim is on the list, because the list is not
+retrievable — and it abstains, which is the designed response to missing evidence. Zero
+wrong verdicts on that split: it never got a claim wrong, it declined.
+
+It also means the 7/7 on refused claims is right for a weaker reason than it looks. The
+system cannot find those claims on a list it cannot see either.
+
+Indexing 432/2012 is the fix and it is deliberately not bundled with the measurement — see
+[`docs/decisions.md`](docs/decisions.md) 026. A circular golden set reported this rule as
+perfect while the regulation it is built around was missing from the index, and no internal
+metric could ever have shown that.
 
 ## Guardrails
 
@@ -372,18 +408,22 @@ managed datastores, publishing n8n — are in [`docs/deployment.md`](docs/deploy
 
 Ranked by what would move the numbers above.
 
-1. **A cross-encoder reranker over the fused candidates.** recall@5 at 57% is the weakest
+1. **Index Regulation (EU) No 432/2012.** The external split says this rule cannot answer
+   the question it exists to answer, because the authorised-claims list it is built around
+   was never in the corpus. The corpus fetcher already handles it; this is a source entry
+   and a re-seed, and it should turn six abstentions into decisions.
+2. **A cross-encoder reranker over the fused candidates.** recall@5 at 57% is the weakest
    measured thing here and it bounds everything downstream. Deferred in decision 010 for
    defensible reasons; those reasons expire the moment the eval says retrieval, not
    reasoning, is the limiter — and it now does.
-2. **Expert relabelling of the golden set.** The labels are mine. A food lawyer disagreeing
+3. **Expert relabelling of the golden set.** The labels are mine. A food lawyer disagreeing
    with twenty of the eighty would change what every number in this README means, and that
    is worth knowing before making the model better at agreeing with me.
-3. **Split `LEGAL_NAME_AND_QUID`.** 5/12 is not a tuning problem, it is one rule asking two
+4. **Split `LEGAL_NAME_AND_QUID`.** 5/12 is not a tuning problem, it is one rule asking two
    questions whose answers live in different clauses. Two rules, two prompts, two anchors.
-4. **More regulations** — Reg. 828/2014 on gluten, 1333/2008 on additives. The chunking and
+5. **More regulations** — Reg. 828/2014 on gluten, 1333/2008 on additives. The chunking and
    the citation model already generalise; the work is corpus and rules, not architecture.
-5. **Agent trajectory metrics.** Currently only the final verdict is scored. Which retrieval
+6. **Agent trajectory metrics.** Currently only the final verdict is scored. Which retrieval
    led to which citation would show whether abstentions are retrieval or reasoning failures,
    which is currently inferred rather than measured.
 

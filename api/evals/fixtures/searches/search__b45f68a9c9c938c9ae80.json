@@ -1,0 +1,78 @@
+{
+  "query": "Magnesium contributes to a reduction of tiredness and fatigue, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "1",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Notwithstanding Article 2(1)(b) of Directive 2000/13/EC, the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "0438a816-9d5a-5e1c-b6c6-e3b847e6b6fb",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part A.2",
+        "heading": "REFERENCE INTAKES — PART A — DAILY REFERENCE INTAKES FOR VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "2. Significant amount of vitamins and minerals\nAs a rule, the following values should be taken into consideration in deciding what constitutes a significant amount:\n— 15 % of the nutrient reference values specified in point 1 supplied by 100 g or 100 ml in the case of products other than beverages,\n— 7,5 % of the nutrient reference values specified in point 1 supplied by 100 ml in the case of beverages, or,\n— 15 % of the nutrient reference values specified in point 1 per portion if the package contains only a single portion,"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "5861c5d9-df57-5d7e-8464-c6aaad14795d",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "10",
+        "paragraph": "3",
+        "heading": "Specific conditions",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. Reference to general, non-specific benefits of the nutrient or food for overall good health or health-related well-being may only be made if accompanied by a specific health claim included in the lists provided for in Article 13 or 14."
+      },
+      "score": 0.3703704
+    },
+    {
+      "clause": {
+        "chunk_id": "48772ac6-2bb7-53a4-9e62-d6ce99c2a021",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "2",
+        "paragraph": "2",
+        "heading": "Definitions",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "2. The following definitions shall also apply:\n1) ‘claim’ means any message or representation, which is not mandatory under Community or national legislation, including pictorial, graphic or symbolic representation, in any form, which states, suggests or implies that a food has particular characteristics;\n2) ‘nutrient’ means protein, carbohydrate, fat, fibre, sodium, vitamins and minerals listed in the Annex to Directive 90/496/EEC, and substances which belong to or are components of one of those categories;\n3) ‘other substance’ means a substance other than a nutrient that has a nutritional or physiological effect;\n4) ‘nutrition claim’ means any claim which states, suggests or implies that a food has particular beneficial nutritional properties due to:\n(a) the energy (calorific value) it\n(i) provides;\n(ii) provides at a reduced or increased rate; or\n(iii) does not provide; and/or\n(b) the nutrients or other substances it\n(i) contains;\n(ii) contains in reduced or increased proportions; or\n(iii) does not contain;\n5) ‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;\n6) ‘reduction of disease risk claim’ means any health claim that states, suggests or implies that the consumption of a food category, a food or one of its constituents significantly reduces a risk factor in the development of a human disease;\n7) ‘Authority’ means the European Food Safety Authority established by Regulation (EC) No 178/2002.\nCHAPTER II\nGENERAL PRINCIPLES"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "17de6080-87fc-510d-8bdd-9ddb4b7d826b",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "4",
+        "paragraph": "3",
+        "heading": "Conditions for the use of nutrition and health claims",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. Beverages containing more than 1,2 % by volume of alcohol shall not bear health claims.\nAs far as nutrition claims are concerned, only nutrition claims referring to low alcohol levels, or the reduction of the alcohol content, or the reduction of the energy content for beverages containing more than 1,2 % by volume of alcohol, shall be permitted."
+      },
+      "score": 0.3125
+    }
+  ]
+}

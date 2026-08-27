@@ -1,0 +1,273 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2",
+  "input_tokens": 4746,
+  "output_tokens": 2131,
+  "cost_usd": 0.02654,
+  "latency_ms": 20618,
+  "response": {
+    "product_name": {
+      "value": "Classic Hummus",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nClassic Hummus"
+    },
+    "legal_name": {
+      "value": "Chickpea dip with sesame paste",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Chickpea dip with sesame paste"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Chickpeas 54%, Water, Rapeseed oil 9%, SESAME paste 7%, Lemon juice 3%, Garlic 1%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Chickpeas",
+              "percentage": 54.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Chickpeas 54%"
+          },
+          {
+            "value": {
+              "name": "Water",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Water"
+          },
+          {
+            "value": {
+              "name": "Rapeseed oil",
+              "percentage": 9.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Rapeseed oil 9%"
+          },
+          {
+            "value": {
+              "name": "SESAME paste",
+              "percentage": 7.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "SESAME paste 7%"
+          },
+          {
+            "value": {
+              "name": "Lemon juice",
+              "percentage": 3.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Lemon juice 3%"
+          },
+          {
+            "value": {
+              "name": "Garlic",
+              "percentage": 1.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Garlic 1%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nChickpeas 54%, Water, Rapeseed oil 9%, SESAME paste 7%, Lemon juice 3%, Garlic 1%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 200.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 200 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Use by: 16 days from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Use by: 16 days from production"
+    },
+    "storage_conditions": {
+      "value": "Keep refrigerated. Consume within 3 days of opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Keep refrigerated. Consume within 3 days of opening."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Meze Foods A.E.",
+        "address": "Odos Athinon 210, 104 42 Athens, Greece",
+        "country": "Greece"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Meze Foods A.E., Odos Athinon 210, 104 42 Athens, Greece"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 883.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 883 kJ / 213 kcal"
+        },
+        "energy_kcal": {
+          "value": 213.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 883 kJ / 213 kcal"
+        },
+        "fat_g": {
+          "value": 15.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 15.1 g"
+        },
+        "saturates_g": {
+          "value": 1.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 1.6 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 10.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 10.2 g"
+        },
+        "sugars_g": {
+          "value": 0.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 0.8 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 5.3,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 5.3 g"
+        },
+        "protein_g": {
+          "value": 6.4,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 6.4 g"
+        },
+        "salt_g": {
+          "value": 0.86,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.86 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 883 kJ / 213 kcal\nFat 15.1 g\nof which saturates 1.6 g\nCarbohydrate 10.2 g\nof which sugars 0.8 g\nFibre 5.3 g\nProtein 6.4 g\nSalt 0.86 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Greece",
+          "raw_text": "Country of origin Greece"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Greece"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Turkey",
+          "raw_text": "Origin of primary ingredient Turkey"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Turkey"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Docosahexaenoic acid (DHA) maternal intake contributes to the normal brain development of the foetus and breastfed infants.",
+          "kind": "health",
+          "nutrient": "Docosahexaenoic acid (DHA)"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Docosahexaenoic acid (DHA) maternal intake contributes to the normal brain development of the foetus and\nbreastfed infants."
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

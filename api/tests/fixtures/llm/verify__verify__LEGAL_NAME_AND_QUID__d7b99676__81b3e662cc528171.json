@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 806,
+  "output_tokens": 125,
+  "cost_usd": 0.002612,
+  "latency_ms": 2518,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause, Article 18(2), requires that ingredients be designated by their specific name according to Article 17 and Annex VI. The verdict, however, discusses both the legal name of the food (which is governed by Article 17) and the quantitative ingredient declaration (QUID) requirement (which is governed by Article 22(1)). Article 18(2) does not establish the QUID requirement; it only addresses how ingredients should be named. Therefore, the clause is insufficient to support the verdict, as the verdict turns on requirements from other articles."
+  }
+}

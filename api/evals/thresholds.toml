@@ -30,6 +30,13 @@ min_citation_resolution = 1.0
 # Reported, never gating. Retrieval quality bounds what the judge can conclude, but the
 # anchors it is scored against are a judgement about which clause decides a question
 # (see evals/build_golden.py), and a build should not fail on a labelling opinion.
+# The externally-labelled split, measured 2026-08-26 at 57.1% (8 of 14). A floor, set
+# below the measurement, because this split answers a harder question than the internal
+# one and the number is not good yet — see docs/decisions.md 026. It is here so it cannot
+# quietly get worse while nobody is looking.
+[gates.external]
+min_accuracy = 0.50
+
 [reported]
 recall_at_5 = true
 hit_rate_at_5 = true

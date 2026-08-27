@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T17:11:08+00:00",
+  "generated_at": "2026-08-27T02:49:32+00:00",
   "mode": "offline",
   "baseline": {
     "accuracy": 0.888,
@@ -17,11 +17,14 @@
     "max_allergen_false_negative_rate": 0.0,
     "max_false_passes": 0,
     "max_wrong_verdicts": 1,
-    "min_citation_resolution": 1.0
+    "min_citation_resolution": 1.0,
+    "external": {
+      "min_accuracy": 0.5
+    }
   },
   "splits": {
-    "all": {
-      "split": "all",
+    "internal": {
+      "split": "internal",
       "records": 80,
       "specs": 18,
       "accuracy": 0.8875,
@@ -45,6 +48,58 @@
         "HEALTH_CLAIM_AUTHORISED": [
           10,
           10
+        ],
+        "LEGAL_NAME_AND_QUID": [
+          5,
+          12
+        ],
+        "MANDATORY_FIELDS": [
+          12,
+          12
+        ],
+        "NUTRITION_ARITHMETIC": [
+          10,
+          10
+        ],
+        "NUTRITION_CLAIM_CONDITIONS": [
+          9,
+          10
+        ],
+        "NUTRITION_PER_100": [
+          8,
+          8
+        ],
+        "ORIGIN_DECLARATION": [
+          7,
+          8
+        ]
+      }
+    },
+    "all": {
+      "split": "all",
+      "records": 94,
+      "specs": 32,
+      "accuracy": 0.8404255319148937,
+      "abstention_rate": 0.1595744680851064,
+      "allergen_fnr": 0.0,
+      "allergen_cases": 6,
+      "false_passes": 0,
+      "wrong_verdicts": 0,
+      "citation_resolution_rate": 1.0,
+      "recall_at_5": 0.57183908045977,
+      "hit_rate_at_5": 0.7586206896551724,
+      "retrieval_queries": 58,
+      "p50_latency_ms": 5224.0,
+      "p95_latency_ms": 6958.0,
+      "cost_per_spec_usd": 0.0175953125,
+      "per_rule": {
+        "ALLERGEN_EMPHASIS": [
+          10,
+          10
+        ],
+        "HEALTH_CLAIM_AUTHORISED": [
+          18,
+          24
         ],
         "LEGAL_NAME_AND_QUID": [
           5,
@@ -173,6 +228,30 @@
         "ORIGIN_DECLARATION": [
           4,
           4
+        ]
+      }
+    },
+    "external": {
+      "split": "external",
+      "records": 14,
+      "specs": 14,
+      "accuracy": 0.5714285714285714,
+      "abstention_rate": 0.42857142857142855,
+      "allergen_fnr": null,
+      "allergen_cases": 0,
+      "false_passes": 0,
+      "wrong_verdicts": 0,
+      "citation_resolution_rate": 1.0,
+      "recall_at_5": null,
+      "hit_rate_at_5": null,
+      "retrieval_queries": 0,
+      "p50_latency_ms": 5224.0,
+      "p95_latency_ms": 6958.0,
+      "cost_per_spec_usd": 0.0,
+      "per_rule": {
+        "HEALTH_CLAIM_AUTHORISED": [
+          8,
+          14
         ]
       }
     }

@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 931,
+  "output_tokens": 120,
+  "cost_usd": 0.002822,
+  "latency_ms": 1556,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 26(3)) establishes the requirement that if the country of origin or place of provenance of a food is given and it differs from that of its primary ingredient, the origin of the primary ingredient must also be given or indicated as different. The verdict turns on this exact requirement, assessing whether both origins are declared and whether there is a discrepancy. Since both are declared as Germany and there is no discrepancy, the clause directly supports the reasoning and conclusion of the verdict."
+  }
+}

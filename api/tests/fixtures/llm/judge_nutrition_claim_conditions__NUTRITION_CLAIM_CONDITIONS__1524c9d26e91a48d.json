@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3577,
+  "output_tokens": 181,
+  "cost_usd": 0.008602,
+  "latency_ms": 2159,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The only nutrition claim present is 'Source of vitamin C'. However, none of the retrieved regulation clauses include the conditions of use for the claim 'source of vitamin C' or any vitamin-related nutrition claim. The retrieved clauses only cover 'source of fibre', 'low fat', and reference intakes for vitamins and minerals, but not the specific conditions for making a 'source of vitamin C' claim. Therefore, it is not possible to determine compliance for this claim based on the supplied regulation text.",
+    "suggested_fix": "Retrieve the specific conditions of use for the claim 'source of vitamin C' from Regulation (EC) No 1924/2006 Annex and compare them to the product's declared vitamin C content.",
+    "citations": [],
+    "confidence": 0.95
+  }
+}

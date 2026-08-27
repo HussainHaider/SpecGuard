@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 909,
+  "output_tokens": 100,
+  "cost_usd": 0.002618,
+  "latency_ms": 1483,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EU) No 1169/2011 Art. 22(1)(a)) establishes the requirement that the quantity of an ingredient must be indicated when that ingredient appears in the name of the food or is usually associated with that name. The verdict turns on this exact requirement, stating that the product provides the necessary quantitative indication (QUID) for ingredients appearing in the name. Therefore, the clause supports the verdict."
+  }
+}

@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import datetime as dt
 import hashlib
+import json
 from collections import defaultdict
 from pathlib import Path
 
@@ -44,6 +45,7 @@ from evals.golden import (
 from specguard.config import get_settings
 from specguard.corpus.seed import load_clauses
 from specguard.corpus.sources import source_version_for
+from specguard.fixtures.generate import SpecFixture
 from specguard.models.citation import chunk_id_for
 from specguard.models.common import Language
 from specguard.models.rule import RuleId, Verdict
@@ -283,6 +285,62 @@ def build_retrieval_records(
     return records
 
 
+def build_external_records(today: str) -> list[GoldenRule]:
+    """The records EU law labels, not this repository.
+
+    Every other record in the set is labelled by the same generator that writes the
+    document, so a misreading shared between the generator and a rule passes unnoticed.
+    These fourteen close that hole: the claim wording and its authorised-or-refused status
+    come from the Commission's own regulations, read by `evals.fetch_register`.
+
+    Only HEALTH_CLAIM_AUTHORISED is labelled. An authorised claim is lawful only where the
+    food meets its conditions of use, and the authorised seven carry the matching
+    "Source of …" statement that satisfies the condition the register records — but for
+    every other rule these documents say nothing EU law settles, so inventing a label for
+    them would reintroduce exactly the circularity this file is here to remove.
+    """
+    manifest = pipeline.SPEC_DIR / "external.jsonl"
+    if not manifest.exists():
+        return []
+
+    sources = json.loads((pipeline.SPEC_DIR / "external_sources.json").read_text(encoding="utf-8"))
+
+    records: list[GoldenRule] = []
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        if not line:
+            continue
+        entry = SpecFixture.model_validate_json(line)
+        rule_id, verdict = next(iter(entry.expected_verdicts.items()))
+        # Recover which register row settled this label, so the record cites its source.
+        origin = sources.get(entry.spec_id, {})
+        records.append(
+            GoldenRule(
+                golden_id=f"GOLD-{entry.spec_id}-{rule_id.value}",
+                split=Split.EXTERNAL,
+                spec_id=entry.spec_id,
+                filename=entry.filename,
+                rule_id=rule_id,
+                language=entry.language,
+                expected_verdict=verdict,
+                defect=None,
+                adversarial=False,
+                provenance=Provenance(
+                    source="eu_register",
+                    labelled_by=(
+                        "the claim appears in the Union list of permitted health claims"
+                        if verdict is Verdict.PASS
+                        else "authorisation of this claim was refused by the Commission"
+                    )
+                    + f": {origin.get('claim', '')[:90]}",
+                    created_at=today,
+                    spec_sha256=entry.sha256,
+                    external_source=origin.get("regulation"),
+                ),
+            )
+        )
+    return records
+
+
 def main() -> None:
     """Rebuild both files."""
     today = dt.date.today().isoformat()
@@ -293,15 +351,16 @@ def main() -> None:
         manifest_sha256=_sha256(MANIFEST),
     )
 
-    rules = build_rule_records(provenance)
+    rules = [*build_rule_records(provenance), *build_external_records(today)]
     write_jsonl(RULES_PATH, rules)
 
     retrieval = build_retrieval_records(provenance, split_map())
     write_jsonl(RETRIEVAL_PATH, retrieval)
 
     for name, records in (("rules", rules), ("retrieval", retrieval)):
-        dev = sum(r.split is Split.DEV for r in records)
-        print(f"{name:10s} {len(records):>3} records  dev {dev}  held-out {len(records) - dev}")
+        counts = {split.value: sum(r.split is split for r in records) for split in Split}
+        shown = "  ".join(f"{k} {v}" for k, v in counts.items() if v)
+        print(f"{name:10s} {len(records):>3} records  {shown}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,78 @@
+{
+  "query": "Source of magnesium, conditions of use for nutrition claims, fibre 10.9 g per 100, fat 42.1 g per 100, saturates 25.3 g per 100, sugars 29 g per 100, salt 0.02 g per 100, protein 7.8 g per 100",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "d48a1c4c-5313-545b-886b-efebd8f8b196",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIV",
+        "paragraph": "CONVERSION FACTORS FOR THE CALCULATION OF ENERGY",
+        "heading": "CONVERSION FACTORS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "The energy value to be declared shall be calculated using the following conversion factors:\n— carbohydrate (except polyols), | 17 kJ/g — 4 kcal/g\n— polyols, | 10 kJ/g — 2,4 kcal/g\n— protein, | 17 kJ/g — 4 kcal/g\n— fat, | 37 kJ/g — 9 kcal/g\n— salatrims, | 25 kJ/g — 6 kcal/g\n— alcohol (ethanol), | 29 kJ/g — 7 kcal/g\n— organic acid, | 13 kJ/g — 3 kcal/g\n— fibre, | 8 kJ/g — 2 kcal/g\n— erythritol, | 0 kJ/g — 0 kcal/g"
+      },
+      "score": 0.54347825
+    },
+    {
+      "clause": {
+        "chunk_id": "0de6dd30-34b6-509d-9ded-eab9adfb18de",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part B",
+        "heading": "REFERENCE INTAKES — PART B — REFERENCE INTAKES FOR ENERGY AND SELECTED NUTRIENTS OTHER THAN VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Energy or nutrient | Reference intake\nEnergy | 8 400 kJ/2 000 kcal\nTotal fat | 70 g\nSaturates | 20 g\nCarbohydrate | 260 g\nSugars | 90 g\nProtein | 50 g\nSalt | 6 g"
+      },
+      "score": 0.53846157
+    },
+    {
+      "clause": {
+        "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "SOURCE OF FIBRE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal."
+      },
+      "score": 0.53333336
+    },
+    {
+      "clause": {
+        "chunk_id": "6c0b9d9f-ec1e-53ea-8fd5-22f8d18cd324",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "LOW SATURATED FAT",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is low in saturated fat, and any claim likely to have the same meaning for the consumer, may only be made if the sum of saturated fatty acids and trans-fatty acids in the product does not exceed 1,5 g per 100 g for solids or 0,75 g/100 ml for liquids and in either case the sum of saturated fatty acids and trans-fatty acids must not provide more than 10 % of energy."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "4a4ede93-e2c6-56cb-89b3-e6175fd060b7",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XV",
+        "paragraph": null,
+        "heading": "EXPRESSION AND PRESENTATION OF NUTRITION DECLARATION",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "The units of measurement to be used in the nutrition declaration for energy (kilojoules (kJ) and kilocalories (kcal)) and mass (grams (g), milligrams (mg) or micrograms (μg)) and the order of presentation of the information, as appropriate, shall be the following:\nenergy | kJ/kcal\nfat | g\nof which\n— saturates, | g\n— mono-unsaturates, | g\n— polyunsaturates, | g\ncarbohydrate | g\nof which\n— sugars, | g\n— polyols, | g\n— starch, | g\nfibre | g\nprotein | g\nsalt | g\nvitamins and minerals | the units specified in point 1 of Part A of Annex XIII"
+      },
+      "score": 0.31111112
+    }
+  ]
+}

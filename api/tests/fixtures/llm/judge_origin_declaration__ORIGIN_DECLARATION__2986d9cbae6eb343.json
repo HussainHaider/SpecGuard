@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3577,
+  "output_tokens": 401,
+  "cost_usd": 0.010362,
+  "latency_ms": 4206,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares both the country of origin of the product (Belgium) and the origin of the primary ingredient (potatoes, also Belgium). This satisfies the requirement in Art. 26(3): when the origin of the food is given and it is not the same as the primary ingredient, the difference must be declared. Here, both are the same, and both are declared, so there is no risk of misleading the consumer. There is no evidence in the specification or the retrieved clauses that would trigger a mandatory origin declaration due to risk of misleading (Art. 26(2)), and the relevant information is present.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient:\n(a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or\n(b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      },
+      {
+        "chunk_id": "b73d2faf-676d-5055-8d61-5ca58c92268f",
+        "quoted_span": "Indication of the country of origin or place of provenance shall be mandatory:\n(a) where failure to indicate this might mislead the consumer as to the true country of origin or place of provenance of the food, in particular if the information accompanying the food or the label as a whole would otherwise imply that the food has a different country of origin or place of provenance;"
+      }
+    ],
+    "confidence": 1.0
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "query": "Vitamin C contributes to maintain the normal function of the immune system during and after intense physical exercise, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "bafee060-6dc5-5bfb-8ce5-ad6c086d1258",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "3",
+        "paragraph": null,
+        "heading": "General principles for all claims",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "Nutrition and health claims may be used in the labelling, presentation and advertising of foods placed on the market in the Community only if they comply with the provisions of this Regulation.\nWithout prejudice to Directives 2000/13/EC and 84/450/EEC, the use of nutrition and health claims shall not:\n(a) be false, ambiguous or misleading;\n(b) give rise to doubt about the safety and/or the nutritional adequacy of other foods;\n(c) encourage or condone excess consumption of a food;\n(d) state, suggest or imply that a balanced and varied diet cannot provide appropriate quantities of nutrients in general. Derogations in the case of nutrients for which sufficient quantities cannot be provided by a balanced and varied diet, including the conditions for their application, and designed to amend non-essential elements of this Regulation by supplementing it may be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), taking into account the special conditions present in Member States;\n(e) refer to changes in bodily functions which could give rise to or exploit fear in the consumer, either textually or through pictorial, graphic or symbolic representations."
+      },
+      "score": 0.5208333
+    },
+    {
+      "clause": {
+        "chunk_id": "3319bd8a-13de-5e00-9d2f-d75272b2902e",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part A.1",
+        "heading": "REFERENCE INTAKES — PART A — DAILY REFERENCE INTAKES FOR VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "1. Vitamins and minerals which may be declared and their nutrient reference values (NRVs)\nVitamin A (μg) | 800\nVitamin D (μg) | 5\nVitamin E (mg) | 12\nVitamin K (μg) | 75\nVitamin C (mg) | 80\nThiamin (mg) | 1,1\nRiboflavin (mg) | 1,4\nNiacin (mg) | 16\nVitamin B6 (mg) | 1,4\nFolic acid (μg) | 200\nVitamin B12 (μg) | 2,5\nBiotin (μg) | 50\nPantothenic acid (mg) | 6\nPotassium (mg) | 2 000\nChloride (mg) | 800\nCalcium (mg) | 800\nPhosphorus (mg) | 700\nMagnesium (mg) | 375\nIron (mg) | 14\nZinc (mg) | 10\nCopper (mg) | 1\nManganese (mg) | 2\nFluoride (mg) | 3,5\nSelenium(μg) | 55\nChromium (μg) | 40\nMolybdenum (μg) | 50\nIodine (μg) | 150"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "15",
+        "paragraph": "3",
+        "heading": "Application for authorisation",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. The application shall include the following:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which the health claim is to be made and its particular characteristics;\n(c) a copy of the studies, including, where available, independent, peer-reviewed studies, which have been carried out with regard to the health claim and any other material which is available to demonstrate that the health claim complies with the criteria provided for in this Regulation;\n(d) where appropriate, an indication of the information which should be regarded as proprietary accompanied by verifiable justification;\n(e) a copy of other scientific studies which are relevant to that health claim;\n(f) a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;\n(g) a summary of the application."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "0de6dd30-34b6-509d-9ded-eab9adfb18de",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part B",
+        "heading": "REFERENCE INTAKES — PART B — REFERENCE INTAKES FOR ENERGY AND SELECTED NUTRIENTS OTHER THAN VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Energy or nutrient | Reference intake\nEnergy | 8 400 kJ/2 000 kcal\nTotal fat | 70 g\nSaturates | 20 g\nCarbohydrate | 260 g\nSugars | 90 g\nProtein | 50 g\nSalt | 6 g"
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "16",
+        "paragraph": "4",
+        "heading": "Opinion of the Authority",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "4. In the event of an opinion in favour of authorising the health claim, the opinion shall include the following particulars:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which a claim is to be made and its particular characteristics;\n(c) a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;\n(d) where applicable, conditions or restrictions of use of the food and/or an additional statement or warning that should accompany the health claim on the label and in advertising."
+      },
+      "score": 0.25
+    }
+  ]
+}

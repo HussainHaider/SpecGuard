@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3811,
+  "output_tokens": 266,
+  "cost_usd": 0.00975,
+  "latency_ms": 2787,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares the country of origin for the product as Italy and also explicitly states the origin of the primary ingredient (tomatoes, 62%) as Italy. According to Art. 26(3), if the origin of the food is given and it differs from the primary ingredient, this must be declared. Here, both are the same (Italy), so there is no misleading information and the requirement is satisfied. There is no evidence that omitting the origin would mislead the consumer, and the relevant information is provided.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

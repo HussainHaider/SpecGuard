@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 4037,
+  "output_tokens": 333,
+  "cost_usd": 0.010738,
+  "latency_ms": 3712,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product specification includes the health claim 'Iron contributes to normal cognitive function.' The retrieved regulation clauses establish that health claims may only be made if they are authorised and must be worded within the terms of that authorisation (see Art. 3 and Art. 16(4)). However, the retrieved clauses do not provide the specific list of authorised health claims or the exact authorised wording for iron and cognitive function. Without access to the official register of authorised health claims and their precise wording, it is not possible to confirm solely from the supplied clauses whether the claim as worded is compliant.",
+    "suggested_fix": "Check the EU Register of Nutrition and Health Claims to confirm whether 'Iron contributes to normal cognitive function' is an authorised claim and that the wording matches the authorised text exactly.",
+    "citations": [
+      {
+        "chunk_id": "bafee060-6dc5-5bfb-8ce5-ad6c086d1258",
+        "quoted_span": "Nutrition and health claims may be used in the labelling, presentation and advertising of foods placed on the market in the Community only if they comply with the provisions of this Regulation."
+      },
+      {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "quoted_span": "a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;"
+      }
+    ],
+    "confidence": 0.7
+  }
+}

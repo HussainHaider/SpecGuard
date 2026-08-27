@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1888,
+  "output_tokens": 151,
+  "cost_usd": 0.004984,
+  "latency_ms": 2605,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (definition of 'legal name' in Art. 2(2)(n)) only defines what a 'legal name' is; it does not itself require that a product provide a legal name, nor does it establish requirements for QUID (quantitative ingredient declaration). The verdict turns on compliance with the requirement to provide a legal name and to declare QUID for certain ingredients, but the cited clause does not establish either obligation. The actual requirements are found elsewhere in Regulation (EU) No 1169/2011, such as in Articles 9, 17 (for legal name), and 22 (for QUID). Therefore, the citation is insufficient to ground the verdict."
+  }
+}

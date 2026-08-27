@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3764,
+  "output_tokens": 301,
+  "cost_usd": 0.009936,
+  "latency_ms": 3421,
+  "response": {
+    "verdict": "FAIL",
+    "rationale": "The product specification for 'Lightly Salted Potato Crisps' includes a health claim: 'Docosahexaenoic acid (DHA) maternal intake contributes to the normal development of the eye of the foetus and breastfed infants.' According to Regulation (EC) No 1924/2006 Art. 14(1), such claims may only be made if they are authorised and used within the terms of that authorisation. There is no evidence in the specification that the product contains DHA or that the claim is authorised for this product. Furthermore, the claim is specific to DHA, which is not listed among the ingredients. Therefore, the claim is not substantiated for this product and is not compliant.",
+    "suggested_fix": "Remove the health claim regarding DHA unless the product contains DHA in sufficient quantity and the claim is authorised for this product under EU law.",
+    "citations": [
+      {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "quoted_span": "the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims"
+      }
+    ],
+    "confidence": 0.95
+  }
+}

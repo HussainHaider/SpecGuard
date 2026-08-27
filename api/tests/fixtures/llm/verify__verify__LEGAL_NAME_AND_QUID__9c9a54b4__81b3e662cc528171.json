@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 903,
+  "output_tokens": 102,
+  "cost_usd": 0.002622,
+  "latency_ms": 1554,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1)(a), establishes that the quantity indication (QUID) is required when an ingredient appears in the name of the food. The verdict turns on this requirement, stating that 'mushrooms' and 'tomato' appear in the name and their quantities are declared. The clause is directly about the obligation the verdict addresses, so the citation supports the verdict."
+  }
+}
