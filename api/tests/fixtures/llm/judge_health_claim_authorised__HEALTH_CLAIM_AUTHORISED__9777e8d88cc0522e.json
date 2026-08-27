@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 3643,
+  "output_tokens": 264,
+  "cost_usd": 0.009398,
+  "latency_ms": 3863,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product makes a health claim: 'Calcium contributes to normal blood clotting.' According to Regulation (EC) No 1924/2006 Art. 10(1), health claims are only permitted if they are authorised and included in the lists of authorised claims. The retrieved clauses establish this requirement. The wording used, 'Calcium contributes to normal blood clotting,' matches the authorised health claim wording for calcium as listed in the EU Register of nutrition and health claims made on foods. There is no evidence in the specification of any unauthorised or disease-prevention/treatment claims. Therefore, the claim is compliant with the regulation as presented in the retrieved clauses.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "27fbb6a0-b5fc-560e-8323-566a13eb067e",
+        "quoted_span": "Health claims shall be prohibited unless they comply with the general requirements in Chapter II and the specific requirements in this Chapter and are authorised in accordance with this Regulation and included in the lists of authorised claims provided for in Articles 13 and 14."
+      }
+    ],
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "query": "OPC Plus has been shown to increase the microcirculation and may therefore reduce the risk of chronic venous insufficiency, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "4837e0cc-e588-5937-9add-433d55c93f1c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "REDUCED [NAME OF THE NUTRIENT]",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim stating that the content in one or more nutrients has been reduced, and any claim likely to have the same meaning for the consumer, may only be made where the reduction in content is at least 30 % compared to a similar product, except for micronutrients, where a 10 % difference in the reference values as set in Directive 90/496/EEC shall be acceptable, and for sodium, or the equivalent value for salt, where a 25 % difference shall be acceptable.\nThe claim ‘reduced saturated fat’, and any claim likely to have the same meaning for the consumer, may only be made:\n(a) if the sum of saturated fatty acids and of trans-fatty acids in the product bearing the claim is at least 30 % less than the sum of saturated fatty acids and of trans-fatty acids in a similar product; and\n(b) if the content in trans-fatty acids in the product bearing the claim is equal to or less than in a similar product.\nThe claim ‘reduced sugars’, and any claim likely to have the same meaning for the consumer, may only be made if the amount of energy of the product bearing the claim is equal to or less than the amount of energy in a similar product."
+      },
+      "score": 0.53571427
+    },
+    {
+      "clause": {
+        "chunk_id": "48772ac6-2bb7-53a4-9e62-d6ce99c2a021",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "2",
+        "paragraph": "2",
+        "heading": "Definitions",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "2. The following definitions shall also apply:\n1) ‘claim’ means any message or representation, which is not mandatory under Community or national legislation, including pictorial, graphic or symbolic representation, in any form, which states, suggests or implies that a food has particular characteristics;\n2) ‘nutrient’ means protein, carbohydrate, fat, fibre, sodium, vitamins and minerals listed in the Annex to Directive 90/496/EEC, and substances which belong to or are components of one of those categories;\n3) ‘other substance’ means a substance other than a nutrient that has a nutritional or physiological effect;\n4) ‘nutrition claim’ means any claim which states, suggests or implies that a food has particular beneficial nutritional properties due to:\n(a) the energy (calorific value) it\n(i) provides;\n(ii) provides at a reduced or increased rate; or\n(iii) does not provide; and/or\n(b) the nutrients or other substances it\n(i) contains;\n(ii) contains in reduced or increased proportions; or\n(iii) does not contain;\n5) ‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;\n6) ‘reduction of disease risk claim’ means any health claim that states, suggests or implies that the consumption of a food category, a food or one of its constituents significantly reduces a risk factor in the development of a human disease;\n7) ‘Authority’ means the European Food Safety Authority established by Regulation (EC) No 178/2002.\nCHAPTER II\nGENERAL PRINCIPLES"
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "af37c4dc-ee93-5585-9c18-6816d5cf511f",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "2",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "2. In addition to the general requirements laid down in this Regulation and the specific requirements of paragraph 1, for reduction of disease risk claims the labelling or, if no such labelling exists, the presentation or advertising shall also bear a statement indicating that the disease to which the claim is referring has multiple risk factors and that altering one of these risk factors may or may not have a beneficial effect."
+      },
+      "score": 0.4166667
+    },
+    {
+      "clause": {
+        "chunk_id": "ab837051-fc58-521b-9c95-a3dd3efa1ad9",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "3",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. After consulting the Authority, the Commission shall adopt, in accordance with the regulatory procedure with scrutiny referred to in Article 25(3), a Community list, designed to amend non-essential elements of this Regulation by supplementing it, of permitted claims as referred to in paragraph 1 and all necessary conditions for the use of these claims by 31 January 2010 at the latest."
+      },
+      "score": 0.39583334
+    },
+    {
+      "clause": {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "1",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Notwithstanding Article 2(1)(b) of Directive 2000/13/EC, the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      },
+      "score": 0.39285713
+    }
+  ]
+}

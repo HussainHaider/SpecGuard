@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 1056,
+  "output_tokens": 137,
+  "cost_usd": 0.003208,
+  "latency_ms": 2400,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Annex VIII, 1) lists exemptions from the requirement to provide quantitative indication of ingredients (QUID), specifying when QUID is not required. The verdict, however, asserts that the QUID requirement is satisfied because the percentages for 'Tomato' and 'Basil' are declared. The clause does not establish the requirement to declare QUID, but rather when it is not required. Therefore, it does not support the verdict's claim that the requirement is satisfied; it only outlines exceptions. The actual requirement for QUID is found elsewhere (Article 22 and Annex VII), not in this exemption clause."
+  }
+}

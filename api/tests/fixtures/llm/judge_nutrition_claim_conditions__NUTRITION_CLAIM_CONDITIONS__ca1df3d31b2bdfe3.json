@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3858,
+  "output_tokens": 155,
+  "cost_usd": 0.008956,
+  "latency_ms": 2303,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The only nutrition claim listed in the specification is 'Source of iron.' The retrieved regulation clauses include conditions for 'source of fibre,' 'high fibre,' 'low fat,' and 'low saturated fat,' but do not include the conditions of use for 'source of iron.' Since the requirement is to check only the claims listed in the specification, and there is no clause provided for 'source of iron,' there is nothing to check against the product's declared nutrition values. Therefore, the answer is PASS, as the retrieved clauses do not establish any unmet requirement for the claims made.",
+    "suggested_fix": null,
+    "citations": [],
+    "confidence": 1.0
+  }
+}

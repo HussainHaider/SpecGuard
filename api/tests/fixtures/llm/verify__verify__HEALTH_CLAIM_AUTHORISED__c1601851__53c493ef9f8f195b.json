@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 956,
+  "output_tokens": 101,
+  "cost_usd": 0.00272,
+  "latency_ms": 1594,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EC) No 1924/2006 Art. 14(1), explicitly states that claims referring to children's development and health may only be made if they have been authorised according to the specified procedure. The verdict turns on the requirement that such claims must be authorised, and finds non-compliance due to lack of evidence of authorisation. This is exactly the requirement established by the cited clause, so the citation supports the verdict."
+  }
+}

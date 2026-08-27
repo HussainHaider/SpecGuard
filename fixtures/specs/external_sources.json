@@ -1,0 +1,86 @@
+{
+  "EXT-001": {
+    "claim": "Vitamin C contributes to maintain the normal function of the immune system during and after intense physical exercise",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-002": {
+    "claim": "Calcium contributes to normal blood clotting",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-003": {
+    "claim": "Iron contributes to normal cognitive function",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-004": {
+    "claim": "Magnesium contributes to a reduction of tiredness and fatigue",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-005": {
+    "claim": "Zinc contributes to normal DNA synthesis",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-006": {
+    "claim": "Biotin contributes to normal energy-yielding metabolism",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-007": {
+    "claim": "Vitamin D contributes to normal absorption/utilisation of calcium and phosphorus",
+    "status": "authorised",
+    "regulation": "Commission Regulation (EU) No 432/2012",
+    "celex": "32012R0432"
+  },
+  "EXT-008": {
+    "claim": "Docosahexaenoic acid (DHA) and arachidonic acid (ARA) contribute to the optimal brain development of infants and young children.",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 440/2011",
+    "celex": "32011R0440"
+  },
+  "EXT-009": {
+    "claim": "Docosahexaenoic acid (DHA) intake contributes to the normal visual development of infants up to 12 months of age.",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 440/2011",
+    "celex": "32011R0440"
+  },
+  "EXT-010": {
+    "claim": "Docosahexaenoic acid (DHA) maternal intake contributes to the normal brain development of the foetus and breastfed infants.",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 440/2011",
+    "celex": "32011R0440"
+  },
+  "EXT-011": {
+    "claim": "Docosahexaenoic acid (DHA) maternal intake contributes to the normal development of the eye of the foetus and breastfed infants.",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 440/2011",
+    "celex": "32011R0440"
+  },
+  "EXT-012": {
+    "claim": "Enfamil® Premium contributes to optimal brain development of infants and young children.",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 440/2011",
+    "celex": "32011R0440"
+  },
+  "EXT-013": {
+    "claim": "Lipil® contributes to optimal brain development of infants and young children.",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 440/2011",
+    "celex": "32011R0440"
+  },
+  "EXT-014": {
+    "claim": "OPC Plus has been shown to increase the microcirculation and may therefore reduce the risk of chronic venous insufficiency",
+    "status": "refused",
+    "regulation": "Commission Regulation (EU) No 665/2011",
+    "celex": "32011R0665"
+  }
+}

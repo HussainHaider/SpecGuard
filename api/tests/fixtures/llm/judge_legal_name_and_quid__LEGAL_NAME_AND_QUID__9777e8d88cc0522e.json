@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4667,
+  "output_tokens": 314,
+  "cost_usd": 0.011846,
+  "latency_ms": 3381,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product is given a legal name: 'Strawberry yogurt with live cultures', which is a descriptive and customary name for this type of food and not merely a brand or fancy name. For the QUID requirement, 'Strawberries' appears in the name of the food and is essential to characterise the food. The ingredient list provides the quantitative declaration for strawberries (12%), as well as for yogurt (82%) and sugar (5%). This satisfies the requirement for quantitative indication of ingredients where required.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "54fa0d25-e799-5589-9374-f7d5f6a52e13",
+        "quoted_span": "The quantitative indication shall not be required:\n(a) in respect of an ingredient or category of ingredients:\n(i) the drained net weight of which is indicated in accordance with point 5 of Annex IX;\n(ii) the quantities of which must already appear on the labelling under Union provisions;\n(iii) which is used in small quantities for the purposes of flavouring; or\n(iv) which, while appearing in the name of the food, is not such as to govern the choice of the consumer in the country of marketing because the variation in quantity is not essential to characterise the food or does not distinguish it from similar foods;"
+      }
+    ],
+    "confidence": 1.0
+  }
+}

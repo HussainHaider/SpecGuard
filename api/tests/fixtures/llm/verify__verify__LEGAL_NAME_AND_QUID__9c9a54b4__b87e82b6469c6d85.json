@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 963,
+  "output_tokens": 118,
+  "cost_usd": 0.00287,
+  "latency_ms": 2058,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that the quantity of an ingredient must be indicated when it appears in the name of the food, is emphasised on the label, or is essential to characterise the food. The verdict turns on this requirement, stating that 'chickpeas' and 'sesame paste' appear in the legal name and their percentages are provided, thus satisfying the QUID requirement. The clause directly supports the legal basis for the verdict."
+  }
+}

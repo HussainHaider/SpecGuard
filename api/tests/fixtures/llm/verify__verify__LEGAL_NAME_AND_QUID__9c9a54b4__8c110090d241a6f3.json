@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 980,
+  "output_tokens": 103,
+  "cost_usd": 0.002784,
+  "latency_ms": 2663,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that a quantitative indication (QUID) is required for ingredients that appear in the name of the food, are emphasised on the labelling, or are essential to characterise the food. The verdict turns on this requirement by assessing whether the product's labelling and ingredient declaration comply with these conditions. Therefore, the clause directly supports the verdict."
+  }
+}

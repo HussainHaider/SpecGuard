@@ -1,0 +1,78 @@
+{
+  "query": "Zinc contributes to normal DNA synthesis, authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "15",
+        "paragraph": "3",
+        "heading": "Application for authorisation",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "3. The application shall include the following:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which the health claim is to be made and its particular characteristics;\n(c) a copy of the studies, including, where available, independent, peer-reviewed studies, which have been carried out with regard to the health claim and any other material which is available to demonstrate that the health claim complies with the criteria provided for in this Regulation;\n(d) where appropriate, an indication of the information which should be regarded as proprietary accompanied by verifiable justification;\n(e) a copy of other scientific studies which are relevant to that health claim;\n(f) a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;\n(g) a summary of the application."
+      },
+      "score": 0.75
+    },
+    {
+      "clause": {
+        "chunk_id": "d37b1ca3-8963-5ecd-a6de-1c1f366e1f07",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "7",
+        "paragraph": "3",
+        "heading": "Fair information practices",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "3. Subject to derogations provided for by Union law applicable to natural mineral waters and foods for particular nutritional uses, food information shall not attribute to any food the property of preventing, treating or curing a human disease, nor refer to such properties."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "16",
+        "paragraph": "4",
+        "heading": "Opinion of the Authority",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "4. In the event of an opinion in favour of authorising the health claim, the opinion shall include the following particulars:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which a claim is to be made and its particular characteristics;\n(c) a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;\n(d) where applicable, conditions or restrictions of use of the food and/or an additional statement or warning that should accompany the health claim on the label and in advertising."
+      },
+      "score": 0.36036038
+    },
+    {
+      "clause": {
+        "chunk_id": "d786effe-213b-5aad-b3da-66a2c6ddf9af",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "HIGH [NAME OF VITAMIN/S] AND/OR [NAME OF MINERAL/S]",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is high in vitamins and/or minerals, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least twice the value of ‘source of [NAME OF VITAMIN/S] and/or [NAME OF MINERAL/S]’."
+      },
+      "score": 0.33333334
+    },
+    {
+      "clause": {
+        "chunk_id": "142a7250-39d1-5797-b6db-90033300da3c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "5",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "5. Any additions of claims to the list referred to in paragraph 3 based on newly developed scientific evidence and/or which include a request for the protection of proprietary data shall be adopted following the procedure laid down in Article 18, except claims referring to children's development and health, which shall be authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19."
+      },
+      "score": 0.25555557
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 4304,
+  "output_tokens": 481,
+  "cost_usd": 0.012456,
+  "latency_ms": 3986,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product specification includes the health claim: 'Vitamin D contributes to normal absorption/utilisation of calcium and phosphorus.' The retrieved regulation clauses define what constitutes a health claim (Art. 2(2), chunk_id: 48772ac6-2bb7-53a4-9e62-d6ce99c2a021) and outline the process for authorisation and wording of health claims (Art. 15(3) and Art. 16(4)), but do not provide the list of authorised health claims or the exact authorised wording for vitamin D. Without the specific list of authorised claims and their permitted wording, it is not possible to determine from the retrieved clauses whether the claim as worded is compliant or overstated. There is also no evidence in the retrieved clauses regarding the prohibition of disease prevention, treatment, or cure claims, though the claim in question does not appear to make such a statement.",
+    "suggested_fix": "Retrieve the relevant annex or register of authorised health claims (such as the EU Register of Nutrition and Health Claims) to verify if the claim 'Vitamin D contributes to normal absorption/utilisation of calcium and phosphorus' is authorised and if the wording matches the authorised form.",
+    "citations": [
+      {
+        "chunk_id": "48772ac6-2bb7-53a4-9e62-d6ce99c2a021",
+        "quoted_span": "‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;"
+      },
+      {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "quoted_span": "a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;"
+      },
+      {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "quoted_span": "a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;"
+      }
+    ],
+    "confidence": 0.6
+  }
+}

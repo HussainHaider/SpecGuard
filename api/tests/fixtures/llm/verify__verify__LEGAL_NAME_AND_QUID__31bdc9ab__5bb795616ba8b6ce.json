@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 977,
+  "output_tokens": 128,
+  "cost_usd": 0.002978,
+  "latency_ms": 1695,
+  "response": {
+    "support": "insufficient",
+    "reason": "The cited clause (Art. 19(1)(e) of Regulation (EU) No 1169/2011) establishes when foods consisting of a single ingredient are exempt from bearing a list of ingredients. The verdict, however, discusses compliance with QUID (Quantitative Ingredient Declaration) requirements and the presentation of the ingredient 'MILK' in the product name and ingredient list. The cited clause does not address QUID requirements or the manner of ingredient emphasis or percentage declaration; those are covered elsewhere in the regulation. Therefore, the clause is insufficient to support the verdict as stated."
+  }
+}

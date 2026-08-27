@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 4114,
+  "output_tokens": 215,
+  "cost_usd": 0.009948,
+  "latency_ms": 3878,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product makes the nutrition claim 'Source of zinc'. To verify compliance, the conditions of use for this claim must be checked against the product's declared zinc content. However, the nutrition table in the specification does not declare the zinc content per 100g, nor is there any micronutrient data provided. The retrieved regulation clauses do not include the specific conditions for the 'Source of [vitamin/mineral]' claim from Regulation (EC) No 1924/2006 Annex, nor do they provide the reference value for zinc or the threshold for making this claim. Therefore, it is not possible to determine compliance based on the supplied information.",
+    "suggested_fix": "Provide the declared zinc content per 100g and retrieve the relevant clause from Regulation (EC) No 1924/2006 Annex specifying the conditions for the 'Source of [vitamin/mineral]' claim.",
+    "citations": [],
+    "confidence": 0.9
+  }
+}

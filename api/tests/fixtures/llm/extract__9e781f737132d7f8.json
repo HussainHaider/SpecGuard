@@ -1,0 +1,271 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2",
+  "input_tokens": 4737,
+  "output_tokens": 2093,
+  "cost_usd": 0.026218,
+  "latency_ms": 14566,
+  "response": {
+    "product_name": {
+      "value": "Roasted Mixed Nuts",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nRoasted Mixed Nuts"
+    },
+    "legal_name": {
+      "value": "Roasted mixed nuts, salted",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Roasted mixed nuts, salted"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "PEANUTS 42%, CASHEW NUTS 26%, ALMONDS 18%, HAZELNUTS 12%, Sunflower oil, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "PEANUTS",
+              "percentage": 42.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "PEANUTS 42%"
+          },
+          {
+            "value": {
+              "name": "CASHEW NUTS",
+              "percentage": 26.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "CASHEW NUTS 26%"
+          },
+          {
+            "value": {
+              "name": "ALMONDS",
+              "percentage": 18.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "ALMONDS 18%"
+          },
+          {
+            "value": {
+              "name": "HAZELNUTS",
+              "percentage": 12.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "HAZELNUTS 12%"
+          },
+          {
+            "value": {
+              "name": "Sunflower oil",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Sunflower oil"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nPEANUTS 42%, CASHEW NUTS 26%, ALMONDS 18%, HAZELNUTS 12%, Sunflower oil, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 200.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 200 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before_end",
+        "raw_text": "Best before end: 8 months from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Best before end: 8 months from production"
+    },
+    "storage_conditions": {
+      "value": "Store in a cool, dry place away from direct sunlight.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Store in a cool, dry place away from direct sunlight."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Nussmeister Handels GmbH",
+        "address": "Am Hafen 23, 20457 Hamburg, Germany",
+        "country": "Germany"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Nussmeister Handels GmbH, Am Hafen 23, 20457 Hamburg, Germany"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 2479.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 2479 kJ / 599 kcal"
+        },
+        "energy_kcal": {
+          "value": 599.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 2479 kJ / 599 kcal"
+        },
+        "fat_g": {
+          "value": 49.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 49.8 g"
+        },
+        "saturates_g": {
+          "value": 7.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 7.2 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 12.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 12.1 g"
+        },
+        "sugars_g": {
+          "value": 4.3,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 4.3 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 7.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 7.9 g"
+        },
+        "protein_g": {
+          "value": 21.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 21.6 g"
+        },
+        "salt_g": {
+          "value": 0.94,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.94 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 2479 kJ / 599 kcal\nFat 49.8 g\nof which saturates 7.2 g\nCarbohydrate 12.1 g\nof which sugars 4.3 g\nFibre 7.9 g\nProtein 21.6 g\nSalt 0.94 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Germany",
+          "raw_text": "Country of origin Germany"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Germany"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Argentina",
+          "raw_text": "Origin of primary ingredient Argentina"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Argentina"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Source of zinc",
+          "kind": "nutrition",
+          "nutrient": "zinc"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Source of zinc"
+      },
+      {
+        "value": {
+          "text": "Zinc contributes to normal DNA synthesis",
+          "kind": "health",
+          "nutrient": "zinc"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Zinc contributes to normal DNA synthesis"
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

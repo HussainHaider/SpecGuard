@@ -1,0 +1,261 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2",
+  "input_tokens": 4741,
+  "output_tokens": 2028,
+  "cost_usd": 0.025706,
+  "latency_ms": 13604,
+  "response": {
+    "product_name": {
+      "value": "Pasta Sauce with Mushrooms",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nPasta Sauce with Mushrooms"
+    },
+    "legal_name": {
+      "value": "Tomato sauce with mushrooms for pasta",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Tomato sauce with mushrooms for pasta"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Tomatoes 62%, Mushrooms 14%, Onions 8%, Olive oil 3.5%, Garlic 1%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Tomatoes",
+              "percentage": 62.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Tomatoes 62%"
+          },
+          {
+            "value": {
+              "name": "Mushrooms",
+              "percentage": 14.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Mushrooms 14%"
+          },
+          {
+            "value": {
+              "name": "Onions",
+              "percentage": 8.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Onions 8%"
+          },
+          {
+            "value": {
+              "name": "Olive oil",
+              "percentage": 3.5,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Olive oil 3.5%"
+          },
+          {
+            "value": {
+              "name": "Garlic",
+              "percentage": 1.0,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Garlic 1%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "none",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "none"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nTomatoes 62%, Mushrooms 14%, Onions 8%, Olive oil 3.5%, Garlic 1%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 440.0,
+        "unit": "g"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 440 g"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "best_before",
+        "raw_text": "Best before: 18 months from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Best before: 18 months from production"
+    },
+    "storage_conditions": {
+      "value": "Store in a cool, dry place. Refrigerate after opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Store in a cool, dry place. Refrigerate after opening."
+    },
+    "instructions_for_use": null,
+    "business_operator": {
+      "value": {
+        "name": "Salsa Bella S.r.l.",
+        "address": "Strada Provinciale 22, 43122 Parma, Italy",
+        "country": "Italy"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Salsa Bella S.r.l., Strada Provinciale 22, 43122 Parma, Italy"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100g",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 g"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 288.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 288 kJ / 69 kcal"
+        },
+        "energy_kcal": {
+          "value": 69.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 288 kJ / 69 kcal"
+        },
+        "fat_g": {
+          "value": 3.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 3.9 g"
+        },
+        "saturates_g": {
+          "value": 0.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 0.6 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 6.2,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 6.2 g"
+        },
+        "sugars_g": {
+          "value": 5.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 5.1 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 1.6,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 1.6 g"
+        },
+        "protein_g": {
+          "value": 1.5,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 1.5 g"
+        },
+        "salt_g": {
+          "value": 0.71,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.71 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 g\nEnergy 288 kJ / 69 kcal\nFat 3.9 g\nof which saturates 0.6 g\nCarbohydrate 6.2 g\nof which sugars 5.1 g\nFibre 1.6 g\nProtein 1.5 g\nSalt 0.71 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Italy",
+          "raw_text": "Country of origin Italy"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Italy"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Italy",
+          "raw_text": "Origin of primary ingredient Italy"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Italy"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "OPC Plus has been shown to increase the microcirculation and may therefore reduce the risk of chronic venous insufficiency",
+          "kind": "health",
+          "nutrient": null
+        },
+        "confidence": 0.9,
+        "page": 1,
+        "quoted_span": "OPC Plus has been shown to increase the microcirculation and may therefore reduce the risk of chronic venous insufficiency"
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

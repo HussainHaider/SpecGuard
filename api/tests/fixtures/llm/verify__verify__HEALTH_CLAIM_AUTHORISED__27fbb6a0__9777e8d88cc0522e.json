@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 881,
+  "output_tokens": 97,
+  "cost_usd": 0.002538,
+  "latency_ms": 1855,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EC) No 1924/2006 Art. 10(1), establishes the requirement that health claims are prohibited unless they comply with the general and specific requirements of the regulation and are authorised and included in the official lists. The verdict turns on this requirement by assessing whether the product's health claim is authorised and included in the relevant lists. Therefore, the clause directly supports the legal basis for the verdict."
+  }
+}

@@ -232,3 +232,6 @@ web/tsconfig.tsbuildinfo
 .ruff_cache/
 .DS_Store
 .gstack/
+
+# Local agent tooling, not part of this project.
+.agents/

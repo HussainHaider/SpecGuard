@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3427,
+  "output_tokens": 358,
+  "cost_usd": 0.009718,
+  "latency_ms": 9895,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares both the country of origin of the product (Spain) and the country of origin of the primary ingredient (Spain). Since both are the same and are clearly stated, there is no risk of misleading the consumer, and the requirement to indicate the origin of the primary ingredient separately (or to state that it differs) does not apply. The relevant regulatory clauses are present and establish the requirement and its conditions.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "b73d2faf-676d-5055-8d61-5ca58c92268f",
+        "quoted_span": "Indication of the country of origin or place of provenance shall be mandatory: (a) where failure to indicate this might mislead the consumer as to the true country of origin or place of provenance of the food, in particular if the information accompanying the food or the label as a whole would otherwise imply that the food has a different country of origin or place of provenance;"
+      },
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient: (a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or (b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

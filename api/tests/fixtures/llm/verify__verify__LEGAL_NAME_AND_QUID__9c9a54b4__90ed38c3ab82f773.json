@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 985,
+  "output_tokens": 129,
+  "cost_usd": 0.003002,
+  "latency_ms": 1829,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EU) No 1169/2011 Art. 22(1), establishes the requirement that the quantity of certain ingredients must be indicated when those ingredients appear in the name of the food, are emphasised on the labelling, or are essential to characterise the food. The verdict turns on whether the specification meets this requirement by providing the quantitative indication of ingredients such as 'Chicken', 'Carrots', and 'Leeks' that appear in the name or are essential to characterise the food. Therefore, the clause directly supports the requirement assessed in the verdict."
+  }
+}

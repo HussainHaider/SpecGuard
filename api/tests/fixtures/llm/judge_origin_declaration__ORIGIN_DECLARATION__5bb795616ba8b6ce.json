@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_origin_declaration@v1",
+  "input_tokens": 3674,
+  "output_tokens": 391,
+  "cost_usd": 0.010476,
+  "latency_ms": 4051,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification declares both the country of origin of the product (Ireland) and the origin of the primary ingredient (milk, also Ireland). The primary ingredient (milk) is present at 98%. There is no discrepancy between the origin of the food and its primary ingredient, and both are clearly stated. The retrieved clauses establish that the origin must be given where omitting it could mislead, and that if the origin of the food is given and differs from the primary ingredient, this must be declared. Here, both are given and are the same, so the requirement is satisfied.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "b73d2faf-676d-5055-8d61-5ca58c92268f",
+        "quoted_span": "Indication of the country of origin or place of provenance shall be mandatory:\n(a) where failure to indicate this might mislead the consumer as to the true country of origin or place of provenance of the food, in particular if the information accompanying the food or the label as a whole would otherwise imply that the food has a different country of origin or place of provenance;"
+      },
+      {
+        "chunk_id": "c3e84cf5-2ec2-5243-a719-2179349cd2c5",
+        "quoted_span": "Where the country of origin or the place of provenance of a food is given and where it is not the same as that of its primary ingredient:\n(a) the country of origin or place of provenance of the primary ingredient in question shall also be given; or\n(b) the country of origin or place of provenance of the primary ingredient shall be indicated as being different to that of the food."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

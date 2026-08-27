@@ -1,0 +1,266 @@
+{
+  "note": "recorded from openai/gpt-4.1 with extract@v2",
+  "input_tokens": 4757,
+  "output_tokens": 2093,
+  "cost_usd": 0.026258,
+  "latency_ms": 15998,
+  "response": {
+    "product_name": {
+      "value": "Tomato & Basil Soup",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "PRODUCT SPECIFICATION\nTomato & Basil Soup"
+    },
+    "legal_name": {
+      "value": "Tomato soup with basil",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Legal name of the food Tomato soup with basil"
+    },
+    "ingredients": {
+      "value": {
+        "raw_text": "Tomatoes 71%, Water, Onions 6%, Single CREAM 4%, Basil 1.2%, Salt",
+        "items": [
+          {
+            "value": {
+              "name": "Tomatoes",
+              "percentage": 71.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Tomatoes 71%"
+          },
+          {
+            "value": {
+              "name": "Water",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Water"
+          },
+          {
+            "value": {
+              "name": "Onions",
+              "percentage": 6.0,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Onions 6%"
+          },
+          {
+            "value": {
+              "name": "Single CREAM",
+              "percentage": 4.0,
+              "emphasised": true,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Single CREAM 4%"
+          },
+          {
+            "value": {
+              "name": "Basil",
+              "percentage": 1.2,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Basil 1.2%"
+          },
+          {
+            "value": {
+              "name": "Salt",
+              "percentage": null,
+              "emphasised": false,
+              "emphasis_style": "uppercase",
+              "sub_ingredients": []
+            },
+            "confidence": 1.0,
+            "page": 1,
+            "quoted_span": "Salt"
+          }
+        ],
+        "dominant_emphasis_style": "uppercase"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Ingredients\nTomatoes 71%, Water, Onions 6%, Single CREAM 4%, Basil 1.2%, Salt"
+    },
+    "allergen_statement": {
+      "value": "Allergens are emphasised in the ingredient list above.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Allergen information\nAllergens are emphasised in the ingredient list above."
+    },
+    "may_contain_statement": null,
+    "net_quantity": {
+      "value": {
+        "value": 600.0,
+        "unit": "ml"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Net quantity 600 ml"
+    },
+    "drained_net_weight": null,
+    "durability": {
+      "value": {
+        "kind": "use_by",
+        "raw_text": "Use by: 14 days from production",
+        "date": null
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Durability Use by: 14 days from production"
+    },
+    "storage_conditions": {
+      "value": "Keep refrigerated. Consume within 3 days of opening.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Storage conditions Keep refrigerated. Consume within 3 days of opening."
+    },
+    "instructions_for_use": {
+      "value": "Heat gently until piping hot. Do not boil.",
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Instructions for use Heat gently until piping hot. Do not boil."
+    },
+    "business_operator": {
+      "value": {
+        "name": "Conserve del Sole S.p.A.",
+        "address": "Via Garibaldi 88, 84013 Cava de' Tirreni, Italy",
+        "country": "Italy"
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Supplier Conserve del Sole S.p.A., Via Garibaldi 88, 84013 Cava de' Tirreni, Italy"
+    },
+    "alcohol_strength_abv": null,
+    "nutrition": {
+      "value": {
+        "basis": {
+          "value": "per_100ml",
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Nutrient per 100 ml"
+        },
+        "portion_size": null,
+        "portions_per_pack": null,
+        "energy_kj": {
+          "value": 207.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 207 kJ / 50 kcal"
+        },
+        "energy_kcal": {
+          "value": 50.0,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Energy 207 kJ / 50 kcal"
+        },
+        "fat_g": {
+          "value": 2.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fat 2.1 g"
+        },
+        "saturates_g": {
+          "value": 1.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which saturates 1.1 g"
+        },
+        "mono_unsaturates_g": null,
+        "polyunsaturates_g": null,
+        "carbohydrate_g": {
+          "value": 5.8,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Carbohydrate 5.8 g"
+        },
+        "sugars_g": {
+          "value": 4.9,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "of which sugars 4.9 g"
+        },
+        "polyols_g": null,
+        "starch_g": null,
+        "fibre_g": {
+          "value": 1.1,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Fibre 1.1 g"
+        },
+        "protein_g": {
+          "value": 1.3,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Protein 1.3 g"
+        },
+        "salt_g": {
+          "value": 0.62,
+          "confidence": 1.0,
+          "page": 1,
+          "quoted_span": "Salt 0.62 g"
+        },
+        "alcohol_g": null,
+        "organic_acids_g": null,
+        "erythritol_g": null,
+        "micronutrients": []
+      },
+      "confidence": 1.0,
+      "page": 1,
+      "quoted_span": "Nutrition declaration\nNutrient per 100 ml\nEnergy 207 kJ / 50 kcal\nFat 2.1 g\nof which saturates 1.1 g\nCarbohydrate 5.8 g\nof which sugars 4.9 g\nFibre 1.1 g\nProtein 1.3 g\nSalt 0.62 g"
+    },
+    "origins": [
+      {
+        "value": {
+          "scope": "product",
+          "country": "Italy",
+          "raw_text": "Country of origin Italy"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Country of origin Italy"
+      },
+      {
+        "value": {
+          "scope": "primary_ingredient",
+          "country": "Italy",
+          "raw_text": "Origin of primary ingredient Italy"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Origin of primary ingredient Italy"
+      }
+    ],
+    "claims": [
+      {
+        "value": {
+          "text": "Docosahexaenoic acid (DHA) intake contributes to the normal visual development of infants up to 12 months of age.",
+          "kind": "health",
+          "nutrient": "Docosahexaenoic acid (DHA)"
+        },
+        "confidence": 1.0,
+        "page": 1,
+        "quoted_span": "Docosahexaenoic acid (DHA) intake contributes to the normal visual development of infants up to 12 months of age."
+      }
+    ],
+    "unmapped_notes": []
+  }
+}

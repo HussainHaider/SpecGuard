@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3898,
+  "output_tokens": 220,
+  "cost_usd": 0.009556,
+  "latency_ms": 3100,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The product makes the nutrition claim 'Source of vitamin D'. To verify compliance, the conditions of use for this claim must be checked against the product's declared nutrition values. However, the nutrition table in the specification does not declare any value for vitamin D (it is not listed among the micronutrients, and the micronutrients array is empty). The retrieved regulation clauses do not include the specific conditions of use for the 'Source of vitamin D' claim from Regulation (EC) No 1924/2006 Annex, nor do they provide the reference intake or significant amount threshold for vitamin D. Therefore, it is not possible to determine compliance based on the supplied information.",
+    "suggested_fix": "Ensure the nutrition declaration includes the vitamin D content per 100g, and retrieve the relevant clause from Regulation (EC) No 1924/2006 Annex specifying the conditions for the 'Source of vitamin D' claim.",
+    "citations": [],
+    "confidence": 0.7
+  }
+}

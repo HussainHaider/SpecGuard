@@ -43,6 +43,10 @@ class Split(StrEnum):
 
     DEV = "dev"
     HELD_OUT = "held_out"
+    #: Labelled by EU law rather than by this repository's generator. Reported on its own
+    #: because it answers a different question: not "is the system consistent with its own
+    #: fixtures" but "is it right about the law".
+    EXTERNAL = "external"
 
 
 class Provenance(SpecGuardModel):
@@ -69,6 +73,18 @@ class Provenance(SpecGuardModel):
     )
     corpus_version: str | None = Field(
         default=None, description="Corpus the chunk ids resolve against."
+    )
+    external_source: str | None = Field(
+        default=None,
+        description="For an externally-labelled record, the act that settles it — e.g. "
+        "'Commission Regulation (EU) No 432/2012'. The label is a fact about EU law, and "
+        "this is where a reviewer goes to check it.",
+    )
+    external_source: str | None = Field(
+        default=None,
+        description="For an externally-labelled record, the act that settles it — e.g. "
+        "'Commission Regulation (EU) No 432/2012'. The label is a fact about EU law, and "
+        "this is where a reviewer goes to check it.",
     )
 
 

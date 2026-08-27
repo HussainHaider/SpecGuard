@@ -9,6 +9,7 @@ and that the split does what it says.
 from __future__ import annotations
 
 import collections
+import json
 from pathlib import Path
 
 import pytest
@@ -34,7 +35,20 @@ def manifest():
 
 @pytest.fixture(scope="module")
 def rules():
-    return load_rules()
+    """The generator-labelled records.
+
+    Scoped to the internal set on purpose: everything below asserts a property of how the
+    generator labels its own documents — that the label matches the manifest, that the
+    sha256 still describes the file, that every seeded defect survived sampling. The
+    externally-labelled records have none of those properties by construction, and are
+    checked separately in TestExternalRecords.
+    """
+    return [record for record in load_rules() if record.split is not Split.EXTERNAL]
+
+
+@pytest.fixture(scope="module")
+def external():
+    return [record for record in load_rules() if record.split is Split.EXTERNAL]
 
 
 @pytest.fixture(scope="module")
@@ -161,3 +175,54 @@ class TestRetrievalRecords:
 
     def test_search_keys_are_unique(self, retrieval):
         assert len({record.search_key for record in retrieval}) == len(retrieval)
+
+
+class TestExternalRecords:
+    """The records EU law labels, not this repository.
+
+    These exist because every other record is labelled by the same generator that writes
+    the document. A misreading shared between the generator and a rule passes unnoticed
+    in the internal set; it cannot in this one.
+    """
+
+    def test_there_is_an_external_split_at_all(self, external):
+        assert len(external) == 14
+
+    def test_none_of_them_were_labelled_by_this_system(self, external):
+        assert {record.provenance.source for record in external} == {"eu_register"}
+
+    def test_each_one_cites_the_act_that_settles_it(self, external):
+        """A reviewer has to be able to check the label against the law itself."""
+        for record in external:
+            assert record.provenance.external_source, record.golden_id
+            assert "Regulation" in record.provenance.external_source
+
+    def test_both_answers_are_represented(self, external):
+        """All-refused would be a set a system passes by always saying FAIL."""
+        verdicts = collections.Counter(r.expected_verdict for r in external)
+        assert verdicts[Verdict.PASS] == 7
+        assert verdicts[Verdict.FAIL] == 7
+
+    def test_only_the_rule_eu_law_settles_is_labelled(self, external):
+        """An authorised claim is lawful only where the food meets its conditions of use.
+
+        Labelling the other rules on these documents would be inventing ground truth,
+        which is the circularity this split exists to remove.
+        """
+        assert {record.rule_id for record in external} == {RuleId.HEALTH_CLAIM_AUTHORISED}
+
+    def test_every_record_still_names_the_document_it_describes(self, external):
+        manifest = SPEC_DIR / "external.jsonl"
+        if not manifest.exists():
+            pytest.skip("external fixtures not generated")
+        hashes = {
+            json.loads(line)["spec_id"]: json.loads(line)["sha256"]
+            for line in manifest.read_text(encoding="utf-8").splitlines()
+            if line
+        }
+        for record in external:
+            assert record.provenance.spec_sha256 == hashes[record.spec_id]
+
+    def test_they_do_not_disturb_the_internal_split(self, rules):
+        """The internal set is still exactly the 80 records the baseline was measured on."""
+        assert len(rules) == 80

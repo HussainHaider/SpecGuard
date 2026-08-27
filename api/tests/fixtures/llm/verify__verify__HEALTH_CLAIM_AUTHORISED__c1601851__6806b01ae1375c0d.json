@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 974,
+  "output_tokens": 94,
+  "cost_usd": 0.0027,
+  "latency_ms": 1635,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause, Regulation (EC) No 1924/2006 Art. 14(1), explicitly states that claims referring to children's development and health (such as the DHA claim in question) may only be made if they have been authorised according to the specified procedure. The verdict turns on the requirement that such claims must be authorised, which is exactly what this clause establishes. Therefore, the clause supports the verdict."
+  }
+}

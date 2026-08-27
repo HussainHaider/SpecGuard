@@ -262,7 +262,19 @@ def by_split(
     stops being held out. The combined figure is kept as well: it is the one that is
     comparable across milestones, since the split itself can be rebuilt.
     """
+    internal = [item for item in scored if item.golden.split is not Split.EXTERNAL]
     out = {
+        # "all" is every record. The gates run against "internal" instead, because the
+        # committed baseline was measured before the external split existed and comparing
+        # a number to a baseline that answers a different question is not a regression
+        # test, it is a coin toss. The external split carries its own floor.
+        "internal": compute(
+            internal,
+            retrieval,
+            known_chunk_ids=known_chunk_ids,
+            spec_cost=spec_cost,
+            split="internal",
+        ),
         "all": compute(
             scored,
             retrieval,

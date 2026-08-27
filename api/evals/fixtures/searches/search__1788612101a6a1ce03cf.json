@@ -1,0 +1,78 @@
+{
+  "query": "Docosahexaenoic acid (DHA) maternal intake contributes to the normal brain development of the foetus and breastfed infants., authorised health claims, general principles, permitted wording",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "d9a04b8b-a8f3-57ce-983c-1b09f8bdb889",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "1",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Health claims describing or referring to:\n(a) the role of a nutrient or other substance in growth, development and the functions of the body; or\n(b) psychological and behavioural functions; or\n(c) without prejudice to Directive 96/8/EC, slimming or weight-control or a reduction in the sense of hunger or an increase in the sense of satiety or to the reduction of the available energy from the diet,\nwhich are indicated in the list provided for in paragraph 3 may be made without undergoing the procedures laid down in Articles 15 to 19, if they are:\n(i) based on generally accepted scientific evidence; and\n(ii) well understood by the average consumer."
+      },
+      "score": 0.6
+    },
+    {
+      "clause": {
+        "chunk_id": "c1601851-f638-5383-a794-630781812cec",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "14",
+        "paragraph": "1",
+        "heading": "Reduction of disease risk claims and claims referring to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. Notwithstanding Article 2(1)(b) of Directive 2000/13/EC, the following claims may be made where they have been authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19 of this Regulation for inclusion in a Community list of such permitted claims together with all the necessary conditions for the use of these claims:\n(a) reduction of disease risk claims;\n(b) claims referring to children's development and health."
+      },
+      "score": 0.5
+    },
+    {
+      "clause": {
+        "chunk_id": "61dc505f-243c-50dd-b6b1-7979146afd32",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "4",
+        "paragraph": "1",
+        "heading": "Conditions for the use of nutrition and health claims",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "1. By 19 January 2009, the Commission shall establish specific nutrient profiles, including exemptions, which food or certain categories of food must comply with in order to bear nutrition or health claims and the conditions for the use of nutrition or health claims for foods or categories of foods with respect to the nutrient profiles. Such measures, designed to amend non-essential elements of this Regulation by supplementing it, shall be adopted in accordance with the regulatory procedure with scrutiny referred to in Article 25(3).\nThe nutrient profiles for food and/or certain categories of food shall be established taking into account in particular:\n(a) the quantities of certain nutrients and other substances contained in the food, such as fat, saturated fatty acids, trans-fatty acids, sugars and salt/sodium;\n(b) the role and importance of the food (or of categories of food) and the contribution to the diet of the population in general or, as appropriate, of certain risk groups including children;\n(c) the overall nutritional composition of the food and the presence of nutrients that have been scientifically recognised as having an effect on health.\nThe nutrient profiles shall be based on scientific knowledge about diet and nutrition, and their relation to health.\nIn setting the nutrient profiles, the Commission shall request the Authority to provide within 12 months relevant scientific advice, focusing in particular on:\n(i) whether profiles should be set for food in general and/or categories of food;\n(ii) the choice and balance of nutrients to be taken into account;\n(iii) the choice of reference quantity/basis for profiles;\n(iv) the approach to the calculation of the profiles; and\n(v) the feasibility and testing of a proposed system.\nIn setting the nutrient profiles, the Commission shall carry out consultations with interested parties, in particular food business operators and consumer groups.\nNutrient profiles and their conditions of use designed to amend non-essential elements of this Regulation by supplementing it shall be updated to take into account relevant scientific developments in accordance with the regulatory procedure with scrutiny referred to in Article 25(3) and after consultation of interested parties, in particular food business operators and consumer groups."
+      },
+      "score": 0.35714287
+    },
+    {
+      "clause": {
+        "chunk_id": "142a7250-39d1-5797-b6db-90033300da3c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "13",
+        "paragraph": "5",
+        "heading": "Health claims other than those referring to the reduction of disease risk and to children's development and health",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "5. Any additions of claims to the list referred to in paragraph 3 based on newly developed scientific evidence and/or which include a request for the protection of proprietary data shall be adopted following the procedure laid down in Article 18, except claims referring to children's development and health, which shall be authorised in accordance with the procedure laid down in Articles 15, 16, 17 and 19."
+      },
+      "score": 0.34285715
+    },
+    {
+      "clause": {
+        "chunk_id": "0b208784-89ac-5303-8073-8d73047cab6c",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "16",
+        "paragraph": "4",
+        "heading": "Opinion of the Authority",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "4. In the event of an opinion in favour of authorising the health claim, the opinion shall include the following particulars:\n(a) the name and address of the applicant;\n(b) the nutrient or other substance, or the food or the category of food, in respect of which a claim is to be made and its particular characteristics;\n(c) a proposal for the wording of the health claim, including, as the case may be, the specific conditions of use;\n(d) where applicable, conditions or restrictions of use of the food and/or an additional statement or warning that should accompany the health claim on the label and in advertising."
+      },
+      "score": 0.34285715
+    }
+  ]
+}

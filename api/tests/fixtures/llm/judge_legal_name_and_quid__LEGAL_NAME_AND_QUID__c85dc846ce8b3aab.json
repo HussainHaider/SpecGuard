@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 5553,
+  "output_tokens": 408,
+  "cost_usd": 0.01437,
+  "latency_ms": 4528,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The product specification provides the legal name as 'Dark chocolate', which satisfies the requirement for a legal, customary, or descriptive name as defined in the regulation. For the QUID requirement, the product name is 'Dark Chocolate 70%'. The percentage in the name refers to the cocoa content, and the ingredient list provides quantitative declarations for cocoa mass (58%) and cocoa butter (12%), which together make up 70% cocoa content. This satisfies the requirement for a quantitative indication of the ingredient that is emphasised in the name of the food. All relevant ingredients are declared with their percentages, and there is no evidence of missing QUID for any ingredient referenced in the name or otherwise emphasised.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "4600cf8d-fc01-58f1-b809-63e6b2653e9a",
+        "quoted_span": "‘legal name’ means the name of a food prescribed in the Union provisions applicable to it or, in the absence of such Union provisions, the name provided for in the laws, regulations and administrative provisions applicable in the Member State in which the food is sold to the final consumer or to mass caterers;"
+      },
+      {
+        "chunk_id": "94ccbb01-66ce-55fc-b02f-5888453a3e61",
+        "quoted_span": "Points (a) and (b) of Article 22(1) shall not apply in the case of:\n(a) any ingredient or category of ingredients covered by the indication ‘with sweetener(s)’ or ‘with sugar(s) and sweetener(s)’ if that indication accompanies the name of the food, pursuant Annex III; or\n(b) any added vitamin and mineral if that substance is subject to a nutrition declaration."
+      }
+    ],
+    "confidence": 0.98
+  }
+}

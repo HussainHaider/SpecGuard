@@ -1,0 +1,19 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_legal_name_and_quid@v1",
+  "input_tokens": 4705,
+  "output_tokens": 331,
+  "cost_usd": 0.012058,
+  "latency_ms": 3069,
+  "response": {
+    "verdict": "PASS",
+    "rationale": "The specification provides a legal name for the food: 'Wholemeal biscuits', which is a customary and descriptive name and not just a brand or fancy name. This satisfies the first requirement. For the second requirement, a quantitative indication (QUID) is required for ingredients that appear in the name of the food, are emphasised, or are essential to characterise the food. The ingredient 'Wholemeal WHEAT flour' appears in the name ('Wholemeal biscuits'), is emphasised in the ingredient list, and its percentage (51%) is declared. This satisfies the QUID requirement. No evidence suggests any other ingredient in the name or emphasised on the label that would require a QUID. Therefore, both requirements are met.",
+    "suggested_fix": null,
+    "citations": [
+      {
+        "chunk_id": "9c9a54b4-9256-51be-812b-fa99f96ad3e7",
+        "quoted_span": "The indication of the quantity of an ingredient or category of ingredients used in the manufacture or preparation of a food shall be required where the ingredient or category of ingredients concerned: (a) appears in the name of the food or is usually associated with that name by the consumer; (b) is emphasised on the labelling in words, pictures or graphics; or (c) is essential to characterise a food and to distinguish it from products with which it might be confused because of its name or appearance."
+      }
+    ],
+    "confidence": 1.0
+  }
+}

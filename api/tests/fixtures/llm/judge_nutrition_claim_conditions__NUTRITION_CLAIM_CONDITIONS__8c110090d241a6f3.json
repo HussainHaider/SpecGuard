@@ -1,0 +1,14 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_nutrition_claim_conditions@v1",
+  "input_tokens": 3848,
+  "output_tokens": 170,
+  "cost_usd": 0.009056,
+  "latency_ms": 3309,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The only nutrition claim made in the specification is 'Source of biotin'. However, none of the retrieved regulation clauses include the conditions of use for the claim 'Source of biotin' or any other vitamin or mineral. The retrieved clauses only cover 'source of fibre', 'low saturated fat', and 'low sugars', none of which are relevant to the claim made. Therefore, I cannot determine compliance for the 'Source of biotin' claim based on the supplied regulation text.",
+    "suggested_fix": "Retrieve the relevant clause from Regulation (EC) No 1924/2006 Annex that specifies the conditions for making a 'Source of biotin' claim.",
+    "citations": [],
+    "confidence": 1.0
+  }
+}

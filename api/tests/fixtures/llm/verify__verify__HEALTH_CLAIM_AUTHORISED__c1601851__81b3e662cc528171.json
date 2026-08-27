@@ -1,0 +1,11 @@
+{
+  "note": "recorded from openai/gpt-4.1 with verify@v2",
+  "input_tokens": 954,
+  "output_tokens": 104,
+  "cost_usd": 0.00274,
+  "latency_ms": 2134,
+  "response": {
+    "support": "supports",
+    "reason": "The cited clause (Regulation (EC) No 1924/2006 Art. 14(1)) specifically states that 'reduction of disease risk claims' may only be made if they have been authorised according to the procedures set out in the Regulation and must comply with all necessary conditions for use. The verdict turns on the requirement that such claims must be authorised and meet specified conditions, which is exactly what this clause establishes. Therefore, the citation supports the verdict."
+  }
+}

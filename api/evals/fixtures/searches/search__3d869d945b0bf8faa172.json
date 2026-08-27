@@ -1,0 +1,78 @@
+{
+  "query": "Source of vitamin C, conditions of use for nutrition claims, fibre 0.3 g per 100, fat 0.2 g per 100, saturates 0 g per 100, sugars 8.9 g per 100, salt 0.01 g per 100, protein 0.7 g per 100",
+  "language": "en",
+  "limit": 5,
+  "regulation": null,
+  "hits": [
+    {
+      "clause": {
+        "chunk_id": "0de6dd30-34b6-509d-9ded-eab9adfb18de",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part B",
+        "heading": "REFERENCE INTAKES — PART B — REFERENCE INTAKES FOR ENERGY AND SELECTED NUTRIENTS OTHER THAN VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "Energy or nutrient | Reference intake\nEnergy | 8 400 kJ/2 000 kcal\nTotal fat | 70 g\nSaturates | 20 g\nCarbohydrate | 260 g\nSugars | 90 g\nProtein | 50 g\nSalt | 6 g"
+      },
+      "score": 0.5769231
+    },
+    {
+      "clause": {
+        "chunk_id": "d48a1c4c-5313-545b-886b-efebd8f8b196",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIV",
+        "paragraph": "CONVERSION FACTORS FOR THE CALCULATION OF ENERGY",
+        "heading": "CONVERSION FACTORS",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "The energy value to be declared shall be calculated using the following conversion factors:\n— carbohydrate (except polyols), | 17 kJ/g — 4 kcal/g\n— polyols, | 10 kJ/g — 2,4 kcal/g\n— protein, | 17 kJ/g — 4 kcal/g\n— fat, | 37 kJ/g — 9 kcal/g\n— salatrims, | 25 kJ/g — 6 kcal/g\n— alcohol (ethanol), | 29 kJ/g — 7 kcal/g\n— organic acid, | 13 kJ/g — 3 kcal/g\n— fibre, | 8 kJ/g — 2 kcal/g\n— erythritol, | 0 kJ/g — 0 kcal/g"
+      },
+      "score": 0.54
+    },
+    {
+      "clause": {
+        "chunk_id": "37ce12a7-8163-58b5-8c80-7358298d14a9",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "SOURCE OF FIBRE",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is a source of fibre, and any claim likely to have the same meaning for the consumer, may only be made where the product contains at least 3 g of fibre per 100 g or at least 1,5 g of fibre per 100 kcal."
+      },
+      "score": 0.45
+    },
+    {
+      "clause": {
+        "chunk_id": "0438a816-9d5a-5e1c-b6c6-e3b847e6b6fb",
+        "regulation": "Regulation (EU) No 1169/2011",
+        "celex": "02011R1169-20180101",
+        "article": "Annex XIII",
+        "paragraph": "Part A.2",
+        "heading": "REFERENCE INTAKES — PART A — DAILY REFERENCE INTAKES FOR VITAMINS AND MINERALS (ADULTS)",
+        "language": "en",
+        "source_version": "02011R1169-20180101-en",
+        "text": "2. Significant amount of vitamins and minerals\nAs a rule, the following values should be taken into consideration in deciding what constitutes a significant amount:\n— 15 % of the nutrient reference values specified in point 1 supplied by 100 g or 100 ml in the case of products other than beverages,\n— 7,5 % of the nutrient reference values specified in point 1 supplied by 100 ml in the case of beverages, or,\n— 15 % of the nutrient reference values specified in point 1 per portion if the package contains only a single portion,"
+      },
+      "score": 0.36190477
+    },
+    {
+      "clause": {
+        "chunk_id": "f9be9d6e-03f4-54e1-b9ff-e6cbf9e7377d",
+        "regulation": "Regulation (EC) No 1924/2006",
+        "celex": "02006R1924-20141213",
+        "article": "Annex",
+        "paragraph": "LOW FAT",
+        "heading": "Nutrition claims and conditions applying to them",
+        "language": "en",
+        "source_version": "02006R1924-20141213-en",
+        "text": "A claim that a food is low in fat, and any claim likely to have the same meaning for the consumer, may only be made where the product contains no more than 3 g of fat per 100 g for solids or 1,5 g of fat per 100 ml for liquids (1,8 g of fat per 100 ml for semi-skimmed milk)."
+      },
+      "score": 0.36036038
+    }
+  ]
+}

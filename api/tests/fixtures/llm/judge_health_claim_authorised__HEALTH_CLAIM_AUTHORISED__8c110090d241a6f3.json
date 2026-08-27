@@ -1,0 +1,23 @@
+{
+  "note": "recorded from openai/gpt-4.1 with judge_health_claim_authorised@v1",
+  "input_tokens": 4041,
+  "output_tokens": 353,
+  "cost_usd": 0.010906,
+  "latency_ms": 3713,
+  "response": {
+    "verdict": "NEEDS_REVIEW",
+    "rationale": "The retrieved regulation clauses define what constitutes a health claim and outline the requirements for authorisation and wording (see Art. 2(2) and Art. 15(3) of Regulation (EC) No 1924/2006). However, none of the retrieved clauses provide the list of authorised health claims or the exact authorised wording for biotin. The product makes the claim 'Biotin contributes to normal energy-yielding metabolism,' which is a typical authorised claim for biotin, but without the actual list of authorised claims or their precise wording from the regulation, it is not possible to confirm compliance solely based on the retrieved clauses.",
+    "suggested_fix": "Retrieve the relevant annex or register of authorised health claims (such as Regulation (EU) No 432/2012) to verify that the claim for biotin is authorised and that the wording matches the authorised text.",
+    "citations": [
+      {
+        "chunk_id": "48772ac6-2bb7-53a4-9e62-d6ce99c2a021",
+        "quoted_span": "‘health claim’ means any claim that states, suggests or implies that a relationship exists between a food category, a food or one of its constituents and health;"
+      },
+      {
+        "chunk_id": "21908493-b362-5017-9457-ddea35a80c5a",
+        "quoted_span": "a proposal for the wording of the health claim for which authorisation is sought including, as the case may be, specific conditions for use;"
+      }
+    ],
+    "confidence": 0.6
+  }
+}
